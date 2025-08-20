@@ -1,159 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>organizational self-awareness</title>
-    <style>
-        body {
-            font-family: 'Inverse Mono', monospace; /* Assuming 'Inverse Mono' is a valid font */
-            background-color: rgb(0, 0, 0);
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            color: white; /* Set text color to white for contrast */
-            font-size: 0.8em; /* Make all text small */
-        }
-        h1, h2, p {
-            text-transform: lowercase; /* Make all text lowercase */
-        }
-        h1, h2 {
-            font-weight: bold; /* Make headings bold */
-        }
-        p {
-            color: #ccc; /* Slightly lighter color for paragraphs */
-            font-size: 1em; /* Keep paragraph font size normal */
-        }
-        .iframe-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Space between iframes */
-            margin-top: 20px;
-        }
-        iframe {
-            border: 2px solid #fff; /* Change border color to white */
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Change shadow color to white */
-        }
-    </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Live‑Updated IPCC — AI Literature Synthesis (Demo Showcase)</title>
+<style>
+  :root {
+    --bg: #000000;
+    --panel: #000000;
+    --muted: #b0b0b0;
+    --text: #ffffff;
+    --accent: #ffef00;
+    --accent2: #00ff99;
+    --danger: #ff0033;
+    --warn: #ff7a00;
+    --ok: #00ff66;
+    --card: #000000;
+    --shadow: none;
+    --radius: 0px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  a { color: var(--accent); text-decoration: underline; font-weight: 700; }
+  a:hover { text-decoration-thickness: 3px; }
+  .wrap {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 8px;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+
+  
+  nav {
+    position: sticky; top: 0;
+    height: 100vh; overflow: auto;
+    padding: 8px;
+    background: var(--panel);
+    border-right: 3px solid #ffffff;
+  }
+  nav h1 { font-size: 16px; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .logo {
+    font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .logo .dot { width: 10px; height: 10px; background: var(--accent); }
+  .toc { list-style: none; padding: 8px 0 0 0; margin: 0; }
+  .toc li { margin: 6px 0; }
+  .toc a { display: block; padding: 8px 10px; border: 2px solid #ffffff; color: var(--text); text-transform: uppercase; font-weight: 700; }
+  .toc a:hover, .toc a.active { background: #ffffff; color: #000; text-decoration: none; }
+  .kbd {
+    display: inline-block; padding: 2px 6px;
+    background: transparent; border: 2px solid #ffffff; color: var(--text); font-size: 12px; font-weight: 700;
+  }
+  main { padding: 16px 16px 120px 8px; width: 75%; justify-self: start; }
+  section { margin: 0 0 36px 0; }
+  .hero {
+    padding: 16px; border-radius: var(--radius);
+    background: transparent;
+    box-shadow: var(--shadow); border: 3px solid #ffffff;
+  }
+  .hero h2 { margin: 4px 0 8px 0; font-size: 28px; }
+  .muted { color: var(--muted); }
+  .grid {
+    display: grid; gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .card {
+    background: var(--card); border: 3px solid #ffffff; border-radius: var(--radius);
+    box-shadow: none;
+  }
+  .card .hd { padding: 10px 12px; border-bottom: 3px solid #ffffff; font-weight: 800; text-transform: uppercase; }
+  .card .bd { padding: 10px 12px; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 0; font-size: 12px; border: 2px solid #ffffff; background: transparent; color: #ffffff; text-transform: uppercase; font-weight: 800; }
+  .pill.ok { color: var(--ok); border-color: var(--ok); }
+  .pill.warn { color: var(--warn); border-color: var(--warn); }
+  .pill.danger { color: var(--danger); border-color: var(--danger); }
+  .note { font-size: 13px; color: var(--muted); }
+  .flow { position: relative; overflow: hidden; border-radius: var(--radius); border: 3px solid #ffffff; background: transparent; }
+  .flow iframe, .flow embed, .flow img, .flow object { display: block; width: 100%; height: 70vh; border: 0; }
+  .toolbar {
+    display: flex; gap: 8px; align-items: center; padding: 8px; border-top: 3px solid #ffffff; background: transparent;
+  }
+  .toolbar button {
+    background: transparent; color: var(--text); border: 3px solid #ffffff; padding: 8px 10px; border-radius: 0; cursor: pointer; font-weight: 800; text-transform: uppercase;
+  }
+  .toolbar button:hover { background: #ffffff; color: #000; }
+  .zoomwrap { position: relative; overflow: hidden; height: 70vh; background: transparent; border-radius: var(--radius) var(--radius) 0 0; }
+  .zoomcontent { transform-origin: center center; transform: translate(0px,0px) scale(1); transition: transform .08s ease-out; }
+  .progress {
+    height: 16px; background: transparent; border: 3px solid #ffffff; border-radius: 0; overflow: hidden;
+  }
+  .progress > div { height: 100%; width: 0%; background: var(--accent); transition: width .3s ease; }
+  .runner-steps { display: grid; grid-template-columns: 28px 1fr 88px; gap: 8px; align-items: center; }
+  .runner-steps .idx { text-align: center; color: var(--muted); font-size: 12px; }
+  .runner-steps .desc { font-size: 14px; text-transform: uppercase; font-weight: 700; }
+  .runner-steps .eta { font-size: 12px; color: var(--muted); text-align: right; }
+  .kbdbar { display: flex; gap: 8px; flex-wrap: wrap; }
+  .footer { margin-top: 40px; padding-top: 16px; border-top: 3px solid #ffffff; color: var(--muted); font-size: 13px; }
+  
+  /* Fullscreen styles */
+  .pdf-container { position: relative; }
+  .fullscreen { 
+    background: transparent; color: var(--text); border: 3px solid #ffffff; 
+    padding: 6px 10px; border-radius: 0; cursor: pointer; font-size: 12px; font-weight: 800; text-transform: uppercase;
+    margin-top: 8px; display: block; width: fit-content;
+  }
+  .fullscreen:hover { background: #ffffff; color: #000; transform: none; }
+  .fullscreen.active { background: var(--accent); color: #000; }
+  
+  .fullscreen-overlay {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; 
+    background: var(--bg); z-index: 9999; display: none;
+    padding: 0; box-sizing: border-box;
+  }
+  .fullscreen-overlay.active { display: block; }
+  .fullscreen-overlay iframe, .fullscreen-overlay object { 
+    width: 100vw; height: 100vh; border: none; position: absolute; top: 0; left: 0;
+  }
+  .fullscreen-overlay .close-btn {
+    position: fixed; top: 20px; right: 20px; 
+    background: var(--danger); color: white; border: 0; padding: 10px 15px; 
+    border-radius: 0; cursor: pointer; font-size: 16px; z-index: 10000; font-weight: 800; text-transform: uppercase;
+  }
+  .fullscreen-overlay .close-btn:hover { opacity: .85; }
+</style>
 </head>
 <body>
-    <h1>welcome, i am building organizational self-awareness</h1>
-    <p>humans decide things for their neighborhood. each agent is making decisions locally. what kind of
-        global features emerge from those local decisions is not trivial to predict. this approach flips that on
-        its head, where we also assess what kind of mesoscale structure we want the organization to have, and
-        then inform our local decisions from there. perhaps, in the future, universities and research institutes can integrate this mesoscale
-        approach along with local and departmental decisions.</p>
-   
-    <div style="margin: 20px 0;">
-        <a href="https://www.sandeepchowdhary.com/" target="_blank" style="text-decoration: none; color: #007BFF; font-size: 1.2em;">my main website</a>
+<!-- Fullscreen overlay -->
+<div class="fullscreen-overlay" id="fullscreenOverlay">
+  <button class="close-btn">✕</button>
+  <div id="fullscreenContent"></div>
+</div>
+
+<div class="wrap">
+  <nav>
+    <div class="logo"><span class="dot"></span> Live‑Updated IPCC</div>
+    <div class="note" style="margin:10px 0 16px">Single‑page demo. Use <span class="kbd">1–6</span> to jump; <span class="kbd">+</span>/<span class="kbd">−</span> to zoom; <span class="kbd">←</span>/<span class="kbd">→</span>/<span class="kbd">↑</span>/<span class="kbd">↓</span> to pan; <span class="kbd">N</span> to advance pipeline.</div>
+    <ul class="toc">
+      <li><a href="#intro" class="active">1. Why this now</a></li>
+      <li><a href="#workflow">2. Workflow (interactive)</a></li>
+      <li><a href="#video">3. Collector Video</a></li>
+      <li><a href="#results">4. Assignment → Chapters</a></li>
+      <li><a href="#script">5. Presenter Notes</a></li>
+    </ul>
+    <div class="footer">
+      Draws on proposal & internal analyses. See embedded PDF and diagram.
         <br><br>
         <a href="demo_showcase_with_pdf.html" style="text-decoration: none; color: #00ff99; font-size: 1.2em; border: 2px solid #00ff99; padding: 8px 16px; display: inline-block;">IPCC Analysis Demo</a>
     </div>
+  </nav>
 
-        
-    <h2>shape of organizations</h2>
+  <main>
+    <section id="intro" class="hero">
+      <div class="pill ok">Open • Transparent • Auditable</div>
+      <h2>AI‑assisted, continuously updated IPCC evidence base</h2>
+      <p class="muted">Automates discovery → relevance filtering → chapter assignment → key‑insight extraction → validator checks → live HTML insertion. Built for coverage, provenance, and policy‑readiness — not chatbot vibes.</p>
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <div class="hd">Why general chatbots such as GPT aren’t enough</div>
+          <div class="bd note">Fast per‑query answers, but: low coverage, opaque retrieval, no provenance guarantees, and hallucinations in long‑form synthesis. <em>Not fit for assessments.</em></div>
+        </div>
+        <div class="card">
+          <div class="hd">What specialized tools still miss</div>
+          <div class="bd note">Tools such as Elicit, Research Rabbit etc are NOT open-acess,  are paid, limited scale, and weak support for consensus building & living updates. We go “glass‑box” + continuous.</div>
+        </div>
+        <div class="card">
+          <div class="hd">What this demo shows</div>
+          <div class="bd note">
+            1) Literature collection (OpenAlex)<br>
+            2) Zero‑shot IPCC chapter assignment<br>
+            3) Hooks for validation and live HTML insertion<br>
+            4) Space for Auto‑Think (future).
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p>iisers are considered institutions of national importance. they are vital for india, promoting excellence in science education and research, fostering innovation, producing skilled scientists, and contributing to national development.
-    </p>
-    <div class="iframe-container">
-        <!-- Start Generation Here -->
-        <div>
-            <iframe
-              width="300"
-              height="600"
-              src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F17bee335babef54f4cbfc681930cd8d0%2Fraw%2Fff87d9a4dbfd60ab9d8b63273fcda1aac5d8c5e2%2Fnetwork-dec9b6cc-978.gexf&nr=0.469&lt=1.596&ls=7&le=19"
-              frameBorder="0"
-              title="iiser pune"
-              allowFullScreen
-            ></iframe>
-            <p>iiser pune</p>
+    <section id="workflow">
+      <div class="card flow">
+        <div class="hd">Workflow Diagram (interactive)</div>
+        <div class="zoomwrap" id="zoomWrap1">
+          <iframe class="zoomcontent" src="Workflow_Diagram_interactive.html" title="Interactive workflow"></iframe>
         </div>
-        <div>
-            <iframe
-              width="300"
-              height="600"
-              src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F1ecfda31becae8701494c2b332f75d1a%2Fraw%2Fd2f4886b276c46e59a73b7c41b4ba1e96b7b2568%2Fnetwork-6628ab6e-912.gexf&nr=0.523&er=0.1&lt=0.751&ls=8&le=20"
-              frameBorder="0"
-              title="iiser kolkata"
-              allowFullScreen
-            ></iframe>
-            <p>iiser kolkata with topics</p>
+        <div class="toolbar">
+          <button data-target="zoomWrap1" class="zIn">Zoom +</button>
+          <button data-target="zoomWrap1" class="zOut">Zoom −</button>
+          <button data-target="zoomWrap1" class="zReset">Reset</button>
+          <button data-target="workflow" data-type="iframe" data-src="Workflow_Diagram_interactive.html" class="fullscreen">⛶ Fullscreen</button>
+          <div class="note">Tip: you can also <span class="kbd">+</span>/<span class="kbd">−</span> and arrow keys to pan.</div>
         </div>
-        <div>
-            <iframe
-              width="300"
-              height="600"
-              src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F6312a6e8b22c22828e9304d5482f0c4e%2Fraw%2F8009f45b4c9ea9ed8120978bbe8503a054eea427%2Fnetwork-1df98f11-7c3.gexf&nr=0.599&lt=2.659&ls=8&le=18"
-              frameBorder="0"
-              title="iiser mohali"
-              allowFullScreen
-            ></iframe>
-            <p>iiser mohali</p>
-        </div>
-        <!-- End Generation Here -->
-    </div>
+      </div>
+    </section>
 
-    <div>
-        <div class="iframe-container">
-            <!-- Start Generation Here -->
-            <div>
-                <iframe
-                  width="500"
-                  height="600"
-                  src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F1311e873cd5a6319bc5508a29fcb002a%2Fraw%2F9fb0fc54ea480c95aacb6cba5511e6782aa98e77%2Fnetwork-6dcf11ed-664.gexf&nr=0.37&lt=1.75&ls=5&le=12"
-                  frameBorder="0"
-                  title="IIASA Vienna"
-                  allowFullScreen
-                ></iframe>
-                <p>IIASA Vienna</p>
+    <section id="video">
+      <div class="card flow">
+        <div class="hd">Literature Collector - Concept</div>
+        <div class="zoomwrap" id="zoomWrap2" style="height:70vh; background:#0d1219; border-radius:var(--radius) var(--radius) 0 0; overflow:hidden;">
+          <video class="zoomcontent" src="systematic_review 3.mp4" controls preload="metadata" style="background:#000; width:100%; height:100%; object-fit:contain; display:block;"></video>
+        </div>
+        <div class="toolbar">
+          <button data-target="zoomWrap2" class="zIn">Zoom +</button>
+          <button data-target="zoomWrap2" class="zOut">Zoom −</button>
+          <button data-target="zoomWrap2" class="zReset">Reset</button>
+          <button data-target="video" data-type="video" data-src="systematic_review 3.mp4" class="fullscreen">⛶ Fullscreen</button>
+          <div class="note">Presenter: pause at 0:22 to highlight OpenAlex metadata capture.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="grid">
+        <div class="card">
+          <div class="hd">Chapter assignment — Results (embedded PDF)</div>
+          <div class="bd">
+            <div class="pdf-container">
+              <object data="ipcc_analysis.pdf#page=1&zoom=120" type="application/pdf" width="100%" height="600">
+                <div class="note">PDF could not be displayed. <a href="ipcc_analysis.pdf">Open ipcc_analysis.pdf</a>.</div>
+              </object>
+              <button class="fullscreen" data-target="pdf1" data-type="pdf" data-src="ipcc_analysis.pdf#page=1&zoom=120">⛶ Fullscreen</button>
             </div>
-            <div>
-                <iframe
-                  width="500"
-                  height="600"
-                  src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2Fbc5441763469230034f4a55fed17a5d8%2Fraw%2Fb671278f8edacf9aa3cae5273bb2ae7b4e019ffe%2Fnetwork-77e54d3c-906.gexf&nr=0.404&lt=3.617&ls=5&le=13"
-                  frameBorder="0"
-                  title="École normale supérieure – PSL"
-                  allowFullScreen
-                ></iframe>
-                <p>École normale supérieure – PSL</p>
-            </div>
-            <!-- <div>
-                <iframe
-                  width="300"
-                  height="600"
-                  src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F6312a6e8b22c22828e9304d5482f0c4e%2Fraw%2F8009f45b4c9ea9ed8120978bbe8503a054eea427%2Fnetwork-1df98f11-7c3.gexf&nr=0.599&lt=2.659&ls=8&le=18"
-                  frameBorder="0"
-                  title="iiser mohali"
-                  allowFullScreen
-                ></iframe>
-                <p>iiser mohali</p>
-            </div> -->
-        <!-- <h2>topicwise collaboration map of iiasa</h2> -->
+        </div>
+      </div>
+    </section> 
 
-        <!-- <iframe
-          width="300"
-          height="600"
-          src="https://ouestware.gitlab.io/retina/beta/#/graph/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F1311e873cd5a6319bc5508a29fcb002a%2Fraw%2F9fb0fc54ea480c95aacb6cba5511e6782aa98e77%2Fnetwork-6dcf11ed-664.gexf&nr=0.37&lt=1.75&ls=5&le=12"
-          frameBorder="0"
-          title="topicwise collaboration map of iiasa"
-          allowFullScreen
-        ></iframe>
-        <p>IIASA Vienna</p> -->
+    <section id="script">
+      <div class="card">
+        <div class="hd">Presenter Notes (concise demo script)</div>
+        <div class="bd">
+          <ol>
+            <li><strong>Hook (15s)</strong> — “Manual synthesis can’t keep up.” Flash 3 facts (authors, pages, € cost).</li>
 
-    </div>
-<!-- <div>
-    <iframe
-      width="300"
-      height="600"
-      src="https://ouestware.gitlab.io/retina/beta/#/graph/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2Fbc5441763469230034f4a55fed17a5d8%2Fraw%2Fb671278f8edacf9aa3cae5273bb2ae7b4e019ffe%2Fnetwork-77e54d3c-906.gexf&nr=0.404&lt=3.617&ls=5&le=13"
-      frameBorder="0"
-      title="École normale supérieure – PSL"
-      allowFullScreen
-    ></iframe>
-    <p>École normale supérieure – PSL</p>
-</div> -->
+            <li><strong>Workflow zoom (40s)</strong> — Pan to Validator/Live Editor; call out <em>glass‑box</em> design and provenance links.</li>
+            <li><strong>Collector Video (45s)</strong> — Play short segment; narrate OpenAlex → DOI → abstract/full‑text → metadata.</li>
+            <li><strong>Results (60s)</strong> — Show matrix and any extra plots; call out precision/recall targets and gaps.</li>
+            <li><strong>Roadmap (30s)</strong> — Point to Auto‑Think cluster: KG → latent inference → hypothesis surfacing (future work).</li>
+          </ol>
+          <p class="note">Keyboard: <span class="kbd">1–5</span> jump; <span class="kbd">+</span>/<span class="kbd">−</span> zoom; arrows to pan.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div class="hd">References inside the page</div>
+        <div class="bd note">
+          <p>Your grant proposal context (FWF ESPRIT) and the chapter‑assignment PDF are embedded above so you can cite claims while presenting.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
 
+<script>
+  // TOC highlight on scroll
+  const sections = [...document.querySelectorAll('main section')];
+  const links = [...document.querySelectorAll('.toc a')];
+  const map = new Map(sections.map(s => [s.id, s]));
+  const linkFor = id => links.find(a => a.getAttribute('href') === '#' + id);
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(a => a.classList.remove('active'));
+        const l = linkFor(e.target.id); if (l) l.classList.add('active');
+      }
+    });
+  }, { rootMargin: "-30% 0px -60% 0px", threshold: 0.01 });
+  sections.forEach(s => obs.observe(s));
+
+  // Keyboard navigation
+  const ids = ['intro','workflow','video','results','script'];
+  window.addEventListener('keydown', e => {
+    if (e.key >= '1' && e.key <= '5') {
+      document.getElementById(ids[Number(e.key)-1]).scrollIntoView({behavior:'smooth'});
+    }
+  });
+
+  // Simple pan/zoom utility
+  function makeZoomable(wrapId) {
+    const wrap = document.getElementById(wrapId);
+    const content = wrap.querySelector('.zoomcontent');
+    let scale = 1, x = 0, y = 0;
+    function apply(){ content.style.transform = `translate(${x}px,${y}px) scale(${scale})`; }
+    function clamp(){ scale = Math.max(0.5, Math.min(3, scale)); }
+    wrap.addEventListener('wheel', e => {
+      if (!e.ctrlKey) return;
+      e.preventDefault();
+      const delta = (e.deltaY < 0) ? 0.1 : -0.1;
+      scale += delta; clamp(); apply();
+    }, { passive:false });
+    let drag = false, sx=0, sy=0;
+    wrap.addEventListener('mousedown', e => { drag=true; sx=e.clientX; sy=e.clientY; wrap.style.cursor='grabbing'; });
+    window.addEventListener('mouseup', () => { drag=false; wrap.style.cursor='default'; });
+    window.addEventListener('mousemove', e => {
+      if (!drag) return; x += (e.clientX - sx); y += (e.clientY - sy); sx = e.clientX; sy = e.clientY; apply();
+    });
+    return {
+      in(){ scale += 0.15; clamp(); apply(); },
+      out(){ scale -= 0.15; clamp(); apply(); },
+      reset(){ scale = 1; x = 0; y = 0; apply(); },
+      nudge(dx,dy){ x+=dx; y+=dy; apply(); }
+    };
+  }
+  const zoomables = {
+    zoomWrap1: makeZoomable('zoomWrap1'),
+    zoomWrap2: makeZoomable('zoomWrap2'),
+  };
+  document.querySelectorAll('.zIn').forEach(b => b.onclick = () => zoomables[b.dataset.target].in());
+  document.querySelectorAll('.zOut').forEach(b => b.onclick = () => zoomables[b.dataset.target].out());
+  document.querySelectorAll('.zReset').forEach(b => b.onclick = () => zoomables[b.dataset.target].reset());
+
+  // Global keyboard for pan/zoom
+  window.addEventListener('keydown', e => {
+    const active = document.querySelector(':hover')?.closest('.zoomwrap')?.id || 'zoomWrap1';
+    const z = zoomables[active];
+    if (!z) return;
+    if (e.key === '+') { z.in(); }
+    if (e.key === '-') { z.out(); }
+    if (e.key === 'ArrowLeft') { z.nudge( -30, 0); }
+    if (e.key === 'ArrowRight'){ z.nudge(  30, 0); }
+    if (e.key === 'ArrowUp')   { z.nudge(  0,-30); }
+    if (e.key === 'ArrowDown') { z.nudge(  0, 30); }
+  });
+
+
+
+  // Fullscreen functionality
+  const fullscreenOverlay = document.getElementById('fullscreenOverlay');
+  const fullscreenContent = document.getElementById('fullscreenContent');
+  const closeBtn = fullscreenOverlay.querySelector('.close-btn');
+  
+  function openFullscreen(type, src, target) {
+    try {
+      if (type === 'iframe') {
+        fullscreenContent.innerHTML = `<iframe src="${src}" title="Fullscreen content" style="width:100%;height:100%;border:none;"></iframe>`;
+      } else if (type === 'pdf') {
+        fullscreenContent.innerHTML = `<object data="${src}" type="application/pdf" style="width:100%;height:100%;"></object>`;
+      } else if (type === 'video') {
+        fullscreenContent.innerHTML = `<video src="${src}" controls autoplay style="width:100%;height:100%;object-fit:contain;background:#000;"></video>`;
+      }
+      fullscreenOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      
+      // Find and highlight the active fullscreen button
+      const activeBtn = document.querySelector(`[data-target="${target}"]`);
+      if (activeBtn) activeBtn.classList.add('active');
+    } catch (error) {
+      console.error('Fullscreen error:', error);
+    }
+  }
+  
+  function closeFullscreen() {
+    fullscreenOverlay.classList.remove('active');
+    fullscreenContent.innerHTML = '';
+    document.body.style.overflow = ''; // Restore scrolling
+    document.querySelectorAll('.fullscreen').forEach(btn => btn.classList.remove('active'));
+  }
+  
+  // Event listeners for fullscreen buttons
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('fullscreen')) {
+      e.preventDefault();
+      const type = e.target.dataset.type || 'iframe';
+      const src = e.target.dataset.src;
+      const target = e.target.dataset.target;
+      
+      if (src) {
+        openFullscreen(type, src, target);
+      }
+    }
+  });
+  
+  // Close button and ESC key
+  closeBtn.addEventListener('click', closeFullscreen);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && fullscreenOverlay.classList.contains('active')) {
+      closeFullscreen();
+    }
+  });
+
+</script>
 </body>
 </html>

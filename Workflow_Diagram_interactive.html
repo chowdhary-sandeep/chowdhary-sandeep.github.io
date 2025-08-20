@@ -1,0 +1,410 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Interactive IPCC Workflow Diagram</title>
+        <style>
+            body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 16px; display: flex; gap: 16px; background: #000; color: #fff; }
+            #diagram { flex: 2; min-width: 70%; border: 3px solid #fff; padding: 8px; }
+            #info-panel { flex: 1; max-width: 420px; padding: 12px; border: 3px solid #fff; position: sticky; top: 16px; height: fit-content; background: transparent; }
+            .info-section { margin-bottom: 15px; }
+            .info-title { font-size: 1.1em; font-weight: 800; color: #fff; text-transform: uppercase; margin-bottom: 10px; }
+            .info-desc { color: #b0b0b0; margin-bottom: 15px; }
+            .info-data { font-family: monospace; background: #000; color: #fff; border: 3px solid #fff; padding: 10px; white-space: pre-line; line-height: 1.5; }
+            .info-data span.io { color: #ffef00; font-weight: bold; }
+            .info-data span.status-done { color: #00ff66; font-weight: bold; }
+            .info-data span.status-hard { color: #ff0033; font-weight: bold; }
+            .info-data span.status-medium { color: #ff7a00; font-weight: bold; }
+            .video-link { color: #ffef00; text-decoration: underline; display: inline-block; margin-top: 10px; padding: 6px 10px; border: 3px solid #fff; }
+            .video-link:hover { background: #fff; color: #000; text-decoration: none; }
+            .video-container { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.98); z-index: 1000; }
+            .video-wrapper { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 85%; max-width: 1400px; }
+            .back-button { position: absolute; top: 20px; left: 20px; padding: 10px 20px; background-color: #000; color: #fff; border: 3px solid #fff; cursor: pointer; font-size: 16px; }
+            #diagram g.cluster text { font-size: 23.4px; font-weight: 800; fill: #ffffff; text-transform: uppercase; }
+            #diagram g.node text { font-size: 19.6px; font-weight: 700; fill: #000000; }
+            #diagram g.edge text { font-size: 19.6px; fill: #ffffff; }
+            #diagram g.node rect { rx: 0; ry: 0; stroke-width: 3px; }
+            #diagram g.node { transition: none; }
+            #diagram g.node:hover { filter: none; transform: none; }
+            #diagram g.node.done rect { stroke: #00ff66; }
+            #diagram g.node.hard rect { stroke: #ff0033; }
+            #diagram g.node.medium rect { stroke: #ff7a00; }
+        </style>
+        <script>
+            // Bind click handlers to SVG nodes to open details on the right
+            document.addEventListener('DOMContentLoaded', function() {
+                try {
+                    // Clicks on <a> links inside nodes (preferred)
+                    const links = document.querySelectorAll('#diagram g.node a');
+                    links.forEach(a => {
+                        a.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const href = this.getAttribute('xlink:href') || this.getAttribute('href');
+                            const m = href && href.match(/showInfo\(['"]([^'"]+)['"]\)/);
+                            if (m) { try { showInfo(m[1]); } catch (_) {} }
+                        });
+                    });
+
+                    const nodeGroups = document.querySelectorAll('#diagram g.node');
+                    nodeGroups.forEach(g => {
+                        g.style.cursor = 'pointer';
+                        g.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            // Prefer parsing the node id from the embedded <a href="javascript:showInfo('ID')">
+                            let nodeId = null;
+                            const link = g.querySelector('a');
+                            if (link) {
+                                const href = link.getAttribute('xlink:href') || link.getAttribute('href');
+                                const m = href && href.match(/showInfo\(['"]([^'"]+)['"]\)/);
+                                if (m) nodeId = m[1];
+                            }
+                            // Fallback: try the <title> tag inside the node group (often holds the node name)
+                            if (!nodeId) {
+                                const titleEl = g.querySelector('title');
+                                if (titleEl) nodeId = (titleEl.textContent || '').trim();
+                            }
+                            if (nodeId) {
+                                try { showInfo(nodeId); } catch (_) {}
+                            }
+                        });
+                    });
+                } catch (_) {}
+            });
+
+            function showInfo(nodeId) {
+                const info = {"USS": {"title": "Update Search Strategy \u26a0", "desc": "Dynamically updates search criteria based on feedback from the Literature Collector.", "data": "Input: Feedback from collector\nOutput: Updated search parameters\nAPI: OpenAlex\nStatus: In Progress (Medium Difficulty)", "status": "medium"}, "LC": {"title": "Literature Collector \u2713", "desc": "Collects initial metadata from OpenAlex API including DOI, Open Access status, title, abstract, and year.", "data": "Input: Search parameters\nOutput: Paper metadata\nAPI: OpenAlex\nStatus: Completed", "status": "done"}, "FPC": {"title": "Full Paper Collector \u2b55", "desc": "Retrieves full paper content for Open Access papers, otherwise relies on abstract.", "data": "Input: DOI + metadata\nOutput: Full paper or abstract\nStatus: Not Started (High Difficulty)", "status": "hard"}, "KIE": {"title": "Key Insight Extractor \u2713", "desc": "Large Language Model that extracts key findings and insights from papers.", "data": "Model: GPT-4/Claude\nInput: Paper text\nOutput: Structured insights\nStatus: Completed", "status": "done"}, "ZC": {"title": "Zeroshot ML Classifier \u2713", "desc": "Categorizes papers into relevant IPCC sections using zero-shot classification.", "data": "Input: Paper content\nOutput: IPCC section classifications\nStatus: Completed", "status": "done"}, "VAI": {"title": "Validator AI \u26a0", "desc": "Validates extracted insights and additions against original papers and existing knowledge.", "data": "Input: Insights, original abstracts, existing database\nOutput: Validation scores\nStatus: In Progress", "status": "medium"}, "IPCC": {"title": "Placement in IPCC \u2713", "desc": "Determines optimal placement of validated content within IPCC structure.", "data": "Input: Validated content\nOutput: Placement recommendations\nStatus: Completed", "status": "done"}, "LEA": {"title": "Live Editor Agent \u26a0", "desc": "Manages content integration and works with Validator AI for continuous validation.", "data": "Input: Validated content\nOutput: Updated IPCC content\nStatus: In Progress", "status": "medium"}, "KG": {"title": "AI-driven Knowledge Graph Generation \u2b55", "desc": "Constructs a dynamic knowledge graph from extracted insights.", "data": "Input: Insights\nOutput: Knowledge graph\nStatus: Not Started (High Difficulty)", "status": "hard"}, "CE": {"title": "Conceptual Enrichment \u2b55", "desc": "Infers relationships from knowledge graph using AI reasoning.", "data": "Input: Knowledge graph\nOutput: Enriched concepts\nStatus: Not Started", "status": "hard"}, "AT": {"title": "Auto-think Layer for Climate Science \u2b55", "desc": "Generates new scientific hypotheses from enriched concepts.", "data": "Input: Enriched concepts\nOutput: Novel insights\nStatus: Not Started", "status": "hard"}, "DAP": {"title": "Discovering Adjacent Possible \u2b55", "desc": "Explores potential breakthrough areas at the edges of current knowledge.", "data": "Input: Enriched concepts\nOutput: Novel possibilities\nStatus: Not Started", "status": "hard"}, "NS": {"title": "New Science \u2b55", "desc": "Novel scientific findings emerging from the knowledge exploration cycle.", "data": "Output: New discoveries\nStatus: Not Started", "status": "hard"}};
+                document.getElementById('info-title').textContent = info[nodeId].title;
+                document.getElementById('info-desc').textContent = info[nodeId].desc;
+                let dataText = info[nodeId].data;
+                dataText = dataText.replace(/(Input:|Output:)/g, '<span class=\"io\">$1</span>');
+                if (dataText.includes('Status: Completed')) {
+                    dataText = dataText.replace(/Status: Completed/g, '<span class=\"status-done\">Status: Completed</span>');
+                } else if (dataText.includes('Status: Not Started')) {
+                    dataText = dataText.replace(/Status: Not Started \\(High Difficulty\\)/g, '<span class=\"status-hard\">Status: Not Started (High Difficulty)</span>');
+                } else if (dataText.includes('Status: In Progress')) {
+                    dataText = dataText.replace(/Status: In Progress/g, '<span class=\"status-medium\">Status: In Progress</span>');
+                }
+                document.getElementById('info-data').innerHTML = dataText;
+                const videoLinkContainer = document.getElementById('video-link-container');
+                if (nodeId === 'LC') {
+                    videoLinkContainer.innerHTML = '<a href=\"#\" class=\"video-link\" onclick=\"showVideo(); return false;\">Watch Demo Video</a>';
+                } else {
+                    videoLinkContainer.innerHTML = '';
+                }
+            }
+            function showVideo() {
+                const videoContainer = document.getElementById('video-container');
+                videoContainer.style.display = 'block';
+                videoContainer.innerHTML = `
+                    <button class="back-button" onclick="hideVideo()">← Back to Diagram</button>
+                    <div class="video-wrapper">
+                        <video width="100%" controls autoplay>
+                            <source src="systematic_review 3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                `;
+            }
+            function hideVideo() {
+                const videoContainer = document.getElementById('video-container');
+                videoContainer.style.display = 'none';
+                videoContainer.innerHTML = '';
+            }
+        </script>
+    </head>
+    <body>
+        <div id="diagram">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 13.0.1 (20250615.1724)
+ -->
+<!-- Pages: 1 -->
+<svg width="871pt" height="575pt"
+ viewBox="0.00 0.00 871.00 575.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.479362 0.479362) rotate(0) translate(4 1195.9)">
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<polygon fill="none" stroke="black" points="8,-314.2 8,-1183.9 837,-1183.9 837,-314.2 8,-314.2"/>
+<text xml:space="preserve" text-anchor="middle" x="422.5" y="-1157.67" font-family="Times New Roman,serif" font-size="23.40">LIVE&#45;UPDATED IPCC REPORT</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_1</title>
+<polygon fill="none" stroke="black" points="862,-8 862,-728.25 1801,-728.25 1801,-8 862,-8"/>
+<text xml:space="preserve" text-anchor="middle" x="1331.5" y="-702.02" font-family="Times New Roman,serif" font-size="23.40">AUTO&#45;THINK LAYER FOR NEW SCIENCE</text>
+</g>
+<!-- USS -->
+<g id="node1" class="node">
+<title>USS</title>
+<g id="a_node1"><a xlink:href="javascript:showInfo(&#39;USS&#39;)" xlink:title="Update Search Strategy ⚠&#10;Dynamically updates search criteria based on feedback from the Literature Collector." target="_self">
+<polygon fill="white" stroke="#ff7a00" stroke-width="3" points="539.5,-1141.65 274.5,-1141.65 274.5,-1084.05 539.5,-1084.05 539.5,-1141.65"/>
+<text xml:space="preserve" text-anchor="middle" x="407" y="-1105.48" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">Update Search Strategy ⚠</text>
+</a>
+</g>
+</g>
+<!-- LC -->
+<g id="node2" class="node">
+<title>LC</title>
+<g id="a_node2"><a xlink:href="javascript:showInfo(&#39;LC&#39;)" xlink:title="Literature Collector ✓&#10;Collects initial metadata from OpenAlex API including DOI, Open Access status, title, abstract, and year." target="_self">
+<polygon fill="white" stroke="#00ff66" stroke-width="3" points="519.88,-1009.55 296.12,-1009.55 296.12,-951.95 519.88,-951.95 519.88,-1009.55"/>
+<text xml:space="preserve" text-anchor="middle" x="408" y="-973.38" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">Literature Collector ✓</text>
+</a>
+</g>
+</g>
+<!-- USS&#45;&gt;LC -->
+<g id="edge2" class="edge">
+<title>USS&#45;&gt;LC</title>
+<path fill="none" stroke="white" stroke-width="2" d="M362.76,-1082.65C348.38,-1069.32 337.91,-1052.7 345.75,-1035.55 348.26,-1030.07 351.62,-1024.94 355.5,-1020.19"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="357.76,-1022.9 362.01,-1013.2 352.63,-1018.14 357.76,-1022.9"/>
+<text xml:space="preserve" text-anchor="middle" x="378.38" y="-1039.43" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">update</text>
+</g>
+<!-- LC&#45;&gt;USS -->
+<g id="edge3" class="edge">
+<title>LC&#45;&gt;USS</title>
+<path fill="none" stroke="white" stroke-width="2" d="M414.29,-1010.7C416.64,-1024.94 418.44,-1042.38 417,-1058.05 416.64,-1061.94 416.14,-1065.98 415.55,-1070.01"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="412.13,-1069.24 413.93,-1079.68 419.03,-1070.4 412.13,-1069.24"/>
+<text xml:space="preserve" text-anchor="middle" x="461.02" y="-1039.43" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">feedback</text>
+</g>
+<!-- FPC -->
+<g id="node3" class="node">
+<title>FPC</title>
+<g id="a_node3"><a xlink:href="javascript:showInfo(&#39;FPC&#39;)" xlink:title="Full Paper Collector ⭕&#10;Retrieves full paper content for Open Access papers, otherwise relies on abstract." target="_self">
+<polygon fill="white" stroke="#ff0033" stroke-width="3" points="500.75,-877.45 267.25,-877.45 267.25,-819.85 500.75,-819.85 500.75,-877.45"/>
+<text xml:space="preserve" text-anchor="middle" x="384" y="-841.28" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">Full Paper Collector ⭕</text>
+</a>
+</g>
+</g>
+<!-- LC&#45;&gt;FPC -->
+<g id="edge6" class="edge">
+<title>LC&#45;&gt;FPC</title>
+<path fill="none" stroke="white" stroke-width="2" stroke-dasharray="5,2" d="M342.71,-950.51C333.81,-943.73 325.9,-935.6 320.5,-925.95 313.07,-912.66 318.33,-899.45 328.42,-887.85"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="330.62,-890.59 335.24,-881.06 325.69,-885.63 330.62,-890.59"/>
+<text xml:space="preserve" text-anchor="middle" x="337.75" y="-907.33" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">DOI</text>
+</g>
+<!-- KIE -->
+<g id="node4" class="node">
+<title>KIE</title>
+<g id="a_node4"><a xlink:href="javascript:showInfo(&#39;KIE&#39;)" xlink:title="Key Insight Extractor ✓&#10;Large Language Model that extracts key findings and insights from papers." target="_self">
+<polygon fill="white" stroke="#00ff66" stroke-width="3" points="829.12,-877.45 588.88,-877.45 588.88,-819.85 829.12,-819.85 829.12,-877.45"/>
+<text xml:space="preserve" text-anchor="middle" x="709" y="-841.28" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">Key Insight Extractor ✓</text>
+</a>
+</g>
+</g>
+<!-- LC&#45;&gt;KIE -->
+<g id="edge4" class="edge">
+<title>LC&#45;&gt;KIE</title>
+<path fill="none" stroke="white" stroke-width="2" d="M521.24,-965.32C558.49,-957.34 599.02,-945 633,-925.95 650.09,-916.37 665.93,-901.84 678.67,-888.02"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="680.96,-890.72 684.97,-880.91 675.72,-886.08 680.96,-890.72"/>
+<text xml:space="preserve" text-anchor="middle" x="700.39" y="-907.33" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">abstract</text>
+</g>
+<!-- ZC -->
+<g id="node5" class="node">
+<title>ZC</title>
+<g id="a_node5"><a xlink:href="javascript:showInfo(&#39;ZC&#39;)" xlink:title="Zeroshot ML Classifier ✓&#10;Categorizes papers into relevant IPCC sections using zero&#45;shot classification." target="_self">
+<polygon fill="white" stroke="#00ff66" stroke-width="3" points="608.88,-793.85 355.12,-793.85 355.12,-736.25 608.88,-736.25 608.88,-793.85"/>
+<text xml:space="preserve" text-anchor="middle" x="482" y="-757.68" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">Zeroshot ML Classifier ✓</text>
+</a>
+</g>
+</g>
+<!-- LC&#45;&gt;ZC -->
+<g id="edge5" class="edge">
+<title>LC&#45;&gt;ZC</title>
+<path fill="none" stroke="white" stroke-width="2" d="M465.77,-950.55C476.61,-943.44 487.27,-935.19 496,-925.95 512.8,-908.17 516.04,-901.17 522,-877.45 528.24,-852.62 530.04,-844.15 522,-819.85 520.42,-815.08 518.23,-810.38 515.69,-805.88"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="518.77,-804.19 510.42,-797.67 512.88,-807.97 518.77,-804.19"/>
+<text xml:space="preserve" text-anchor="middle" x="552.07" y="-907.33" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">abstract</text>
+</g>
+<!-- VAI -->
+<g id="node6" class="node">
+<title>VAI</title>
+<g id="a_node6"><a xlink:href="javascript:showInfo(&#39;VAI&#39;)" xlink:title="Validator AI ⚠&#10;Validates extracted insights and additions against original papers and existing knowledge." target="_self">
+<polygon fill="white" stroke="#ff7a00" stroke-width="3" points="759.4,-644 586.6,-644 586.6,-586.4 759.4,-586.4 759.4,-644"/>
+<text xml:space="preserve" text-anchor="middle" x="673" y="-607.83" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">Validator AI ⚠</text>
+</a>
+</g>
+</g>
+<!-- LC&#45;&gt;VAI -->
+<g id="edge1" class="edge">
+<title>LC&#45;&gt;VAI</title>
+<path fill="none" stroke="white" stroke-width="2" stroke-dasharray="5,2" d="M294.76,-966.27C177.41,-947.43 19.13,-905.45 81,-819.85 150.37,-723.87 217.41,-757 334,-736.25 360.38,-731.55 550.79,-739.73 575,-728.25 607.04,-713.06 632.88,-681.97 649.97,-656.38"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="652.89,-658.31 655.34,-648 647,-654.54 652.89,-658.31"/>
+<text xml:space="preserve" text-anchor="middle" x="163.5" y="-852.53" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">original abstracts</text>
+<text xml:space="preserve" text-anchor="middle" x="163.5" y="-830.03" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">for validation</text>
+</g>
+<!-- FPC&#45;&gt;LC -->
+<g id="edge7" class="edge">
+<title>FPC&#45;&gt;LC</title>
+<path fill="none" stroke="white" stroke-width="2" stroke-dasharray="5,2" d="M389.37,-878.75C392.58,-896.14 396.71,-918.53 400.26,-937.8"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="396.81,-938.38 402.06,-947.58 403.69,-937.11 396.81,-938.38"/>
+<text xml:space="preserve" text-anchor="middle" x="441.69" y="-907.33" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">full paper</text>
+</g>
+<!-- KIE&#45;&gt;VAI -->
+<g id="edge8" class="edge">
+<title>KIE&#45;&gt;VAI</title>
+<path fill="none" stroke="white" stroke-width="2" d="M704.51,-818.8C698.22,-778.35 686.74,-704.52 679.51,-658.03"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="683,-657.74 678.01,-648.4 676.09,-658.82 683,-657.74"/>
+<text xml:space="preserve" text-anchor="middle" x="757.68" y="-757.68" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">key insights</text>
+</g>
+<!-- KG -->
+<g id="node9" class="node">
+<title>KG</title>
+<g id="a_node9"><a xlink:href="javascript:showInfo(&#39;KG&#39;)" xlink:title="AI&#45;driven Knowledge Graph Generation ⭕&#10;Constructs a dynamic knowledge graph from extracted insights." target="_self">
+<polygon fill="white" stroke="#ff0033" stroke-width="3" points="1328.25,-644 911.75,-644 911.75,-586.4 1328.25,-586.4 1328.25,-644"/>
+<text xml:space="preserve" text-anchor="middle" x="1120" y="-607.83" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">AI&#45;driven Knowledge Graph Generation ⭕</text>
+</a>
+</g>
+</g>
+<!-- KIE&#45;&gt;KG -->
+<g id="edge20" class="edge">
+<title>KIE&#45;&gt;KG</title>
+<path fill="none" stroke="white" stroke-width="2" d="M775.25,-818.42C791.67,-810.77 809.12,-802.28 825,-793.85 910.32,-748.54 1005.46,-689.65 1064.04,-652.38"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1065.79,-655.41 1072.34,-647.08 1062.03,-649.51 1065.79,-655.41"/>
+<text xml:space="preserve" text-anchor="middle" x="961.91" y="-757.68" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">insights</text>
+</g>
+<!-- IPCC -->
+<g id="node7" class="node">
+<title>IPCC</title>
+<g id="a_node7"><a xlink:href="javascript:showInfo(&#39;IPCC&#39;)" xlink:title="Placement in IPCC ✓&#10;Determines optimal placement of validated content within IPCC structure." target="_self">
+<polygon fill="white" stroke="#00ff66" stroke-width="3" points="586.38,-511.9 371.62,-511.9 371.62,-454.3 586.38,-454.3 586.38,-511.9"/>
+<text xml:space="preserve" text-anchor="middle" x="479" y="-475.73" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">Placement in IPCC ✓</text>
+</a>
+</g>
+</g>
+<!-- ZC&#45;&gt;IPCC -->
+<g id="edge9" class="edge">
+<title>ZC&#45;&gt;IPCC</title>
+<path fill="none" stroke="white" stroke-width="2" d="M453.52,-735.06C452.25,-732.86 451.13,-730.58 450.25,-728.25 427.88,-669.31 441.64,-648.85 450.25,-586.4 453.06,-566.01 458.88,-543.96 464.56,-525.57"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="467.88,-526.67 467.6,-516.08 461.21,-524.53 467.88,-526.67"/>
+<text xml:space="preserve" text-anchor="middle" x="507.62" y="-607.83" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">key insights</text>
+</g>
+<!-- VAI&#45;&gt;IPCC -->
+<g id="edge10" class="edge">
+<title>VAI&#45;&gt;IPCC</title>
+<path fill="none" stroke="white" stroke-width="2" d="M585.32,-592.2C543.28,-580.88 500.55,-567.92 493.75,-560.4 485.29,-551.04 481.04,-538.34 479.06,-525.98"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="482.58,-525.98 478.05,-516.4 475.61,-526.71 482.58,-525.98"/>
+<text xml:space="preserve" text-anchor="middle" x="577.38" y="-541.78" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">validated insights</text>
+</g>
+<!-- LEA -->
+<g id="node8" class="node">
+<title>LEA</title>
+<g id="a_node8"><a xlink:href="javascript:showInfo(&#39;LEA&#39;)" xlink:title="Live Editor Agent ⚠&#10;Manages content integration and works with Validator AI for continuous validation." target="_self">
+<polygon fill="white" stroke="#ff7a00" stroke-width="3" points="694.75,-379.8 491.25,-379.8 491.25,-322.2 694.75,-322.2 694.75,-379.8"/>
+<text xml:space="preserve" text-anchor="middle" x="593" y="-343.63" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">Live Editor Agent ⚠</text>
+</a>
+</g>
+</g>
+<!-- IPCC&#45;&gt;LEA -->
+<g id="edge11" class="edge">
+<title>IPCC&#45;&gt;LEA</title>
+<path fill="none" stroke="white" stroke-width="2" d="M486.33,-453.07C491.25,-437.8 498.93,-419.47 510.25,-405.8 515.27,-399.74 521.15,-394.12 527.43,-388.98"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="529.28,-391.96 535.13,-383.13 525.05,-386.39 529.28,-391.96"/>
+<text xml:space="preserve" text-anchor="middle" x="585.62" y="-409.68" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">validation score</text>
+</g>
+<!-- LEA&#45;&gt;VAI -->
+<g id="edge12" class="edge">
+<title>LEA&#45;&gt;VAI</title>
+<path fill="none" stroke="white" stroke-width="2" d="M655.54,-389.97C660.03,-394.79 663.97,-400.06 667,-405.8 694.55,-458.02 689.43,-528.31 682.08,-572.43"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="658.2,-387.68 648.53,-383.36 653.4,-392.77 658.2,-387.68"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="678.64,-571.8 680.3,-582.26 685.53,-573.04 678.64,-571.8"/>
+<text xml:space="preserve" text-anchor="middle" x="757.66" y="-475.73" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">added insights</text>
+</g>
+<!-- CE -->
+<g id="node10" class="node">
+<title>CE</title>
+<g id="a_node10"><a xlink:href="javascript:showInfo(&#39;CE&#39;)" xlink:title="Conceptual Enrichment ⭕&#10;Infers relationships from knowledge graph using AI reasoning." target="_self">
+<polygon fill="white" stroke="#ff0033" stroke-width="3" points="1254.75,-511.9 985.25,-511.9 985.25,-454.3 1254.75,-454.3 1254.75,-511.9"/>
+<text xml:space="preserve" text-anchor="middle" x="1120" y="-475.73" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">Conceptual Enrichment ⭕</text>
+</a>
+</g>
+</g>
+<!-- KG&#45;&gt;CE -->
+<g id="edge13" class="edge">
+<title>KG&#45;&gt;CE</title>
+<path fill="none" stroke="white" stroke-width="2" d="M1120,-585C1120,-567.68 1120,-545.42 1120,-526.22"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1123.5,-526.23 1120,-516.23 1116.5,-526.23 1123.5,-526.23"/>
+<text xml:space="preserve" text-anchor="middle" x="1201" y="-541.78" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">knowledge graph</text>
+</g>
+<!-- DAP -->
+<g id="node11" class="node">
+<title>DAP</title>
+<g id="a_node11"><a xlink:href="javascript:showInfo(&#39;DAP&#39;)" xlink:title="Discovering Adjacent Possible ⭕&#10;Explores potential breakthrough areas at the edges of current knowledge." target="_self">
+<polygon fill="white" stroke="#ff0033" stroke-width="3" points="1248.12,-379.8 911.88,-379.8 911.88,-322.2 1248.12,-322.2 1248.12,-379.8"/>
+<text xml:space="preserve" text-anchor="middle" x="1080" y="-343.63" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">Discovering Adjacent Possible ⭕</text>
+</a>
+</g>
+</g>
+<!-- CE&#45;&gt;DAP -->
+<g id="edge14" class="edge">
+<title>CE&#45;&gt;DAP</title>
+<path fill="none" stroke="white" stroke-width="2" d="M1111.02,-452.9C1105.62,-435.33 1098.65,-412.67 1092.69,-393.28"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1096.12,-392.52 1089.84,-383.99 1089.43,-394.58 1096.12,-392.52"/>
+<text xml:space="preserve" text-anchor="middle" x="1190.14" y="-409.68" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">enriched concepts</text>
+</g>
+<!-- AT -->
+<g id="node12" class="node">
+<title>AT</title>
+<g id="a_node12"><a xlink:href="javascript:showInfo(&#39;AT&#39;)" xlink:title="Auto&#45;think Layer for Climate Science ⭕&#10;Generates new scientific hypotheses from enriched concepts." target="_self">
+<polygon fill="white" stroke="#ff0033" stroke-width="3" points="1338,-247.7 944,-247.7 944,-190.1 1338,-190.1 1338,-247.7"/>
+<text xml:space="preserve" text-anchor="middle" x="1141" y="-211.53" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">Auto&#45;think Layer for Climate Science ⭕</text>
+</a>
+</g>
+</g>
+<!-- CE&#45;&gt;AT -->
+<g id="edge17" class="edge">
+<title>CE&#45;&gt;AT</title>
+<path fill="none" stroke="white" stroke-width="2" d="M1255.88,-453.95C1267.95,-447.15 1278.99,-438.72 1288,-428.3 1326.93,-383.28 1305.09,-355.52 1310,-296.2 1310.82,-286.23 1315.9,-281.77 1310,-273.7 1305.4,-267.41 1300.06,-261.84 1294.17,-256.9"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1296.32,-254.14 1286.2,-250.99 1292.15,-259.76 1296.32,-254.14"/>
+<text xml:space="preserve" text-anchor="middle" x="1399.51" y="-343.63" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">enriched concepts</text>
+</g>
+<!-- DAP&#45;&gt;AT -->
+<g id="edge15" class="edge">
+<title>DAP&#45;&gt;AT</title>
+<path fill="none" stroke="white" stroke-width="2" d="M972.24,-320.75C948.88,-308.97 935.07,-293.42 950,-273.7 955.73,-266.13 967.85,-259.33 983.34,-253.31"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="984.09,-256.76 992.32,-250.09 981.73,-250.17 984.09,-256.76"/>
+<text xml:space="preserve" text-anchor="middle" x="1035.5" y="-277.58" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">novel possibilities</text>
+</g>
+<!-- AT&#45;&gt;CE -->
+<g id="edge16" class="edge">
+<title>AT&#45;&gt;CE</title>
+<path fill="none" stroke="white" stroke-width="2" d="M1339.28,-239.3C1460.22,-259.43 1580.85,-299.79 1520,-379.8 1489.18,-420.32 1369.41,-447.37 1268.88,-463.42"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1268.43,-459.95 1259.09,-464.96 1269.51,-466.87 1268.43,-459.95"/>
+<text xml:space="preserve" text-anchor="middle" x="1613.53" y="-343.63" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">new hypotheses</text>
+</g>
+<!-- AT&#45;&gt;DAP -->
+<g id="edge18" class="edge">
+<title>AT&#45;&gt;DAP</title>
+<path fill="none" stroke="white" stroke-width="2" d="M1139.34,-248.93C1137.6,-263.68 1134.08,-281.52 1127,-296.2 1124.63,-301.1 1121.7,-305.9 1118.46,-310.49"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1115.7,-308.34 1112.33,-318.39 1121.23,-312.64 1115.7,-308.34"/>
+<text xml:space="preserve" text-anchor="middle" x="1217.25" y="-277.58" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">exploration paths</text>
+</g>
+<!-- NS -->
+<g id="node13" class="node">
+<title>NS</title>
+<g id="a_node13"><a xlink:href="javascript:showInfo(&#39;NS&#39;)" xlink:title="New Science ⭕&#10;Novel scientific findings emerging from the knowledge exploration cycle." target="_self">
+<polygon fill="white" stroke="#ff0033" stroke-width="3" points="1227.4,-115.6 1054.6,-115.6 1054.6,-58 1227.4,-58 1227.4,-115.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1141" y="-79.43" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60">New Science ⭕</text>
+</a>
+</g>
+</g>
+<!-- AT&#45;&gt;NS -->
+<g id="edge19" class="edge">
+<title>AT&#45;&gt;NS</title>
+<path fill="none" stroke="white" stroke-width="2" d="M1141,-188.7C1141,-171.38 1141,-149.12 1141,-129.92"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1144.5,-129.93 1141,-119.93 1137.5,-129.93 1144.5,-129.93"/>
+<text xml:space="preserve" text-anchor="middle" x="1241.5" y="-145.48" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="19.60" fill="white">validated discoveries</text>
+</g>
+</g>
+</svg>
+
+        </div>
+        <div id="info-panel">
+            <div class="info-section">
+                <div class="info-title" id="info-title">Click a node to see details</div>
+                <div class="info-desc" id="info-desc"></div>
+                <div class="info-data" id="info-data"></div>
+                <div id="video-link-container"></div>
+            </div>
+        </div>
+        <div id="video-container" class="video-container"></div>
+    </body>
+    </html>
+    

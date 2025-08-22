@@ -147,10 +147,11 @@
     <div class="note" style="margin:10px 0 16px">Single‑page demo. Use <span class="kbd">1–6</span> to jump; <span class="kbd">+</span>/<span class="kbd">−</span> to zoom; <span class="kbd">←</span>/<span class="kbd">→</span>/<span class="kbd">↑</span>/<span class="kbd">↓</span> to pan; <span class="kbd">N</span> to advance pipeline.</div>
     <ul class="toc">
       <li><a href="#intro" class="active">1. Why this now</a></li>
-      <li><a href="#workflow">2. Workflow (interactive)</a></li>
-      <li><a href="#video">3. Collector Video</a></li>
-      <li><a href="#results">4. Assignment → Chapters</a></li>
-      <li><a href="#future-directions">5. Future Directions</a></li>
+      <li><a href="#concept-note">2. Concept Note</a></li>
+      <li><a href="#workflow">3. Workflow (interactive)</a></li>
+      <li><a href="#video">4. Collector Video</a></li>
+      <li><a href="#results">5. Assignment → Chapters</a></li>
+      <li><a href="#future-directions">6. Future Directions</a></li>
     </ul>
     <div class="footer">
       Draws on proposal & internal analyses. See embedded PDF and diagram.
@@ -178,6 +179,21 @@
             2) Zero‑shot IPCC chapter assignment<br>
             3) Hooks for validation and live HTML insertion<br>
             4) Space for Auto‑Think (future).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="concept-note">
+      <div class="card">
+        <div class="hd">IPCC Concept Note</div>
+        <div class="bd">
+          <p class="muted" style="margin-bottom: 16px;">Executive summary and concept overview for the AI-augmented IPCC literature synthesis project.</p>
+          <div class="pdf-container">
+            <object data="IPCC_1_pager.pdf#page=1&zoom=50" type="application/pdf" width="100%" height="600">
+              <div class="note">PDF could not be displayed. <a href="IPCC_1_pager.pdf">Open IPCC_1_pager.pdf</a>.</div>
+            </object>
+            <button class="fullscreen" data-target="concept-pdf" data-type="pdf" data-src="IPCC_1_pager.pdf#page=1&zoom=50">⛶ Fullscreen</button>
           </div>
         </div>
       </div>
@@ -281,9 +297,9 @@
   sections.forEach(s => obs.observe(s));
 
   // Keyboard navigation
-  const ids = ['intro','workflow','video','results','future-directions'];
+  const ids = ['intro','concept-note','workflow','video','results','future-directions'];
   window.addEventListener('keydown', e => {
-    if (e.key >= '1' && e.key <= '5') {
+    if (e.key >= '1' && e.key <= '6') {
       document.getElementById(ids[Number(e.key)-1]).scrollIntoView({behavior:'smooth'});
     }
   });

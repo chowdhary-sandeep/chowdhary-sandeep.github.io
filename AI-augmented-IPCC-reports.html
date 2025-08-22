@@ -150,7 +150,7 @@
       <li><a href="#workflow">2. Workflow (interactive)</a></li>
       <li><a href="#video">3. Collector Video</a></li>
       <li><a href="#results">4. Assignment → Chapters</a></li>
-      <li><a href="#script">5. Presenter Notes</a></li>
+
     </ul>
     <div class="footer">
       Draws on proposal & internal analyses. See embedded PDF and diagram.
@@ -231,10 +231,8 @@
       </div>
     </section> 
 
-    <section id="script">
-      <div class="card">
-        <div class="hd">Presenter Notes (concise demo script)</div>
-        <div class="bd">
+
+
           <ol>
             <li><strong>Hook (15s)</strong> — “Manual synthesis can’t keep up.” Flash 3 facts (authors, pages, € cost).</li>
 
@@ -250,9 +248,6 @@
         <div class="hd">References inside the page</div>
         <div class="bd note">
           <p>Your grant proposal context (FWF ESPRIT) and the chapter‑assignment PDF are embedded above so you can cite claims while presenting.</p>
-        </div>
-      </div>
-    </section>
   </main>
 </div>
 
@@ -273,7 +268,7 @@
   sections.forEach(s => obs.observe(s));
 
   // Keyboard navigation
-  const ids = ['intro','workflow','video','results','script'];
+  const ids = ['intro','workflow','video','results'];
   window.addEventListener('keydown', e => {
     if (e.key >= '1' && e.key <= '5') {
       document.getElementById(ids[Number(e.key)-1]).scrollIntoView({behavior:'smooth'});

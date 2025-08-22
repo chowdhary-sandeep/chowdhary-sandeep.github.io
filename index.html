@@ -3,121 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>organizational maps</title>
+    <title>Organizational Self-Awareness — Sandeep Chowdhary</title>
     <style>
+        :root {
+            --bg: #000000;
+            --panel: #000000;
+            --muted: #b0b0b0;
+            --text: #ffffff;
+            --accent: #ffef00;
+            --accent2: #00ff99;
+            --danger: #ff0033;
+            --warn: #ff7a00;
+            --ok: #00ff66;
+            --card: #000000;
+            --shadow: none;
+            --radius: 0px;
+        }
+
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
         body {
-            font-family: 'Inverse Mono', monospace;
-            background-color: rgb(0, 0, 0);
+            margin: 0; 
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.55;
+        }
+
+        .wrap {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 8px;
+            min-height: 100vh;
+            width: 100vw;
             margin: 0;
-            padding: 20px;
-            text-align: center;
-            color: white;
-            font-size: 0.8em;
         }
-        h1, h2, p {
-            text-transform: lowercase;
+
+        nav {
+            position: sticky; 
+            top: 0;
+            height: 100vh; 
+            overflow: auto;
+            padding: 8px;
+            background: var(--panel);
+            border-right: 3px solid #ffffff;
         }
-        h1, h2 {
-            font-weight: bold;
+
+        nav h1 { 
+            font-size: 16px; 
+            margin: 0 0 6px 0; 
+            letter-spacing: .5px; 
         }
-        p {
-            color: #ccc;
-            font-size: 1em;
+
+        .logo {
+            font-weight: 800; 
+            letter-spacing: 1px; 
+            text-transform: uppercase;
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
         }
+
+        .logo .dot { 
+            width: 10px; 
+            height: 10px; 
+            background: var(--accent); 
+        }
+
+        .toc { 
+            list-style: none; 
+            padding: 8px 0 0 0; 
+            margin: 0; 
+        }
+
+        .toc li { 
+            margin: 6px 0; 
+        }
+
+        .toc a { 
+            display: block; 
+            padding: 8px 10px; 
+            border: 2px solid #ffffff; 
+            color: var(--text); 
+            text-transform: uppercase; 
+            font-weight: 700; 
+        }
+
+        .toc a:hover, .toc a.active { 
+            background: #ffffff; 
+            color: #000; 
+            text-decoration: none; 
+        }
+
+        main { 
+            padding: 16px 16px 120px 8px; 
+            width: 75%; 
+            justify-self: start; 
+        }
+
+        section { 
+            margin: 0 0 36px 0; 
+        }
+
+        .hero {
+            padding: 16px; 
+            border-radius: var(--radius);
+            background: transparent;
+            box-shadow: var(--shadow); 
+            border: 3px solid #ffffff;
+        }
+
+        .hero h2 { 
+            margin: 4px 0 8px 0; 
+            font-size: 28px; 
+        }
+
+        .muted { 
+            color: var(--muted); 
+        }
+
+        .card {
+            background: var(--card); 
+            border: 3px solid #ffffff; 
+            border-radius: var(--radius);
+            box-shadow: none;
+            margin-bottom: 16px;
+        }
+
+        .card .hd { 
+            padding: 10px 12px; 
+            border-bottom: 3px solid #ffffff; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+        }
+
+        .card .bd { 
+            padding: 10px 12px; 
+        }
+
         .iframe-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            margin: 16px 0;
         }
-        iframe {
-            border: 2px solid #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+
+        .iframe-wrapper {
+            border: 3px solid #ffffff;
+            background: transparent;
+            padding: 8px;
+        }
+
+        .iframe-wrapper iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+
+        .iframe-wrapper p {
+            margin: 8px 0 0 0;
+            padding: 8px;
+            border-top: 2px solid #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        a { 
+            color: var(--accent); 
+            text-decoration: underline; 
+            font-weight: 700; 
+        }
+
+        a:hover { 
+            text-decoration-thickness: 3px; 
+        }
+
+        .pill {
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px; 
+            padding: 6px 10px; 
+            border-radius: 0; 
+            font-size: 12px; 
+            border: 2px solid #ffffff; 
+            background: transparent; 
+            color: #ffffff; 
+            text-transform: uppercase; 
+            font-weight: 800;
+            margin: 8px 8px 8px 0;
+        }
+
+        .pill.accent { 
+            color: var(--accent); 
+            border-color: var(--accent); 
+        }
+
+        .pill.accent2 { 
+            color: var(--accent2); 
+            border-color: var(--accent2); 
         }
     </style>
 </head>
 <body>
-    <h1>welcome, i am building organizational self-awareness</h1>
-    <p>humans decide things for their neighborhood. each agent is making decisions locally. what kind of
-        global features emerge from those local decisions is not trivial to predict. this approach flips that on
-        its head, where we also assess what kind of mesoscale structure we want the organization to have, and
-        then inform our local decisions from there. perhaps, in the future, universities and research institutes can integrate this mesoscale
-        approach along with local and departmental decisions.</p>
-   
-    <div style="margin: 20px 0;">
-        <a href="https://www.sandeepchowdhary.com/" target="_blank" style="text-decoration: none; color: #007BFF; font-size: 1.2em;">my main website</a>
-        <br><br>
-        <a href="AI-augmented-IPCC-reports.html" style="text-decoration: none; color: #00ff99; font-size: 1.2em; border: 2px solid #00ff99; padding: 8px 16px; display: inline-block;">AI-Augmented IPCC Reports</a>
-    </div>
-
-        
-    <h2>shape of organizations</h2>
-
-    <p>iisers are considered institutions of national importance. they are vital for india, promoting excellence in science education and research, fostering innovation, producing skilled scientists, and contributing to national development.
-    </p>
-    <div class="iframe-container">
-        <div>
-            <iframe
-              width="300"
-              height="600"
-              src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F17bee335babef54f4cbfc681930cd8d0%2Fraw%2Fff87d9a4dbfd60ab9d8b63273fcda1aac5d8c5e2%2Fnetwork-dec9b6cc-978.gexf&nr=0.469&lt=1.596&ls=7&le=19"
-              frameBorder="0"
-              title="iiser pune"
-              allowFullScreen
-            ></iframe>
-            <p>iiser pune</p>
-        </div>
-        <div>
-            <iframe
-              width="300"
-              height="600"
-              src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F1ecfda31becae8701494c2b332f75d1a%2Fraw%2Fd2f4886b276c46e59a73b7c41b4ba1e96b7b2568%2Fnetwork-6628ab6e-912.gexf&nr=0.523&er=0.1&lt=0.751&ls=8&le=20"
-              frameBorder="0"
-              title="iiser kolkata"
-              allowFullScreen
-            ></iframe>
-            <p>iiser kolkata with topics</p>
-        </div>
-        <div>
-            <iframe
-              width="300"
-              height="600"
-              src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F6312a6e8b22c22828e9304d5482f0c4e%2Fraw%2F8009f45b4c9ea9ed8120978bbe8503a054eea427%2Fnetwork-1df98f11-7c3.gexf&nr=0.599&lt=2.659&ls=8&le=18"
-              frameBorder="0"
-              title="iiser mohali"
-              allowFullScreen
-            ></iframe>
-            <p>iiser mohali</p>
-        </div>
-    </div>
-
-    <div>
-        <div class="iframe-container">
-            <div>
-                <iframe
-                  width="500"
-                  height="600"
-                  src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F1311e873cd5a6319bc5508a29fcb002a%2Fraw%2F9fb0fc54ea480c95aacb6cba5511e6782aa98e77%2Fnetwork-6dcf11ed-664.gexf&nr=0.37&lt=1.75&ls=5&le=12"
-                  frameBorder="0"
-                  title="IIASA Vienna"
-                  allowFullScreen
-                ></iframe>
-                <p>IIASA Vienna</p>
+    <div class="wrap">
+        <nav>
+            <h1>Organizational Self-Awareness</h1>
+            <div class="logo">
+                <span class="dot"></span>
+                Sandeep Chowdhary
             </div>
-            <div>
-                <iframe
-                  width="500"
-                  height="600"
-                  src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2Fbc5441763469230034f4a55fed17a5d8%2Fraw%2Fb671278f8edacf9aa3cae5273bb2ae7b4e019ffe%2Fnetwork-77e54d3c-906.gexf&nr=0.404&lt=3.617&ls=5&le=13"
-                  frameBorder="0"
-                  title="École normale supérieure – PSL"
-                  allowFullScreen
-                ></iframe>
-                <p>École normale supérieure – PSL</p>
-            </div>
-        </div>
-    </div>
+            
+            <ul class="toc">
+                <li><a href="#welcome">Welcome</a></li>
+                <li><a href="#organizations">Organizational Shapes</a></li>
+                <li><a href="#iisers">IISERs</a></li>
+                <li><a href="#international">International Institutes</a></li>
+                <li><a href="#ipcc">IPCC Reports</a></li>
+            </ul>
+        </nav>
 
+        <main>
+            <section id="welcome">
+                <div class="hero">
+                    <h2>Building Organizational Self-Awareness</h2>
+                    <p class="muted">Humans decide things for their neighborhood. Each agent is making decisions locally. What kind of global features emerge from those local decisions is not trivial to predict.</p>
+                    <p>This approach flips that on its head, where we also assess what kind of mesoscale structure we want the organization to have, and then inform our local decisions from there. Perhaps, in the future, universities and research institutes can integrate this mesoscale approach along with local and departmental decisions.</p>
+                    
+                    <div style="margin-top: 16px;">
+                        <a href="https://www.sandeepchowdhary.com/" target="_blank" class="pill accent">My Main Website</a>
+                        <a href="AI-augmented-IPCC-reports.html" class="pill accent2">AI-Augmented IPCC Reports</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="organizations">
+                <div class="card">
+                    <div class="hd">Shape of Organizations</div>
+                    <div class="bd">
+                        <p>IISERs are considered institutions of national importance. They are vital for India, promoting excellence in science education and research, fostering innovation, producing skilled scientists, and contributing to national development.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="iisers">
+                <div class="card">
+                    <div class="hd">IISER Network Analysis</div>
+                    <div class="bd">
+                        <div class="iframe-container">
+                            <div class="iframe-wrapper">
+                                <iframe
+                                    src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F17bee335babef54f4cbfc681930cd8d0%2Fraw%2Fff87d9a4dbfd60ab9d8b63273fcda1aac5d8c5e2%2Fnetwork-dec9b6cc-978.gexf&nr=0.469&lt=1.596&ls=7&le=19"
+                                    title="IISER Pune"
+                                    allowFullScreen>
+                                </iframe>
+                                <p>IISER Pune</p>
+                            </div>
+                            <div class="iframe-wrapper">
+                                <iframe
+                                    src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F1ecfda31becae8701494c2b332f75d1a%2Fraw%2Fd2f4886b276c46e59a73b7c41b4ba1e96b7b2568%2Fnetwork-6628ab6e-912.gexf&nr=0.523&er=0.1&lt=0.751&ls=8&le=20"
+                                    title="IISER Kolkata"
+                                    allowFullScreen>
+                                </iframe>
+                                <p>IISER Kolkata with Topics</p>
+                            </div>
+                            <div class="iframe-wrapper">
+                                <iframe
+                                    src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F6312a6e8b22c22828e9304d5482f0c4e%2Fraw%2F8009f45b4c9ea9ed8120978bbe8503a054eea427%2Fnetwork-1df98f11-7c3.gexf&nr=0.599&lt=2.659&ls=8&le=18"
+                                    title="IISER Mohali"
+                                    allowFullScreen>
+                                </iframe>
+                                <p>IISER Mohali</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="international">
+                <div class="card">
+                    <div class="hd">International Research Institutes</div>
+                    <div class="bd">
+                        <div class="iframe-container">
+                            <div class="iframe-wrapper">
+                                <iframe
+                                    src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2F1311e873cd5a6319bc5508a29fcb002a%2Fraw%2F9fb0fc54ea480c95aacb6cba5511e6782aa98e77%2Fnetwork-6dcf11ed-664.gexf&nr=0.37&lt=1.75&ls=5&le=12"
+                                    title="IIASA Vienna"
+                                    allowFullScreen>
+                                </iframe>
+                                <p>IIASA Vienna</p>
+                            </div>
+                            <div class="iframe-wrapper">
+                                <iframe
+                                    src="https://ouestware.gitlab.io/retina/beta/#/embed/?url=https%3A%2F%2Fgist.githubusercontent.com%2Fchowdhary-sandeep%2Fbc5441763469230034f4a55fed17a5d8%2Fraw%2Fb671278f8edacf9aa3cae5273bb2ae7b4e019ffe%2Fnetwork-77e54d3c-906.gexf&nr=0.404&lt=3.617&ls=5&le=13"
+                                    title="École normale supérieure – PSL"
+                                    allowFullScreen>
+                                </iframe>
+                                <p>École normale supérieure – PSL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ipcc">
+                <div class="card">
+                    <div class="hd">IPCC Working Group 3</div>
+                    <div class="bd">
+                        <p>Explore our AI-augmented IPCC reports focusing on Working Group 3: Mitigation of Climate Change, with special attention to buildings and demand chapters.</p>
+                        <a href="AI-augmented-IPCC-reports.html" class="pill accent2">View IPCC Demo</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

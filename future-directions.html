@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Future Directions — IPCC Working Group 3 & Beyond</title>
+<style>
+  :root {
+    --bg: #000000;
+    --panel: #000000;
+    --muted: #b0b0b0;
+    --text: #ffffff;
+    --accent: #ffef00;
+    --accent2: #00ff99;
+    --danger: #ff0033;
+    --warn: #ff7a00;
+    --ok: #00ff66;
+    --card: #000000;
+    --shadow: none;
+    --radius: 0px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  a { color: var(--accent); text-decoration: underline; font-weight: 700; }
+  a:hover { text-decoration-thickness: 3px; }
+  .wrap {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 8px;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+
+  
+  nav {
+    position: sticky; top: 0;
+    height: 100vh; overflow: auto;
+    padding: 8px;
+    background: var(--panel);
+    border-right: 3px solid #ffffff;
+  }
+  nav h1 { font-size: 16px; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .logo {
+    font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .logo .dot { width: 10px; height: 10px; background: var(--accent); }
+  .toc { list-style: none; padding: 8px 0 0 0; margin: 0; }
+  .toc li { margin: 6px 0; }
+  .toc a { display: block; padding: 8px 10px; border: 2px solid #ffffff; color: var(--text); text-transform: uppercase; font-weight: 700; }
+  .toc a:hover, .toc a.active { background: #ffffff; color: #000; text-decoration: none; }
+  .kbd {
+    display: inline-block; padding: 2px 6px;
+    background: transparent; border: 2px solid #ffffff; color: var(--text); font-size: 12px; font-weight: 700;
+  }
+  main { padding: 16px 16px 120px 8px; width: 75%; justify-self: start; }
+  section { margin: 0 0 36px 0; }
+  .hero {
+    padding: 16px; border-radius: var(--radius);
+    background: transparent;
+    box-shadow: var(--shadow); border: 3px solid #ffffff;
+  }
+  .hero h2 { margin: 4px 0 8px 0; font-size: 28px; }
+  .muted { color: var(--muted); }
+  .grid {
+    display: grid; gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .card {
+    background: var(--card); border: 3px solid #ffffff; border-radius: var(--radius);
+    box-shadow: none;
+    margin-bottom: 16px;
+  }
+  .card .hd { padding: 10px 12px; border-bottom: 3px solid #ffffff; font-weight: 800; text-transform: uppercase; }
+  .card .bd { padding: 10px 12px; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 0; font-size: 12px; border: 2px solid #ffffff; background: transparent; color: #ffffff; text-transform: uppercase; font-weight: 800; }
+  .pill.ok { color: var(--ok); border-color: var(--ok); }
+  .pill.warn { color: var(--warn); border-color: var(--warn); }
+  .pill.danger { color: var(--danger); border-color: var(--danger); }
+  .pill.accent { color: var(--accent); border-color: var(--accent); }
+  .pill.accent2 { color: var(--accent2); border-color: var(--accent2); }
+  .note { font-size: 13px; color: var(--muted); }
+  .flow { position: relative; overflow: hidden; border-radius: var(--radius); border: 3px solid #ffffff; background: transparent; }
+  .flow iframe, .flow embed, .flow img, .flow object { display: block; width: 100%; height: 100%; border: 0; }
+  .toolbar {
+    display: flex; gap: 8px; align-items: center; padding: 8px; border-top: 3px solid #ffffff; background: transparent;
+  }
+  .toolbar button {
+    background: transparent; color: var(--text); border: 3px solid #ffffff; padding: 8px 10px; border-radius: 0; cursor: pointer; font-weight: 800; text-transform: uppercase;
+  }
+  .toolbar button:hover { background: #ffffff; color: #000; }
+  .zoomwrap { position: relative; overflow: hidden; height: 70vh; background: transparent; border-radius: var(--radius) var(--radius) 0 0; }
+  .zoomcontent { transform-origin: center center; transform: translate(0px,0px) scale(1); transition: transform .08s ease-out; }
+  .progress {
+    height: 16px; background: transparent; border: 3px solid #ffffff; border-radius: 0; overflow: hidden;
+  }
+  .progress .bar {
+    height: 100%; background: var(--accent); width: 0%; transition: width .3s ease-out;
+  }
+  .highlight {
+    background: var(--accent);
+    color: #000;
+    padding: 2px 4px;
+    font-weight: 700;
+  }
+  .status {
+    display: inline-flex; align-items: center; gap: 8px; padding: 4px 8px; border: 2px solid #ffffff; font-size: 12px; font-weight: 700; text-transform: uppercase;
+  }
+  .status.upcoming { border-color: var(--warn); color: var(--warn); }
+  .status.active { border-color: var(--ok); color: var(--ok); }
+  .status.completed { border-color: var(--muted); color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <h1>Future Directions</h1>
+      <div class="logo">
+        <span class="dot"></span>
+        IPCC WG3
+      </div>
+      
+      <ul class="toc">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#chapter8">Chapter 8: Services & Demand</a></li>
+        <li><a href="#chapter5">Chapter 5: Enablers & Barriers</a></li>
+        <li><a href="#political-process">Political Process</a></li>
+        <li><a href="#research-gaps">Research Gaps</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+        <li><a href="#collaborations">Collaborations</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="overview">
+        <div class="hero">
+          <h2>Future Directions in IPCC Working Group 3</h2>
+          <p class="muted">Exploring the next generation of climate mitigation research and policy integration</p>
+          <p>This page outlines the upcoming IPCC Working Group 3 report chapters and the future directions for AI-augmented literature synthesis in climate science. We focus on the critical areas of services, demand, and the enablers and barriers to effective climate mitigation.</p>
+          
+          <div style="margin-top: 16px;">
+            <a href="index.html" class="pill accent">← Back to Home</a>
+            <a href="AI-augmented-IPCC-reports.html" class="pill accent2">IPCC Reports Demo</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="chapter8">
+        <div class="card">
+          <div class="hd">Chapter 8: Services and Demand <span class="status upcoming">Upcoming</span></div>
+          <div class="bd">
+            <h3>Lead Authors</h3>
+            <ul>
+              <li><strong>Bas Van Ruijven</strong> - International Institute for Applied Systems Analysis (IIASA)</li>
+              <li><strong>Leila Niamar</strong> - [Institution]</li>
+            </ul>
+
+            <h3>Core Themes</h3>
+            <div class="grid">
+              <div class="card">
+                <div class="hd">Human Needs & Well-being</div>
+                <div class="bd">
+                  <ul>
+                    <li>Inclusive development and aspirations</li>
+                    <li>Equity, affordability, and access across regions</li>
+                    <li>Informal sector considerations</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="hd">Demand-Side Mitigation</div>
+                <div class="bd">
+                  <ul>
+                    <li>Service provisioning options</li>
+                    <li>Comparative analysis with other strategies</li>
+                    <li>Behavioral change drivers</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h3>Innovation & Diffusion</h3>
+            <p>Focus on social innovations, business models, behavioral changes, and community-based solutions. Analysis of institutional innovations and policy frameworks for governance structures.</p>
+
+            <h3>Cross-Sectoral Integration</h3>
+            <p>Examination of synergies and co-benefits including adaptation strategies, health impacts, energy security, inclusive development, and materials efficiency.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="chapter5">
+        <div class="card">
+          <div class="hd">Chapter 5: Enablers and Barriers <span class="status upcoming">Upcoming</span></div>
+          <div class="bd">
+            <h3>Key Focus Areas</h3>
+            
+            <div class="grid">
+              <div class="card">
+                <div class="hd">Feasibility & Capacity</div>
+                <div class="bd">
+                  <ul>
+                    <li>Context-specific mitigation</li>
+                    <li>Development as enabler</li>
+                    <li>Capacity building</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="hd">Technology & Infrastructure</div>
+                <div class="bd">
+                  <ul>
+                    <li>Access & cost considerations</li>
+                    <li>Innovation & scalability</li>
+                    <li>Infrastructure requirements</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h3>Social Dimensions</h3>
+            <p>Analysis of public perception, lifestyle changes, labor considerations, and just transitions. Focus on equitable transformation processes and social equity.</p>
+
+            <h3>Environmental & Political</h3>
+            <p>Examination of natural resources, indigenous rights, political economy, and international cooperation including supply chains and global partnerships.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="political-process">
+        <div class="card">
+          <div class="hd">Human Political Process Integration</div>
+          <div class="bd">
+            <h3>Policy Maker Insights</h3>
+            
+            <div class="grid">
+              <div class="card">
+                <div class="hd">What Should Policy Makers Know?</div>
+                <div class="bd">
+                  <ul>
+                    <li>Evidence-based mitigation strategies</li>
+                    <li>Implementation feasibility and barriers</li>
+                    <li>Cost-effectiveness of approaches</li>
+                    <li>Social and economic co-benefits</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="hd">Consensus Assessment</div>
+                <div class="bd">
+                  <ul>
+                    <li>Areas of scientific agreement</li>
+                    <li>Remaining uncertainties</li>
+                    <li>Confidence levels in findings</li>
+                    <li>Expert opinion convergence</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h3>Review Process & Literature Gaps</h3>
+            <p>Identification of missing research areas, regional representation gaps, emerging topics requiring attention, and interdisciplinary integration needs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="research-gaps">
+        <div class="card">
+          <div class="hd">Research Gaps & Future Directions</div>
+          <div class="bd">
+            <h3>Emerging Research Areas</h3>
+            <ul>
+              <li><strong>Behavioral Economics in Climate Policy</strong> - Understanding decision-making processes</li>
+              <li><strong>Social Innovation Diffusion</strong> - Speed and patterns of adoption</li>
+              <li><strong>Indigenous Knowledge Systems</strong> - Integration with scientific approaches</li>
+              <li><strong>Cross-sectoral Synergies</strong> - Health, energy, and development co-benefits</li>
+            </ul>
+
+            <h3>Methodological Advances</h3>
+            <ul>
+              <li><strong>AI-Augmented Literature Review</strong> - Automated gap analysis</li>
+              <li><strong>Network Analysis</strong> - Research collaboration mapping</li>
+              <li><strong>Real-time Updates</strong> - Dynamic literature synthesis</li>
+              <li><strong>Bias Detection</strong> - Systematic review of representation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="methodology">
+        <div class="card">
+          <div class="hd">Technical Implementation & Methodology</div>
+          <div class="bd">
+            <h3>Visualization Framework</h3>
+            <div class="grid">
+              <div class="card">
+                <div class="hd">D3.js Network Diagrams</div>
+                <div class="bd">
+                  <ul>
+                    <li>Interactive bipartite networks</li>
+                    <li>Paper-chapter mapping</li>
+                    <li>Zoom and pan capabilities</li>
+                    <li>High-resolution exports</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="hd">AI Components</div>
+                <div class="bd">
+                  <ul>
+                    <li>Natural language processing</li>
+                    <li>Machine learning classification</li>
+                    <li>Semantic analysis</li>
+                    <li>Bias detection algorithms</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h3>Data Integration</h3>
+            <p>Real-time literature database connections, automated relevance scoring, and dynamic content updates based on new research publications.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="collaborations">
+        <div class="card">
+          <div class="hd">Collaborations & Partnerships</div>
+          <div class="bd">
+            <h3>Key Institutions</h3>
+            <ul>
+              <li><strong>IIASA Vienna</strong> - Bas Van Ruijven's research on energy systems</li>
+              <li><strong>IISER Network</strong> - Indian research excellence and innovation</li>
+              <li><strong>International Partners</strong> - Cross-border climate research collaboration</li>
+            </ul>
+
+            <h3>Future Research Agenda</h3>
+            <p>Development of comprehensive frameworks for AI-augmented scientific literature synthesis, with applications beyond climate science to other interdisciplinary research domains.</p>
+
+            <div style="margin-top: 16px;">
+              <a href="index.html" class="pill accent">← Back to Home</a>
+              <a href="AI-augmented-IPCC-reports.html" class="pill accent2">IPCC Reports Demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

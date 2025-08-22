@@ -150,7 +150,7 @@
       <li><a href="#workflow">2. Workflow (interactive)</a></li>
       <li><a href="#video">3. Collector Video</a></li>
       <li><a href="#results">4. Assignment → Chapters</a></li>
-
+      <li><a href="#future-directions">5. Future Directions</a></li>
     </ul>
     <div class="footer">
       Draws on proposal & internal analyses. See embedded PDF and diagram.
@@ -229,17 +229,40 @@
             </div>
         </div>
       </div>
-    </section> 
+    </section>
 
-
-
+    <section id="future-directions">
+      <div class="card">
+        <div class="hd">Future Directions & Upcoming IPCC Reports</div>
+        <div class="bd">
+          <p class="muted" style="margin-bottom: 16px;">Explore the next generation of IPCC Working Group 3 research and the future directions for AI-augmented literature synthesis in climate science.</p>
+          
+          <div class="grid">
+            <div class="card">
+              <div class="hd">Chapter 8: Services & Demand</div>
+              <div class="bd">
+                <p><strong>Lead Authors:</strong> Bas Van Ruijven (IIASA), Leila Niamar</p>
+                <p>Focus on human needs, behavioral change drivers, social innovations, and cross-sectoral synergies for demand-side mitigation.</p>
+                <a href="future-directions.html#chapter8" class="pill accent2">Learn More</a>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="hd">Chapter 5: Enablers & Barriers</div>
+              <div class="bd">
+                <p>Analysis of feasibility, capacity building, technology access, and social dimensions of climate mitigation.</p>
+                <a href="future-directions.html#chapter5" class="pill accent2">Learn More</a>
+              </div>
+            </div>
+          </div>
+          
+          <div style="margin-top: 16px; text-align: center;">
+            <a href="future-directions.html" class="pill accent">Explore Future Directions →</a>
+          </div>
         </div>
       </div>
-      <div class="card" style="margin-top:12px">
-        <div class="hd">References inside the page</div>
-        <div class="bd note">
+    </section>
   </main>
-</div>
 
 <script>
   // TOC highlight on scroll
@@ -258,7 +281,7 @@
   sections.forEach(s => obs.observe(s));
 
   // Keyboard navigation
-  const ids = ['intro','workflow','video','results'];
+  const ids = ['intro','workflow','video','results','future-directions'];
   window.addEventListener('keydown', e => {
     if (e.key >= '1' && e.key <= '5') {
       document.getElementById(ids[Number(e.key)-1]).scrollIntoView({behavior:'smooth'});

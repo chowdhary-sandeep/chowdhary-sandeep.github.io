@@ -167,20 +167,23 @@
       <div class="pill ok">Open • Transparent • Auditable</div>
       <h2>AI‑assisted, continuously updated IPCC evidence base</h2>
       <p class="muted">Automates discovery → relevance filtering → chapter assignment → key‑insight extraction → validator checks → live HTML insertion. Built for coverage, provenance, and policy‑readiness — not chatbot vibes.</p>
-      <div class="grid" style="margin-top:12px">
-        <div class="card">
-          <div class="hd">Why general chatbots such as GPT aren’t enough</div>
-          <div class="bd note">Fast per‑query answers, but: low coverage, opaque retrieval, no provenance guarantees, and hallucinations in long‑form synthesis. <em>Not fit for assessments.</em></div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px;">
+        <!-- Left column: Two stacked boxes -->
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div class="card">
+            <div class="hd">Why general chatbots such as GPT aren't enough</div>
+            <div class="bd note">Fast per‑query answers, but: low coverage, opaque retrieval, no provenance guarantees, and hallucinations in long‑form synthesis. <em>Not fit for assessments.</em></div>
+          </div>
+          <div class="card">
+            <div class="hd">What specialized tools still miss</div>
+            <div class="bd note">Tools such as Elicit, Research Rabbit etc are NOT open-acess,  are paid, limited scale, and weak support for consensus building & living updates. We go "glass‑box" + continuous.</div>
+          </div>
         </div>
-        <div class="card">
-          <div class="hd">What specialized tools still miss</div>
-          <div class="bd note">Tools such as Elicit, Research Rabbit etc are NOT open-acess,  are paid, limited scale, and weak support for consensus building & living updates. We go “glass‑box” + continuous.</div>
-        </div>
+        
+        <!-- Right column: Single full-height box -->
         <div class="card">
           <div class="hd">How This Tool Improves Upon Existing AI</div>
           <div class="bd note">
-            <p><strong>Scientific synthesis is facing a bottleneck:</strong> The volume of literature grows exponentially while expert attention remains finite. Global assessments such as the IPCC exemplify this challenge, with multi-year lags between new findings and their incorporation into policy-relevant reports.</p>
-            
             <p><strong>Our transparent, open-source solution:</strong></p>
             <ul style="margin: 8px 0; padding-left: 20px;">
               <li><strong>Glass Box:</strong> Not a black box - fully auditable and transparent</li>
@@ -255,6 +258,7 @@
               </object>
               <button class="fullscreen" data-target="pdf1" data-type="pdf" data-src="ipcc_analysis.pdf#page=1&zoom=40">⛶ Fullscreen</button>
             </div>
+          </div>
         </div>
       </div>
     </section>

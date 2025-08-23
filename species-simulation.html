@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Species Interaction Simulation — Rock-Paper-Scissors Ecosystem</title>
+<style>
+  :root {
+    --bg: #000000;
+    --panel: #000000;
+    --muted: #b0b0b0;
+    --text: #ffffff;
+    --accent: #ffef00;
+    --accent2: #00ff99;
+    --danger: #ff0033;
+    --warn: #ff7a00;
+    --ok: #00ff66;
+    --card: #000000;
+    --shadow: none;
+    --radius: 0px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  a { color: var(--accent); text-decoration: underline; font-weight: 700; }
+  a:hover { text-decoration-thickness: 3px; }
+     .wrap {
+     display: grid;
+     grid-template-columns: 300px 1fr;
+     gap: 8px;
+     min-height: 100vh;
+     width: 100vw;
+     margin: 0;
+   }
+
+  nav {
+    position: sticky; top: 0;
+    height: 100vh; overflow: auto;
+    padding: 8px;
+    background: var(--panel);
+    border-right: 3px solid #ffffff;
+  }
+  nav h1 { font-size: 16px; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .logo {
+    font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .logo .dot { width: 10px; height: 10px; background: var(--accent); }
+  .toc { list-style: none; padding: 8px 0 0 0; margin: 0; }
+  .toc li { margin: 6px 0; }
+  .toc a { display: block; padding: 8px 10px; border: 2px solid #ffffff; color: var(--text); text-transform: uppercase; font-weight: 700; }
+  .toc a:hover, .toc a.active { background: #ffffff; color: #000; text-decoration: none; }
+     main { padding: 16px 16px 120px 32px; width: 90%; justify-self: start; }
+  section { margin: 0 0 36px 0; }
+  .hero {
+    padding: 16px; border-radius: var(--radius);
+    background: transparent;
+    box-shadow: var(--shadow); border: 3px solid #ffffff;
+  }
+  .hero h2 { margin: 4px 0 8px 0; font-size: 28px; }
+  .muted { color: var(--muted); }
+  .card {
+    background: var(--card); border: 3px solid #ffffff; border-radius: var(--radius);
+    box-shadow: none;
+    margin-bottom: 16px;
+  }
+  .card .hd { padding: 10px 12px; border-bottom: 3px solid #ffffff; font-weight: 800; text-transform: uppercase; }
+  .card .bd { padding: 10px 12px; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 0; font-size: 12px; border: 2px solid #ffffff; background: transparent; color: #ffffff; text-transform: uppercase; font-weight: 800; }
+  .pill.accent { color: var(--accent); border-color: var(--accent); }
+  .pill.accent2 { color: var(--accent2); border-color: var(--accent2); }
+  .pill.danger { color: var(--danger); border-color: var(--danger); }
+  .pill.ok { color: var(--ok); border-color: var(--ok); }
+  .pill.warn { color: var(--warn); border-color: var(--warn); }
+  .note { font-size: 13px; color: var(--muted); }
+  
+  .simulation-container {
+    border: 3px solid #ffffff;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+  }
+  
+           .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 16px;
+      width: 95%;
+    }
+    
+    .stat-card {
+      border: 2px solid #ffffff;
+      padding: 8px;
+      text-align: center;
+      width: 95%;
+    }
+    
+    .stat-value {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    
+       .stat-label {
+       font-size: 12px;
+       text-transform: uppercase;
+       color: var(--muted);
+     }
+     
+     .speed-distribution {
+       margin-top: 16px;
+       border: 2px solid #ffffff;
+       padding: 12px;
+       width: 95%;
+     }
+     
+     .speed-distribution h4 {
+       margin: 0 0 12px 0;
+       font-size: 14px;
+       text-transform: uppercase;
+       text-align: center;
+     }
+     
+     .distribution-charts {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 8px;
+       width: 95%;
+     }
+     
+     .chart-container {
+       text-align: center;
+       width: 95%;
+     }
+    
+    .chart-title {
+      font-size: 11px;
+      margin-bottom: 4px;
+      color: var(--muted);
+    }
+   
+   /* Make canvas responsive */
+   #canvas {
+     max-width: 100%;
+     height: auto;
+     display: block;
+     margin: 0 auto;
+   }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <h1>Species Simulation</h1>
+      <div class="logo">
+        <span class="dot"></span>
+        Ecosystem Dynamics
+      </div>
+      
+      <ul class="toc">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#simulation">Live Simulation</a></li>
+        <li><a href="#mechanics">Game Mechanics</a></li>
+        <li><a href="#dynamics">Population Dynamics</a></li>
+        <li><a href="#patterns">Emergent Patterns</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="overview">
+                 <div class="hero">
+           <h2>Rock-Paper-Scissors Ecosystem Simulation</h2>
+           <p class="muted">A dynamic simulation of 3 species interacting in a cyclic predator-prey relationship</p>
+           <p>This simulation demonstrates how simple rules can create complex, emergent behaviors in ecological systems. Three species compete in a rock-paper-scissors dynamic where each species has one predator and one prey, creating a never-ending cycle of population fluctuations. The system features evolutionary speed and size inheritance with mutations, instant multiplication when eating prey, and real-time speed distribution tracking.</p>
+         </div>
+      </section>
+
+      <section id="simulation">
+        <div class="card">
+          <div class="hd">Live Simulation</div>
+          <div class="bd">
+            <div class="simulation-container" id="simulationCanvas">
+              <canvas id="canvas" width="800" height="600"></canvas>
+            </div>
+            
+                         <div class="stats">
+               <div class="stat-card">
+                 <div class="stat-value" id="species1Count">0</div>
+                 <div class="stat-label">Species A</div>
+               </div>
+               <div class="stat-card">
+                 <div class="stat-value" id="species2Count">0</div>
+                 <div class="stat-label">Species B</div>
+               </div>
+               <div class="stat-card">
+                 <div class="stat-value" id="species3Count">0</div>
+                 <div class="stat-label">Species C</div>
+               </div>
+             </div>
+             
+                           <div class="speed-distribution">
+                <h4>Current Speed Distribution</h4>
+                <div class="distribution-charts">
+                  <div class="chart-container">
+                    <div class="chart-title">Species A (Red)</div>
+                                         <canvas id="speedChart1" width="220" height="100"></canvas>
+                   </div>
+                   <div class="chart-container">
+                     <div class="chart-title">Species B (Green)</div>
+                     <canvas id="speedChart2" width="220" height="100"></canvas>
+                   </div>
+                   <div class="chart-container">
+                     <div class="chart-title">Species C (Orange)</div>
+                     <canvas id="speedChart3" width="220" height="100"></canvas>
+                  </div>
+                </div>
+              </div>
+              
+                                                           <div class="speed-distribution">
+                  <h4>Cumulative Speed Distribution - Probability Density (observe the selection pressure toward higher speeds)</h4>
+                <div class="distribution-charts">
+                  <div class="chart-container">
+                    <div class="chart-title">Species A (Red)</div>
+                                         <canvas id="cumulativeSpeedChart1" width="220" height="100"></canvas>
+                   </div>
+                   <div class="chart-container">
+                     <div class="chart-title">Species B (Green)</div>
+                     <canvas id="cumulativeSpeedChart2" width="220" height="100"></canvas>
+                   </div>
+                   <div class="chart-container">
+                     <div class="chart-title">Species C (Orange)</div>
+                     <canvas id="cumulativeSpeedChart3" width="220" height="100"></canvas>
+                  </div>
+                </div>
+              </div>
+            
+                         <div class="note" style="margin-top: 16px;">
+               <strong>Legend:</strong> 
+               <span style="color: var(--danger);">Red</span> (Species A) - Balanced traits, 2 offspring
+               <br><span style="color: var(--ok);">Green</span> (Species B) - Balanced traits, 2 offspring
+               <br><span style="color: var(--warn);">Orange</span> (Species C) - Balanced traits, 2 offspring
+               <br><span style="color: var(--danger);">Red</span> (Species A)
+               <br><small>Arrow sharpness indicates speed: Sharp = Fast, Rounded = Slow</small>
+               <br><small>Size and speed evolve through inheritance and mutation</small>
+               <br><small>Colored circles show home zones (safe areas for each species)</small>
+               <br><small>Reproduction timing: random 0.3-0.4 of each agent's lifespan</small>
+               <br><small>Eating prey triggers instant multiplication</small>
+               <br><small>Speed and size inherited from parents with random mutations</small>
+               <br><small>Speed distribution charts show real-time population speed spread</small>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mechanics">
+        <div class="card">
+          <div class="hd">Game Mechanics</div>
+          <div class="bd">
+                         <h3>Species Interactions</h3>
+             <ul>
+               <li><strong>Species A (Red):</strong> Medium size, medium speed - Preys on Species C, hunted by Species B</li>
+               <li><strong>Species B (Green):</strong> Small size, fast speed - Preys on Species A, hunted by Species C</li>
+               <li><strong>Species C (Orange):</strong> Large size, slow speed - Preys on Species B, hunted by Species A</li>
+             </ul>
+            
+                         <h3>Movement & Behavior</h3>
+             <ul>
+               <li>Each agent moves toward its prey and away from its predator</li>
+               <li>Agents have a detection radius for nearby interactions</li>
+               <li><strong>Instant Multiplication:</strong> When prey is caught, the predator immediately reproduces and creates offspring</li>
+               <li><strong>Swarm Behavior:</strong> Species A (Red) and Species C (Orange) exhibit flocking behavior</li>
+               <li>Random movement when no prey/predator is detected (Species B)</li>
+               <li><strong>Home Zone Retreat:</strong> Low-energy agents retreat to their safe home zones</li>
+             </ul>
+             
+                           <h3>Reproduction System</h3>
+              <ul>
+                <li><strong>Instant Multiplication:</strong> Eating prey triggers immediate reproduction with offspring appearing instantly</li>
+                <li><strong>Lifespan-Based Timing:</strong> Each agent has random reproduction timing: 0.3 + random(0,0.1) of their lifespan for non-hunting reproduction</li>
+                <li><strong>Balanced Offspring:</strong> All species produce 2 offspring (balanced reproductive strategy)</li>
+                <li><strong>Resource Requirements:</strong> High energy (>60 for hunting reproduction, >80 for normal reproduction) and low crowding (<6 nearby same species)</li>
+                <li><strong>Population Control:</strong> Maximum 400 agents to prevent system explosion</li>
+                <li><strong>Energy Cost:</strong> Hunting reproduction costs 20 energy, normal reproduction costs 30 energy</li>
+                <li><strong>Emergency Reproduction:</strong> When population <15%, energy threshold drops to 60, offspring count increases, crowding tolerance increases</li>
+              </ul>
+             
+             <h3>Volume Exclusion</h3>
+             <ul>
+               <li><strong>Weak Repulsion:</strong> Agents maintain minimum spacing to prevent overlapping</li>
+               <li><strong>Inverse Square Law:</strong> Repulsion force decreases with distance squared</li>
+               <li><strong>Natural Spacing:</strong> Creates realistic agent distribution without rigid boundaries</li>
+               <li><strong>Buffer Zone:</strong> 2-pixel buffer beyond agent radius for comfortable spacing</li>
+             </ul>
+             
+                           <h3>Evolutionary Speed & Size System</h3>
+              <ul>
+                <li><strong>Gaussian Distribution:</strong> Initial agents have speed ~2.0±0.4 and radius ~5.0±1.0 (normal distribution)</li>
+                <li><strong>Inheritance:</strong> Offspring inherit speed and size from parents with slight variations</li>
+                <li><strong>Mutation:</strong> Speed mutates at 10% rate, size mutates at 8% rate for evolutionary diversity</li>
+                <li><strong>Natural Selection:</strong> Successful hunters pass on their traits, creating evolutionary pressure</li>
+                <li><strong>Balanced Evolution:</strong> All species start with similar capabilities, evolve based on success</li>
+                                 <li><strong>Visual Speed Indicator:</strong> Arrow sharpness shows speed - sharp arrows = fast, rounded arrows = slow (speed range: 0.8 to 7.0)</li>
+              </ul>
+              
+              <h3>Species Characteristics (Independent of Speed/Size)</h3>
+              <ul>
+                <li><strong>Red Species:</strong> Medium detection (35), medium mass (5), medium inertia (0.8), lifespan 800</li>
+                <li><strong>Green Species:</strong> Balanced detection (30), balanced mass (4), balanced inertia (0.6), lifespan 700</li>
+                <li><strong>Orange Species:</strong> Balanced detection (35), balanced mass (6), balanced inertia (0.7), lifespan 900</li>
+              </ul>
+             
+                           <h3>Momentum & Inertia System</h3>
+              <ul>
+                <li><strong>Mass-Based Physics:</strong> Each species has fixed mass and inertia values independent of size</li>
+                <li><strong>Inertia Scaling:</strong> Orange (0.7), Red (0.8), Green (0.6) - affects direction change speed</li>
+                <li><strong>Momentum Conservation:</strong> Higher inertia species maintain direction longer, lower inertia species turn quickly</li>
+                <li><strong>Force Scaling:</strong> Volume exclusion and swarm forces scale with mass for realistic physics</li>
+              </ul>
+             
+             <h3>Home Zone System</h3>
+             <ul>
+               <li><strong>Safe Havens:</strong> Each species has a designated home zone (Red: top-left, Green: top-right, Orange: bottom-center)</li>
+               <li><strong>Energy Regeneration:</strong> Agents regenerate energy 2x faster in their home zones</li>
+               <li><strong>Reproduction Boost:</strong> Reproduction cooldown reduces faster in home zones</li>
+               <li><strong>Strategic Retreat:</strong> Low-energy agents automatically retreat to their home zones</li>
+               <li><strong>Population-Based Retreat:</strong> When species population falls below 15%, all agents retreat and multiply aggressively</li>
+               <li><strong>Territorial Behavior:</strong> Creates natural boundaries and strategic positioning</li>
+             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="dynamics">
+        <div class="card">
+          <div class="hd">Population Dynamics</div>
+          <div class="bd">
+            <p>The simulation starts with random proportions > 0.1 for each species. As the system evolves, you'll observe:</p>
+            <ul>
+              <li><strong>Cyclic Oscillations:</strong> Population booms and busts in predictable cycles</li>
+              <li><strong>Phase Shifts:</strong> Temporary dominance of one species</li>
+              <li><strong>Coexistence:</strong> Complex patterns of species interaction</li>
+              <li><strong>Extinction Events:</strong> When one species completely eliminates another</li>
+            </ul>
+                         <p>When any species goes extinct (population reaches 0), the system automatically restarts with new random initial conditions, ensuring all three species remain in competition and preventing the loss of biodiversity.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="patterns">
+        <div class="card">
+          <div class="hd">Emergent Patterns</div>
+          <div class="bd">
+                         <h3>Observed Behaviors</h3>
+             <ul>
+               <li><strong>Spiral Waves:</strong> Concentric patterns of species movement</li>
+               <li><strong>Territorial Segregation:</strong> Spatial clustering of species</li>
+               <li><strong>Chase Dynamics:</strong> Complex predator-prey pursuit patterns</li>
+               <li><strong>Population Synchronization:</strong> Coordinated population cycles</li>
+               <li><strong>Swarm Formation:</strong> Species A and C form cohesive groups</li>
+               <li><strong>Collective Movement:</strong> Coordinated flocking behavior in swarming species</li>
+             </ul>
+            
+            <h3>Mathematical Insights</h3>
+            <p>This simulation demonstrates the mathematical principles of Lotka-Volterra equations and cyclic dominance in evolutionary game theory. The rock-paper-scissors dynamic ensures that no single strategy can dominate indefinitely, creating a fascinating example of how biodiversity can be maintained through cyclic competition.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+<script>
+class Agent {
+  constructor(x, y, species, canvas, parentSpeed = null, parentRadius = null) {
+    this.x = x;
+    this.y = y;
+    this.species = species;
+    this.canvas = canvas;
+    this.vx = (Math.random() - 0.5) * 2;
+    this.vy = (Math.random() - 0.5) * 2;
+    
+    // Evolutionary speed and size system
+    if (parentSpeed !== null && parentRadius !== null) {
+      // Inherit from parent with mutation
+      this.speed = this.mutateValue(parentSpeed, 0.1); // 10% mutation rate
+      this.radius = this.mutateValue(parentRadius, 0.08); // 8% mutation rate
+    } else {
+      // Initial Gaussian distribution for new agents
+      this.speed = this.generateGaussian(2.0, 0.4); // Mean 2.0, std dev 0.4
+      this.radius = this.generateGaussian(5.0, 1.0); // Mean 5.0, std dev 1.0
+    }
+    
+         // Clamp values to reasonable ranges
+     this.speed = Math.max(0.8, Math.min(7.0, this.speed));
+     this.radius = Math.max(2.5, Math.min(8.0, this.radius));
+    
+    // Species-specific characteristics (now independent of speed/size)
+    switch (species) {
+      case 0: // Red - Medium characteristics
+        this.detectionRadius = 35;
+        this.mass = 5; // Medium mass
+        this.inertia = 0.8; // Medium inertia
+        this.lifespan = 800; // Medium lifespan
+        this.offspringCount = 2; // Medium offspring count
+        break;
+      case 1: // Green - Balanced characteristics
+        this.detectionRadius = 30;
+        this.mass = 4; // Balanced mass
+        this.inertia = 0.6; // Balanced inertia
+        this.lifespan = 700; // Balanced lifespan
+        this.offspringCount = 2; // Balanced offspring count
+        break;
+      case 2: // Orange - Balanced characteristics
+        this.detectionRadius = 35;
+        this.mass = 6; // Balanced mass
+        this.inertia = 0.7; // Balanced inertia
+        this.lifespan = 900; // Balanced lifespan
+        this.offspringCount = 2; // Balanced offspring count
+        break;
+    }
+    
+    this.energy = 100;
+    this.maxEnergy = 100;
+    this.age = 0;
+    this.reproductionCooldown = 0;
+    
+    // Set random reproduction timing based on lifespan
+    this.setReproductionTiming();
+  }
+  
+  // Generate Gaussian distribution using Box-Muller transform
+  generateGaussian(mean, stdDev) {
+    const u1 = Math.random();
+    const u2 = Math.random();
+    const z0 = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(2.0 * Math.PI * u2);
+    return mean + z0 * stdDev;
+  }
+  
+  // Mutate a value with random variation
+  mutateValue(value, mutationRate) {
+    const mutation = (Math.random() - 0.5) * 2 * mutationRate * value;
+    return value + mutation;
+  }
+  
+  setReproductionTiming() {
+    // Random timing: 0.3 + random(0,0.1) of lifespan
+    const timingFactor = 0.3 + Math.random() * 0.1;
+    this.reproductionCooldown = Math.floor(this.lifespan * timingFactor);
+  }
+
+     update(agents, homeZones, simulation = null) {
+    // Find nearest prey and predator
+    let nearestPrey = null;
+    let nearestPredator = null;
+    let minPreyDist = Infinity;
+    let minPredatorDist = Infinity;
+    
+    // Check if agent is in home zone
+    const inHomeZone = this.isInHomeZone(homeZones);
+    const homeZone = this.getHomeZone(homeZones);
+    
+    // Check if species population is critically low (below 15% of total)
+    const totalAgents = agents.length;
+    const speciesCount = agents.filter(a => a.species === this.species).length;
+    const populationFraction = speciesCount / totalAgents;
+    const isPopulationCritical = populationFraction < 0.15;
+    
+    // Swarm behavior variables
+    let swarmCenterX = 0;
+    let swarmCenterY = 0;
+    let swarmCount = 0;
+    let swarmVelocityX = 0;
+    let swarmVelocityY = 0;
+    
+         // Reproduction check - more aggressive when population is critical
+     if (this.reproductionCooldown <= 0 && this.energy > (isPopulationCritical ? 60 : 80) && inHomeZone) {
+       // Check if there's enough space and resources for reproduction
+       let nearbySameSpecies = 0;
+       for (let agent of agents) {
+         if (agent.species === this.species && agent !== this) {
+           const dx = agent.x - this.x;
+           const dy = agent.y - this.y;
+           const distance = Math.sqrt(dx * dx + dy * dy);
+           if (distance < 50) nearbySameSpecies++;
+         }
+       }
+       
+       // More lenient crowding when population is critical
+       const maxNearby = isPopulationCritical ? 8 : 5;
+       
+               // Only reproduce if not too crowded and system isn't at capacity
+        if (nearbySameSpecies < maxNearby && agents.length < 350) { // Lower threshold for safety
+                   // Create multiple offspring based on species characteristics
+          const actualOffspringCount = isPopulationCritical ? this.offspringCount + 1 : this.offspringCount;
+          
+          for (let i = 0; i < actualOffspringCount; i++) {
+            // Create offspring with slight position variation and inherit parent traits
+            const offspring = new Agent(
+              this.x + (Math.random() - 0.5) * 20,
+              this.y + (Math.random() - 0.5) * 20,
+              this.species,
+              this.canvas,
+              this.speed,  // Inherit parent speed
+              this.radius  // Inherit parent radius
+            );
+            
+                         // Add offspring to agents array
+             agents.push(offspring);
+             
+             // Track in cumulative data if simulation reference is available
+             if (simulation) {
+               simulation.cumulativeSpeedData[this.species].push(offspring.speed);
+               simulation.cumulativeRadiusData[this.species].push(offspring.radius);
+             }
+           }
+          
+          // Set new reproduction cooldown based on lifespan and random timing
+          this.setReproductionTiming();
+          this.energy -= 30; // Reproduction costs energy
+          
+          return 'reproduce';
+       }
+     }
+
+    for (let agent of agents) {
+      if (agent.species === this.species) continue;
+      
+      const dx = agent.x - this.x;
+      const dy = agent.y - this.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      
+      if (distance < this.detectionRadius) {
+        // Check if this is prey (we can eat it)
+        if (this.canEat(agent)) {
+          if (distance < minPreyDist) {
+            minPreyDist = distance;
+            nearestPrey = agent;
+          }
+        }
+        // Check if this is predator (it can eat us)
+        else if (agent.canEat(this)) {
+          if (distance < minPredatorDist) {
+            minPredatorDist = distance;
+            nearestPredator = agent;
+          }
+        }
+      }
+      
+      // Swarm behavior for Species A (Red) and Species C (Orange)
+      if ((this.species === 0 || this.species === 2) && agent.species === this.species) {
+        if (distance < this.detectionRadius * 1.5) {
+          swarmCenterX += agent.x;
+          swarmCenterY += agent.y;
+          swarmVelocityX += agent.vx;
+          swarmVelocityY += agent.vy;
+          swarmCount++;
+        }
+      }
+    }
+
+         // Movement logic with momentum and inertia
+     if (nearestPrey) {
+       // Move toward prey with momentum
+       const dx = nearestPrey.x - this.x;
+       const dy = nearestPrey.y - this.y;
+       const distance = Math.sqrt(dx * dx + dy * dy);
+       
+       if (distance > 0) {
+         // Apply force based on mass (heavier = harder to change direction)
+         const targetVx = (dx / distance) * this.speed;
+         const targetVy = (dy / distance) * this.speed;
+         
+         // Gradual velocity change based on inertia (higher inertia = slower to change)
+         this.vx += (targetVx - this.vx) * (1 - this.inertia) * 0.1;
+         this.vy += (targetVy - this.vy) * (1 - this.inertia) * 0.1;
+         
+                   // If close enough, eat the prey
+          if (distance < this.radius + nearestPrey.radius) {
+            this.energy = Math.min(this.maxEnergy, this.energy + 50);
+            
+                         // Instant multiplication when eating prey
+             if (this.energy > 60 && agents.length < 350) { // Lower threshold for safety
+              // Check if there's enough space for reproduction
+              let nearbySameSpecies = 0;
+              for (let agent of agents) {
+                if (agent.species === this.species && agent !== this) {
+                  const dx = agent.x - this.x;
+                  const dy = agent.y - this.y;
+                  const distance = Math.sqrt(dx * dx + dy * dy);
+                  if (distance < 50) nearbySameSpecies++;
+                }
+              }
+              
+              // Only reproduce if not too crowded
+              if (nearbySameSpecies < 6) {
+                                 // Create offspring based on species characteristics
+                 for (let i = 0; i < this.offspringCount; i++) {
+                   const offspring = new Agent(
+                     this.x + (Math.random() - 0.5) * 20,
+                     this.y + (Math.random() - 0.5) * 20,
+                     this.species,
+                     this.canvas,
+                     this.speed,  // Inherit parent speed
+                     this.radius  // Inherit parent radius
+                   );
+                   
+                                        // Add offspring to agents array
+                     agents.push(offspring);
+                     
+                     // Track in cumulative data if simulation reference is available
+                     if (simulation) {
+                       simulation.cumulativeSpeedData[this.species].push(offspring.speed);
+                       simulation.cumulativeRadiusData[this.species].push(offspring.radius);
+                     }
+                   }
+                 
+                 // Set new reproduction cooldown for future reproduction
+                 this.setReproductionTiming();
+                 this.energy -= 20; // Small energy cost for instant reproduction
+                 
+                 return 'eat_and_reproduce';
+              }
+            }
+            
+            return 'eat';
+          }
+       }
+     } else if (nearestPredator) {
+       // Move away from predator with momentum
+       const dx = this.x - nearestPredator.x;
+       const dy = this.y - nearestPredator.y;
+       const distance = Math.sqrt(dx * dx + dy * dy);
+       
+       if (distance > 0) {
+         // Apply force based on mass and inertia
+         const targetVx = (dx / distance) * this.speed;
+         const targetVy = (dy / distance) * this.speed;
+         
+         // Gradual velocity change based on inertia
+         this.vx += (targetVx - this.vx) * (1 - this.inertia) * 0.1;
+         this.vy += (targetVy - this.vy) * (1 - this.inertia) * 0.1;
+       }
+           } else if ((this.energy < 30 || isPopulationCritical) && homeZone) {
+        // Retreat to home zone when low on energy OR when population is critical
+        const dx = homeZone.x - this.x;
+        const dy = homeZone.y - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance > 0) {
+          const targetVx = (dx / distance) * this.speed;
+          const targetVy = (dy / distance) * this.speed;
+          
+          // More aggressive retreat when population is critical
+          const retreatForce = isPopulationCritical ? 0.25 : 0.15;
+          this.vx += (targetVx - this.vx) * (1 - this.inertia) * retreatForce;
+          this.vy += (targetVy - this.vy) * (1 - this.inertia) * retreatForce;
+        }
+      } else {
+        // Swarm behavior for Species A (Red) and Species C (Orange)
+        if ((this.species === 0 || this.species === 2) && swarmCount > 0) {
+        // Calculate swarm center and average velocity
+        swarmCenterX /= swarmCount;
+        swarmCenterY /= swarmCount;
+        swarmVelocityX /= swarmCount;
+        swarmVelocityY /= swarmCount;
+        
+                 // Cohesion: move toward swarm center with inertia
+         const cohesionX = swarmCenterX - this.x;
+         const cohesionY = swarmCenterY - this.y;
+         const cohesionDist = Math.sqrt(cohesionX * cohesionX + cohesionY * cohesionY);
+         
+         if (cohesionDist > 0) {
+           const cohesionForce = 0.3 * (1 - this.inertia);
+           this.vx += (cohesionX / cohesionDist) * cohesionForce;
+           this.vy += (cohesionY / cohesionDist) * cohesionForce;
+         }
+         
+         // Alignment: match swarm velocity with inertia
+         const alignmentForce = 0.2 * (1 - this.inertia);
+         this.vx += swarmVelocityX * alignmentForce;
+         this.vy += swarmVelocityY * alignmentForce;
+         
+         // Separation: avoid crowding with inertia
+         if (swarmCount > 3) {
+           const separationX = this.x - swarmCenterX;
+           const separationY = this.y - swarmCenterY;
+           const separationDist = Math.sqrt(separationX * separationX + separationY * separationY);
+           
+           if (separationDist > 0) {
+             const separationForce = 0.1 * (1 - this.inertia);
+             this.vx += (separationX / separationDist) * separationForce;
+             this.vy += (separationY / separationDist) * separationForce;
+           }
+         }
+      } else {
+        // Random movement with slight bias toward center for non-swarming species
+        this.vx += (Math.random() - 0.5) * 0.1;
+        this.vy += (Math.random() - 0.5) * 0.1;
+        
+        // Center-seeking behavior
+        const centerX = this.canvas.width / 2;
+        const centerY = this.canvas.height / 2;
+        const dx = centerX - this.x;
+        const dy = centerY - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance > 100) {
+          this.vx += (dx / distance) * 0.05;
+          this.vy += (dy / distance) * 0.05;
+        }
+      }
+    }
+
+         // Weak volume exclusion - prevent overlapping with other agents
+     let exclusionForceX = 0;
+     let exclusionForceY = 0;
+     
+     for (let agent of agents) {
+       if (agent !== this) {
+         const dx = agent.x - this.x;
+         const dy = agent.y - this.y;
+         const distance = Math.sqrt(dx * dx + dy * dy);
+         const minDistance = this.radius + agent.radius + 2; // Small buffer
+         
+         if (distance < minDistance && distance > 0) {
+           // Weak repulsion force (inverse square law) scaled by mass
+           const baseForce = 0.3 / (distance * distance);
+           const massScaledForce = baseForce * (this.mass / 5); // Normalize to medium mass
+           exclusionForceX -= (dx / distance) * massScaledForce;
+           exclusionForceY -= (dy / distance) * massScaledForce;
+         }
+       }
+     }
+     
+     // Apply exclusion forces
+     this.vx += exclusionForceX;
+     this.vy += exclusionForceY;
+     
+     // Update position
+     this.x += this.vx;
+     this.y += this.vy;
+ 
+     // Boundary wrapping
+     if (this.x < 0) this.x = this.canvas.width;
+     if (this.x > this.canvas.width) this.x = 0;
+     if (this.y < 0) this.y = this.canvas.height;
+     if (this.y > this.canvas.height) this.y = 0;
+
+    // Home zone benefits
+    if (inHomeZone) {
+      // Regenerate energy faster in home zone
+      this.energy = Math.min(this.maxEnergy, this.energy + 0.2);
+      // Reduce reproduction cooldown faster in home zone
+      this.reproductionCooldown = Math.max(0, this.reproductionCooldown - 0.2);
+    } else {
+      // Normal energy consumption and aging outside home zone
+      this.energy -= 0.1;
+      this.age += 0.1;
+      this.reproductionCooldown = Math.max(0, this.reproductionCooldown - 0.1);
+    }
+    
+    // Limit velocity
+    const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+    if (speed > this.speed) {
+      this.vx = (this.vx / speed) * this.speed;
+      this.vy = (this.vy / speed) * this.speed;
+    }
+
+    return null;
+  }
+
+  canEat(other) {
+    // Rock-paper-scissors logic
+    if (this.species === 0) return other.species === 2; // Red eats Orange
+    if (this.species === 1) return other.species === 0; // Green eats Red
+    if (this.species === 2) return other.species === 1; // Orange eats Green
+    return false;
+  }
+  
+  isInHomeZone(homeZones) {
+    for (let zone of homeZones) {
+      if (zone.species === this.species) {
+        const dx = this.x - zone.x;
+        const dy = this.y - zone.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        return distance < zone.radius;
+      }
+    }
+    return false;
+  }
+  
+  getHomeZone(homeZones) {
+    for (let zone of homeZones) {
+      if (zone.species === this.species) {
+        return zone;
+      }
+    }
+    return null;
+  }
+  
+  canEnterHomeZone(zone) {
+    // Predators cannot enter the home zone of their prey
+    // Red (0) eats Orange (2), so Red cannot enter Orange's home zone
+    // Green (1) eats Red (0), so Green cannot enter Red's home zone  
+    // Orange (2) eats Green (1), so Orange cannot enter Green's home zone
+    if (this.species === 0 && zone.species === 2) return false; // Red can't enter Orange home
+    if (this.species === 1 && zone.species === 0) return false; // Green can't enter Red home
+    if (this.species === 2 && zone.species === 1) return false; // Orange can't enter Green home
+    return true;
+  }
+
+  draw(ctx) {
+    // Calculate direction angle from velocity
+    const angle = Math.atan2(this.vy, this.vx);
+    
+    // Save context state
+    ctx.save();
+    
+    // Move to agent position and rotate to face direction of motion
+    ctx.translate(this.x, this.y);
+    ctx.rotate(angle);
+    
+         // Calculate arrow sharpness based on speed
+     // Speed range: 0.8 to 7.0, map to sharpness: 0.3 to 0.8
+     const speedRatio = (this.speed - 0.8) / (7.0 - 0.8); // 0 to 1
+     const sharpness = 0.3 + (speedRatio * 0.5); // 0.3 to 0.8
+    
+    // Draw oriented pointer (triangle) with speed-based sharpness
+    ctx.beginPath();
+    ctx.moveTo(this.radius, 0); // Tip of pointer
+    ctx.lineTo(-this.radius * sharpness, -this.radius * (1 - sharpness)); // Left wing
+    ctx.lineTo(-this.radius * sharpness, this.radius * (1 - sharpness));  // Right wing
+    ctx.closePath();
+    
+    // Color based on species
+    switch (this.species) {
+      case 0: ctx.fillStyle = '#ff0033'; break; // Red
+      case 1: ctx.fillStyle = '#00ff66'; break; // Green
+      case 2: ctx.fillStyle = '#ff7a00'; break; // Orange
+    }
+    
+    ctx.fill();
+    
+    // Restore context state
+    ctx.restore();
+  }
+}
+
+class Simulation {
+     constructor() {
+     this.canvas = document.getElementById('canvas');
+     this.ctx = this.canvas.getContext('2d');
+     this.agents = [];
+     this.generation = 0;
+     this.time = 0;
+     this.isRestarting = false;
+     
+     // Cumulative tracking for all agents that have existed in this generation
+     this.cumulativeSpeedData = [[], [], []]; // [species0, species1, species2]
+     this.cumulativeRadiusData = [[], [], []]; // [species0, species1, species2]
+     
+     // Define home zones for each species
+     this.homeZones = [
+       { x: 100, y: 100, radius: 80, species: 0 }, // Red species home (top-left)
+       { x: 700, y: 100, radius: 80, species: 1 }, // Green species home (top-right)
+       { x: 400, y: 500, radius: 80, species: 2 }  // Orange species home (bottom-center)
+     ];
+     
+     this.init();
+     this.animate();
+   }
+
+     init() {
+     this.agents = [];
+     this.generation++;
+     this.time = 0;
+     
+     // Reset cumulative data for new generation
+     this.cumulativeSpeedData = [[], [], []];
+     this.cumulativeRadiusData = [[], [], []];
+     
+                // Start with roughly equal populations for each species
+      const totalAgents = 200;
+      const basePerSpecies = Math.floor(totalAgents / 3); // ~66 per species
+      const remaining = totalAgents - (basePerSpecies * 3); // 2 remaining
+      
+      // Distribute remaining agents randomly but fairly
+      let species1Count = basePerSpecies + (remaining > 0 ? 1 : 0);
+      let species2Count = basePerSpecies + (remaining > 1 ? 1 : 0);
+      let species3Count = basePerSpecies + (remaining > 2 ? 1 : 0);
+      
+      // Add small random variation (±5) to each species for diversity
+      const variation = 5;
+      species1Count += Math.floor(Math.random() * variation * 2) - variation;
+      species2Count += Math.floor(Math.random() * variation * 2) - variation;
+      species3Count += Math.floor(Math.random() * variation * 2) - variation;
+      
+      // Ensure minimum population and total constraint
+      species1Count = Math.max(15, Math.min(species1Count, totalAgents - 30));
+      species2Count = Math.max(15, Math.min(species2Count, totalAgents - species1Count - 15));
+      species3Count = totalAgents - species1Count - species2Count;
+     
+     // Create agents
+     for (let i = 0; i < species1Count; i++) {
+       const agent = new Agent(
+         Math.random() * this.canvas.width,
+         Math.random() * this.canvas.height,
+         0, this.canvas
+       );
+       this.agents.push(agent);
+       // Add to cumulative data
+       this.cumulativeSpeedData[0].push(agent.speed);
+       this.cumulativeRadiusData[0].push(agent.radius);
+     }
+     
+     for (let i = 0; i < species2Count; i++) {
+       const agent = new Agent(
+         Math.random() * this.canvas.width,
+         Math.random() * this.canvas.height,
+         1, this.canvas
+       );
+       this.agents.push(agent);
+       // Add to cumulative data
+       this.cumulativeSpeedData[1].push(agent.speed);
+       this.cumulativeRadiusData[1].push(agent.radius);
+     }
+     
+     for (let i = 0; i < species3Count; i++) {
+       const agent = new Agent(
+         Math.random() * this.canvas.width,
+         Math.random() * this.canvas.height,
+         2, this.canvas
+       );
+       this.agents.push(agent);
+       // Add to cumulative data
+       this.cumulativeSpeedData[2].push(agent.speed);
+       this.cumulativeRadiusData[2].push(agent.radius);
+     }
+     
+     this.updateStats();
+   }
+
+     update() {
+     this.time++;
+     
+     // Enforce strict population control - cull excess agents if over limit
+     if (this.agents.length > 400) {
+       this.enforcePopulationLimit();
+     }
+     
+     // Update all agents
+     for (let i = this.agents.length - 1; i >= 0; i--) {
+       const result = this.agents[i].update(this.agents, this.homeZones, this);
+       
+       if (result === 'eat' || result === 'eat_and_reproduce') {
+         // Find and remove the eaten agent
+         for (let j = this.agents.length - 1; j >= 0; j--) {
+           if (j !== i && this.agents[i].canEat(this.agents[j])) {
+             const dx = this.agents[i].x - this.agents[j].x;
+             const dy = this.agents[i].y - this.agents[j].y;
+             const distance = Math.sqrt(dx * dx + dy * dy);
+             
+             if (distance < this.agents[i].radius + this.agents[j].radius) {
+               // Add the eaten agent's traits to cumulative data before removal
+               this.cumulativeSpeedData[this.agents[j].species].push(this.agents[j].speed);
+               this.cumulativeRadiusData[this.agents[j].species].push(this.agents[j].radius);
+               
+               this.agents.splice(j, 1);
+               if (j < i) i--;
+               break;
+             }
+           }
+         }
+       } else if (result === 'reproduce') {
+         // Reproduction already handled in agent update
+         // Just continue with the simulation
+       }
+       
+       // Remove dead agents (no energy)
+       if (this.agents[i].energy <= 0) {
+         // Add the dead agent's traits to cumulative data before removal
+         this.cumulativeSpeedData[this.agents[i].species].push(this.agents[i].speed);
+         this.cumulativeRadiusData[this.agents[i].species].push(this.agents[i].radius);
+         
+         this.agents.splice(i, 1);
+       }
+     }
+     
+     // Check for end state (extinction of any species)
+     const speciesCounts = [0, 0, 0];
+     for (let agent of this.agents) {
+       speciesCounts[agent.species]++;
+     }
+     
+     // Restart when any species goes extinct (population = 0)
+     if (speciesCounts.some(count => count === 0)) {
+       console.log('Species extinction detected, restarting in 1 second...');
+       this.isRestarting = true;
+       setTimeout(() => {
+         this.init();
+         this.isRestarting = false;
+       }, 1000);
+       return; // Stop updating until restart
+     }
+     
+     // If system is stable for too long, restart
+     if (this.time > 5000) {
+       console.log('System stable too long, restarting in 1 second...');
+       this.isRestarting = true;
+       setTimeout(() => {
+         this.init();
+         this.isRestarting = false;
+       }, 1000);
+       return; // Stop updating until restart
+     }
+     
+          this.updateStats();
+   }
+   
+   enforcePopulationLimit() {
+     // Calculate target population per species (maintain balance)
+     const targetPerSpecies = Math.floor(400 / 3); // ~133 per species
+     
+     // Count current species populations
+     const speciesCounts = [0, 0, 0];
+     for (let agent of this.agents) {
+       speciesCounts[agent.species]++;
+     }
+     
+     // Cull excess agents from dominant species
+     for (let species = 0; species < 3; species++) {
+       if (speciesCounts[species] > targetPerSpecies) {
+         const excess = speciesCounts[species] - targetPerSpecies;
+         const agentsToRemove = this.agents.filter(a => a.species === species);
+         
+         // Remove excess agents (prioritize low energy and old agents)
+         agentsToRemove.sort((a, b) => (a.energy - b.energy) + (a.age - b.age));
+         
+         for (let i = 0; i < Math.min(excess, agentsToRemove.length); i++) {
+           const agentToRemove = agentsToRemove[i];
+           const index = this.agents.indexOf(agentToRemove);
+           if (index > -1) {
+             // Add to cumulative data before removal
+             this.cumulativeSpeedData[agentToRemove.species].push(agentToRemove.speed);
+             this.cumulativeRadiusData[agentToRemove.species].push(agentToRemove.radius);
+             this.agents.splice(index, 1);
+           }
+         }
+       }
+     }
+     
+     console.log(`Population culled to ${this.agents.length} agents`);
+   }
+   
+   draw() {
+    // Clear canvas
+    this.ctx.fillStyle = '#000000';
+    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+    
+    // Draw home zones
+    for (let zone of this.homeZones) {
+      this.ctx.beginPath();
+      this.ctx.arc(zone.x, zone.y, zone.radius, 0, Math.PI * 2);
+      
+      // Semi-transparent fill with species color
+      switch (zone.species) {
+        case 0: // Red
+          this.ctx.fillStyle = 'rgba(255, 0, 51, 0.1)';
+          this.ctx.strokeStyle = 'rgba(255, 0, 51, 0.5)';
+          break;
+        case 1: // Green
+          this.ctx.fillStyle = 'rgba(0, 255, 102, 0.1)';
+          this.ctx.strokeStyle = 'rgba(0, 255, 102, 0.5)';
+          break;
+        case 2: // Orange
+          this.ctx.fillStyle = 'rgba(255, 122, 0, 0.1)';
+          this.ctx.strokeStyle = 'rgba(255, 122, 0, 0.5)';
+          break;
+      }
+      
+      this.ctx.fill();
+      this.ctx.lineWidth = 2;
+      this.ctx.stroke();
+      
+      // Draw home zone label
+      this.ctx.fillStyle = this.ctx.strokeStyle;
+      this.ctx.font = '12px monospace';
+      this.ctx.textAlign = 'center';
+      this.ctx.fillText(`Home ${String.fromCharCode(65 + zone.species)}`, zone.x, zone.y + 4);
+    }
+    
+    // Draw grid
+    this.ctx.strokeStyle = '#1a1a1a';
+    this.ctx.lineWidth = 1;
+    for (let x = 0; x < this.canvas.width; x += 50) {
+      this.ctx.beginPath();
+      this.ctx.moveTo(x, 0);
+      this.ctx.lineTo(x, this.canvas.height);
+      this.ctx.stroke();
+    }
+    for (let y = 0; y < this.canvas.height; y += 50) {
+      this.ctx.beginPath();
+      this.ctx.moveTo(0, y);
+      this.ctx.lineTo(this.canvas.width, y);
+      this.ctx.stroke();
+    }
+    
+    // Draw agents
+    for (let agent of this.agents) {
+      agent.draw(this.ctx);
+    }
+    
+         // Draw generation info
+     this.ctx.fillStyle = '#ffffff';
+     this.ctx.font = '16px monospace';
+     this.ctx.fillText(`Generation: ${this.generation}`, 10, 30);
+     this.ctx.fillText(`Time: ${this.time}`, 10, 50);
+     this.ctx.fillText(`Agents: ${this.agents.length}`, 10, 70);
+     
+     // Draw restart indicator
+     if (this.isRestarting) {
+       this.ctx.fillStyle = '#ff0000';
+       this.ctx.font = '24px monospace';
+       this.ctx.textAlign = 'center';
+       this.ctx.fillText('RESTARTING...', this.canvas.width / 2, this.canvas.height / 2);
+     }
+  }
+
+     updateStats() {
+     const speciesCounts = [0, 0, 0];
+     for (let agent of this.agents) {
+       speciesCounts[agent.species]++;
+     }
+     
+     document.getElementById('species1Count').textContent = speciesCounts[0];
+     document.getElementById('species2Count').textContent = speciesCounts[1];
+     document.getElementById('species3Count').textContent = speciesCounts[2];
+     
+           // Update speed distribution charts
+      this.updateSpeedCharts();
+      this.updateCumulativeSpeedCharts();
+    }
+    
+    updateSpeedCharts() {
+      // Collect speed data for each species
+      const speedData = [[], [], []];
+      for (let agent of this.agents) {
+        speedData[agent.species].push(agent.speed);
+      }
+      
+      // Draw charts for each species
+      for (let species = 0; species < 3; species++) {
+        this.drawSpeedChart(species, speedData[species]);
+      }
+    }
+    
+    updateCumulativeSpeedCharts() {
+      // Draw cumulative charts for each species
+      for (let species = 0; species < 3; species++) {
+        this.drawCumulativeSpeedChart(species, this.cumulativeSpeedData[species]);
+      }
+    }
+   
+   drawSpeedChart(species, speeds) {
+     const canvas = document.getElementById(`speedChart${species + 1}`);
+     const ctx = canvas.getContext('2d');
+     
+     // Clear canvas
+     ctx.fillStyle = '#000000';
+     ctx.fillRect(0, 0, canvas.width, canvas.height);
+     
+     if (speeds.length === 0) return;
+     
+            // Define speed bins (0.8 to 7.0)
+       const bins = 8;
+       const binSize = (7.0 - 0.8) / bins;
+     const binCounts = new Array(bins).fill(0);
+     
+     // Count speeds in each bin
+     for (let speed of speeds) {
+       const binIndex = Math.min(Math.floor((speed - 0.8) / binSize), bins - 1);
+       binCounts[binIndex]++;
+     }
+     
+     // Find max count for scaling
+     const maxCount = Math.max(...binCounts);
+     if (maxCount === 0) return;
+     
+     // Draw bars
+     const barWidth = canvas.width / bins;
+     const barHeight = canvas.height - 20; // Leave space for labels
+     
+     ctx.fillStyle = this.getSpeciesColor(species);
+     ctx.strokeStyle = '#ffffff';
+     ctx.lineWidth = 1;
+     
+     for (let i = 0; i < bins; i++) {
+       const x = i * barWidth;
+       const height = (binCounts[i] / maxCount) * barHeight;
+       const y = canvas.height - 20 - height;
+       
+       // Draw bar
+       ctx.fillRect(x + 1, y, barWidth - 2, height);
+       ctx.strokeRect(x + 1, y, barWidth - 2, height);
+       
+       // Draw speed label
+       ctx.fillStyle = '#ffffff';
+       ctx.font = '8px monospace';
+       ctx.textAlign = 'center';
+       const speedLabel = (0.8 + i * binSize).toFixed(1);
+       ctx.fillText(speedLabel, x + barWidth / 2, canvas.height - 5);
+       ctx.fillStyle = this.getSpeciesColor(species);
+     }
+     
+     // Draw count labels on bars
+     ctx.fillStyle = '#ffffff';
+     ctx.font = '8px monospace';
+     ctx.textAlign = 'center';
+     for (let i = 0; i < bins; i++) {
+       if (binCounts[i] > 0) {
+         const x = i * barWidth + barWidth / 2;
+         const height = (binCounts[i] / maxCount) * barHeight;
+         const y = canvas.height - 20 - height;
+         ctx.fillText(binCounts[i], x, y - 5);
+       }
+     }
+   }
+   
+   getSpeciesColor(species) {
+     switch (species) {
+       case 0: return '#ff0033'; // Red
+       case 1: return '#00ff66'; // Green
+       case 2: return '#ff7a00'; // Orange
+       default: return '#ffffff';
+          }
+   }
+   
+       drawCumulativeSpeedChart(species, speeds) {
+      const canvas = document.getElementById(`cumulativeSpeedChart${species + 1}`);
+      const ctx = canvas.getContext('2d');
+      
+      // Clear canvas
+      ctx.fillStyle = '#000000';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      if (speeds.length === 0) return;
+      
+      // Define speed bins (0.8 to 7.0)
+      const bins = 8;
+      const binSize = (7.0 - 0.8) / bins;
+      const binCounts = new Array(bins).fill(0);
+      
+      // Count speeds in each bin
+      for (let speed of speeds) {
+        const binIndex = Math.min(Math.floor((speed - 0.8) / binSize), bins - 1);
+        binCounts[binIndex]++;
+      }
+      
+      // Convert to probability density function
+      const totalAgents = speeds.length;
+      const binProbabilities = binCounts.map(count => count / totalAgents);
+      const binDensities = binProbabilities.map(prob => prob / binSize); // Divide by bin width for density
+      
+      // Find max density for scaling
+      const maxDensity = Math.max(...binDensities);
+      if (maxDensity === 0) return;
+      
+      // Draw bars
+      const barWidth = canvas.width / bins;
+      const barHeight = canvas.height - 20; // Leave space for labels
+      
+      ctx.fillStyle = this.getSpeciesColor(species);
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1;
+      
+      for (let i = 0; i < bins; i++) {
+        const x = i * barWidth;
+        const height = (binDensities[i] / maxDensity) * barHeight;
+        const y = canvas.height - 20 - height;
+        
+        // Draw bar
+        ctx.fillRect(x + 1, y, barWidth - 2, height);
+        ctx.strokeRect(x + 1, y, barWidth - 2, height);
+        
+        // Draw speed label
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '8px monospace';
+        ctx.textAlign = 'center';
+        const speedLabel = (0.8 + i * binSize).toFixed(1);
+        ctx.fillText(speedLabel, x + barWidth / 2, canvas.height - 5);
+        ctx.fillStyle = this.getSpeciesColor(species);
+      }
+      
+      // Draw probability density labels on bars
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '8px monospace';
+      ctx.textAlign = 'center';
+      for (let i = 0; i < bins; i++) {
+        if (binDensities[i] > 0) {
+          const x = i * barWidth + barWidth / 2;
+          const height = (binDensities[i] / maxDensity) * barHeight;
+          const y = canvas.height - 20 - height;
+          // Show probability density (normalized to 0-1 range)
+          const normalizedDensity = (binDensities[i] / maxDensity).toFixed(2);
+          ctx.fillText(normalizedDensity, x, y - 5);
+        }
+      }
+      
+      // Draw total count at top
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '10px monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText(`Total: ${totalAgents}`, canvas.width / 2, 15);
+    }
+   
+   animate() {
+     if (!this.isRestarting) {
+       this.update();
+     }
+     this.draw();
+     requestAnimationFrame(() => this.animate());
+   }
+}
+
+// Initialize simulation when page loads
+window.addEventListener('load', () => {
+  new Simulation();
+});
+</script>
+</body>
+</html>

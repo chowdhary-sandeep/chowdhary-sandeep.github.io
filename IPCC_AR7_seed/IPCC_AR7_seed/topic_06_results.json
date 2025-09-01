@@ -1,0 +1,8872 @@
+{
+  "topic_id": 6,
+  "main_theme": "Distribution of benefits, costs, and impacts of mitigation",
+  "key_concepts": [
+    "distributional effects",
+    "equity",
+    "justice",
+    "benefits",
+    "costs",
+    "impacts"
+  ],
+  "search_queries": [
+    "climate change mitigation distribution benefits costs",
+    "mitigation policy distributional effects",
+    "climate mitigation equity justice",
+    "distributional impacts climate policies",
+    "climate justice mitigation policies"
+  ],
+  "google_scholar_papers": 0,
+  "openalex_papers_found": 7,
+  "top_google_scholar_papers": [],
+  "openalex_top_papers": [
+    {
+      "openalex_id": "https://openalex.org/W1567561872",
+      "title": "The Regional Impacts of Climate Change: An Assessment of Vulnerability",
+      "authors": [
+        {
+          "name": "Robert T. Watson",
+          "openalex_id": "https://openalex.org/A5103428585"
+        },
+        {
+          "name": "Marufu C. Zinyowera",
+          "openalex_id": "https://openalex.org/A5022376581"
+        },
+        {
+          "name": "Richard H. Moss",
+          "openalex_id": "https://openalex.org/A5000113329"
+        },
+        {
+          "name": "David Jon Dokken",
+          "openalex_id": "https://openalex.org/A5067020707"
+        }
+      ],
+      "publication_year": 1998,
+      "journal": "",
+      "doi": null,
+      "citations_count": 1328,
+      "abstract": {
+        "The": [
+          0,
+          163,
+          194
+        ],
+        "Intergovernmental": [
+          1
+        ],
+        "Panel": [
+          2
+        ],
+        "on": [
+          3,
+          27,
+          89,
+          128
+        ],
+        "Climate": [
+          4
+        ],
+        "Change": [
+          5
+        ],
+        "(IPCC)": [
+          6
+        ],
+        "was\njointly": [
+          7
+        ],
+        "established": [
+          8
+        ],
+        "by": [
+          9,
+          70,
+          82
+        ],
+        "the": [
+          10,
+          14,
+          22,
+          86,
+          90,
+          94,
+          124,
+          137,
+          140,
+          144,
+          146,
+          153,
+          158,
+          171,
+          179,
+          185,
+          204,
+          224,
+          230
+        ],
+        "World": [
+          11
+        ],
+        "Meteorological": [
+          12
+        ],
+        "Organization\nand": [
+          13
+        ],
+        "United": [
+          15
+        ],
+        "Nations": [
+          16
+        ],
+        "Environment": [
+          17
+        ],
+        "Programme": [
+          18
+        ],
+        "in": [
+          19,
+          34,
+          110
+        ],
+        "1988": [
+          20
+        ],
+        "to\nassess": [
+          21
+        ],
+        "scientific": [
+          23
+        ],
+        "and": [
+          24,
+          36,
+          40,
+          60,
+          73,
+          99,
+          120,
+          152,
+          174,
+          189,
+          229,
+          236,
+          252
+        ],
+        "technical": [
+          25
+        ],
+        "literature": [
+          26
+        ],
+        "climate": [
+          28,
+          43,
+          248
+        ],
+        "change,\nthe": [
+          29
+        ],
+        "potential": [
+          30,
+          159,
+          172
+        ],
+        "impacts": [
+          31
+        ],
+        "of": [
+          32,
+          42,
+          53,
+          67,
+          85,
+          123,
+          139,
+          161,
+          169,
+          176,
+          181,
+          197
+        ],
+        "changes": [
+          33
+        ],
+        "climate,": [
+          35
+        ],
+        "options": [
+          37
+        ],
+        "for\nadaption": [
+          38
+        ],
+        "to": [
+          39,
+          112,
+          143,
+          148,
+          157,
+          183
+        ],
+        "mitigation": [
+          41,
+          190
+        ],
+        "change.": [
+          44
+        ],
+        "Since": [
+          45
+        ],
+        "its": [
+          46
+        ],
+        "inception,\nthe": [
+          47
+        ],
+        "IPCC": [
+          48
+        ],
+        "has": [
+          49,
+          79,
+          107
+        ],
+        "produced": [
+          50,
+          81
+        ],
+        "a": [
+          51,
+          113,
+          166
+        ],
+        "series": [
+          52
+        ],
+        "Assessment": [
+          54,
+          96
+        ],
+        "Reports,\nSpecial": [
+          55
+        ],
+        "Reports,": [
+          56
+        ],
+        "Technical": [
+          57
+        ],
+        "Papers,": [
+          58
+        ],
+        "methodologies": [
+          59
+        ],
+        "other\nproducts": [
+          61
+        ],
+        "which": [
+          62,
+          78,
+          149
+        ],
+        "have": [
+          63
+        ],
+        "become": [
+          64
+        ],
+        "standard": [
+          65
+        ],
+        "works": [
+          66
+        ],
+        "reference,\nwidely": [
+          68
+        ],
+        "used": [
+          69
+        ],
+        "policymakers,": [
+          71
+        ],
+        "scientists": [
+          72
+        ],
+        "other": [
+          74
+        ],
+        "experts.\nThis": [
+          75
+        ],
+        "Special": [
+          76
+        ],
+        "Report,": [
+          77
+        ],
+        "been": [
+          80,
+          108
+        ],
+        "Working\nGroup": [
+          83
+        ],
+        "II": [
+          84
+        ],
+        "IPCC,": [
+          87
+        ],
+        "builds": [
+          88
+        ],
+        "Working": [
+          91
+        ],
+        "Group's": [
+          92
+        ],
+        "contribution\nto": [
+          93
+        ],
+        "Second": [
+          95
+        ],
+        "Report": [
+          97
+        ],
+        "(SAR),": [
+          98
+        ],
+        "incorporates\nmore": [
+          100
+        ],
+        "recent": [
+          101
+        ],
+        "information": [
+          102,
+          245
+        ],
+        "made": [
+          103
+        ],
+        "available": [
+          104
+        ],
+        "since": [
+          105
+        ],
+        "mid-1995.\nIt": [
+          106
+        ],
+        "prepared": [
+          109
+        ],
+        "response": [
+          111
+        ],
+        "request": [
+          114
+        ],
+        "from": [
+          115
+        ],
+        "the\nSubsidiary": [
+          116
+        ],
+        "Body": [
+          117
+        ],
+        "for": [
+          118
+        ],
+        "Scientific": [
+          119
+        ],
+        "Technological": [
+          121
+        ],
+        "Advice\n(SBSTA)": [
+          122
+        ],
+        "UN": [
+          125
+        ],
+        "Framework": [
+          126
+        ],
+        "Convention": [
+          127
+        ],
+        "Climate\nChange": [
+          129
+        ],
+        "(UNFCCC).": [
+          130
+        ],
+        "It": [
+          131,
+          239
+        ],
+        "addresses": [
+          132
+        ],
+        "an": [
+          133
+        ],
+        "important": [
+          134
+        ],
+        "question": [
+          135
+        ],
+        "posed\nby": [
+          136
+        ],
+        "Conference": [
+          138
+        ],
+        "Parties": [
+          141
+        ],
+        "(COP)": [
+          142
+        ],
+        "UNFCCC,\nnamely,": [
+          145
+        ],
+        "degree": [
+          147
+        ],
+        "human": [
+          150
+        ],
+        "conditions": [
+          151
+        ],
+        "natural\nenvironment": [
+          154
+        ],
+        "are": [
+          155
+        ],
+        "vulnerable": [
+          156
+        ],
+        "effects": [
+          160
+        ],
+        "climate\nchange.": [
+          162
+        ],
+        "report": [
+          164,
+          195
+        ],
+        "establishes": [
+          165
+        ],
+        "common": [
+          167
+        ],
+        "base": [
+          168
+        ],
+        "information\nregarding": [
+          170
+        ],
+        "costs": [
+          173
+        ],
+        "benefits": [
+          175
+        ],
+        "climatic": [
+          177
+        ],
+        "change,\nincluding": [
+          178
+        ],
+        "evaluation": [
+          180
+        ],
+        "uncertainties,": [
+          182
+        ],
+        "help": [
+          184
+        ],
+        "COP\ndetermine": [
+          186
+        ],
+        "what": [
+          187
+        ],
+        "adaptation": [
+          188
+        ],
+        "measures": [
+          191
+        ],
+        "might": [
+          192
+        ],
+        "be\njustified.": [
+          193
+        ],
+        "consists": [
+          196
+        ],
+        "vulnerability": [
+          198
+        ],
+        "assessments": [
+          199
+        ],
+        "for\n10": [
+          200
+        ],
+        "regions": [
+          201
+        ],
+        "that": [
+          202,
+          243
+        ],
+        "comprise": [
+          203
+        ],
+        "Earth's": [
+          205
+        ],
+        "entire": [
+          206
+        ],
+        "land": [
+          207
+        ],
+        "surface": [
+          208
+        ],
+        "and\nadjoining": [
+          209
+        ],
+        "coastal": [
+          210
+        ],
+        "seas:": [
+          211
+        ],
+        "Africa,": [
+          212
+        ],
+        "Arid": [
+          213
+        ],
+        "Western": [
+          214
+        ],
+        "Asia": [
+          215,
+          235
+        ],
+        "(including": [
+          216
+        ],
+        "the\nMiddle": [
+          217
+        ],
+        "East),": [
+          218
+        ],
+        "Australasia,": [
+          219
+        ],
+        "Europe,": [
+          220
+        ],
+        "Latin": [
+          221
+        ],
+        "America,": [
+          222
+        ],
+        "North\nAmerica,": [
+          223
+        ],
+        "Polar": [
+          225
+        ],
+        "Regions": [
+          226
+        ],
+        "(The": [
+          227
+        ],
+        "Arctic": [
+          228
+        ],
+        "Antarctic),\nSmall": [
+          231
+        ],
+        "Island": [
+          232
+        ],
+        "States,": [
+          233
+        ],
+        "Temperate": [
+          234
+        ],
+        "Tropical": [
+          237
+        ],
+        "Asia.": [
+          238
+        ],
+        "also\nincludes": [
+          240
+        ],
+        "several": [
+          241
+        ],
+        "annexes": [
+          242
+        ],
+        "provide": [
+          244
+        ],
+        "about": [
+          246
+        ],
+        "climate\nobservations,": [
+          247
+        ],
+        "projections,": [
+          249
+        ],
+        "vegetation": [
+          250
+        ],
+        "distribution\nprojections": [
+          251
+        ],
+        "socioeconomic": [
+          253
+        ],
+        "trends.": [
+          254
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.73368835
+        },
+        {
+          "name": "Vulnerability (computing)",
+          "openalex_id": "https://openalex.org/C95713431",
+          "level": 2,
+          "score": 0.68427926
+        },
+        {
+          "name": "United Nations Framework Convention on Climate Change",
+          "openalex_id": "https://openalex.org/C2778539042",
+          "level": 4,
+          "score": 0.6642466
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.5618985
+        },
+        {
+          "name": "Environmental resource management",
+          "openalex_id": "https://openalex.org/C107826830",
+          "level": 1,
+          "score": 0.53782374
+        },
+        {
+          "name": "Environmental planning",
+          "openalex_id": "https://openalex.org/C91375879",
+          "level": 1,
+          "score": 0.49339977
+        },
+        {
+          "name": "Vulnerability assessment",
+          "openalex_id": "https://openalex.org/C167063184",
+          "level": 3,
+          "score": 0.47880703
+        },
+        {
+          "name": "Convention",
+          "openalex_id": "https://openalex.org/C2780608745",
+          "level": 2,
+          "score": 0.41948283
+        },
+        {
+          "name": "Environmental protection",
+          "openalex_id": "https://openalex.org/C526734887",
+          "level": 1,
+          "score": 0.38078347
+        },
+        {
+          "name": "Political science",
+          "openalex_id": "https://openalex.org/C17744445",
+          "level": 0,
+          "score": 0.34678626
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.26942658
+        },
+        {
+          "name": "Kyoto Protocol",
+          "openalex_id": "https://openalex.org/C99743013",
+          "level": 3,
+          "score": 0.23354656
+        },
+        {
+          "name": "Computer science",
+          "openalex_id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.09470335
+        },
+        {
+          "name": "Psychology",
+          "openalex_id": "https://openalex.org/C15744967",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Computer security",
+          "openalex_id": "https://openalex.org/C38652104",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Psychological resilience",
+          "openalex_id": "https://openalex.org/C137176749",
+          "level": 2,
+          "score": 0.0
+        },
+        {
+          "name": "Law",
+          "openalex_id": "https://openalex.org/C199539241",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Psychotherapist",
+          "openalex_id": "https://openalex.org/C542102704",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "book",
+      "open_access": false,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_1_climate change mitigation Dist"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2125340357",
+      "title": "Assessing effects of forecasted climate change on the diversity and distribution of European higher plants for 2050",
+      "authors": [
+        {
+          "name": "Michel Bakkenes",
+          "openalex_id": "https://openalex.org/A5050769625"
+        },
+        {
+          "name": "Rob Alkemade",
+          "openalex_id": "https://openalex.org/A5071729186"
+        },
+        {
+          "name": "F. Ihle",
+          "openalex_id": "https://openalex.org/A5087753202"
+        },
+        {
+          "name": "Rik Leemans",
+          "openalex_id": "https://openalex.org/A5003249859"
+        },
+        {
+          "name": "J. B. Latour",
+          "openalex_id": "https://openalex.org/A5084048017"
+        }
+      ],
+      "publication_year": 2002,
+      "journal": "Global Change Biology",
+      "doi": "https://doi.org/10.1046/j.1354-1013.2001.00467.x",
+      "citations_count": 615,
+      "abstract": {
+        "Abstract": [
+          0
+        ],
+        "The": [
+          1,
+          47,
+          77,
+          116,
+          146
+        ],
+        "rapidly": [
+          2
+        ],
+        "increasing": [
+          3
+        ],
+        "atmospheric": [
+          4
+        ],
+        "concentrations": [
+          5
+        ],
+        "of": [
+          6,
+          29,
+          128,
+          153,
+          162,
+          169
+        ],
+        "greenhouse": [
+          7
+        ],
+        "gases": [
+          8
+        ],
+        "may": [
+          9
+        ],
+        "lead": [
+          10
+        ],
+        "to": [
+          11,
+          54,
+          82,
+          86,
+          173
+        ],
+        "significant": [
+          12
+        ],
+        "changes": [
+          13,
+          21,
+          40,
+          120
+        ],
+        "in": [
+          14,
+          108,
+          121,
+          136,
+          139,
+          148,
+          190,
+          210
+        ],
+        "regional": [
+          15
+        ],
+        "and": [
+          16,
+          27,
+          35,
+          63,
+          92,
+          113
+        ],
+        "seasonal": [
+          17
+        ],
+        "climate": [
+          18,
+          50,
+          65,
+          78,
+          85,
+          111,
+          176,
+          196
+        ],
+        "patterns.": [
+          19
+        ],
+        "Such": [
+          20
+        ],
+        "can": [
+          22
+        ],
+        "strongly": [
+          23
+        ],
+        "influence": [
+          24
+        ],
+        "the": [
+          25,
+          59,
+          83,
+          129,
+          154,
+          163,
+          170,
+          174
+        ],
+        "diversity": [
+          26,
+          91
+        ],
+        "distribution": [
+          28
+        ],
+        "species": [
+          30,
+          71,
+          104,
+          132,
+          156,
+          172
+        ],
+        "and,": [
+          31
+        ],
+        "therefore,": [
+          32
+        ],
+        "affect": [
+          33
+        ],
+        "ecosystems": [
+          34
+        ],
+        "biodiversity.": [
+          36
+        ],
+        "To": [
+          37
+        ],
+        "assess": [
+          38
+        ],
+        "these": [
+          39
+        ],
+        "we": [
+          41,
+          185
+        ],
+        "developed": [
+          42
+        ],
+        "a": [
+          43,
+          137
+        ],
+        "model,": [
+          44,
+          62
+        ],
+        "called": [
+          45
+        ],
+        "euromove.": [
+          46
+        ],
+        "model": [
+          48
+        ],
+        "uses": [
+          49
+        ],
+        "data": [
+          51
+        ],
+        "from": [
+          52,
+          58,
+          143
+        ],
+        "1990": [
+          53,
+          140,
+          155
+        ],
+        "2050": [
+          55
+        ],
+        "as": [
+          56
+        ],
+        "compiled": [
+          57
+        ],
+        "image": [
+          60
+        ],
+        "2": [
+          61
+        ],
+        "determines": [
+          64
+        ],
+        "envelopes": [
+          66,
+          79,
+          197
+        ],
+        "for": [
+          67
+        ],
+        "about": [
+          68,
+          89
+        ],
+        "1400": [
+          69
+        ],
+        "plant": [
+          70,
+          90,
+          131,
+          171,
+          188
+        ],
+        "by": [
+          72,
+          94,
+          123,
+          200
+        ],
+        "multiple": [
+          73
+        ],
+        "logistic": [
+          74
+        ],
+        "regression": [
+          75
+        ],
+        "analysis.": [
+          76
+        ],
+        "were": [
+          80,
+          134,
+          178,
+          205
+        ],
+        "applied": [
+          81
+        ],
+        "projected": [
+          84
+        ],
+        "obtain": [
+          87
+        ],
+        "predictions": [
+          88
+        ],
+        "distributions": [
+          93
+        ],
+        "2050.": [
+          95,
+          124
+        ],
+        "For": [
+          96
+        ],
+        "each": [
+          97
+        ],
+        "European": [
+          98,
+          130,
+          165
+        ],
+        "grid": [
+          99
+        ],
+        "cell,": [
+          100
+        ],
+        "euromove": [
+          101
+        ],
+        "calculates": [
+          102
+        ],
+        "which": [
+          103,
+          114,
+          149
+        ],
+        "would": [
+          105,
+          141,
+          192
+        ],
+        "still": [
+          106
+        ],
+        "occur": [
+          107
+        ],
+        "forecasted": [
+          109,
+          175
+        ],
+        "future": [
+          110,
+          183
+        ],
+        "conditions": [
+          112
+        ],
+        "not.": [
+          115
+        ],
+        "results": [
+          117
+        ],
+        "show": [
+          118
+        ],
+        "major": [
+          119
+        ],
+        "biodiversity": [
+          122
+        ],
+        "On": [
+          125
+        ],
+        "average,": [
+          126
+        ],
+        "32%": [
+          127,
+          150
+        ],
+        "that": [
+          133,
+          144,
+          187,
+          204
+        ],
+        "present": [
+          135
+        ],
+        "cell": [
+          138
+        ],
+        "disappear": [
+          142
+        ],
+        "cell.": [
+          145
+        ],
+        "area,": [
+          147
+        ],
+        "or": [
+          151
+        ],
+        "more": [
+          152
+        ],
+        "will": [
+          157
+        ],
+        "disappear,": [
+          158
+        ],
+        "takes": [
+          159
+        ],
+        "up": [
+          160
+        ],
+        "44%": [
+          161
+        ],
+        "modelled": [
+          164
+        ],
+        "area.": [
+          166
+        ],
+        "Individual": [
+          167
+        ],
+        "responses": [
+          168
+        ],
+        "change": [
+          177
+        ],
+        "diverse.": [
+          179
+        ],
+        "In": [
+          180
+        ],
+        "reviewing": [
+          181
+        ],
+        "possible": [
+          182
+        ],
+        "trends,": [
+          184
+        ],
+        "found": [
+          186
+        ],
+        "species,": [
+          189
+        ],
+        "general,": [
+          191
+        ],
+        "find": [
+          193
+        ],
+        "their": [
+          194
+        ],
+        "current": [
+          195
+        ],
+        "further": [
+          198
+        ],
+        "northeast": [
+          199
+        ],
+        "2050,": [
+          201
+        ],
+        "shifting": [
+          202
+        ],
+        "ranges": [
+          203,
+          209
+        ],
+        "comparable": [
+          206
+        ],
+        "with": [
+          207
+        ],
+        "those": [
+          208
+        ],
+        "other": [
+          211
+        ],
+        "studies.": [
+          212
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.7691034
+        },
+        {
+          "name": "Biodiversity",
+          "openalex_id": "https://openalex.org/C130217890",
+          "level": 2,
+          "score": 0.7570749
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.6113881
+        },
+        {
+          "name": "Greenhouse gas",
+          "openalex_id": "https://openalex.org/C47737302",
+          "level": 2,
+          "score": 0.5333068
+        },
+        {
+          "name": "Climate model",
+          "openalex_id": "https://openalex.org/C168754636",
+          "level": 3,
+          "score": 0.51999456
+        },
+        {
+          "name": "Species distribution",
+          "openalex_id": "https://openalex.org/C132124917",
+          "level": 3,
+          "score": 0.48796362
+        },
+        {
+          "name": "Ecosystem",
+          "openalex_id": "https://openalex.org/C110872660",
+          "level": 2,
+          "score": 0.4863544
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.46320876
+        },
+        {
+          "name": "Distribution (mathematics)",
+          "openalex_id": "https://openalex.org/C110121322",
+          "level": 2,
+          "score": 0.44744992
+        },
+        {
+          "name": "Global biodiversity",
+          "openalex_id": "https://openalex.org/C187604713",
+          "level": 3,
+          "score": 0.43361115
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.40031728
+        },
+        {
+          "name": "Physical geography",
+          "openalex_id": "https://openalex.org/C100970517",
+          "level": 1,
+          "score": 0.32863402
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.17062432
+        },
+        {
+          "name": "Habitat",
+          "openalex_id": "https://openalex.org/C185933670",
+          "level": 2,
+          "score": 0.08770111
+        },
+        {
+          "name": "Mathematical analysis",
+          "openalex_id": "https://openalex.org/C134306372",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Mathematics",
+          "openalex_id": "https://openalex.org/C33923547",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": false,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_2_climate change distributional "
+    },
+    {
+      "openalex_id": "https://openalex.org/W2002368560",
+      "title": "POTENTIAL EFFECTS OF CLIMATE CHANGE ON ECOSYSTEM AND TREE SPECIES DISTRIBUTION IN BRITISH COLUMBIA",
+      "authors": [
+        {
+          "name": "Andreas Hamann",
+          "openalex_id": "https://openalex.org/A5084733320"
+        },
+        {
+          "name": "Tongli Wang",
+          "openalex_id": "https://openalex.org/A5007547630"
+        }
+      ],
+      "publication_year": 2006,
+      "journal": "Ecology",
+      "doi": "https://doi.org/10.1890/0012-9658(2006)87[2773:peocco]2.0.co;2",
+      "citations_count": 580,
+      "abstract": {
+        "A": [
+          0
+        ],
+        "new": [
+          1
+        ],
+        "ecosystem-based": [
+          2
+        ],
+        "climate": [
+          3,
+          12,
+          32,
+          90,
+          103,
+          146,
+          177,
+          189,
+          213
+        ],
+        "envelope": [
+          4
+        ],
+        "modeling": [
+          5
+        ],
+        "approach": [
+          6
+        ],
+        "was": [
+          7
+        ],
+        "applied": [
+          8
+        ],
+        "to": [
+          9,
+          28,
+          39,
+          141,
+          161,
+          197,
+          212
+        ],
+        "assess": [
+          10
+        ],
+        "potential": [
+          11,
+          111,
+          126
+        ],
+        "change": [
+          13,
+          104
+        ],
+        "impacts": [
+          14
+        ],
+        "on": [
+          15
+        ],
+        "forest": [
+          16
+        ],
+        "communities": [
+          17
+        ],
+        "and": [
+          18,
+          38,
+          52,
+          78,
+          99,
+          106,
+          148,
+          187
+        ],
+        "tree": [
+          19,
+          48,
+          112,
+          198
+        ],
+        "species.": [
+          20,
+          84
+        ],
+        "Four": [
+          21
+        ],
+        "orthogonal": [
+          22
+        ],
+        "canonical": [
+          23
+        ],
+        "discriminant": [
+          24
+        ],
+        "functions": [
+          25
+        ],
+        "were": [
+          26,
+          201
+        ],
+        "used": [
+          27
+        ],
+        "describe": [
+          29
+        ],
+        "the": [
+          30,
+          43,
+          72,
+          88,
+          108,
+          151
+        ],
+        "realized": [
+          31,
+          44,
+          89,
+          176
+        ],
+        "space": [
+          33,
+          46,
+          91,
+          178
+        ],
+        "for": [
+          34,
+          47,
+          82,
+          110,
+          179,
+          206
+        ],
+        "British": [
+          35,
+          123,
+          157
+        ],
+        "Columbia's": [
+          36
+        ],
+        "ecosystems": [
+          37,
+          94,
+          180
+        ],
+        "model": [
+          40,
+          59
+        ],
+        "portions": [
+          41
+        ],
+        "of": [
+          42,
+          62,
+          92,
+          131,
+          150,
+          166,
+          172,
+          175,
+          195,
+          209
+        ],
+        "niche": [
+          45
+        ],
+        "species": [
+          49,
+          64,
+          113,
+          116,
+          155,
+          199
+        ],
+        "under": [
+          50,
+          102
+        ],
+        "current": [
+          51,
+          93
+        ],
+        "predicted": [
+          53
+        ],
+        "future": [
+          54
+        ],
+        "climates.": [
+          55
+        ],
+        "This": [
+          56
+        ],
+        "conceptually": [
+          57
+        ],
+        "simple": [
+          58
+        ],
+        "is": [
+          60,
+          181
+        ],
+        "capable": [
+          61
+        ],
+        "predicting": [
+          63
+        ],
+        "ranges": [
+          65
+        ],
+        "at": [
+          66,
+          128,
+          132
+        ],
+        "high": [
+          67
+        ],
+        "spatial": [
+          68,
+          100,
+          173
+        ],
+        "resolutions": [
+          69
+        ],
+        "far": [
+          70
+        ],
+        "beyond": [
+          71
+        ],
+        "study": [
+          73
+        ],
+        "area,": [
+          74
+        ],
+        "including": [
+          75
+        ],
+        "outlying": [
+          76
+        ],
+        "populations": [
+          77
+        ],
+        "southern": [
+          79
+        ],
+        "range": [
+          80,
+          120
+        ],
+        "limits": [
+          81
+        ],
+        "many": [
+          83
+        ],
+        "We": [
+          85
+        ],
+        "analyzed": [
+          86
+        ],
+        "how": [
+          87
+        ],
+        "changes": [
+          95,
+          196
+        ],
+        "in": [
+          96,
+          122,
+          156
+        ],
+        "extent,": [
+          97
+        ],
+        "elevation,": [
+          98
+        ],
+        "distribution": [
+          101
+        ],
+        "scenarios": [
+          105
+        ],
+        "evaluated": [
+          107
+        ],
+        "implications": [
+          109
+        ],
+        "habitat.": [
+          114,
+          169
+        ],
+        "Tree": [
+          115
+        ],
+        "with": [
+          117,
+          183
+        ],
+        "their": [
+          118,
+          167
+        ],
+        "northern": [
+          119
+        ],
+        "limit": [
+          121
+        ],
+        "Columbia": [
+          124,
+          158
+        ],
+        "gain": [
+          125
+        ],
+        "habitat": [
+          127
+        ],
+        "a": [
+          129,
+          163,
+          204
+        ],
+        "pace": [
+          130
+        ],
+        "least": [
+          133
+        ],
+        "100": [
+          134
+        ],
+        "km": [
+          135
+        ],
+        "per": [
+          136
+        ],
+        "decade,": [
+          137
+        ],
+        "common": [
+          138
+        ],
+        "hardwoods": [
+          139
+        ],
+        "appear": [
+          140
+        ],
+        "be": [
+          142
+        ],
+        "generally": [
+          143
+        ],
+        "unaffected": [
+          144
+        ],
+        "by": [
+          145
+        ],
+        "change,": [
+          147
+        ],
+        "some": [
+          149
+        ],
+        "most": [
+          152
+        ],
+        "important": [
+          153,
+          185
+        ],
+        "conifer": [
+          154
+        ],
+        "are": [
+          159
+        ],
+        "expected": [
+          160
+        ],
+        "lose": [
+          162
+        ],
+        "large": [
+          164
+        ],
+        "portion": [
+          165
+        ],
+        "suitable": [
+          168
+        ],
+        "The": [
+          170
+        ],
+        "extent": [
+          171
+        ],
+        "redistribution": [
+          174
+        ],
+        "considerable,": [
+          182
+        ],
+        "currently": [
+          184
+        ],
+        "sub-boreal": [
+          186
+        ],
+        "montane": [
+          188
+        ],
+        "regions": [
+          190
+        ],
+        "rapidly": [
+          191
+        ],
+        "disappearing.": [
+          192
+        ],
+        "Local": [
+          193
+        ],
+        "predictions": [
+          194
+        ],
+        "frequencies": [
+          200
+        ],
+        "generated": [
+          202
+        ],
+        "as": [
+          203
+        ],
+        "basis": [
+          205
+        ],
+        "systematic": [
+          207
+        ],
+        "surveys": [
+          208
+        ],
+        "biological": [
+          210
+        ],
+        "response": [
+          211
+        ],
+        "change.": [
+          214
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.6987532
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.67456293
+        },
+        {
+          "name": "Habitat",
+          "openalex_id": "https://openalex.org/C185933670",
+          "level": 2,
+          "score": 0.60667163
+        },
+        {
+          "name": "Ecosystem",
+          "openalex_id": "https://openalex.org/C110872660",
+          "level": 2,
+          "score": 0.5507093
+        },
+        {
+          "name": "Range (aeronautics)",
+          "openalex_id": "https://openalex.org/C204323151",
+          "level": 2,
+          "score": 0.53571117
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.52083284
+        },
+        {
+          "name": "Species distribution",
+          "openalex_id": "https://openalex.org/C132124917",
+          "level": 3,
+          "score": 0.52029544
+        },
+        {
+          "name": "Ecological niche",
+          "openalex_id": "https://openalex.org/C102715595",
+          "level": 3,
+          "score": 0.472804
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.4364161
+        },
+        {
+          "name": "Boreal ecosystem",
+          "openalex_id": "https://openalex.org/C12202269",
+          "level": 3,
+          "score": 0.42568243
+        },
+        {
+          "name": "Boreal",
+          "openalex_id": "https://openalex.org/C100537666",
+          "level": 2,
+          "score": 0.42200655
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.12415707
+        },
+        {
+          "name": "Materials science",
+          "openalex_id": "https://openalex.org/C192562407",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Composite material",
+          "openalex_id": "https://openalex.org/C159985019",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": false,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_2_climate change distributional "
+    },
+    {
+      "openalex_id": "https://openalex.org/W2791215549",
+      "title": "Health co-benefits from air pollution and mitigation costs of the Paris Agreement: a modelling study",
+      "authors": [
+        {
+          "name": "Anil Markandya",
+          "openalex_id": "https://openalex.org/A5051484500"
+        },
+        {
+          "name": "Jon Sampedro",
+          "openalex_id": "https://openalex.org/A5042172640"
+        },
+        {
+          "name": "Steven J. Smith",
+          "openalex_id": "https://openalex.org/A5011759109"
+        },
+        {
+          "name": "Rita Van Dingenen",
+          "openalex_id": "https://openalex.org/A5047660675"
+        },
+        {
+          "name": "Cristina Pizarro-Irizar",
+          "openalex_id": "https://openalex.org/A5033234983"
+        },
+        {
+          "name": "Iñaki Arto",
+          "openalex_id": "https://openalex.org/A5024466086"
+        },
+        {
+          "name": "Mikel González‐Eguino",
+          "openalex_id": "https://openalex.org/A5016262428"
+        }
+      ],
+      "publication_year": 2018,
+      "journal": "The Lancet Planetary Health",
+      "doi": "https://doi.org/10.1016/s2542-5196(18)30029-9",
+      "citations_count": 539,
+      "abstract": {
+        "BackgroundAlthough": [
+          0
+        ],
+        "the": [
+          1,
+          23,
+          43,
+          51,
+          56,
+          59,
+          71,
+          97,
+          105,
+          134,
+          162,
+          170,
+          173,
+          196,
+          208,
+          227,
+          238,
+          243,
+          248,
+          256,
+          259,
+          264,
+          286,
+          289,
+          292,
+          303,
+          312,
+          314,
+          323,
+          335,
+          342,
+          347,
+          372,
+          416,
+          423,
+          426
+        ],
+        "co-benefits": [
+          2,
+          48,
+          235,
+          261,
+          305,
+          315,
+          414,
+          449
+        ],
+        "from": [
+          3,
+          212,
+          280,
+          380
+        ],
+        "addressing": [
+          4
+        ],
+        "problems": [
+          5
+        ],
+        "related": [
+          6
+        ],
+        "to": [
+          7,
+          36,
+          45,
+          103,
+          133,
+          154,
+          160,
+          186,
+          222,
+          276,
+          282,
+          340,
+          383,
+          395,
+          429,
+          432,
+          436
+        ],
+        "both": [
+          8,
+          214
+        ],
+        "climate": [
+          9,
+          61,
+          137,
+          385,
+          396
+        ],
+        "change": [
+          10,
+          138
+        ],
+        "and": [
+          11,
+          26,
+          64,
+          109,
+          113,
+          131,
+          144,
+          167,
+          172,
+          178,
+          201,
+          216,
+          309,
+          327,
+          360,
+          403,
+          445,
+          458
+        ],
+        "air": [
+          12,
+          30,
+          110,
+          156
+        ],
+        "pollution": [
+          13,
+          31
+        ],
+        "have": [
+          14
+        ],
+        "been": [
+          15
+        ],
+        "recognised,": [
+          16
+        ],
+        "there": [
+          17
+        ],
+        "is": [
+          18,
+          75
+        ],
+        "not": [
+          19,
+          369
+        ],
+        "much": [
+          20
+        ],
+        "evidence": [
+          21
+        ],
+        "comparing": [
+          22
+        ],
+        "mitigation": [
+          24,
+          52,
+          209,
+          257,
+          277,
+          408
+        ],
+        "costs": [
+          25,
+          115,
+          210,
+          266,
+          293
+        ],
+        "economic": [
+          27,
+          440
+        ],
+        "benefits": [
+          28
+        ],
+        "of": [
+          29,
+          54,
+          58,
+          116,
+          119,
+          136,
+          164,
+          192,
+          198,
+          207,
+          241,
+          247,
+          255,
+          273,
+          294,
+          338,
+          346,
+          388
+        ],
+        "reduction": [
+          32
+        ],
+        "for": [
+          33,
+          245,
+          307
+        ],
+        "alternative": [
+          34
+        ],
+        "approaches": [
+          35,
+          132
+        ],
+        "meeting": [
+          37
+        ],
+        "greenhouse": [
+          38,
+          296
+        ],
+        "gas": [
+          39,
+          297
+        ],
+        "targets.": [
+          40
+        ],
+        "We": [
+          41,
+          180
+        ],
+        "analysed": [
+          42
+        ],
+        "extent": [
+          44
+        ],
+        "which": [
+          46,
+          70
+        ],
+        "health": [
+          47,
+          188,
+          234,
+          274,
+          304,
+          375,
+          413,
+          448
+        ],
+        "would": [
+          49,
+          350
+        ],
+        "compensate": [
+          50
+        ],
+        "cost": [
+          53,
+          240,
+          278
+        ],
+        "achieving": [
+          55,
+          242
+        ],
+        "targets": [
+          57
+        ],
+        "Paris": [
+          60,
+          427
+        ],
+        "agreement": [
+          62
+        ],
+        "(2°C": [
+          63
+        ],
+        "1·5°C)": [
+          65,
+          130
+        ],
+        "under": [
+          66
+        ],
+        "different": [
+          67
+        ],
+        "scenarios": [
+          68,
+          120,
+          249,
+          444
+        ],
+        "in": [
+          69,
+          79,
+          169,
+          224,
+          322,
+          356,
+          371,
+          392,
+          415,
+          425,
+          442
+        ],
+        "emissions": [
+          72,
+          150,
+          298
+        ],
+        "abatement": [
+          73,
+          114
+        ],
+        "effort": [
+          74,
+          337
+        ],
+        "shared": [
+          76
+        ],
+        "between": [
+          77
+        ],
+        "countries": [
+          78,
+          446
+        ],
+        "accordance": [
+          80,
+          225
+        ],
+        "with": [
+          81,
+          121,
+          205,
+          226,
+          302
+        ],
+        "three": [
+          82,
+          88
+        ],
+        "established": [
+          83
+        ],
+        "equity": [
+          84
+        ],
+        "criteria.MethodsOur": [
+          85
+        ],
+        "study": [
+          86
+        ],
+        "had": [
+          87
+        ],
+        "stages.": [
+          89
+        ],
+        "First,": [
+          90
+        ],
+        "we": [
+          91,
+          251,
+          332
+        ],
+        "used": [
+          92
+        ],
+        "an": [
+          93,
+          155
+        ],
+        "integrated": [
+          94
+        ],
+        "assessment": [
+          95
+        ],
+        "model,": [
+          96
+        ],
+        "Global": [
+          98
+        ],
+        "Change": [
+          99
+        ],
+        "Assessment": [
+          100
+        ],
+        "Model": [
+          101
+        ],
+        "(GCAM),": [
+          102
+        ],
+        "investigate": [
+          104
+        ],
+        "emission": [
+          106,
+          142
+        ],
+        "(greenhouse": [
+          107
+        ],
+        "gases": [
+          108
+        ],
+        "pollutants)": [
+          111
+        ],
+        "pathways": [
+          112,
+          151
+        ],
+        "a": [
+          117,
+          183,
+          193,
+          268,
+          352
+        ],
+        "set": [
+          118
+        ],
+        "varying": [
+          122
+        ],
+        "temperature": [
+          123,
+          434
+        ],
+        "objectives": [
+          124
+        ],
+        "(nationally": [
+          125
+        ],
+        "determined": [
+          126
+        ],
+        "contributions,": [
+          127
+        ],
+        "2°C,": [
+          128
+        ],
+        "or": [
+          129
+        ],
+        "distribution": [
+          135
+        ],
+        "methods": [
+          139
+        ],
+        "(capability,": [
+          140
+        ],
+        "constant": [
+          141
+        ],
+        "ratios,": [
+          143
+        ],
+        "equal": [
+          145
+        ],
+        "per": [
+          146
+        ],
+        "capita).": [
+          147
+        ],
+        "The": [
+          148,
+          271
+        ],
+        "resulting": [
+          149,
+          174
+        ],
+        "were": [
+          152,
+          262
+        ],
+        "transferred": [
+          153
+        ],
+        "quality": [
+          157
+        ],
+        "model": [
+          158
+        ],
+        "(TM5-FASST)": [
+          159
+        ],
+        "estimate": [
+          161
+        ],
+        "concentrations": [
+          163
+        ],
+        "particulate": [
+          165
+        ],
+        "matter": [
+          166
+        ],
+        "ozone": [
+          168
+        ],
+        "atmosphere": [
+          171
+        ],
+        "associated": [
+          175
+        ],
+        "premature": [
+          176
+        ],
+        "deaths": [
+          177
+        ],
+        "morbidity.": [
+          179
+        ],
+        "then": [
+          181
+        ],
+        "applied": [
+          182
+        ],
+        "monetary": [
+          184
+        ],
+        "value": [
+          185,
+          197
+        ],
+        "these": [
+          187,
+          203
+        ],
+        "impacts": [
+          189
+        ],
+        "by": [
+          190,
+          411
+        ],
+        "use": [
+          191
+        ],
+        "term": [
+          194
+        ],
+        "called": [
+          195
+        ],
+        "statistical": [
+          199
+        ],
+        "life": [
+          200
+        ],
+        "compared": [
+          202
+        ],
+        "values": [
+          204
+        ],
+        "those": [
+          206
+        ],
+        "calculated": [
+          211
+        ],
+        "GCAM,": [
+          213
+        ],
+        "globally": [
+          215
+        ],
+        "regionally.": [
+          217
+        ],
+        "Our": [
+          218,
+          418
+        ],
+        "analysis": [
+          219
+        ],
+        "looked": [
+          220
+        ],
+        "forward": [
+          221
+        ],
+        "2050": [
+          223
+        ],
+        "socioeconomic": [
+          228
+        ],
+        "narrative": [
+          229
+        ],
+        "Shared": [
+          230
+        ],
+        "Socioeconomic": [
+          231
+        ],
+        "Pathways": [
+          232
+        ],
+        "2.FindingsThe": [
+          233
+        ],
+        "substantially": [
+          236
+        ],
+        "outweighed": [
+          237
+        ],
+        "policy": [
+          239
+        ],
+        "target": [
+          244,
+          344,
+          349
+        ],
+        "all": [
+          246
+        ],
+        "that": [
+          250,
+          334,
+          422
+        ],
+        "analysed.": [
+          252
+        ],
+        "In": [
+          253
+        ],
+        "some": [
+          254,
+          443
+        ],
+        "strategies,": [
+          258
+        ],
+        "median": [
+          260,
+          265
+        ],
+        "double": [
+          263
+        ],
+        "at": [
+          267
+        ],
+        "global": [
+          269
+        ],
+        "level.": [
+          270
+        ],
+        "ratio": [
+          272
+        ],
+        "co-benefit": [
+          275
+        ],
+        "ranged": [
+          279
+        ],
+        "1·4": [
+          281
+        ],
+        "2·45,": [
+          283
+        ],
+        "depending": [
+          284
+        ],
+        "on": [
+          285
+        ],
+        "scenario.": [
+          287
+        ],
+        "At": [
+          288
+        ],
+        "regional": [
+          290
+        ],
+        "level,": [
+          291
+        ],
+        "reducing": [
+          295
+        ],
+        "could": [
+          299,
+          319,
+          405,
+          438
+        ],
+        "be": [
+          300,
+          320,
+          378
+        ],
+        "compensated": [
+          301
+        ],
+        "alone": [
+          306
+        ],
+        "China": [
+          308,
+          361,
+          402
+        ],
+        "India,": [
+          310,
+          404
+        ],
+        "whereas": [
+          311
+        ],
+        "proportion": [
+          313
+        ],
+        "covered": [
+          316
+        ],
+        "varied": [
+          317
+        ],
+        "but": [
+          318
+        ],
+        "substantial": [
+          321,
+          353
+        ],
+        "European": [
+          324
+        ],
+        "Union": [
+          325
+        ],
+        "(7–84%)": [
+          326
+        ],
+        "USA": [
+          328
+        ],
+        "(10–41%),": [
+          329
+        ],
+        "respectively.": [
+          330
+        ],
+        "Finally,": [
+          331
+        ],
+        "found": [
+          333
+        ],
+        "extra": [
+          336
+        ],
+        "trying": [
+          339
+        ],
+        "pursue": [
+          341,
+          430
+        ],
+        "1·5°C": [
+          343,
+          437
+        ],
+        "instead": [
+          345
+        ],
+        "2°C": [
+          348
+        ],
+        "generate": [
+          351
+        ],
+        "net": [
+          354
+        ],
+        "benefit": [
+          355
+        ],
+        "India": [
+          357
+        ],
+        "(US$3·28–8·4": [
+          358
+        ],
+        "trillion)": [
+          359
+        ],
+        "($0·27–2·31": [
+          362
+        ],
+        "trillion),": [
+          363
+        ],
+        "although": [
+          364
+        ],
+        "this": [
+          365
+        ],
+        "positive": [
+          366
+        ],
+        "result": [
+          367
+        ],
+        "was": [
+          368
+        ],
+        "seen": [
+          370
+        ],
+        "other": [
+          373
+        ],
+        "regions.InterpretationSubstantial": [
+          374
+        ],
+        "gains": [
+          376
+        ],
+        "can": [
+          377
+        ],
+        "achieved": [
+          379
+        ],
+        "taking": [
+          381
+        ],
+        "action": [
+          382
+        ],
+        "prevent": [
+          384
+        ],
+        "change,": [
+          386
+        ],
+        "independent": [
+          387
+        ],
+        "any": [
+          389
+        ],
+        "future": [
+          390
+        ],
+        "reductions": [
+          391
+        ],
+        "damages": [
+          393
+        ],
+        "due": [
+          394
+        ],
+        "change.": [
+          397
+        ],
+        "Some": [
+          398
+        ],
+        "countries,": [
+          399
+        ],
+        "such": [
+          400
+        ],
+        "as": [
+          401
+        ],
+        "justify": [
+          406
+        ],
+        "stringent": [
+          407
+        ],
+        "efforts": [
+          409,
+          431
+        ],
+        "just": [
+          410
+        ],
+        "including": [
+          412
+        ],
+        "analysis.": [
+          417
+        ],
+        "results": [
+          419
+        ],
+        "also": [
+          420
+        ],
+        "suggest": [
+          421
+        ],
+        "statement": [
+          424
+        ],
+        "Agreement": [
+          428
+        ],
+        "limit": [
+          433
+        ],
+        "increase": [
+          435
+        ],
+        "make": [
+          439
+        ],
+        "sense": [
+          441
+        ],
+        "if": [
+          447
+        ],
+        "are": [
+          450
+        ],
+        "taken": [
+          451
+        ],
+        "into": [
+          452
+        ],
+        "account.FundingEuropean": [
+          453
+        ],
+        "Union's": [
+          454
+        ],
+        "Horizon": [
+          455
+        ],
+        "2020": [
+          456
+        ],
+        "research": [
+          457
+        ],
+        "innovation": [
+          459
+        ],
+        "programme.": [
+          460
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Greenhouse gas",
+          "openalex_id": "https://openalex.org/C47737302",
+          "level": 2,
+          "score": 0.71070397
+        },
+        {
+          "name": "Per capita",
+          "openalex_id": "https://openalex.org/C127598652",
+          "level": 3,
+          "score": 0.7059711
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.6630633
+        },
+        {
+          "name": "Air pollution",
+          "openalex_id": "https://openalex.org/C559116025",
+          "level": 2,
+          "score": 0.6372261
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.5941951
+        },
+        {
+          "name": "Air quality index",
+          "openalex_id": "https://openalex.org/C126314574",
+          "level": 2,
+          "score": 0.55295515
+        },
+        {
+          "name": "Natural resource economics",
+          "openalex_id": "https://openalex.org/C175605778",
+          "level": 1,
+          "score": 0.5522768
+        },
+        {
+          "name": "Climate change mitigation",
+          "openalex_id": "https://openalex.org/C509746633",
+          "level": 3,
+          "score": 0.45851988
+        },
+        {
+          "name": "Pollutant",
+          "openalex_id": "https://openalex.org/C82685317",
+          "level": 2,
+          "score": 0.4403252
+        },
+        {
+          "name": "Socioeconomic status",
+          "openalex_id": "https://openalex.org/C147077947",
+          "level": 3,
+          "score": 0.4318755
+        },
+        {
+          "name": "Cost–benefit analysis",
+          "openalex_id": "https://openalex.org/C127454912",
+          "level": 2,
+          "score": 0.42317635
+        },
+        {
+          "name": "Environmental protection",
+          "openalex_id": "https://openalex.org/C526734887",
+          "level": 1,
+          "score": 0.3945524
+        },
+        {
+          "name": "Environmental resource management",
+          "openalex_id": "https://openalex.org/C107826830",
+          "level": 1,
+          "score": 0.36968744
+        },
+        {
+          "name": "Environmental health",
+          "openalex_id": "https://openalex.org/C99454951",
+          "level": 1,
+          "score": 0.2952115
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.2314432
+        },
+        {
+          "name": "Meteorology",
+          "openalex_id": "https://openalex.org/C153294291",
+          "level": 1,
+          "score": 0.1865314
+        },
+        {
+          "name": "Economics",
+          "openalex_id": "https://openalex.org/C162324750",
+          "level": 0,
+          "score": 0.17236549
+        },
+        {
+          "name": "Population",
+          "openalex_id": "https://openalex.org/C2908647359",
+          "level": 2,
+          "score": 0.103235334
+        },
+        {
+          "name": "Medicine",
+          "openalex_id": "https://openalex.org/C71924100",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Chemistry",
+          "openalex_id": "https://openalex.org/C185592680",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Organic chemistry",
+          "openalex_id": "https://openalex.org/C178790620",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": true,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_1_climate change mitigation Dist"
+    },
+    {
+      "openalex_id": "https://openalex.org/W1968251786",
+      "title": "Transient Climate Change Simulations with a Coupled Atmosphere–Ocean GCM Including the Tropospheric Sulfur Cycle",
+      "authors": [
+        {
+          "name": "E. Roeckner",
+          "openalex_id": "https://openalex.org/A5105422664"
+        },
+        {
+          "name": "Lennart Bengtsson",
+          "openalex_id": "https://openalex.org/A5079253870"
+        },
+        {
+          "name": "J. Feichter",
+          "openalex_id": "https://openalex.org/A5032734484"
+        },
+        {
+          "name": "Jos Lelieveld",
+          "openalex_id": "https://openalex.org/A5027329208"
+        },
+        {
+          "name": "Henning Rodhe",
+          "openalex_id": "https://openalex.org/A5038257673"
+        }
+      ],
+      "publication_year": 1999,
+      "journal": "Journal of Climate",
+      "doi": "https://doi.org/10.1175/1520-0442(1999)012<3004:tccswa>2.0.co;2",
+      "citations_count": 510,
+      "abstract": {
+        "The": [
+          0,
+          28,
+          95
+        ],
+        "time-dependent": [
+          1
+        ],
+        "climate": [
+          2,
+          158,
+          186,
+          281
+        ],
+        "response": [
+          3,
+          187
+        ],
+        "to": [
+          4,
+          53,
+          146,
+          199,
+          205,
+          233,
+          253,
+          293,
+          301,
+          328
+        ],
+        "changing": [
+          5
+        ],
+        "concentrations": [
+          6,
+          29
+        ],
+        "of": [
+          7,
+          21,
+          30,
+          67,
+          86,
+          98,
+          128,
+          212,
+          224,
+          259,
+          264,
+          271,
+          306,
+          319
+        ],
+        "greenhouse": [
+          8,
+          33,
+          200,
+          235,
+          295
+        ],
+        "gases": [
+          9,
+          34
+        ],
+        "and": [
+          10,
+          24,
+          39,
+          47,
+          72,
+          89,
+          107,
+          139,
+          167,
+          285,
+          322
+        ],
+        "sulfate": [
+          11,
+          123
+        ],
+        "aerosols": [
+          12,
+          100
+        ],
+        "is": [
+          13,
+          70,
+          77,
+          101,
+          116,
+          132,
+          188,
+          208,
+          217,
+          230,
+          240,
+          256,
+          313
+        ],
+        "studied": [
+          14
+        ],
+        "using": [
+          15,
+          83
+        ],
+        "a": [
+          16,
+          176,
+          234,
+          279
+        ],
+        "coupled": [
+          17,
+          81
+        ],
+        "general": [
+          18
+        ],
+        "circulation": [
+          19
+        ],
+        "model": [
+          20,
+          82
+        ],
+        "the": [
+          22,
+          25,
+          31,
+          44,
+          50,
+          64,
+          73,
+          80,
+          87,
+          92,
+          99,
+          105,
+          108,
+          119,
+          126,
+          129,
+          140,
+          151,
+          168,
+          185,
+          210,
+          213,
+          222,
+          228,
+          246,
+          257,
+          260,
+          269,
+          272,
+          294,
+          307,
+          326,
+          329
+        ],
+        "atmosphere": [
+          23
+        ],
+        "ocean": [
+          26
+        ],
+        "(ECHAM4/OPYC3).": [
+          27
+        ],
+        "well-mixed": [
+          32
+        ],
+        "like": [
+          35
+        ],
+        "CO2,": [
+          36
+        ],
+        "CH4,": [
+          37
+        ],
+        "N2O,": [
+          38
+        ],
+        "CFCs": [
+          40
+        ],
+        "are": [
+          41,
+          149,
+          161,
+          170,
+          195,
+          289
+        ],
+        "prescribed": [
+          42
+        ],
+        "for": [
+          43
+        ],
+        "past": [
+          45,
+          88
+        ],
+        "(1860–1990)": [
+          46
+        ],
+        "projected": [
+          48,
+          90
+        ],
+        "into": [
+          49,
+          91
+        ],
+        "future": [
+          51,
+          93
+        ],
+        "according": [
+          52
+        ],
+        "International": [
+          54
+        ],
+        "Panel": [
+          55
+        ],
+        "on": [
+          56
+        ],
+        "Climate": [
+          57
+        ],
+        "Change": [
+          58
+        ],
+        "(IPCC)": [
+          59
+        ],
+        "scenario": [
+          60
+        ],
+        "IS92a.": [
+          61
+        ],
+        "In": [
+          62
+        ],
+        "addition,": [
+          63
+        ],
+        "space–time": [
+          65
+        ],
+        "distribution": [
+          66,
+          263
+        ],
+        "tropospheric": [
+          68,
+          74
+        ],
+        "ozone": [
+          69
+        ],
+        "prescribed,": [
+          71
+        ],
+        "sulfur": [
+          75,
+          84
+        ],
+        "cycle": [
+          76,
+          275
+        ],
+        "calculated": [
+          78,
+          141
+        ],
+        "within": [
+          79,
+          150
+        ],
+        "emissions": [
+          85
+        ],
+        "(IS92a).": [
+          94
+        ],
+        "radiative": [
+          96,
+          142,
+          304
+        ],
+        "impact": [
+          97
+        ],
+        "considered": [
+          102
+        ],
+        "via": [
+          103
+        ],
+        "both": [
+          104,
+          283,
+          320
+        ],
+        "direct": [
+          106,
+          284
+        ],
+        "indirect": [
+          109,
+          286
+        ],
+        "(i.e.,": [
+          110
+        ],
+        "through": [
+          111,
+          310
+        ],
+        "cloud": [
+          112
+        ],
+        "albedo)": [
+          113
+        ],
+        "effect.": [
+          114
+        ],
+        "It": [
+          115
+        ],
+        "shown": [
+          117
+        ],
+        "that": [
+          118,
+          209
+        ],
+        "simulated": [
+          120
+        ],
+        "trend": [
+          121
+        ],
+        "in": [
+          122,
+          182,
+          197,
+          245,
+          278,
+          291
+        ],
+        "deposition": [
+          124
+        ],
+        "since": [
+          125
+        ],
+        "end": [
+          127
+        ],
+        "last": [
+          130
+        ],
+        "century": [
+          131
+        ],
+        "broadly": [
+          133
+        ],
+        "consistent": [
+          134
+        ],
+        "with": [
+          135,
+          172
+        ],
+        "ice": [
+          136
+        ],
+        "core": [
+          137
+        ],
+        "measurements,": [
+          138
+        ],
+        "forcings": [
+          143
+        ],
+        "from": [
+          144,
+          175,
+          325
+        ],
+        "preindustrial": [
+          145
+        ],
+        "present": [
+          147
+        ],
+        "time": [
+          148
+        ],
+        "uncertainty": [
+          152
+        ],
+        "range": [
+          153
+        ],
+        "estimated": [
+          154
+        ],
+        "by": [
+          155,
+          221,
+          315
+        ],
+        "IPCC.": [
+          156
+        ],
+        "Three": [
+          157
+        ],
+        "perturbation": [
+          159
+        ],
+        "experiments": [
+          160,
+          207
+        ],
+        "performed,": [
+          162
+        ],
+        "applying": [
+          163
+        ],
+        "different": [
+          164,
+          250,
+          261
+        ],
+        "forcing": [
+          165
+        ],
+        "mechanisms,": [
+          166
+        ],
+        "results": [
+          169
+        ],
+        "compared": [
+          171,
+          232,
+          252
+        ],
+        "those": [
+          173
+        ],
+        "obtained": [
+          174
+        ],
+        "300-yr": [
+          177
+        ],
+        "unforced": [
+          178
+        ],
+        "control": [
+          179,
+          247
+        ],
+        "experiment.": [
+          180,
+          248
+        ],
+        "As": [
+          181
+        ],
+        "previous": [
+          183,
+          206,
+          254
+        ],
+        "experiments,": [
+          184
+        ],
+        "similar,": [
+          189
+        ],
+        "but": [
+          190
+        ],
+        "weaker,": [
+          191
+        ],
+        "if": [
+          192,
+          282
+        ],
+        "aerosol": [
+          193,
+          225,
+          265,
+          287
+        ],
+        "effects": [
+          194,
+          288
+        ],
+        "included": [
+          196,
+          290
+        ],
+        "addition": [
+          198,
+          292
+        ],
+        "gases.": [
+          201,
+          296
+        ],
+        "One": [
+          202
+        ],
+        "notable": [
+          203
+        ],
+        "difference": [
+          204
+        ],
+        "strength": [
+          211
+        ],
+        "Indian": [
+          214
+        ],
+        "summer": [
+          215
+        ],
+        "monsoon": [
+          216,
+          229
+        ],
+        "not": [
+          218
+        ],
+        "fundamentally": [
+          219
+        ],
+        "affected": [
+          220
+        ],
+        "inclusion": [
+          223
+        ],
+        "effects.": [
+          226
+        ],
+        "Although": [
+          227
+        ],
+        "damped": [
+          231
+        ],
+        "gas": [
+          236
+        ],
+        "only": [
+          237
+        ],
+        "experiment,": [
+          238
+        ],
+        "it": [
+          239
+        ],
+        "still": [
+          241
+        ],
+        "more": [
+          242
+        ],
+        "vigorous": [
+          243
+        ],
+        "than": [
+          244
+        ],
+        "This": [
+          249,
+          297
+        ],
+        "behavior,": [
+          251
+        ],
+        "studies,": [
+          255
+        ],
+        "result": [
+          258
+        ],
+        "land–sea": [
+          262
+        ],
+        "forcing.": [
+          266
+        ],
+        "Somewhat": [
+          267
+        ],
+        "unexpected,": [
+          268
+        ],
+        "intensity": [
+          270
+        ],
+        "global": [
+          273
+        ],
+        "hydrological": [
+          274
+        ],
+        "becomes": [
+          276
+        ],
+        "weaker": [
+          277
+        ],
+        "warmer": [
+          280
+        ],
+        "can": [
+          298
+        ],
+        "be": [
+          299
+        ],
+        "related": [
+          300
+        ],
+        "anomalous": [
+          302
+        ],
+        "net": [
+          303
+        ],
+        "cooling": [
+          305
+        ],
+        "earth's": [
+          308
+        ],
+        "surface": [
+          309,
+          327
+        ],
+        "aerosols,": [
+          311
+        ],
+        "which": [
+          312
+        ],
+        "balanced": [
+          314
+        ],
+        "reduced": [
+          316
+        ],
+        "turbulent": [
+          317
+        ],
+        "transfer": [
+          318
+        ],
+        "sensible": [
+          321
+        ],
+        "latent": [
+          323
+        ],
+        "heat": [
+          324
+        ],
+        "atmosphere.": [
+          330
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Climatology",
+          "openalex_id": "https://openalex.org/C49204034",
+          "level": 1,
+          "score": 0.7593132
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.72182953
+        },
+        {
+          "name": "Atmospheric sciences",
+          "openalex_id": "https://openalex.org/C91586092",
+          "level": 1,
+          "score": 0.67111784
+        },
+        {
+          "name": "Troposphere",
+          "openalex_id": "https://openalex.org/C9075549",
+          "level": 2,
+          "score": 0.66082287
+        },
+        {
+          "name": "Radiative forcing",
+          "openalex_id": "https://openalex.org/C99578197",
+          "level": 3,
+          "score": 0.61876804
+        },
+        {
+          "name": "Climate model",
+          "openalex_id": "https://openalex.org/C168754636",
+          "level": 3,
+          "score": 0.5999744
+        },
+        {
+          "name": "Greenhouse gas",
+          "openalex_id": "https://openalex.org/C47737302",
+          "level": 2,
+          "score": 0.5757143
+        },
+        {
+          "name": "Sulfate aerosol",
+          "openalex_id": "https://openalex.org/C2779681926",
+          "level": 3,
+          "score": 0.57238925
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.49242887
+        },
+        {
+          "name": "Aerosol",
+          "openalex_id": "https://openalex.org/C2779345167",
+          "level": 2,
+          "score": 0.48826027
+        },
+        {
+          "name": "Atmosphere (unit)",
+          "openalex_id": "https://openalex.org/C65440619",
+          "level": 2,
+          "score": 0.45563808
+        },
+        {
+          "name": "Monsoon",
+          "openalex_id": "https://openalex.org/C136996986",
+          "level": 2,
+          "score": 0.41656578
+        },
+        {
+          "name": "Stratosphere",
+          "openalex_id": "https://openalex.org/C163861444",
+          "level": 2,
+          "score": 0.247123
+        },
+        {
+          "name": "Meteorology",
+          "openalex_id": "https://openalex.org/C153294291",
+          "level": 1,
+          "score": 0.24315563
+        },
+        {
+          "name": "Geology",
+          "openalex_id": "https://openalex.org/C127313418",
+          "level": 0,
+          "score": 0.07441199
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.06538394
+        },
+        {
+          "name": "Oceanography",
+          "openalex_id": "https://openalex.org/C111368507",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": true,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_4_IPCC climate change distributi"
+    }
+  ],
+  "all_google_scholar_papers": [],
+  "all_openalex_papers": [
+    {
+      "openalex_id": "https://openalex.org/W1567561872",
+      "title": "The Regional Impacts of Climate Change: An Assessment of Vulnerability",
+      "authors": [
+        {
+          "name": "Robert T. Watson",
+          "openalex_id": "https://openalex.org/A5103428585"
+        },
+        {
+          "name": "Marufu C. Zinyowera",
+          "openalex_id": "https://openalex.org/A5022376581"
+        },
+        {
+          "name": "Richard H. Moss",
+          "openalex_id": "https://openalex.org/A5000113329"
+        },
+        {
+          "name": "David Jon Dokken",
+          "openalex_id": "https://openalex.org/A5067020707"
+        }
+      ],
+      "publication_year": 1998,
+      "journal": "",
+      "doi": null,
+      "citations_count": 1328,
+      "abstract": {
+        "The": [
+          0,
+          163,
+          194
+        ],
+        "Intergovernmental": [
+          1
+        ],
+        "Panel": [
+          2
+        ],
+        "on": [
+          3,
+          27,
+          89,
+          128
+        ],
+        "Climate": [
+          4
+        ],
+        "Change": [
+          5
+        ],
+        "(IPCC)": [
+          6
+        ],
+        "was\njointly": [
+          7
+        ],
+        "established": [
+          8
+        ],
+        "by": [
+          9,
+          70,
+          82
+        ],
+        "the": [
+          10,
+          14,
+          22,
+          86,
+          90,
+          94,
+          124,
+          137,
+          140,
+          144,
+          146,
+          153,
+          158,
+          171,
+          179,
+          185,
+          204,
+          224,
+          230
+        ],
+        "World": [
+          11
+        ],
+        "Meteorological": [
+          12
+        ],
+        "Organization\nand": [
+          13
+        ],
+        "United": [
+          15
+        ],
+        "Nations": [
+          16
+        ],
+        "Environment": [
+          17
+        ],
+        "Programme": [
+          18
+        ],
+        "in": [
+          19,
+          34,
+          110
+        ],
+        "1988": [
+          20
+        ],
+        "to\nassess": [
+          21
+        ],
+        "scientific": [
+          23
+        ],
+        "and": [
+          24,
+          36,
+          40,
+          60,
+          73,
+          99,
+          120,
+          152,
+          174,
+          189,
+          229,
+          236,
+          252
+        ],
+        "technical": [
+          25
+        ],
+        "literature": [
+          26
+        ],
+        "climate": [
+          28,
+          43,
+          248
+        ],
+        "change,\nthe": [
+          29
+        ],
+        "potential": [
+          30,
+          159,
+          172
+        ],
+        "impacts": [
+          31
+        ],
+        "of": [
+          32,
+          42,
+          53,
+          67,
+          85,
+          123,
+          139,
+          161,
+          169,
+          176,
+          181,
+          197
+        ],
+        "changes": [
+          33
+        ],
+        "climate,": [
+          35
+        ],
+        "options": [
+          37
+        ],
+        "for\nadaption": [
+          38
+        ],
+        "to": [
+          39,
+          112,
+          143,
+          148,
+          157,
+          183
+        ],
+        "mitigation": [
+          41,
+          190
+        ],
+        "change.": [
+          44
+        ],
+        "Since": [
+          45
+        ],
+        "its": [
+          46
+        ],
+        "inception,\nthe": [
+          47
+        ],
+        "IPCC": [
+          48
+        ],
+        "has": [
+          49,
+          79,
+          107
+        ],
+        "produced": [
+          50,
+          81
+        ],
+        "a": [
+          51,
+          113,
+          166
+        ],
+        "series": [
+          52
+        ],
+        "Assessment": [
+          54,
+          96
+        ],
+        "Reports,\nSpecial": [
+          55
+        ],
+        "Reports,": [
+          56
+        ],
+        "Technical": [
+          57
+        ],
+        "Papers,": [
+          58
+        ],
+        "methodologies": [
+          59
+        ],
+        "other\nproducts": [
+          61
+        ],
+        "which": [
+          62,
+          78,
+          149
+        ],
+        "have": [
+          63
+        ],
+        "become": [
+          64
+        ],
+        "standard": [
+          65
+        ],
+        "works": [
+          66
+        ],
+        "reference,\nwidely": [
+          68
+        ],
+        "used": [
+          69
+        ],
+        "policymakers,": [
+          71
+        ],
+        "scientists": [
+          72
+        ],
+        "other": [
+          74
+        ],
+        "experts.\nThis": [
+          75
+        ],
+        "Special": [
+          76
+        ],
+        "Report,": [
+          77
+        ],
+        "been": [
+          80,
+          108
+        ],
+        "Working\nGroup": [
+          83
+        ],
+        "II": [
+          84
+        ],
+        "IPCC,": [
+          87
+        ],
+        "builds": [
+          88
+        ],
+        "Working": [
+          91
+        ],
+        "Group's": [
+          92
+        ],
+        "contribution\nto": [
+          93
+        ],
+        "Second": [
+          95
+        ],
+        "Report": [
+          97
+        ],
+        "(SAR),": [
+          98
+        ],
+        "incorporates\nmore": [
+          100
+        ],
+        "recent": [
+          101
+        ],
+        "information": [
+          102,
+          245
+        ],
+        "made": [
+          103
+        ],
+        "available": [
+          104
+        ],
+        "since": [
+          105
+        ],
+        "mid-1995.\nIt": [
+          106
+        ],
+        "prepared": [
+          109
+        ],
+        "response": [
+          111
+        ],
+        "request": [
+          114
+        ],
+        "from": [
+          115
+        ],
+        "the\nSubsidiary": [
+          116
+        ],
+        "Body": [
+          117
+        ],
+        "for": [
+          118
+        ],
+        "Scientific": [
+          119
+        ],
+        "Technological": [
+          121
+        ],
+        "Advice\n(SBSTA)": [
+          122
+        ],
+        "UN": [
+          125
+        ],
+        "Framework": [
+          126
+        ],
+        "Convention": [
+          127
+        ],
+        "Climate\nChange": [
+          129
+        ],
+        "(UNFCCC).": [
+          130
+        ],
+        "It": [
+          131,
+          239
+        ],
+        "addresses": [
+          132
+        ],
+        "an": [
+          133
+        ],
+        "important": [
+          134
+        ],
+        "question": [
+          135
+        ],
+        "posed\nby": [
+          136
+        ],
+        "Conference": [
+          138
+        ],
+        "Parties": [
+          141
+        ],
+        "(COP)": [
+          142
+        ],
+        "UNFCCC,\nnamely,": [
+          145
+        ],
+        "degree": [
+          147
+        ],
+        "human": [
+          150
+        ],
+        "conditions": [
+          151
+        ],
+        "natural\nenvironment": [
+          154
+        ],
+        "are": [
+          155
+        ],
+        "vulnerable": [
+          156
+        ],
+        "effects": [
+          160
+        ],
+        "climate\nchange.": [
+          162
+        ],
+        "report": [
+          164,
+          195
+        ],
+        "establishes": [
+          165
+        ],
+        "common": [
+          167
+        ],
+        "base": [
+          168
+        ],
+        "information\nregarding": [
+          170
+        ],
+        "costs": [
+          173
+        ],
+        "benefits": [
+          175
+        ],
+        "climatic": [
+          177
+        ],
+        "change,\nincluding": [
+          178
+        ],
+        "evaluation": [
+          180
+        ],
+        "uncertainties,": [
+          182
+        ],
+        "help": [
+          184
+        ],
+        "COP\ndetermine": [
+          186
+        ],
+        "what": [
+          187
+        ],
+        "adaptation": [
+          188
+        ],
+        "measures": [
+          191
+        ],
+        "might": [
+          192
+        ],
+        "be\njustified.": [
+          193
+        ],
+        "consists": [
+          196
+        ],
+        "vulnerability": [
+          198
+        ],
+        "assessments": [
+          199
+        ],
+        "for\n10": [
+          200
+        ],
+        "regions": [
+          201
+        ],
+        "that": [
+          202,
+          243
+        ],
+        "comprise": [
+          203
+        ],
+        "Earth's": [
+          205
+        ],
+        "entire": [
+          206
+        ],
+        "land": [
+          207
+        ],
+        "surface": [
+          208
+        ],
+        "and\nadjoining": [
+          209
+        ],
+        "coastal": [
+          210
+        ],
+        "seas:": [
+          211
+        ],
+        "Africa,": [
+          212
+        ],
+        "Arid": [
+          213
+        ],
+        "Western": [
+          214
+        ],
+        "Asia": [
+          215,
+          235
+        ],
+        "(including": [
+          216
+        ],
+        "the\nMiddle": [
+          217
+        ],
+        "East),": [
+          218
+        ],
+        "Australasia,": [
+          219
+        ],
+        "Europe,": [
+          220
+        ],
+        "Latin": [
+          221
+        ],
+        "America,": [
+          222
+        ],
+        "North\nAmerica,": [
+          223
+        ],
+        "Polar": [
+          225
+        ],
+        "Regions": [
+          226
+        ],
+        "(The": [
+          227
+        ],
+        "Arctic": [
+          228
+        ],
+        "Antarctic),\nSmall": [
+          231
+        ],
+        "Island": [
+          232
+        ],
+        "States,": [
+          233
+        ],
+        "Temperate": [
+          234
+        ],
+        "Tropical": [
+          237
+        ],
+        "Asia.": [
+          238
+        ],
+        "also\nincludes": [
+          240
+        ],
+        "several": [
+          241
+        ],
+        "annexes": [
+          242
+        ],
+        "provide": [
+          244
+        ],
+        "about": [
+          246
+        ],
+        "climate\nobservations,": [
+          247
+        ],
+        "projections,": [
+          249
+        ],
+        "vegetation": [
+          250
+        ],
+        "distribution\nprojections": [
+          251
+        ],
+        "socioeconomic": [
+          253
+        ],
+        "trends.": [
+          254
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.73368835
+        },
+        {
+          "name": "Vulnerability (computing)",
+          "openalex_id": "https://openalex.org/C95713431",
+          "level": 2,
+          "score": 0.68427926
+        },
+        {
+          "name": "United Nations Framework Convention on Climate Change",
+          "openalex_id": "https://openalex.org/C2778539042",
+          "level": 4,
+          "score": 0.6642466
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.5618985
+        },
+        {
+          "name": "Environmental resource management",
+          "openalex_id": "https://openalex.org/C107826830",
+          "level": 1,
+          "score": 0.53782374
+        },
+        {
+          "name": "Environmental planning",
+          "openalex_id": "https://openalex.org/C91375879",
+          "level": 1,
+          "score": 0.49339977
+        },
+        {
+          "name": "Vulnerability assessment",
+          "openalex_id": "https://openalex.org/C167063184",
+          "level": 3,
+          "score": 0.47880703
+        },
+        {
+          "name": "Convention",
+          "openalex_id": "https://openalex.org/C2780608745",
+          "level": 2,
+          "score": 0.41948283
+        },
+        {
+          "name": "Environmental protection",
+          "openalex_id": "https://openalex.org/C526734887",
+          "level": 1,
+          "score": 0.38078347
+        },
+        {
+          "name": "Political science",
+          "openalex_id": "https://openalex.org/C17744445",
+          "level": 0,
+          "score": 0.34678626
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.26942658
+        },
+        {
+          "name": "Kyoto Protocol",
+          "openalex_id": "https://openalex.org/C99743013",
+          "level": 3,
+          "score": 0.23354656
+        },
+        {
+          "name": "Computer science",
+          "openalex_id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.09470335
+        },
+        {
+          "name": "Psychology",
+          "openalex_id": "https://openalex.org/C15744967",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Computer security",
+          "openalex_id": "https://openalex.org/C38652104",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Psychological resilience",
+          "openalex_id": "https://openalex.org/C137176749",
+          "level": 2,
+          "score": 0.0
+        },
+        {
+          "name": "Law",
+          "openalex_id": "https://openalex.org/C199539241",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Psychotherapist",
+          "openalex_id": "https://openalex.org/C542102704",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "book",
+      "open_access": false,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_1_climate change mitigation Dist"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2125340357",
+      "title": "Assessing effects of forecasted climate change on the diversity and distribution of European higher plants for 2050",
+      "authors": [
+        {
+          "name": "Michel Bakkenes",
+          "openalex_id": "https://openalex.org/A5050769625"
+        },
+        {
+          "name": "Rob Alkemade",
+          "openalex_id": "https://openalex.org/A5071729186"
+        },
+        {
+          "name": "F. Ihle",
+          "openalex_id": "https://openalex.org/A5087753202"
+        },
+        {
+          "name": "Rik Leemans",
+          "openalex_id": "https://openalex.org/A5003249859"
+        },
+        {
+          "name": "J. B. Latour",
+          "openalex_id": "https://openalex.org/A5084048017"
+        }
+      ],
+      "publication_year": 2002,
+      "journal": "Global Change Biology",
+      "doi": "https://doi.org/10.1046/j.1354-1013.2001.00467.x",
+      "citations_count": 615,
+      "abstract": {
+        "Abstract": [
+          0
+        ],
+        "The": [
+          1,
+          47,
+          77,
+          116,
+          146
+        ],
+        "rapidly": [
+          2
+        ],
+        "increasing": [
+          3
+        ],
+        "atmospheric": [
+          4
+        ],
+        "concentrations": [
+          5
+        ],
+        "of": [
+          6,
+          29,
+          128,
+          153,
+          162,
+          169
+        ],
+        "greenhouse": [
+          7
+        ],
+        "gases": [
+          8
+        ],
+        "may": [
+          9
+        ],
+        "lead": [
+          10
+        ],
+        "to": [
+          11,
+          54,
+          82,
+          86,
+          173
+        ],
+        "significant": [
+          12
+        ],
+        "changes": [
+          13,
+          21,
+          40,
+          120
+        ],
+        "in": [
+          14,
+          108,
+          121,
+          136,
+          139,
+          148,
+          190,
+          210
+        ],
+        "regional": [
+          15
+        ],
+        "and": [
+          16,
+          27,
+          35,
+          63,
+          92,
+          113
+        ],
+        "seasonal": [
+          17
+        ],
+        "climate": [
+          18,
+          50,
+          65,
+          78,
+          85,
+          111,
+          176,
+          196
+        ],
+        "patterns.": [
+          19
+        ],
+        "Such": [
+          20
+        ],
+        "can": [
+          22
+        ],
+        "strongly": [
+          23
+        ],
+        "influence": [
+          24
+        ],
+        "the": [
+          25,
+          59,
+          83,
+          129,
+          154,
+          163,
+          170,
+          174
+        ],
+        "diversity": [
+          26,
+          91
+        ],
+        "distribution": [
+          28
+        ],
+        "species": [
+          30,
+          71,
+          104,
+          132,
+          156,
+          172
+        ],
+        "and,": [
+          31
+        ],
+        "therefore,": [
+          32
+        ],
+        "affect": [
+          33
+        ],
+        "ecosystems": [
+          34
+        ],
+        "biodiversity.": [
+          36
+        ],
+        "To": [
+          37
+        ],
+        "assess": [
+          38
+        ],
+        "these": [
+          39
+        ],
+        "we": [
+          41,
+          185
+        ],
+        "developed": [
+          42
+        ],
+        "a": [
+          43,
+          137
+        ],
+        "model,": [
+          44,
+          62
+        ],
+        "called": [
+          45
+        ],
+        "euromove.": [
+          46
+        ],
+        "model": [
+          48
+        ],
+        "uses": [
+          49
+        ],
+        "data": [
+          51
+        ],
+        "from": [
+          52,
+          58,
+          143
+        ],
+        "1990": [
+          53,
+          140,
+          155
+        ],
+        "2050": [
+          55
+        ],
+        "as": [
+          56
+        ],
+        "compiled": [
+          57
+        ],
+        "image": [
+          60
+        ],
+        "2": [
+          61
+        ],
+        "determines": [
+          64
+        ],
+        "envelopes": [
+          66,
+          79,
+          197
+        ],
+        "for": [
+          67
+        ],
+        "about": [
+          68,
+          89
+        ],
+        "1400": [
+          69
+        ],
+        "plant": [
+          70,
+          90,
+          131,
+          171,
+          188
+        ],
+        "by": [
+          72,
+          94,
+          123,
+          200
+        ],
+        "multiple": [
+          73
+        ],
+        "logistic": [
+          74
+        ],
+        "regression": [
+          75
+        ],
+        "analysis.": [
+          76
+        ],
+        "were": [
+          80,
+          134,
+          178,
+          205
+        ],
+        "applied": [
+          81
+        ],
+        "projected": [
+          84
+        ],
+        "obtain": [
+          87
+        ],
+        "predictions": [
+          88
+        ],
+        "distributions": [
+          93
+        ],
+        "2050.": [
+          95,
+          124
+        ],
+        "For": [
+          96
+        ],
+        "each": [
+          97
+        ],
+        "European": [
+          98,
+          130,
+          165
+        ],
+        "grid": [
+          99
+        ],
+        "cell,": [
+          100
+        ],
+        "euromove": [
+          101
+        ],
+        "calculates": [
+          102
+        ],
+        "which": [
+          103,
+          114,
+          149
+        ],
+        "would": [
+          105,
+          141,
+          192
+        ],
+        "still": [
+          106
+        ],
+        "occur": [
+          107
+        ],
+        "forecasted": [
+          109,
+          175
+        ],
+        "future": [
+          110,
+          183
+        ],
+        "conditions": [
+          112
+        ],
+        "not.": [
+          115
+        ],
+        "results": [
+          117
+        ],
+        "show": [
+          118
+        ],
+        "major": [
+          119
+        ],
+        "biodiversity": [
+          122
+        ],
+        "On": [
+          125
+        ],
+        "average,": [
+          126
+        ],
+        "32%": [
+          127,
+          150
+        ],
+        "that": [
+          133,
+          144,
+          187,
+          204
+        ],
+        "present": [
+          135
+        ],
+        "cell": [
+          138
+        ],
+        "disappear": [
+          142
+        ],
+        "cell.": [
+          145
+        ],
+        "area,": [
+          147
+        ],
+        "or": [
+          151
+        ],
+        "more": [
+          152
+        ],
+        "will": [
+          157
+        ],
+        "disappear,": [
+          158
+        ],
+        "takes": [
+          159
+        ],
+        "up": [
+          160
+        ],
+        "44%": [
+          161
+        ],
+        "modelled": [
+          164
+        ],
+        "area.": [
+          166
+        ],
+        "Individual": [
+          167
+        ],
+        "responses": [
+          168
+        ],
+        "change": [
+          177
+        ],
+        "diverse.": [
+          179
+        ],
+        "In": [
+          180
+        ],
+        "reviewing": [
+          181
+        ],
+        "possible": [
+          182
+        ],
+        "trends,": [
+          184
+        ],
+        "found": [
+          186
+        ],
+        "species,": [
+          189
+        ],
+        "general,": [
+          191
+        ],
+        "find": [
+          193
+        ],
+        "their": [
+          194
+        ],
+        "current": [
+          195
+        ],
+        "further": [
+          198
+        ],
+        "northeast": [
+          199
+        ],
+        "2050,": [
+          201
+        ],
+        "shifting": [
+          202
+        ],
+        "ranges": [
+          203,
+          209
+        ],
+        "comparable": [
+          206
+        ],
+        "with": [
+          207
+        ],
+        "those": [
+          208
+        ],
+        "other": [
+          211
+        ],
+        "studies.": [
+          212
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.7691034
+        },
+        {
+          "name": "Biodiversity",
+          "openalex_id": "https://openalex.org/C130217890",
+          "level": 2,
+          "score": 0.7570749
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.6113881
+        },
+        {
+          "name": "Greenhouse gas",
+          "openalex_id": "https://openalex.org/C47737302",
+          "level": 2,
+          "score": 0.5333068
+        },
+        {
+          "name": "Climate model",
+          "openalex_id": "https://openalex.org/C168754636",
+          "level": 3,
+          "score": 0.51999456
+        },
+        {
+          "name": "Species distribution",
+          "openalex_id": "https://openalex.org/C132124917",
+          "level": 3,
+          "score": 0.48796362
+        },
+        {
+          "name": "Ecosystem",
+          "openalex_id": "https://openalex.org/C110872660",
+          "level": 2,
+          "score": 0.4863544
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.46320876
+        },
+        {
+          "name": "Distribution (mathematics)",
+          "openalex_id": "https://openalex.org/C110121322",
+          "level": 2,
+          "score": 0.44744992
+        },
+        {
+          "name": "Global biodiversity",
+          "openalex_id": "https://openalex.org/C187604713",
+          "level": 3,
+          "score": 0.43361115
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.40031728
+        },
+        {
+          "name": "Physical geography",
+          "openalex_id": "https://openalex.org/C100970517",
+          "level": 1,
+          "score": 0.32863402
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.17062432
+        },
+        {
+          "name": "Habitat",
+          "openalex_id": "https://openalex.org/C185933670",
+          "level": 2,
+          "score": 0.08770111
+        },
+        {
+          "name": "Mathematical analysis",
+          "openalex_id": "https://openalex.org/C134306372",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Mathematics",
+          "openalex_id": "https://openalex.org/C33923547",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": false,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_2_climate change distributional "
+    },
+    {
+      "openalex_id": "https://openalex.org/W2002368560",
+      "title": "POTENTIAL EFFECTS OF CLIMATE CHANGE ON ECOSYSTEM AND TREE SPECIES DISTRIBUTION IN BRITISH COLUMBIA",
+      "authors": [
+        {
+          "name": "Andreas Hamann",
+          "openalex_id": "https://openalex.org/A5084733320"
+        },
+        {
+          "name": "Tongli Wang",
+          "openalex_id": "https://openalex.org/A5007547630"
+        }
+      ],
+      "publication_year": 2006,
+      "journal": "Ecology",
+      "doi": "https://doi.org/10.1890/0012-9658(2006)87[2773:peocco]2.0.co;2",
+      "citations_count": 580,
+      "abstract": {
+        "A": [
+          0
+        ],
+        "new": [
+          1
+        ],
+        "ecosystem-based": [
+          2
+        ],
+        "climate": [
+          3,
+          12,
+          32,
+          90,
+          103,
+          146,
+          177,
+          189,
+          213
+        ],
+        "envelope": [
+          4
+        ],
+        "modeling": [
+          5
+        ],
+        "approach": [
+          6
+        ],
+        "was": [
+          7
+        ],
+        "applied": [
+          8
+        ],
+        "to": [
+          9,
+          28,
+          39,
+          141,
+          161,
+          197,
+          212
+        ],
+        "assess": [
+          10
+        ],
+        "potential": [
+          11,
+          111,
+          126
+        ],
+        "change": [
+          13,
+          104
+        ],
+        "impacts": [
+          14
+        ],
+        "on": [
+          15
+        ],
+        "forest": [
+          16
+        ],
+        "communities": [
+          17
+        ],
+        "and": [
+          18,
+          38,
+          52,
+          78,
+          99,
+          106,
+          148,
+          187
+        ],
+        "tree": [
+          19,
+          48,
+          112,
+          198
+        ],
+        "species.": [
+          20,
+          84
+        ],
+        "Four": [
+          21
+        ],
+        "orthogonal": [
+          22
+        ],
+        "canonical": [
+          23
+        ],
+        "discriminant": [
+          24
+        ],
+        "functions": [
+          25
+        ],
+        "were": [
+          26,
+          201
+        ],
+        "used": [
+          27
+        ],
+        "describe": [
+          29
+        ],
+        "the": [
+          30,
+          43,
+          72,
+          88,
+          108,
+          151
+        ],
+        "realized": [
+          31,
+          44,
+          89,
+          176
+        ],
+        "space": [
+          33,
+          46,
+          91,
+          178
+        ],
+        "for": [
+          34,
+          47,
+          82,
+          110,
+          179,
+          206
+        ],
+        "British": [
+          35,
+          123,
+          157
+        ],
+        "Columbia's": [
+          36
+        ],
+        "ecosystems": [
+          37,
+          94,
+          180
+        ],
+        "model": [
+          40,
+          59
+        ],
+        "portions": [
+          41
+        ],
+        "of": [
+          42,
+          62,
+          92,
+          131,
+          150,
+          166,
+          172,
+          175,
+          195,
+          209
+        ],
+        "niche": [
+          45
+        ],
+        "species": [
+          49,
+          64,
+          113,
+          116,
+          155,
+          199
+        ],
+        "under": [
+          50,
+          102
+        ],
+        "current": [
+          51,
+          93
+        ],
+        "predicted": [
+          53
+        ],
+        "future": [
+          54
+        ],
+        "climates.": [
+          55
+        ],
+        "This": [
+          56
+        ],
+        "conceptually": [
+          57
+        ],
+        "simple": [
+          58
+        ],
+        "is": [
+          60,
+          181
+        ],
+        "capable": [
+          61
+        ],
+        "predicting": [
+          63
+        ],
+        "ranges": [
+          65
+        ],
+        "at": [
+          66,
+          128,
+          132
+        ],
+        "high": [
+          67
+        ],
+        "spatial": [
+          68,
+          100,
+          173
+        ],
+        "resolutions": [
+          69
+        ],
+        "far": [
+          70
+        ],
+        "beyond": [
+          71
+        ],
+        "study": [
+          73
+        ],
+        "area,": [
+          74
+        ],
+        "including": [
+          75
+        ],
+        "outlying": [
+          76
+        ],
+        "populations": [
+          77
+        ],
+        "southern": [
+          79
+        ],
+        "range": [
+          80,
+          120
+        ],
+        "limits": [
+          81
+        ],
+        "many": [
+          83
+        ],
+        "We": [
+          85
+        ],
+        "analyzed": [
+          86
+        ],
+        "how": [
+          87
+        ],
+        "changes": [
+          95,
+          196
+        ],
+        "in": [
+          96,
+          122,
+          156
+        ],
+        "extent,": [
+          97
+        ],
+        "elevation,": [
+          98
+        ],
+        "distribution": [
+          101
+        ],
+        "scenarios": [
+          105
+        ],
+        "evaluated": [
+          107
+        ],
+        "implications": [
+          109
+        ],
+        "habitat.": [
+          114,
+          169
+        ],
+        "Tree": [
+          115
+        ],
+        "with": [
+          117,
+          183
+        ],
+        "their": [
+          118,
+          167
+        ],
+        "northern": [
+          119
+        ],
+        "limit": [
+          121
+        ],
+        "Columbia": [
+          124,
+          158
+        ],
+        "gain": [
+          125
+        ],
+        "habitat": [
+          127
+        ],
+        "a": [
+          129,
+          163,
+          204
+        ],
+        "pace": [
+          130
+        ],
+        "least": [
+          133
+        ],
+        "100": [
+          134
+        ],
+        "km": [
+          135
+        ],
+        "per": [
+          136
+        ],
+        "decade,": [
+          137
+        ],
+        "common": [
+          138
+        ],
+        "hardwoods": [
+          139
+        ],
+        "appear": [
+          140
+        ],
+        "be": [
+          142
+        ],
+        "generally": [
+          143
+        ],
+        "unaffected": [
+          144
+        ],
+        "by": [
+          145
+        ],
+        "change,": [
+          147
+        ],
+        "some": [
+          149
+        ],
+        "most": [
+          152
+        ],
+        "important": [
+          153,
+          185
+        ],
+        "conifer": [
+          154
+        ],
+        "are": [
+          159
+        ],
+        "expected": [
+          160
+        ],
+        "lose": [
+          162
+        ],
+        "large": [
+          164
+        ],
+        "portion": [
+          165
+        ],
+        "suitable": [
+          168
+        ],
+        "The": [
+          170
+        ],
+        "extent": [
+          171
+        ],
+        "redistribution": [
+          174
+        ],
+        "considerable,": [
+          182
+        ],
+        "currently": [
+          184
+        ],
+        "sub-boreal": [
+          186
+        ],
+        "montane": [
+          188
+        ],
+        "regions": [
+          190
+        ],
+        "rapidly": [
+          191
+        ],
+        "disappearing.": [
+          192
+        ],
+        "Local": [
+          193
+        ],
+        "predictions": [
+          194
+        ],
+        "frequencies": [
+          200
+        ],
+        "generated": [
+          202
+        ],
+        "as": [
+          203
+        ],
+        "basis": [
+          205
+        ],
+        "systematic": [
+          207
+        ],
+        "surveys": [
+          208
+        ],
+        "biological": [
+          210
+        ],
+        "response": [
+          211
+        ],
+        "change.": [
+          214
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.6987532
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.67456293
+        },
+        {
+          "name": "Habitat",
+          "openalex_id": "https://openalex.org/C185933670",
+          "level": 2,
+          "score": 0.60667163
+        },
+        {
+          "name": "Ecosystem",
+          "openalex_id": "https://openalex.org/C110872660",
+          "level": 2,
+          "score": 0.5507093
+        },
+        {
+          "name": "Range (aeronautics)",
+          "openalex_id": "https://openalex.org/C204323151",
+          "level": 2,
+          "score": 0.53571117
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.52083284
+        },
+        {
+          "name": "Species distribution",
+          "openalex_id": "https://openalex.org/C132124917",
+          "level": 3,
+          "score": 0.52029544
+        },
+        {
+          "name": "Ecological niche",
+          "openalex_id": "https://openalex.org/C102715595",
+          "level": 3,
+          "score": 0.472804
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.4364161
+        },
+        {
+          "name": "Boreal ecosystem",
+          "openalex_id": "https://openalex.org/C12202269",
+          "level": 3,
+          "score": 0.42568243
+        },
+        {
+          "name": "Boreal",
+          "openalex_id": "https://openalex.org/C100537666",
+          "level": 2,
+          "score": 0.42200655
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.12415707
+        },
+        {
+          "name": "Materials science",
+          "openalex_id": "https://openalex.org/C192562407",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Composite material",
+          "openalex_id": "https://openalex.org/C159985019",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": false,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_2_climate change distributional "
+    },
+    {
+      "openalex_id": "https://openalex.org/W2791215549",
+      "title": "Health co-benefits from air pollution and mitigation costs of the Paris Agreement: a modelling study",
+      "authors": [
+        {
+          "name": "Anil Markandya",
+          "openalex_id": "https://openalex.org/A5051484500"
+        },
+        {
+          "name": "Jon Sampedro",
+          "openalex_id": "https://openalex.org/A5042172640"
+        },
+        {
+          "name": "Steven J. Smith",
+          "openalex_id": "https://openalex.org/A5011759109"
+        },
+        {
+          "name": "Rita Van Dingenen",
+          "openalex_id": "https://openalex.org/A5047660675"
+        },
+        {
+          "name": "Cristina Pizarro-Irizar",
+          "openalex_id": "https://openalex.org/A5033234983"
+        },
+        {
+          "name": "Iñaki Arto",
+          "openalex_id": "https://openalex.org/A5024466086"
+        },
+        {
+          "name": "Mikel González‐Eguino",
+          "openalex_id": "https://openalex.org/A5016262428"
+        }
+      ],
+      "publication_year": 2018,
+      "journal": "The Lancet Planetary Health",
+      "doi": "https://doi.org/10.1016/s2542-5196(18)30029-9",
+      "citations_count": 539,
+      "abstract": {
+        "BackgroundAlthough": [
+          0
+        ],
+        "the": [
+          1,
+          23,
+          43,
+          51,
+          56,
+          59,
+          71,
+          97,
+          105,
+          134,
+          162,
+          170,
+          173,
+          196,
+          208,
+          227,
+          238,
+          243,
+          248,
+          256,
+          259,
+          264,
+          286,
+          289,
+          292,
+          303,
+          312,
+          314,
+          323,
+          335,
+          342,
+          347,
+          372,
+          416,
+          423,
+          426
+        ],
+        "co-benefits": [
+          2,
+          48,
+          235,
+          261,
+          305,
+          315,
+          414,
+          449
+        ],
+        "from": [
+          3,
+          212,
+          280,
+          380
+        ],
+        "addressing": [
+          4
+        ],
+        "problems": [
+          5
+        ],
+        "related": [
+          6
+        ],
+        "to": [
+          7,
+          36,
+          45,
+          103,
+          133,
+          154,
+          160,
+          186,
+          222,
+          276,
+          282,
+          340,
+          383,
+          395,
+          429,
+          432,
+          436
+        ],
+        "both": [
+          8,
+          214
+        ],
+        "climate": [
+          9,
+          61,
+          137,
+          385,
+          396
+        ],
+        "change": [
+          10,
+          138
+        ],
+        "and": [
+          11,
+          26,
+          64,
+          109,
+          113,
+          131,
+          144,
+          167,
+          172,
+          178,
+          201,
+          216,
+          309,
+          327,
+          360,
+          403,
+          445,
+          458
+        ],
+        "air": [
+          12,
+          30,
+          110,
+          156
+        ],
+        "pollution": [
+          13,
+          31
+        ],
+        "have": [
+          14
+        ],
+        "been": [
+          15
+        ],
+        "recognised,": [
+          16
+        ],
+        "there": [
+          17
+        ],
+        "is": [
+          18,
+          75
+        ],
+        "not": [
+          19,
+          369
+        ],
+        "much": [
+          20
+        ],
+        "evidence": [
+          21
+        ],
+        "comparing": [
+          22
+        ],
+        "mitigation": [
+          24,
+          52,
+          209,
+          257,
+          277,
+          408
+        ],
+        "costs": [
+          25,
+          115,
+          210,
+          266,
+          293
+        ],
+        "economic": [
+          27,
+          440
+        ],
+        "benefits": [
+          28
+        ],
+        "of": [
+          29,
+          54,
+          58,
+          116,
+          119,
+          136,
+          164,
+          192,
+          198,
+          207,
+          241,
+          247,
+          255,
+          273,
+          294,
+          338,
+          346,
+          388
+        ],
+        "reduction": [
+          32
+        ],
+        "for": [
+          33,
+          245,
+          307
+        ],
+        "alternative": [
+          34
+        ],
+        "approaches": [
+          35,
+          132
+        ],
+        "meeting": [
+          37
+        ],
+        "greenhouse": [
+          38,
+          296
+        ],
+        "gas": [
+          39,
+          297
+        ],
+        "targets.": [
+          40
+        ],
+        "We": [
+          41,
+          180
+        ],
+        "analysed": [
+          42
+        ],
+        "extent": [
+          44
+        ],
+        "which": [
+          46,
+          70
+        ],
+        "health": [
+          47,
+          188,
+          234,
+          274,
+          304,
+          375,
+          413,
+          448
+        ],
+        "would": [
+          49,
+          350
+        ],
+        "compensate": [
+          50
+        ],
+        "cost": [
+          53,
+          240,
+          278
+        ],
+        "achieving": [
+          55,
+          242
+        ],
+        "targets": [
+          57
+        ],
+        "Paris": [
+          60,
+          427
+        ],
+        "agreement": [
+          62
+        ],
+        "(2°C": [
+          63
+        ],
+        "1·5°C)": [
+          65,
+          130
+        ],
+        "under": [
+          66
+        ],
+        "different": [
+          67
+        ],
+        "scenarios": [
+          68,
+          120,
+          249,
+          444
+        ],
+        "in": [
+          69,
+          79,
+          169,
+          224,
+          322,
+          356,
+          371,
+          392,
+          415,
+          425,
+          442
+        ],
+        "emissions": [
+          72,
+          150,
+          298
+        ],
+        "abatement": [
+          73,
+          114
+        ],
+        "effort": [
+          74,
+          337
+        ],
+        "shared": [
+          76
+        ],
+        "between": [
+          77
+        ],
+        "countries": [
+          78,
+          446
+        ],
+        "accordance": [
+          80,
+          225
+        ],
+        "with": [
+          81,
+          121,
+          205,
+          226,
+          302
+        ],
+        "three": [
+          82,
+          88
+        ],
+        "established": [
+          83
+        ],
+        "equity": [
+          84
+        ],
+        "criteria.MethodsOur": [
+          85
+        ],
+        "study": [
+          86
+        ],
+        "had": [
+          87
+        ],
+        "stages.": [
+          89
+        ],
+        "First,": [
+          90
+        ],
+        "we": [
+          91,
+          251,
+          332
+        ],
+        "used": [
+          92
+        ],
+        "an": [
+          93,
+          155
+        ],
+        "integrated": [
+          94
+        ],
+        "assessment": [
+          95
+        ],
+        "model,": [
+          96
+        ],
+        "Global": [
+          98
+        ],
+        "Change": [
+          99
+        ],
+        "Assessment": [
+          100
+        ],
+        "Model": [
+          101
+        ],
+        "(GCAM),": [
+          102
+        ],
+        "investigate": [
+          104
+        ],
+        "emission": [
+          106,
+          142
+        ],
+        "(greenhouse": [
+          107
+        ],
+        "gases": [
+          108
+        ],
+        "pollutants)": [
+          111
+        ],
+        "pathways": [
+          112,
+          151
+        ],
+        "a": [
+          117,
+          183,
+          193,
+          268,
+          352
+        ],
+        "set": [
+          118
+        ],
+        "varying": [
+          122
+        ],
+        "temperature": [
+          123,
+          434
+        ],
+        "objectives": [
+          124
+        ],
+        "(nationally": [
+          125
+        ],
+        "determined": [
+          126
+        ],
+        "contributions,": [
+          127
+        ],
+        "2°C,": [
+          128
+        ],
+        "or": [
+          129
+        ],
+        "distribution": [
+          135
+        ],
+        "methods": [
+          139
+        ],
+        "(capability,": [
+          140
+        ],
+        "constant": [
+          141
+        ],
+        "ratios,": [
+          143
+        ],
+        "equal": [
+          145
+        ],
+        "per": [
+          146
+        ],
+        "capita).": [
+          147
+        ],
+        "The": [
+          148,
+          271
+        ],
+        "resulting": [
+          149,
+          174
+        ],
+        "were": [
+          152,
+          262
+        ],
+        "transferred": [
+          153
+        ],
+        "quality": [
+          157
+        ],
+        "model": [
+          158
+        ],
+        "(TM5-FASST)": [
+          159
+        ],
+        "estimate": [
+          161
+        ],
+        "concentrations": [
+          163
+        ],
+        "particulate": [
+          165
+        ],
+        "matter": [
+          166
+        ],
+        "ozone": [
+          168
+        ],
+        "atmosphere": [
+          171
+        ],
+        "associated": [
+          175
+        ],
+        "premature": [
+          176
+        ],
+        "deaths": [
+          177
+        ],
+        "morbidity.": [
+          179
+        ],
+        "then": [
+          181
+        ],
+        "applied": [
+          182
+        ],
+        "monetary": [
+          184
+        ],
+        "value": [
+          185,
+          197
+        ],
+        "these": [
+          187,
+          203
+        ],
+        "impacts": [
+          189
+        ],
+        "by": [
+          190,
+          411
+        ],
+        "use": [
+          191
+        ],
+        "term": [
+          194
+        ],
+        "called": [
+          195
+        ],
+        "statistical": [
+          199
+        ],
+        "life": [
+          200
+        ],
+        "compared": [
+          202
+        ],
+        "values": [
+          204
+        ],
+        "those": [
+          206
+        ],
+        "calculated": [
+          211
+        ],
+        "GCAM,": [
+          213
+        ],
+        "globally": [
+          215
+        ],
+        "regionally.": [
+          217
+        ],
+        "Our": [
+          218,
+          418
+        ],
+        "analysis": [
+          219
+        ],
+        "looked": [
+          220
+        ],
+        "forward": [
+          221
+        ],
+        "2050": [
+          223
+        ],
+        "socioeconomic": [
+          228
+        ],
+        "narrative": [
+          229
+        ],
+        "Shared": [
+          230
+        ],
+        "Socioeconomic": [
+          231
+        ],
+        "Pathways": [
+          232
+        ],
+        "2.FindingsThe": [
+          233
+        ],
+        "substantially": [
+          236
+        ],
+        "outweighed": [
+          237
+        ],
+        "policy": [
+          239
+        ],
+        "target": [
+          244,
+          344,
+          349
+        ],
+        "all": [
+          246
+        ],
+        "that": [
+          250,
+          334,
+          422
+        ],
+        "analysed.": [
+          252
+        ],
+        "In": [
+          253
+        ],
+        "some": [
+          254,
+          443
+        ],
+        "strategies,": [
+          258
+        ],
+        "median": [
+          260,
+          265
+        ],
+        "double": [
+          263
+        ],
+        "at": [
+          267
+        ],
+        "global": [
+          269
+        ],
+        "level.": [
+          270
+        ],
+        "ratio": [
+          272
+        ],
+        "co-benefit": [
+          275
+        ],
+        "ranged": [
+          279
+        ],
+        "1·4": [
+          281
+        ],
+        "2·45,": [
+          283
+        ],
+        "depending": [
+          284
+        ],
+        "on": [
+          285
+        ],
+        "scenario.": [
+          287
+        ],
+        "At": [
+          288
+        ],
+        "regional": [
+          290
+        ],
+        "level,": [
+          291
+        ],
+        "reducing": [
+          295
+        ],
+        "could": [
+          299,
+          319,
+          405,
+          438
+        ],
+        "be": [
+          300,
+          320,
+          378
+        ],
+        "compensated": [
+          301
+        ],
+        "alone": [
+          306
+        ],
+        "China": [
+          308,
+          361,
+          402
+        ],
+        "India,": [
+          310,
+          404
+        ],
+        "whereas": [
+          311
+        ],
+        "proportion": [
+          313
+        ],
+        "covered": [
+          316
+        ],
+        "varied": [
+          317
+        ],
+        "but": [
+          318
+        ],
+        "substantial": [
+          321,
+          353
+        ],
+        "European": [
+          324
+        ],
+        "Union": [
+          325
+        ],
+        "(7–84%)": [
+          326
+        ],
+        "USA": [
+          328
+        ],
+        "(10–41%),": [
+          329
+        ],
+        "respectively.": [
+          330
+        ],
+        "Finally,": [
+          331
+        ],
+        "found": [
+          333
+        ],
+        "extra": [
+          336
+        ],
+        "trying": [
+          339
+        ],
+        "pursue": [
+          341,
+          430
+        ],
+        "1·5°C": [
+          343,
+          437
+        ],
+        "instead": [
+          345
+        ],
+        "2°C": [
+          348
+        ],
+        "generate": [
+          351
+        ],
+        "net": [
+          354
+        ],
+        "benefit": [
+          355
+        ],
+        "India": [
+          357
+        ],
+        "(US$3·28–8·4": [
+          358
+        ],
+        "trillion)": [
+          359
+        ],
+        "($0·27–2·31": [
+          362
+        ],
+        "trillion),": [
+          363
+        ],
+        "although": [
+          364
+        ],
+        "this": [
+          365
+        ],
+        "positive": [
+          366
+        ],
+        "result": [
+          367
+        ],
+        "was": [
+          368
+        ],
+        "seen": [
+          370
+        ],
+        "other": [
+          373
+        ],
+        "regions.InterpretationSubstantial": [
+          374
+        ],
+        "gains": [
+          376
+        ],
+        "can": [
+          377
+        ],
+        "achieved": [
+          379
+        ],
+        "taking": [
+          381
+        ],
+        "action": [
+          382
+        ],
+        "prevent": [
+          384
+        ],
+        "change,": [
+          386
+        ],
+        "independent": [
+          387
+        ],
+        "any": [
+          389
+        ],
+        "future": [
+          390
+        ],
+        "reductions": [
+          391
+        ],
+        "damages": [
+          393
+        ],
+        "due": [
+          394
+        ],
+        "change.": [
+          397
+        ],
+        "Some": [
+          398
+        ],
+        "countries,": [
+          399
+        ],
+        "such": [
+          400
+        ],
+        "as": [
+          401
+        ],
+        "justify": [
+          406
+        ],
+        "stringent": [
+          407
+        ],
+        "efforts": [
+          409,
+          431
+        ],
+        "just": [
+          410
+        ],
+        "including": [
+          412
+        ],
+        "analysis.": [
+          417
+        ],
+        "results": [
+          419
+        ],
+        "also": [
+          420
+        ],
+        "suggest": [
+          421
+        ],
+        "statement": [
+          424
+        ],
+        "Agreement": [
+          428
+        ],
+        "limit": [
+          433
+        ],
+        "increase": [
+          435
+        ],
+        "make": [
+          439
+        ],
+        "sense": [
+          441
+        ],
+        "if": [
+          447
+        ],
+        "are": [
+          450
+        ],
+        "taken": [
+          451
+        ],
+        "into": [
+          452
+        ],
+        "account.FundingEuropean": [
+          453
+        ],
+        "Union's": [
+          454
+        ],
+        "Horizon": [
+          455
+        ],
+        "2020": [
+          456
+        ],
+        "research": [
+          457
+        ],
+        "innovation": [
+          459
+        ],
+        "programme.": [
+          460
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Greenhouse gas",
+          "openalex_id": "https://openalex.org/C47737302",
+          "level": 2,
+          "score": 0.71070397
+        },
+        {
+          "name": "Per capita",
+          "openalex_id": "https://openalex.org/C127598652",
+          "level": 3,
+          "score": 0.7059711
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.6630633
+        },
+        {
+          "name": "Air pollution",
+          "openalex_id": "https://openalex.org/C559116025",
+          "level": 2,
+          "score": 0.6372261
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.5941951
+        },
+        {
+          "name": "Air quality index",
+          "openalex_id": "https://openalex.org/C126314574",
+          "level": 2,
+          "score": 0.55295515
+        },
+        {
+          "name": "Natural resource economics",
+          "openalex_id": "https://openalex.org/C175605778",
+          "level": 1,
+          "score": 0.5522768
+        },
+        {
+          "name": "Climate change mitigation",
+          "openalex_id": "https://openalex.org/C509746633",
+          "level": 3,
+          "score": 0.45851988
+        },
+        {
+          "name": "Pollutant",
+          "openalex_id": "https://openalex.org/C82685317",
+          "level": 2,
+          "score": 0.4403252
+        },
+        {
+          "name": "Socioeconomic status",
+          "openalex_id": "https://openalex.org/C147077947",
+          "level": 3,
+          "score": 0.4318755
+        },
+        {
+          "name": "Cost–benefit analysis",
+          "openalex_id": "https://openalex.org/C127454912",
+          "level": 2,
+          "score": 0.42317635
+        },
+        {
+          "name": "Environmental protection",
+          "openalex_id": "https://openalex.org/C526734887",
+          "level": 1,
+          "score": 0.3945524
+        },
+        {
+          "name": "Environmental resource management",
+          "openalex_id": "https://openalex.org/C107826830",
+          "level": 1,
+          "score": 0.36968744
+        },
+        {
+          "name": "Environmental health",
+          "openalex_id": "https://openalex.org/C99454951",
+          "level": 1,
+          "score": 0.2952115
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.2314432
+        },
+        {
+          "name": "Meteorology",
+          "openalex_id": "https://openalex.org/C153294291",
+          "level": 1,
+          "score": 0.1865314
+        },
+        {
+          "name": "Economics",
+          "openalex_id": "https://openalex.org/C162324750",
+          "level": 0,
+          "score": 0.17236549
+        },
+        {
+          "name": "Population",
+          "openalex_id": "https://openalex.org/C2908647359",
+          "level": 2,
+          "score": 0.103235334
+        },
+        {
+          "name": "Medicine",
+          "openalex_id": "https://openalex.org/C71924100",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Chemistry",
+          "openalex_id": "https://openalex.org/C185592680",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Organic chemistry",
+          "openalex_id": "https://openalex.org/C178790620",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": true,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_1_climate change mitigation Dist"
+    },
+    {
+      "openalex_id": "https://openalex.org/W1968251786",
+      "title": "Transient Climate Change Simulations with a Coupled Atmosphere–Ocean GCM Including the Tropospheric Sulfur Cycle",
+      "authors": [
+        {
+          "name": "E. Roeckner",
+          "openalex_id": "https://openalex.org/A5105422664"
+        },
+        {
+          "name": "Lennart Bengtsson",
+          "openalex_id": "https://openalex.org/A5079253870"
+        },
+        {
+          "name": "J. Feichter",
+          "openalex_id": "https://openalex.org/A5032734484"
+        },
+        {
+          "name": "Jos Lelieveld",
+          "openalex_id": "https://openalex.org/A5027329208"
+        },
+        {
+          "name": "Henning Rodhe",
+          "openalex_id": "https://openalex.org/A5038257673"
+        }
+      ],
+      "publication_year": 1999,
+      "journal": "Journal of Climate",
+      "doi": "https://doi.org/10.1175/1520-0442(1999)012<3004:tccswa>2.0.co;2",
+      "citations_count": 510,
+      "abstract": {
+        "The": [
+          0,
+          28,
+          95
+        ],
+        "time-dependent": [
+          1
+        ],
+        "climate": [
+          2,
+          158,
+          186,
+          281
+        ],
+        "response": [
+          3,
+          187
+        ],
+        "to": [
+          4,
+          53,
+          146,
+          199,
+          205,
+          233,
+          253,
+          293,
+          301,
+          328
+        ],
+        "changing": [
+          5
+        ],
+        "concentrations": [
+          6,
+          29
+        ],
+        "of": [
+          7,
+          21,
+          30,
+          67,
+          86,
+          98,
+          128,
+          212,
+          224,
+          259,
+          264,
+          271,
+          306,
+          319
+        ],
+        "greenhouse": [
+          8,
+          33,
+          200,
+          235,
+          295
+        ],
+        "gases": [
+          9,
+          34
+        ],
+        "and": [
+          10,
+          24,
+          39,
+          47,
+          72,
+          89,
+          107,
+          139,
+          167,
+          285,
+          322
+        ],
+        "sulfate": [
+          11,
+          123
+        ],
+        "aerosols": [
+          12,
+          100
+        ],
+        "is": [
+          13,
+          70,
+          77,
+          101,
+          116,
+          132,
+          188,
+          208,
+          217,
+          230,
+          240,
+          256,
+          313
+        ],
+        "studied": [
+          14
+        ],
+        "using": [
+          15,
+          83
+        ],
+        "a": [
+          16,
+          176,
+          234,
+          279
+        ],
+        "coupled": [
+          17,
+          81
+        ],
+        "general": [
+          18
+        ],
+        "circulation": [
+          19
+        ],
+        "model": [
+          20,
+          82
+        ],
+        "the": [
+          22,
+          25,
+          31,
+          44,
+          50,
+          64,
+          73,
+          80,
+          87,
+          92,
+          99,
+          105,
+          108,
+          119,
+          126,
+          129,
+          140,
+          151,
+          168,
+          185,
+          210,
+          213,
+          222,
+          228,
+          246,
+          257,
+          260,
+          269,
+          272,
+          294,
+          307,
+          326,
+          329
+        ],
+        "atmosphere": [
+          23
+        ],
+        "ocean": [
+          26
+        ],
+        "(ECHAM4/OPYC3).": [
+          27
+        ],
+        "well-mixed": [
+          32
+        ],
+        "like": [
+          35
+        ],
+        "CO2,": [
+          36
+        ],
+        "CH4,": [
+          37
+        ],
+        "N2O,": [
+          38
+        ],
+        "CFCs": [
+          40
+        ],
+        "are": [
+          41,
+          149,
+          161,
+          170,
+          195,
+          289
+        ],
+        "prescribed": [
+          42
+        ],
+        "for": [
+          43
+        ],
+        "past": [
+          45,
+          88
+        ],
+        "(1860–1990)": [
+          46
+        ],
+        "projected": [
+          48,
+          90
+        ],
+        "into": [
+          49,
+          91
+        ],
+        "future": [
+          51,
+          93
+        ],
+        "according": [
+          52
+        ],
+        "International": [
+          54
+        ],
+        "Panel": [
+          55
+        ],
+        "on": [
+          56
+        ],
+        "Climate": [
+          57
+        ],
+        "Change": [
+          58
+        ],
+        "(IPCC)": [
+          59
+        ],
+        "scenario": [
+          60
+        ],
+        "IS92a.": [
+          61
+        ],
+        "In": [
+          62
+        ],
+        "addition,": [
+          63
+        ],
+        "space–time": [
+          65
+        ],
+        "distribution": [
+          66,
+          263
+        ],
+        "tropospheric": [
+          68,
+          74
+        ],
+        "ozone": [
+          69
+        ],
+        "prescribed,": [
+          71
+        ],
+        "sulfur": [
+          75,
+          84
+        ],
+        "cycle": [
+          76,
+          275
+        ],
+        "calculated": [
+          78,
+          141
+        ],
+        "within": [
+          79,
+          150
+        ],
+        "emissions": [
+          85
+        ],
+        "(IS92a).": [
+          94
+        ],
+        "radiative": [
+          96,
+          142,
+          304
+        ],
+        "impact": [
+          97
+        ],
+        "considered": [
+          102
+        ],
+        "via": [
+          103
+        ],
+        "both": [
+          104,
+          283,
+          320
+        ],
+        "direct": [
+          106,
+          284
+        ],
+        "indirect": [
+          109,
+          286
+        ],
+        "(i.e.,": [
+          110
+        ],
+        "through": [
+          111,
+          310
+        ],
+        "cloud": [
+          112
+        ],
+        "albedo)": [
+          113
+        ],
+        "effect.": [
+          114
+        ],
+        "It": [
+          115
+        ],
+        "shown": [
+          117
+        ],
+        "that": [
+          118,
+          209
+        ],
+        "simulated": [
+          120
+        ],
+        "trend": [
+          121
+        ],
+        "in": [
+          122,
+          182,
+          197,
+          245,
+          278,
+          291
+        ],
+        "deposition": [
+          124
+        ],
+        "since": [
+          125
+        ],
+        "end": [
+          127
+        ],
+        "last": [
+          130
+        ],
+        "century": [
+          131
+        ],
+        "broadly": [
+          133
+        ],
+        "consistent": [
+          134
+        ],
+        "with": [
+          135,
+          172
+        ],
+        "ice": [
+          136
+        ],
+        "core": [
+          137
+        ],
+        "measurements,": [
+          138
+        ],
+        "forcings": [
+          143
+        ],
+        "from": [
+          144,
+          175,
+          325
+        ],
+        "preindustrial": [
+          145
+        ],
+        "present": [
+          147
+        ],
+        "time": [
+          148
+        ],
+        "uncertainty": [
+          152
+        ],
+        "range": [
+          153
+        ],
+        "estimated": [
+          154
+        ],
+        "by": [
+          155,
+          221,
+          315
+        ],
+        "IPCC.": [
+          156
+        ],
+        "Three": [
+          157
+        ],
+        "perturbation": [
+          159
+        ],
+        "experiments": [
+          160,
+          207
+        ],
+        "performed,": [
+          162
+        ],
+        "applying": [
+          163
+        ],
+        "different": [
+          164,
+          250,
+          261
+        ],
+        "forcing": [
+          165
+        ],
+        "mechanisms,": [
+          166
+        ],
+        "results": [
+          169
+        ],
+        "compared": [
+          171,
+          232,
+          252
+        ],
+        "those": [
+          173
+        ],
+        "obtained": [
+          174
+        ],
+        "300-yr": [
+          177
+        ],
+        "unforced": [
+          178
+        ],
+        "control": [
+          179,
+          247
+        ],
+        "experiment.": [
+          180,
+          248
+        ],
+        "As": [
+          181
+        ],
+        "previous": [
+          183,
+          206,
+          254
+        ],
+        "experiments,": [
+          184
+        ],
+        "similar,": [
+          189
+        ],
+        "but": [
+          190
+        ],
+        "weaker,": [
+          191
+        ],
+        "if": [
+          192,
+          282
+        ],
+        "aerosol": [
+          193,
+          225,
+          265,
+          287
+        ],
+        "effects": [
+          194,
+          288
+        ],
+        "included": [
+          196,
+          290
+        ],
+        "addition": [
+          198,
+          292
+        ],
+        "gases.": [
+          201,
+          296
+        ],
+        "One": [
+          202
+        ],
+        "notable": [
+          203
+        ],
+        "difference": [
+          204
+        ],
+        "strength": [
+          211
+        ],
+        "Indian": [
+          214
+        ],
+        "summer": [
+          215
+        ],
+        "monsoon": [
+          216,
+          229
+        ],
+        "not": [
+          218
+        ],
+        "fundamentally": [
+          219
+        ],
+        "affected": [
+          220
+        ],
+        "inclusion": [
+          223
+        ],
+        "effects.": [
+          226
+        ],
+        "Although": [
+          227
+        ],
+        "damped": [
+          231
+        ],
+        "gas": [
+          236
+        ],
+        "only": [
+          237
+        ],
+        "experiment,": [
+          238
+        ],
+        "it": [
+          239
+        ],
+        "still": [
+          241
+        ],
+        "more": [
+          242
+        ],
+        "vigorous": [
+          243
+        ],
+        "than": [
+          244
+        ],
+        "This": [
+          249,
+          297
+        ],
+        "behavior,": [
+          251
+        ],
+        "studies,": [
+          255
+        ],
+        "result": [
+          258
+        ],
+        "land–sea": [
+          262
+        ],
+        "forcing.": [
+          266
+        ],
+        "Somewhat": [
+          267
+        ],
+        "unexpected,": [
+          268
+        ],
+        "intensity": [
+          270
+        ],
+        "global": [
+          273
+        ],
+        "hydrological": [
+          274
+        ],
+        "becomes": [
+          276
+        ],
+        "weaker": [
+          277
+        ],
+        "warmer": [
+          280
+        ],
+        "can": [
+          298
+        ],
+        "be": [
+          299
+        ],
+        "related": [
+          300
+        ],
+        "anomalous": [
+          302
+        ],
+        "net": [
+          303
+        ],
+        "cooling": [
+          305
+        ],
+        "earth's": [
+          308
+        ],
+        "surface": [
+          309,
+          327
+        ],
+        "aerosols,": [
+          311
+        ],
+        "which": [
+          312
+        ],
+        "balanced": [
+          314
+        ],
+        "reduced": [
+          316
+        ],
+        "turbulent": [
+          317
+        ],
+        "transfer": [
+          318
+        ],
+        "sensible": [
+          321
+        ],
+        "latent": [
+          323
+        ],
+        "heat": [
+          324
+        ],
+        "atmosphere.": [
+          330
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Climatology",
+          "openalex_id": "https://openalex.org/C49204034",
+          "level": 1,
+          "score": 0.7593132
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.72182953
+        },
+        {
+          "name": "Atmospheric sciences",
+          "openalex_id": "https://openalex.org/C91586092",
+          "level": 1,
+          "score": 0.67111784
+        },
+        {
+          "name": "Troposphere",
+          "openalex_id": "https://openalex.org/C9075549",
+          "level": 2,
+          "score": 0.66082287
+        },
+        {
+          "name": "Radiative forcing",
+          "openalex_id": "https://openalex.org/C99578197",
+          "level": 3,
+          "score": 0.61876804
+        },
+        {
+          "name": "Climate model",
+          "openalex_id": "https://openalex.org/C168754636",
+          "level": 3,
+          "score": 0.5999744
+        },
+        {
+          "name": "Greenhouse gas",
+          "openalex_id": "https://openalex.org/C47737302",
+          "level": 2,
+          "score": 0.5757143
+        },
+        {
+          "name": "Sulfate aerosol",
+          "openalex_id": "https://openalex.org/C2779681926",
+          "level": 3,
+          "score": 0.57238925
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.49242887
+        },
+        {
+          "name": "Aerosol",
+          "openalex_id": "https://openalex.org/C2779345167",
+          "level": 2,
+          "score": 0.48826027
+        },
+        {
+          "name": "Atmosphere (unit)",
+          "openalex_id": "https://openalex.org/C65440619",
+          "level": 2,
+          "score": 0.45563808
+        },
+        {
+          "name": "Monsoon",
+          "openalex_id": "https://openalex.org/C136996986",
+          "level": 2,
+          "score": 0.41656578
+        },
+        {
+          "name": "Stratosphere",
+          "openalex_id": "https://openalex.org/C163861444",
+          "level": 2,
+          "score": 0.247123
+        },
+        {
+          "name": "Meteorology",
+          "openalex_id": "https://openalex.org/C153294291",
+          "level": 1,
+          "score": 0.24315563
+        },
+        {
+          "name": "Geology",
+          "openalex_id": "https://openalex.org/C127313418",
+          "level": 0,
+          "score": 0.07441199
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.06538394
+        },
+        {
+          "name": "Oceanography",
+          "openalex_id": "https://openalex.org/C111368507",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": true,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_4_IPCC climate change distributi"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2059298650",
+      "title": "Distributional Preferences and the Incidence of Costs and Benefits in Climate Change Policy",
+      "authors": [
+        {
+          "name": "Beilei Cai",
+          "openalex_id": "https://openalex.org/A5038383749"
+        },
+        {
+          "name": "Trudy Ann Cameron",
+          "openalex_id": "https://openalex.org/A5012494110"
+        },
+        {
+          "name": "Geoffrey R. Gerdes",
+          "openalex_id": "https://openalex.org/A5062457295"
+        }
+      ],
+      "publication_year": 2010,
+      "journal": "Environmental and Resource Economics",
+      "doi": "https://doi.org/10.1007/s10640-010-9348-7",
+      "citations_count": 76,
+      "abstract": null,
+      "concepts": [
+        {
+          "name": "Willingness to pay",
+          "openalex_id": "https://openalex.org/C2777364431",
+          "level": 2,
+          "score": 0.75578964
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.7071614
+        },
+        {
+          "name": "Equity (law)",
+          "openalex_id": "https://openalex.org/C199728807",
+          "level": 2,
+          "score": 0.6985667
+        },
+        {
+          "name": "Public economics",
+          "openalex_id": "https://openalex.org/C100001284",
+          "level": 1,
+          "score": 0.63178337
+        },
+        {
+          "name": "Economics",
+          "openalex_id": "https://openalex.org/C162324750",
+          "level": 0,
+          "score": 0.5533167
+        },
+        {
+          "name": "Intergenerational equity",
+          "openalex_id": "https://openalex.org/C2781133197",
+          "level": 3,
+          "score": 0.48530763
+        },
+        {
+          "name": "Payment",
+          "openalex_id": "https://openalex.org/C145097563",
+          "level": 2,
+          "score": 0.47900102
+        },
+        {
+          "name": "Cost–benefit analysis",
+          "openalex_id": "https://openalex.org/C127454912",
+          "level": 2,
+          "score": 0.46161377
+        },
+        {
+          "name": "Preference",
+          "openalex_id": "https://openalex.org/C2781249084",
+          "level": 2,
+          "score": 0.461509
+        },
+        {
+          "name": "Natural resource economics",
+          "openalex_id": "https://openalex.org/C175605778",
+          "level": 1,
+          "score": 0.42848936
+        },
+        {
+          "name": "Climate change mitigation",
+          "openalex_id": "https://openalex.org/C509746633",
+          "level": 3,
+          "score": 0.4176994
+        },
+        {
+          "name": "Business",
+          "openalex_id": "https://openalex.org/C144133560",
+          "level": 0,
+          "score": 0.36710298
+        },
+        {
+          "name": "Sustainability",
+          "openalex_id": "https://openalex.org/C66204764",
+          "level": 2,
+          "score": 0.19432479
+        },
+        {
+          "name": "Finance",
+          "openalex_id": "https://openalex.org/C10138342",
+          "level": 1,
+          "score": 0.12535617
+        },
+        {
+          "name": "Microeconomics",
+          "openalex_id": "https://openalex.org/C175444787",
+          "level": 1,
+          "score": 0.0851652
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Political science",
+          "openalex_id": "https://openalex.org/C17744445",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Law",
+          "openalex_id": "https://openalex.org/C199539241",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": false,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_3_climate change ['Distribution'"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3210833310",
+      "title": "Temporal and spatial distribution of health, labor, and crop benefits of climate change mitigation in the United States",
+      "authors": [
+        {
+          "name": "Drew Shindell",
+          "openalex_id": "https://openalex.org/A5024714508"
+        },
+        {
+          "name": "Muye Ru",
+          "openalex_id": "https://openalex.org/A5005649056"
+        },
+        {
+          "name": "Yuqiang Zhang",
+          "openalex_id": "https://openalex.org/A5041582911"
+        },
+        {
+          "name": "Karl M. Seltzer",
+          "openalex_id": "https://openalex.org/A5021801240"
+        },
+        {
+          "name": "G. Faluvegi",
+          "openalex_id": "https://openalex.org/A5043794133"
+        },
+        {
+          "name": "Larissa Nazarenko",
+          "openalex_id": "https://openalex.org/A5044776057"
+        },
+        {
+          "name": "Gavin A. Schmidt",
+          "openalex_id": "https://openalex.org/A5012924570"
+        },
+        {
+          "name": "Luke Parsons",
+          "openalex_id": "https://openalex.org/A5020430011"
+        },
+        {
+          "name": "Ariyani Challapalli",
+          "openalex_id": "https://openalex.org/A5051287945"
+        },
+        {
+          "name": "Longyi Yang",
+          "openalex_id": "https://openalex.org/A5022154556"
+        },
+        {
+          "name": "Alex Glick",
+          "openalex_id": "https://openalex.org/A5066986720"
+        }
+      ],
+      "publication_year": 2021,
+      "journal": "Proceedings of the National Academy of Sciences",
+      "doi": "https://doi.org/10.1073/pnas.2104061118",
+      "citations_count": 69,
+      "abstract": {
+        "Societal": [
+          0
+        ],
+        "benefits": [
+          1,
+          32,
+          74,
+          103,
+          153,
+          164,
+          180,
+          202
+        ],
+        "from": [
+          2,
+          37,
+          56,
+          69,
+          154,
+          165,
+          183
+        ],
+        "climate": [
+          3,
+          26,
+          166,
+          211,
+          229
+        ],
+        "change": [
+          4
+        ],
+        "mitigation": [
+          5,
+          236
+        ],
+        "accrue": [
+          6
+        ],
+        "via": [
+          7
+        ],
+        "multiple": [
+          8
+        ],
+        "pathways.": [
+          9
+        ],
+        "We": [
+          10
+        ],
+        "examine": [
+          11
+        ],
+        "the": [
+          12,
+          77,
+          123,
+          160,
+          171,
+          175,
+          190,
+          206,
+          221
+        ],
+        "US": [
+          13,
+          179,
+          184
+        ],
+        "impacts": [
+          14,
+          126,
+          195
+        ],
+        "of": [
+          15,
+          79,
+          81,
+          88,
+          122,
+          127,
+          174,
+          210,
+          235
+        ],
+        "emission": [
+          16
+        ],
+        "changes": [
+          17
+        ],
+        "on": [
+          18,
+          189
+        ],
+        "several": [
+          19
+        ],
+        "factors": [
+          20
+        ],
+        "that": [
+          21,
+          147
+        ],
+        "are": [
+          22,
+          42,
+          75,
+          106,
+          111,
+          137
+        ],
+        "affected": [
+          23
+        ],
+        "by": [
+          24,
+          108,
+          204
+        ],
+        "both": [
+          25,
+          130
+        ],
+        "and": [
+          27,
+          45,
+          51,
+          86,
+          93,
+          97,
+          110,
+          132,
+          218,
+          220
+        ],
+        "air": [
+          28,
+          38,
+          71,
+          133,
+          150,
+          156,
+          193
+        ],
+        "quality": [
+          29,
+          39
+        ],
+        "responses.": [
+          30
+        ],
+        "Nationwide": [
+          31
+        ],
+        "through": [
+          33
+        ],
+        "midcentury": [
+          34
+        ],
+        "stem": [
+          35,
+          182
+        ],
+        "primarily": [
+          36
+        ],
+        "improvements,": [
+          40
+        ],
+        "which": [
+          41
+        ],
+        "realized": [
+          43
+        ],
+        "rapidly,": [
+          44
+        ],
+        "include": [
+          46
+        ],
+        "human": [
+          47,
+          124
+        ],
+        "health,": [
+          48
+        ],
+        "labor": [
+          49,
+          91
+        ],
+        "productivity,": [
+          50
+        ],
+        "crop": [
+          52,
+          94
+        ],
+        "yield": [
+          53,
+          95
+        ],
+        "benefits.": [
+          54,
+          151
+        ],
+        "Benefits": [
+          55
+        ],
+        "reduced": [
+          57,
+          98
+        ],
+        "heat": [
+          58,
+          131
+        ],
+        "exposure": [
+          59,
+          128
+        ],
+        "become": [
+          60
+        ],
+        "large": [
+          61
+        ],
+        "around": [
+          62
+        ],
+        "2060,": [
+          63
+        ],
+        "thereafter": [
+          64
+        ],
+        "often": [
+          65
+        ],
+        "dominating": [
+          66
+        ],
+        "over": [
+          67
+        ],
+        "those": [
+          68,
+          146
+        ],
+        "improved": [
+          70,
+          120
+        ],
+        "quality.": [
+          72
+        ],
+        "Monetized": [
+          73
+        ],
+        "in": [
+          76,
+          115,
+          142,
+          159,
+          170,
+          216
+        ],
+        "tens": [
+          78,
+          87
+        ],
+        "trillions": [
+          80
+        ],
+        "dollars": [
+          82
+        ],
+        "for": [
+          83,
+          90,
+          223
+        ],
+        "avoided": [
+          84
+        ],
+        "deaths": [
+          85
+        ],
+        "billions": [
+          89
+        ],
+        "productivity": [
+          92
+        ],
+        "increases": [
+          96
+        ],
+        "hospital": [
+          99
+        ],
+        "expenditures.": [
+          100
+        ],
+        "Total": [
+          101
+        ],
+        "monetized": [
+          102,
+          178
+        ],
+        "this": [
+          104
+        ],
+        "century": [
+          105
+        ],
+        "dominated": [
+          107
+        ],
+        "health": [
+          109,
+          125
+        ],
+        "much": [
+          112,
+          139
+        ],
+        "larger": [
+          113,
+          140
+        ],
+        "than": [
+          114,
+          141
+        ],
+        "previous": [
+          116
+        ],
+        "analyses": [
+          117
+        ],
+        "due": [
+          118
+        ],
+        "to": [
+          119,
+          129,
+          226
+        ],
+        "understanding": [
+          121
+        ],
+        "pollution.": [
+          134
+        ],
+        "Benefit-cost": [
+          135
+        ],
+        "ratios": [
+          136
+        ],
+        "therefore": [
+          138
+        ],
+        "prior": [
+          143
+        ],
+        "studies,": [
+          144
+        ],
+        "especially": [
+          145
+        ],
+        "neglected": [
+          148
+        ],
+        "clean": [
+          149,
+          155
+        ],
+        "Specifically,": [
+          152
+        ],
+        "exceed": [
+          157,
+          168
+        ],
+        "costs": [
+          158,
+          169
+        ],
+        "first": [
+          161
+        ],
+        "decade,": [
+          162
+        ],
+        "whereas": [
+          163
+        ],
+        "alone": [
+          167
+        ],
+        "latter": [
+          172
+        ],
+        "half": [
+          173
+        ],
+        "century.": [
+          176
+        ],
+        "Furthermore,": [
+          177
+        ],
+        "largely": [
+          181
+        ],
+        "emissions": [
+          185
+        ],
+        "reductions.": [
+          186
+        ],
+        "Increased": [
+          187
+        ],
+        "emphasis": [
+          188
+        ],
+        "localized,": [
+          191
+        ],
+        "near-term": [
+          192
+        ],
+        "quality-related": [
+          194
+        ],
+        "would": [
+          196
+        ],
+        "better": [
+          197
+        ],
+        "align": [
+          198
+        ],
+        "policies": [
+          199
+        ],
+        "with": [
+          200
+        ],
+        "societal": [
+          201
+        ],
+        "and,": [
+          203
+        ],
+        "reducing": [
+          205
+        ],
+        "mismatch": [
+          207
+        ],
+        "between": [
+          208
+        ],
+        "perception": [
+          209
+        ],
+        "as": [
+          212
+        ],
+        "a": [
+          213
+        ],
+        "risk": [
+          214
+        ],
+        "distant": [
+          215
+        ],
+        "space": [
+          217
+        ],
+        "time": [
+          219
+        ],
+        "need": [
+          222
+        ],
+        "rapid": [
+          224
+        ],
+        "action": [
+          225
+        ],
+        "mitigate": [
+          227
+        ],
+        "long-term": [
+          228
+        ],
+        "change,": [
+          230
+        ],
+        "might": [
+          231
+        ],
+        "help": [
+          232
+        ],
+        "increase": [
+          233
+        ],
+        "acceptance": [
+          234
+        ],
+        "policies.": [
+          237
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.61488616
+        },
+        {
+          "name": "Health benefits",
+          "openalex_id": "https://openalex.org/C3018122547",
+          "level": 2,
+          "score": 0.61397797
+        },
+        {
+          "name": "Natural resource economics",
+          "openalex_id": "https://openalex.org/C175605778",
+          "level": 1,
+          "score": 0.6035745
+        },
+        {
+          "name": "Productivity",
+          "openalex_id": "https://openalex.org/C204983608",
+          "level": 2,
+          "score": 0.5769352
+        },
+        {
+          "name": "Cost–benefit analysis",
+          "openalex_id": "https://openalex.org/C127454912",
+          "level": 2,
+          "score": 0.5649343
+        },
+        {
+          "name": "Air quality index",
+          "openalex_id": "https://openalex.org/C126314574",
+          "level": 2,
+          "score": 0.561837
+        },
+        {
+          "name": "Yield (engineering)",
+          "openalex_id": "https://openalex.org/C134121241",
+          "level": 2,
+          "score": 0.48754045
+        },
+        {
+          "name": "Air pollution",
+          "openalex_id": "https://openalex.org/C559116025",
+          "level": 2,
+          "score": 0.43949926
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.39790666
+        },
+        {
+          "name": "Business",
+          "openalex_id": "https://openalex.org/C144133560",
+          "level": 0,
+          "score": 0.38781238
+        },
+        {
+          "name": "Agricultural economics",
+          "openalex_id": "https://openalex.org/C48824518",
+          "level": 1,
+          "score": 0.344209
+        },
+        {
+          "name": "Economics",
+          "openalex_id": "https://openalex.org/C162324750",
+          "level": 0,
+          "score": 0.21837768
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.18920502
+        },
+        {
+          "name": "Economic growth",
+          "openalex_id": "https://openalex.org/C50522688",
+          "level": 1,
+          "score": 0.1552136
+        },
+        {
+          "name": "Medicine",
+          "openalex_id": "https://openalex.org/C71924100",
+          "level": 0,
+          "score": 0.12746605
+        },
+        {
+          "name": "Meteorology",
+          "openalex_id": "https://openalex.org/C153294291",
+          "level": 1,
+          "score": 0.10686216
+        },
+        {
+          "name": "Political science",
+          "openalex_id": "https://openalex.org/C17744445",
+          "level": 0,
+          "score": 0.09437147
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.075039595
+        },
+        {
+          "name": "Law",
+          "openalex_id": "https://openalex.org/C199539241",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Materials science",
+          "openalex_id": "https://openalex.org/C192562407",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Metallurgy",
+          "openalex_id": "https://openalex.org/C191897082",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Traditional medicine",
+          "openalex_id": "https://openalex.org/C556039675",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": true,
+      "topic_id": 6,
+      "topic_theme": "Distribution of benefits, costs, and impacts of mitigation",
+      "search_source": "strategy_3_climate change ['Distribution'"
+    }
+  ]
+}

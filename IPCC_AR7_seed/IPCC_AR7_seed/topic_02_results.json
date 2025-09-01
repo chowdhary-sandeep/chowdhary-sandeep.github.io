@@ -1,0 +1,6385 @@
+{
+  "topic_id": 2,
+  "main_theme": "Development as enabler of mitigation",
+  "key_concepts": [
+    "development",
+    "economic growth",
+    "sustainable development",
+    "IPAT",
+    "mitigation enablers"
+  ],
+  "search_queries": [
+    "development enabler climate change mitigation",
+    "economic development climate mitigation",
+    "sustainable development climate change mitigation",
+    "development pathways climate mitigation",
+    "IPAT equation climate change"
+  ],
+  "google_scholar_papers": 0,
+  "openalex_papers_found": 8,
+  "top_google_scholar_papers": [],
+  "openalex_top_papers": [
+    {
+      "openalex_id": "https://openalex.org/W4382362038",
+      "title": "Climate Change 2022 – Impacts, Adaptation and Vulnerability",
+      "authors": [
+        {
+          "name": "Intergovernmental Panel on Climate Change",
+          "openalex_id": "https://openalex.org/A5114006012"
+        }
+      ],
+      "publication_year": 2023,
+      "journal": "",
+      "doi": "https://doi.org/10.1017/9781009325844",
+      "citations_count": 5559,
+      "abstract": {
+        "The": [
+          0,
+          34,
+          88
+        ],
+        "Working": [
+          1
+        ],
+        "Group": [
+          2
+        ],
+        "II": [
+          3
+        ],
+        "contribution": [
+          4
+        ],
+        "to": [
+          5,
+          27,
+          140
+        ],
+        "the": [
+          6,
+          11,
+          23,
+          37,
+          50,
+          91,
+          112,
+          118
+        ],
+        "Sixth": [
+          7
+        ],
+        "Assessment": [
+          8
+        ],
+        "Report": [
+          9
+        ],
+        "of": [
+          10,
+          22,
+          39,
+          115
+        ],
+        "Intergovernmental": [
+          12
+        ],
+        "Panel": [
+          13
+        ],
+        "on": [
+          14,
+          147
+        ],
+        "Climate": [
+          15
+        ],
+        "Change": [
+          16
+        ],
+        "(IPCC)": [
+          17
+        ],
+        "provides": [
+          18
+        ],
+        "a": [
+          19,
+          73,
+          81
+        ],
+        "comprehensive": [
+          20
+        ],
+        "assessment": [
+          21
+        ],
+        "scientific": [
+          24,
+          119
+        ],
+        "literature": [
+          25
+        ],
+        "relevant": [
+          26
+        ],
+        "climate": [
+          28,
+          76,
+          96,
+          132
+        ],
+        "change": [
+          29,
+          97,
+          133
+        ],
+        "impacts,": [
+          30
+        ],
+        "adaptation": [
+          31,
+          62
+        ],
+        "and": [
+          32,
+          42,
+          44,
+          47,
+          54,
+          63,
+          86,
+          106,
+          127,
+          135
+        ],
+        "vulnerability.": [
+          33
+        ],
+        "report": [
+          35
+        ],
+        "recognizes": [
+          36
+        ],
+        "interactions": [
+          38
+        ],
+        "climate,": [
+          40
+        ],
+        "ecosystems": [
+          41
+        ],
+        "biodiversity,": [
+          43
+        ],
+        "human": [
+          45
+        ],
+        "societies,": [
+          46
+        ],
+        "integrates": [
+          48
+        ],
+        "across": [
+          49
+        ],
+        "natural,": [
+          51
+        ],
+        "ecological,": [
+          52
+        ],
+        "social": [
+          53
+        ],
+        "economic": [
+          55
+        ],
+        "sciences.": [
+          56
+        ],
+        "It": [
+          57
+        ],
+        "emphasizes": [
+          58
+        ],
+        "how": [
+          59
+        ],
+        "efforts": [
+          60
+        ],
+        "in": [
+          61,
+          64,
+          72,
+          103,
+          117
+        ],
+        "reducing": [
+          65
+        ],
+        "greenhouse": [
+          66
+        ],
+        "gas": [
+          67
+        ],
+        "emissions": [
+          68
+        ],
+        "can": [
+          69
+        ],
+        "come": [
+          70
+        ],
+        "together": [
+          71
+        ],
+        "process": [
+          74
+        ],
+        "called": [
+          75
+        ],
+        "resilient": [
+          77
+        ],
+        "development,": [
+          78
+        ],
+        "which": [
+          79
+        ],
+        "enables": [
+          80
+        ],
+        "liveable": [
+          82
+        ],
+        "future": [
+          83,
+          136
+        ],
+        "for": [
+          84,
+          94
+        ],
+        "biodiversity": [
+          85
+        ],
+        "humankind.": [
+          87
+        ],
+        "IPCC": [
+          89,
+          99
+        ],
+        "is": [
+          90
+        ],
+        "leading": [
+          92
+        ],
+        "body": [
+          93
+        ],
+        "assessing": [
+          95
+        ],
+        "science.": [
+          98
+        ],
+        "reports": [
+          100
+        ],
+        "are": [
+          101
+        ],
+        "produced": [
+          102
+        ],
+        "comprehensive,": [
+          104
+        ],
+        "objective": [
+          105
+        ],
+        "transparent": [
+          107
+        ],
+        "ways,": [
+          108
+        ],
+        "ensuring": [
+          109
+        ],
+        "they": [
+          110
+        ],
+        "reflect": [
+          111
+        ],
+        "full": [
+          113
+        ],
+        "range": [
+          114
+        ],
+        "views": [
+          116
+        ],
+        "literature.": [
+          120
+        ],
+        "Novel": [
+          121
+        ],
+        "elements": [
+          122
+        ],
+        "include": [
+          123
+        ],
+        "focused": [
+          124
+        ],
+        "topical": [
+          125
+        ],
+        "assessments,": [
+          126
+        ],
+        "an": [
+          128
+        ],
+        "atlas": [
+          129
+        ],
+        "presenting": [
+          130
+        ],
+        "observed": [
+          131
+        ],
+        "impacts": [
+          134
+        ],
+        "risks": [
+          137
+        ],
+        "from": [
+          138
+        ],
+        "global": [
+          139
+        ],
+        "regional": [
+          141
+        ],
+        "scales.": [
+          142
+        ],
+        "Available": [
+          143
+        ],
+        "as": [
+          144
+        ],
+        "Open": [
+          145
+        ],
+        "Access": [
+          146
+        ],
+        "Cambridge": [
+          148
+        ],
+        "Core.": [
+          149
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.78312105
+        },
+        {
+          "name": "Vulnerability (computing)",
+          "openalex_id": "https://openalex.org/C95713431",
+          "level": 2,
+          "score": 0.76941
+        },
+        {
+          "name": "Environmental resource management",
+          "openalex_id": "https://openalex.org/C107826830",
+          "level": 1,
+          "score": 0.5888593
+        },
+        {
+          "name": "Adaptation (eye)",
+          "openalex_id": "https://openalex.org/C139807058",
+          "level": 2,
+          "score": 0.5592167
+        },
+        {
+          "name": "Biodiversity",
+          "openalex_id": "https://openalex.org/C130217890",
+          "level": 2,
+          "score": 0.49633628
+        },
+        {
+          "name": "Greenhouse gas",
+          "openalex_id": "https://openalex.org/C47737302",
+          "level": 2,
+          "score": 0.46952382
+        },
+        {
+          "name": "Political economy of climate change",
+          "openalex_id": "https://openalex.org/C189123395",
+          "level": 3,
+          "score": 0.4501918
+        },
+        {
+          "name": "Ecological forecasting",
+          "openalex_id": "https://openalex.org/C96240277",
+          "level": 4,
+          "score": 0.45000696
+        },
+        {
+          "name": "Vulnerability assessment",
+          "openalex_id": "https://openalex.org/C167063184",
+          "level": 3,
+          "score": 0.44553047
+        },
+        {
+          "name": "Environmental planning",
+          "openalex_id": "https://openalex.org/C91375879",
+          "level": 1,
+          "score": 0.44427773
+        },
+        {
+          "name": "Global warming",
+          "openalex_id": "https://openalex.org/C115343472",
+          "level": 3,
+          "score": 0.416923
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.37249094
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.3559813
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.22332448
+        },
+        {
+          "name": "Psychological resilience",
+          "openalex_id": "https://openalex.org/C137176749",
+          "level": 2,
+          "score": 0.19351372
+        },
+        {
+          "name": "Computer science",
+          "openalex_id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.109440446
+        },
+        {
+          "name": "Psychology",
+          "openalex_id": "https://openalex.org/C15744967",
+          "level": 0,
+          "score": 0.0851022
+        },
+        {
+          "name": "Computer security",
+          "openalex_id": "https://openalex.org/C38652104",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Neuroscience",
+          "openalex_id": "https://openalex.org/C169760540",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Psychotherapist",
+          "openalex_id": "https://openalex.org/C542102704",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "book",
+      "open_access": true,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_3_climate change ['Development',"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2093141926",
+      "title": "Linking climate change modelling to impacts studies: recent advances in downscaling techniques for hydrological modelling",
+      "authors": [
+        {
+          "name": "Hayley J. Fowler",
+          "openalex_id": "https://openalex.org/A5061602805"
+        },
+        {
+          "name": "Stephen Blenkinsop",
+          "openalex_id": "https://openalex.org/A5042075687"
+        },
+        {
+          "name": "Claudia Tebaldi",
+          "openalex_id": "https://openalex.org/A5037816255"
+        }
+      ],
+      "publication_year": 2007,
+      "journal": "International Journal of Climatology",
+      "doi": "https://doi.org/10.1002/joc.1556",
+      "citations_count": 2160,
+      "abstract": {
+        "Abstract": [
+          0
+        ],
+        "There": [
+          1
+        ],
+        "is": [
+          2,
+          28,
+          87,
+          154,
+          194,
+          198
+        ],
+        "now": [
+          3
+        ],
+        "a": [
+          4,
+          135,
+          199,
+          202
+        ],
+        "large": [
+          5
+        ],
+        "published": [
+          6
+        ],
+        "literature": [
+          7
+        ],
+        "on": [
+          8,
+          43,
+          67,
+          179
+        ],
+        "the": [
+          9,
+          31,
+          38,
+          50,
+          58,
+          68,
+          76,
+          81,
+          100,
+          106,
+          143,
+          163,
+          185,
+          191,
+          209,
+          231
+        ],
+        "strengths": [
+          10
+        ],
+        "and": [
+          11,
+          23,
+          80,
+          118,
+          123,
+          172,
+          181,
+          216,
+          226
+        ],
+        "weaknesses": [
+          12
+        ],
+        "of": [
+          13,
+          33,
+          40,
+          78,
+          120,
+          187,
+          211,
+          228
+        ],
+        "downscaling": [
+          14,
+          34,
+          52,
+          59,
+          69,
+          119,
+          132
+        ],
+        "methods": [
+          15
+        ],
+        "for": [
+          16,
+          62,
+          103,
+          108,
+          201,
+          214
+        ],
+        "different": [
+          17,
+          21
+        ],
+        "climatic": [
+          18
+        ],
+        "variables,": [
+          19
+        ],
+        "in": [
+          20,
+          57,
+          93,
+          134,
+          184
+        ],
+        "regions": [
+          22
+        ],
+        "seasons.": [
+          24
+        ],
+        "However,": [
+          25
+        ],
+        "little": [
+          26,
+          156
+        ],
+        "attention": [
+          27
+        ],
+        "given": [
+          29,
+          89,
+          158
+        ],
+        "to": [
+          30,
+          83,
+          90,
+          141,
+          159,
+          169,
+          174,
+          221
+        ],
+        "choice": [
+          32
+        ],
+        "method": [
+          35
+        ],
+        "when": [
+          36
+        ],
+        "examining": [
+          37,
+          54
+        ],
+        "impacts": [
+          39
+        ],
+        "climate": [
+          41,
+          94,
+          137
+        ],
+        "change": [
+          42,
+          138
+        ],
+        "hydrological": [
+          44,
+          63,
+          84,
+          109,
+          150
+        ],
+        "systems.": [
+          45
+        ],
+        "This": [
+          46
+        ],
+        "review": [
+          47
+        ],
+        "paper": [
+          48
+        ],
+        "assesses": [
+          49
+        ],
+        "current": [
+          51
+        ],
+        "literature,": [
+          53
+        ],
+        "new": [
+          55,
+          71,
+          91
+        ],
+        "developments": [
+          56,
+          92
+        ],
+        "field": [
+          60
+        ],
+        "specifically": [
+          61
+        ],
+        "impacts.": [
+          64,
+          85
+        ],
+        "Sections": [
+          65
+        ],
+        "focus": [
+          66
+        ],
+        "concept;": [
+          70
+        ],
+        "methods;": [
+          72
+        ],
+        "comparative": [
+          73
+        ],
+        "methodological": [
+          74
+        ],
+        "studies;": [
+          75
+        ],
+        "modelling": [
+          77,
+          232
+        ],
+        "extremes;": [
+          79
+        ],
+        "application": [
+          82
+        ],
+        "Consideration": [
+          86
+        ],
+        "then": [
+          88
+        ],
+        "scenario": [
+          95,
+          139
+        ],
+        "construction": [
+          96
+        ],
+        "which": [
+          97
+        ],
+        "may": [
+          98
+        ],
+        "offer": [
+          99
+        ],
+        "most": [
+          101
+        ],
+        "potential": [
+          102
+        ],
+        "advancement": [
+          104
+        ],
+        "within": [
+          105,
+          230
+        ],
+        "‘downscaling": [
+          107
+        ],
+        "impacts’": [
+          110
+        ],
+        "community,": [
+          111
+        ],
+        "such": [
+          112
+        ],
+        "as": [
+          113
+        ],
+        "probabilistic": [
+          114,
+          136
+        ],
+        "modelling,": [
+          115
+        ],
+        "pattern": [
+          116
+        ],
+        "scaling": [
+          117
+        ],
+        "multiple": [
+          121
+        ],
+        "variables": [
+          122
+        ],
+        "suggests": [
+          124
+        ],
+        "ways": [
+          125
+        ],
+        "that": [
+          126,
+          196,
+          218
+        ],
+        "they": [
+          127
+        ],
+        "can": [
+          128,
+          165
+        ],
+        "be": [
+          129,
+          166
+        ],
+        "merged": [
+          130
+        ],
+        "with": [
+          131,
+          146,
+          224
+        ],
+        "techniques": [
+          133
+        ],
+        "framework": [
+          140
+        ],
+        "assess": [
+          142
+        ],
+        "uncertainties": [
+          144,
+          189,
+          229
+        ],
+        "associated": [
+          145
+        ],
+        "future": [
+          147,
+          222
+        ],
+        "projections.": [
+          148
+        ],
+        "Within": [
+          149
+        ],
+        "impact": [
+          151
+        ],
+        "studies": [
+          152,
+          207
+        ],
+        "there": [
+          153,
+          197
+        ],
+        "still": [
+          155
+        ],
+        "consideration": [
+          157
+        ],
+        "applied": [
+          160
+        ],
+        "research;": [
+          161
+        ],
+        "how": [
+          162
+        ],
+        "results": [
+          164
+        ],
+        "best": [
+          167
+        ],
+        "used": [
+          168
+        ],
+        "enable": [
+          170
+        ],
+        "stakeholders": [
+          171
+        ],
+        "managers": [
+          173
+        ],
+        "make": [
+          175
+        ],
+        "informed,": [
+          176
+        ],
+        "robust": [
+          177,
+          220
+        ],
+        "decisions": [
+          178
+        ],
+        "adaptation": [
+          180
+        ],
+        "mitigation": [
+          182
+        ],
+        "strategies": [
+          183
+        ],
+        "face": [
+          186
+        ],
+        "many": [
+          188
+        ],
+        "about": [
+          190
+        ],
+        "future.": [
+          192
+        ],
+        "It": [
+          193
+        ],
+        "suggested": [
+          195
+        ],
+        "need": [
+          200
+        ],
+        "move": [
+          203
+        ],
+        "away": [
+          204
+        ],
+        "from": [
+          205
+        ],
+        "comparison": [
+          206
+        ],
+        "into": [
+          208
+        ],
+        "provision": [
+          210
+        ],
+        "decision‐making": [
+          212
+        ],
+        "tools": [
+          213
+        ],
+        "planning": [
+          215
+        ],
+        "management": [
+          217
+        ],
+        "are": [
+          219
+        ],
+        "uncertainties;": [
+          223
+        ],
+        "examination": [
+          225
+        ],
+        "understanding": [
+          227
+        ],
+        "system.": [
+          233
+        ],
+        "Copyright": [
+          234
+        ],
+        "©": [
+          235
+        ],
+        "2007": [
+          236
+        ],
+        "Royal": [
+          237
+        ],
+        "Meteorological": [
+          238
+        ],
+        "Society": [
+          239
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Downscaling",
+          "openalex_id": "https://openalex.org/C41156917",
+          "level": 3,
+          "score": 0.99067277
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.6630157
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.51986814
+        },
+        {
+          "name": "Computer science",
+          "openalex_id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.47673428
+        },
+        {
+          "name": "Probabilistic logic",
+          "openalex_id": "https://openalex.org/C49937458",
+          "level": 2,
+          "score": 0.42690623
+        },
+        {
+          "name": "Climatology",
+          "openalex_id": "https://openalex.org/C49204034",
+          "level": 1,
+          "score": 0.41878372
+        },
+        {
+          "name": "Environmental resource management",
+          "openalex_id": "https://openalex.org/C107826830",
+          "level": 1,
+          "score": 0.41585255
+        },
+        {
+          "name": "Artificial intelligence",
+          "openalex_id": "https://openalex.org/C154945302",
+          "level": 1,
+          "score": 0.07098177
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.06978333
+        },
+        {
+          "name": "Geology",
+          "openalex_id": "https://openalex.org/C127313418",
+          "level": 0,
+          "score": 0.069200635
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": false,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_1_climate change mitigation Deve"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3159281654",
+      "title": "Global Warming of 1.5°C. An IPCC Special Report on the impacts of global warming of 1.5°C above pre-industrial levels and related global greenhouse gas emission pathways, in the context of strengthening the global response to the threat of climate change,sustainable development, and efforts to eradicate poverty",
+      "authors": [
+        {
+          "name": "Valérie Masson‐Delmotte",
+          "openalex_id": "https://openalex.org/A5054087600"
+        },
+        {
+          "name": "Panmao Zhai",
+          "openalex_id": "https://openalex.org/A5003077921"
+        },
+        {
+          "name": "Hans‐Otto Pörtner",
+          "openalex_id": "https://openalex.org/A5089898800"
+        },
+        {
+          "name": "Daniel Roberts",
+          "openalex_id": "https://openalex.org/A5000813884"
+        },
+        {
+          "name": "Jim Skea",
+          "openalex_id": "https://openalex.org/A5082696302"
+        },
+        {
+          "name": "R.S. Priyadarshi",
+          "openalex_id": "https://openalex.org/A5087064588"
+        },
+        {
+          "name": "Anna Pirani",
+          "openalex_id": "https://openalex.org/A5053264314"
+        },
+        {
+          "name": "Wilfran Moufouma‐Okia",
+          "openalex_id": "https://openalex.org/A5045971604"
+        },
+        {
+          "name": "Clotilde Péan",
+          "openalex_id": "https://openalex.org/A5013955393"
+        },
+        {
+          "name": "Roz Pidcock",
+          "openalex_id": "https://openalex.org/A5041242608"
+        },
+        {
+          "name": "Stephen R. Connors",
+          "openalex_id": "https://openalex.org/A5054159553"
+        },
+        {
+          "name": "J.B. Robin Matthews",
+          "openalex_id": "https://openalex.org/A5033715304"
+        },
+        {
+          "name": "Y. Chen",
+          "openalex_id": "https://openalex.org/A5028665924"
+        },
+        {
+          "name": "Xiaoqian Zhou",
+          "openalex_id": "https://openalex.org/A5100580845"
+        },
+        {
+          "name": "Melissa Gomis",
+          "openalex_id": "https://openalex.org/A5054029441"
+        },
+        {
+          "name": "E Lonnoy",
+          "openalex_id": "https://openalex.org/A5056902969"
+        },
+        {
+          "name": "Thomas K. Maycock",
+          "openalex_id": "https://openalex.org/A5022396715"
+        },
+        {
+          "name": "M Tignor",
+          "openalex_id": "https://openalex.org/A5019954898"
+        },
+        {
+          "name": "T. Waterfield",
+          "openalex_id": "https://openalex.org/A5030466730"
+        }
+      ],
+      "publication_year": 2019,
+      "journal": "",
+      "doi": null,
+      "citations_count": 2034,
+      "abstract": null,
+      "concepts": [
+        {
+          "name": "Global warming",
+          "openalex_id": "https://openalex.org/C115343472",
+          "level": 3,
+          "score": 0.8359016
+        },
+        {
+          "name": "Greenhouse gas",
+          "openalex_id": "https://openalex.org/C47737302",
+          "level": 2,
+          "score": 0.7891915
+        },
+        {
+          "name": "Global-warming potential",
+          "openalex_id": "https://openalex.org/C119288801",
+          "level": 3,
+          "score": 0.74937034
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.6665629
+        },
+        {
+          "name": "Greenhouse effect",
+          "openalex_id": "https://openalex.org/C137851953",
+          "level": 4,
+          "score": 0.5078319
+        },
+        {
+          "name": "Greenhouse",
+          "openalex_id": "https://openalex.org/C32198211",
+          "level": 2,
+          "score": 0.4372039
+        },
+        {
+          "name": "Atmospheric sciences",
+          "openalex_id": "https://openalex.org/C91586092",
+          "level": 1,
+          "score": 0.41349983
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.39644805
+        },
+        {
+          "name": "Climatology",
+          "openalex_id": "https://openalex.org/C49204034",
+          "level": 1,
+          "score": 0.39463422
+        },
+        {
+          "name": "Agronomy",
+          "openalex_id": "https://openalex.org/C6557445",
+          "level": 1,
+          "score": 0.087111026
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.07598728
+        },
+        {
+          "name": "Geology",
+          "openalex_id": "https://openalex.org/C127313418",
+          "level": 0,
+          "score": 0.07327309
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": false,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_4_IPCC climate change developmen"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4240669445",
+      "title": "Unbundling Institutions",
+      "authors": [
+        {
+          "name": "Daron Acemoğlu",
+          "openalex_id": "https://openalex.org/A5012301204"
+        },
+        {
+          "name": "Simon Johnson",
+          "openalex_id": "https://openalex.org/A5111446264"
+        }
+      ],
+      "publication_year": 2005,
+      "journal": "Journal of Political Economy",
+      "doi": "https://doi.org/10.1086/432166",
+      "citations_count": 2007,
+      "abstract": {
+        "This": [
+          0
+        ],
+        "paper": [
+          1
+        ],
+        "evaluates": [
+          2
+        ],
+        "the": [
+          3,
+          15,
+          52,
+          70,
+          73,
+          106,
+          125,
+          135,
+          148
+        ],
+        "importance": [
+          4
+        ],
+        "of": [
+          5,
+          36,
+          54,
+          72,
+          108,
+          123,
+          127,
+          138,
+          150
+        ],
+        "\"property": [
+          6
+        ],
+        "rights": [
+          7,
+          49,
+          85
+        ],
+        "institutions,\"": [
+          8,
+          22
+        ],
+        "which": [
+          9,
+          23
+        ],
+        "protect": [
+          10
+        ],
+        "citizens": [
+          11
+        ],
+        "against": [
+          12
+        ],
+        "expropriation": [
+          13,
+          151
+        ],
+        "by": [
+          14,
+          39
+        ],
+        "government": [
+          16
+        ],
+        "and": [
+          17,
+          20,
+          42,
+          51,
+          60,
+          65,
+          69,
+          96,
+          130
+        ],
+        "powerful": [
+          18
+        ],
+        "elites,": [
+          19
+        ],
+        "\"contracting": [
+          21
+        ],
+        "enable": [
+          24
+        ],
+        "private": [
+          25
+        ],
+        "contracts": [
+          26,
+          132
+        ],
+        "between": [
+          27,
+          47,
+          66
+        ],
+        "citizens.": [
+          28
+        ],
+        "We": [
+          29
+        ],
+        "exploit": [
+          30
+        ],
+        "exogenous": [
+          31
+        ],
+        "variation": [
+          32
+        ],
+        "in": [
+          33,
+          152
+        ],
+        "both": [
+          34
+        ],
+        "types": [
+          35
+        ],
+        "institutions": [
+          37,
+          50,
+          68,
+          86,
+          100,
+          141
+        ],
+        "driven": [
+          38
+        ],
+        "colonial": [
+          40
+        ],
+        "history": [
+          41
+        ],
+        "document": [
+          43
+        ],
+        "strong": [
+          44
+        ],
+        "first‐stage": [
+          45
+        ],
+        "relationships": [
+          46
+        ],
+        "property": [
+          48,
+          84
+        ],
+        "determinants": [
+          53
+        ],
+        "European": [
+          55
+        ],
+        "colonization": [
+          56
+        ],
+        "strategy": [
+          57
+        ],
+        "(settler": [
+          58
+        ],
+        "mortality": [
+          59
+        ],
+        "population": [
+          61
+        ],
+        "density": [
+          62
+        ],
+        "before": [
+          63
+        ],
+        "colonization)": [
+          64
+        ],
+        "contracting": [
+          67,
+          140
+        ],
+        "identity": [
+          71
+        ],
+        "colonizing": [
+          74
+        ],
+        "power.": [
+          75
+        ],
+        "Using": [
+          76
+        ],
+        "this": [
+          77,
+          115,
+          153
+        ],
+        "instrumental": [
+          78
+        ],
+        "variables": [
+          79
+        ],
+        "approach,": [
+          80
+        ],
+        "we": [
+          81
+        ],
+        "find": [
+          82,
+          121,
+          143
+        ],
+        "that": [
+          83,
+          118
+        ],
+        "have": [
+          87
+        ],
+        "a": [
+          88
+        ],
+        "first‐order": [
+          89
+        ],
+        "effect": [
+          90
+        ],
+        "on": [
+          91
+        ],
+        "long‐run": [
+          92
+        ],
+        "economic": [
+          93
+        ],
+        "growth,": [
+          94
+        ],
+        "investment,": [
+          95
+        ],
+        "financial": [
+          97,
+          109
+        ],
+        "development.": [
+          98
+        ],
+        "Contracting": [
+          99
+        ],
+        "appear": [
+          101
+        ],
+        "to": [
+          102,
+          133,
+          146
+        ],
+        "matter": [
+          103
+        ],
+        "only": [
+          104
+        ],
+        "for": [
+          105,
+          114
+        ],
+        "form": [
+          107
+        ],
+        "intermediation.": [
+          110
+        ],
+        "A": [
+          111
+        ],
+        "possible": [
+          112
+        ],
+        "explanation": [
+          113
+        ],
+        "pattern": [
+          116
+        ],
+        "is": [
+          117
+        ],
+        "individuals": [
+          119
+        ],
+        "often": [
+          120
+        ],
+        "ways": [
+          122
+        ],
+        "altering": [
+          124
+        ],
+        "terms": [
+          126
+        ],
+        "their": [
+          128
+        ],
+        "formal": [
+          129
+        ],
+        "informal": [
+          131
+        ],
+        "avoid": [
+          134
+        ],
+        "adverse": [
+          136
+        ],
+        "effects": [
+          137
+        ],
+        "weak": [
+          139
+        ],
+        "but": [
+          142
+        ],
+        "it": [
+          144
+        ],
+        "harder": [
+          145
+        ],
+        "mitigate": [
+          147
+        ],
+        "risk": [
+          149
+        ],
+        "way.": [
+          154
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Expropriation",
+          "openalex_id": "https://openalex.org/C2780060422",
+          "level": 2,
+          "score": 0.8392199
+        },
+        {
+          "name": "Property rights",
+          "openalex_id": "https://openalex.org/C86511162",
+          "level": 2,
+          "score": 0.7622798
+        },
+        {
+          "name": "Unbundling",
+          "openalex_id": "https://openalex.org/C7668479",
+          "level": 2,
+          "score": 0.707395
+        },
+        {
+          "name": "Financial intermediary",
+          "openalex_id": "https://openalex.org/C65146658",
+          "level": 2,
+          "score": 0.61765635
+        },
+        {
+          "name": "Exploit",
+          "openalex_id": "https://openalex.org/C165696696",
+          "level": 2,
+          "score": 0.5343676
+        },
+        {
+          "name": "Business",
+          "openalex_id": "https://openalex.org/C144133560",
+          "level": 0,
+          "score": 0.52205753
+        },
+        {
+          "name": "Intermediary",
+          "openalex_id": "https://openalex.org/C139569457",
+          "level": 2,
+          "score": 0.47815117
+        },
+        {
+          "name": "Investment (military)",
+          "openalex_id": "https://openalex.org/C27548731",
+          "level": 3,
+          "score": 0.47018874
+        },
+        {
+          "name": "Government (linguistics)",
+          "openalex_id": "https://openalex.org/C2778137410",
+          "level": 2,
+          "score": 0.46851966
+        },
+        {
+          "name": "Economic rent",
+          "openalex_id": "https://openalex.org/C106866004",
+          "level": 2,
+          "score": 0.46105802
+        },
+        {
+          "name": "Population",
+          "openalex_id": "https://openalex.org/C2908647359",
+          "level": 2,
+          "score": 0.45998448
+        },
+        {
+          "name": "Intermediation",
+          "openalex_id": "https://openalex.org/C2779143981",
+          "level": 2,
+          "score": 0.4377911
+        },
+        {
+          "name": "Market economy",
+          "openalex_id": "https://openalex.org/C34447519",
+          "level": 1,
+          "score": 0.38813007
+        },
+        {
+          "name": "Economics",
+          "openalex_id": "https://openalex.org/C162324750",
+          "level": 0,
+          "score": 0.37728208
+        },
+        {
+          "name": "Financial system",
+          "openalex_id": "https://openalex.org/C73283319",
+          "level": 1,
+          "score": 0.31323346
+        },
+        {
+          "name": "Finance",
+          "openalex_id": "https://openalex.org/C10138342",
+          "level": 1,
+          "score": 0.23082408
+        },
+        {
+          "name": "Politics",
+          "openalex_id": "https://openalex.org/C94625758",
+          "level": 2,
+          "score": 0.19552207
+        },
+        {
+          "name": "Industrial organization",
+          "openalex_id": "https://openalex.org/C40700",
+          "level": 1,
+          "score": 0.16676024
+        },
+        {
+          "name": "Political science",
+          "openalex_id": "https://openalex.org/C17744445",
+          "level": 0,
+          "score": 0.15084532
+        },
+        {
+          "name": "Law",
+          "openalex_id": "https://openalex.org/C199539241",
+          "level": 1,
+          "score": 0.12430632
+        },
+        {
+          "name": "Microeconomics",
+          "openalex_id": "https://openalex.org/C175444787",
+          "level": 1,
+          "score": 0.09372473
+        },
+        {
+          "name": "Linguistics",
+          "openalex_id": "https://openalex.org/C41895202",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Philosophy",
+          "openalex_id": "https://openalex.org/C138885662",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Demography",
+          "openalex_id": "https://openalex.org/C149923435",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Computer security",
+          "openalex_id": "https://openalex.org/C38652104",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Sociology",
+          "openalex_id": "https://openalex.org/C144024400",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Computer science",
+          "openalex_id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": true,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_5_Development as enabler of miti"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2172191993",
+      "title": "Precipitation downscaling under climate change: Recent developments to bridge the gap between dynamical models and the end user",
+      "authors": [
+        {
+          "name": "Douglas Maraun",
+          "openalex_id": "https://openalex.org/A5053857204"
+        },
+        {
+          "name": "Fredrik Wetterhall",
+          "openalex_id": "https://openalex.org/A5004701035"
+        },
+        {
+          "name": "Andrew Ireson",
+          "openalex_id": "https://openalex.org/A5086383334"
+        },
+        {
+          "name": "Richard E. Chandler",
+          "openalex_id": "https://openalex.org/A5014133789"
+        },
+        {
+          "name": "Elizabeth Kendon",
+          "openalex_id": "https://openalex.org/A5043361929"
+        },
+        {
+          "name": "Martin Widmann",
+          "openalex_id": "https://openalex.org/A5089300300"
+        },
+        {
+          "name": "Susanne Brienen",
+          "openalex_id": "https://openalex.org/A5043007763"
+        },
+        {
+          "name": "Henning W. Rust",
+          "openalex_id": "https://openalex.org/A5059852792"
+        },
+        {
+          "name": "Tobias Sauter",
+          "openalex_id": "https://openalex.org/A5079612225"
+        },
+        {
+          "name": "Matthias Themeßl",
+          "openalex_id": "https://openalex.org/A5012526848"
+        },
+        {
+          "name": "Victor Venema",
+          "openalex_id": "https://openalex.org/A5115599859"
+        },
+        {
+          "name": "Kwok Pan Chun",
+          "openalex_id": "https://openalex.org/A5005362656"
+        },
+        {
+          "name": "C. M. Goodess",
+          "openalex_id": "https://openalex.org/A5076855659"
+        },
+        {
+          "name": "Richard Jones",
+          "openalex_id": "https://openalex.org/A5002521218"
+        },
+        {
+          "name": "Christian Onof",
+          "openalex_id": "https://openalex.org/A5017809538"
+        },
+        {
+          "name": "Mathieu Vrac",
+          "openalex_id": "https://openalex.org/A5072990918"
+        },
+        {
+          "name": "Insa Thiele-Eich",
+          "openalex_id": "https://openalex.org/A5080241715"
+        }
+      ],
+      "publication_year": 2010,
+      "journal": "Reviews of Geophysics",
+      "doi": "https://doi.org/10.1029/2009rg000314",
+      "citations_count": 1672,
+      "abstract": {
+        "[1]": [
+          0
+        ],
+        "Precipitation": [
+          1
+        ],
+        "downscaling": [
+          2,
+          52,
+          114
+        ],
+        "improves": [
+          3
+        ],
+        "the": [
+          4,
+          22,
+          104,
+          165
+        ],
+        "coarse": [
+          5
+        ],
+        "resolution": [
+          6
+        ],
+        "and": [
+          7,
+          16,
+          37,
+          49,
+          54,
+          65,
+          67,
+          78,
+          95,
+          143,
+          155,
+          161
+        ],
+        "poor": [
+          8
+        ],
+        "representation": [
+          9,
+          61,
+          105,
+          136
+        ],
+        "of": [
+          10,
+          26,
+          62,
+          76,
+          106,
+          137
+        ],
+        "precipitation": [
+          11,
+          63,
+          145
+        ],
+        "in": [
+          12,
+          152
+        ],
+        "global": [
+          13,
+          125,
+          167
+        ],
+        "climate": [
+          14,
+          27,
+          126,
+          168
+        ],
+        "models": [
+          15
+        ],
+        "helps": [
+          17
+        ],
+        "end": [
+          18,
+          42
+        ],
+        "users": [
+          19,
+          57
+        ],
+        "to": [
+          20,
+          39,
+          50,
+          82,
+          102,
+          112,
+          122
+        ],
+        "assess": [
+          21,
+          113
+        ],
+        "likely": [
+          23
+        ],
+        "hydrological": [
+          24
+        ],
+        "impacts": [
+          25
+        ],
+        "change.": [
+          28
+        ],
+        "This": [
+          29
+        ],
+        "paper": [
+          30
+        ],
+        "integrates": [
+          31
+        ],
+        "perspectives": [
+          32
+        ],
+        "from": [
+          33,
+          124,
+          133,
+          164
+        ],
+        "meteorologists,": [
+          34
+        ],
+        "climatologists,": [
+          35
+        ],
+        "statisticians,": [
+          36
+        ],
+        "hydrologists": [
+          38
+        ],
+        "identify": [
+          40
+        ],
+        "generic": [
+          41
+        ],
+        "user": [
+          43
+        ],
+        "(in": [
+          44
+        ],
+        "particular,": [
+          45
+        ],
+        "impact": [
+          46
+        ],
+        "modeler)": [
+          47
+        ],
+        "needs": [
+          48
+        ],
+        "discuss": [
+          51
+        ],
+        "capabilities": [
+          53
+        ],
+        "gaps.": [
+          55
+        ],
+        "End": [
+          56
+        ],
+        "need": [
+          58
+        ],
+        "a": [
+          59
+        ],
+        "reliable": [
+          60
+        ],
+        "intensities": [
+          64
+        ],
+        "temporal": [
+          66
+        ],
+        "spatial": [
+          68
+        ],
+        "variability,": [
+          69
+        ],
+        "as": [
+          70,
+          72
+        ],
+        "well": [
+          71
+        ],
+        "physical": [
+          73
+        ],
+        "consistency,": [
+          74
+        ],
+        "independent": [
+          75
+        ],
+        "region": [
+          77
+        ],
+        "season.": [
+          79
+        ],
+        "In": [
+          80
+        ],
+        "addition": [
+          81
+        ],
+        "presenting": [
+          83
+        ],
+        "dynamical": [
+          84
+        ],
+        "downscaling,": [
+          85,
+          91
+        ],
+        "we": [
+          86
+        ],
+        "review": [
+          87
+        ],
+        "perfect": [
+          88
+        ],
+        "prognosis": [
+          89
+        ],
+        "statistical": [
+          90
+        ],
+        "model": [
+          92
+        ],
+        "output": [
+          93
+        ],
+        "statistics,": [
+          94
+        ],
+        "weather": [
+          96
+        ],
+        "generators,": [
+          97
+        ],
+        "focusing": [
+          98
+        ],
+        "on": [
+          99,
+          147,
+          158
+        ],
+        "recent": [
+          100
+        ],
+        "developments": [
+          101
+        ],
+        "improve": [
+          103
+        ],
+        "space-time": [
+          107
+        ],
+        "variability.": [
+          108
+        ],
+        "Furthermore,": [
+          109
+        ],
+        "evaluation": [
+          110
+        ],
+        "techniques": [
+          111
+        ],
+        "skill": [
+          115
+        ],
+        "are": [
+          116,
+          130
+        ],
+        "presented.": [
+          117
+        ],
+        "Downscaling": [
+          118
+        ],
+        "adds": [
+          119
+        ],
+        "considerable": [
+          120
+        ],
+        "value": [
+          121
+        ],
+        "projections": [
+          123
+        ],
+        "models.": [
+          127
+        ],
+        "Remaining": [
+          128
+        ],
+        "gaps": [
+          129
+        ],
+        "uncertainties": [
+          131
+        ],
+        "arising": [
+          132
+        ],
+        "sparse": [
+          134
+        ],
+        "data;": [
+          135
+        ],
+        "extreme": [
+          138
+        ],
+        "summer": [
+          139
+        ],
+        "precipitation,": [
+          140,
+          142
+        ],
+        "subdaily": [
+          141
+        ],
+        "full": [
+          144
+        ],
+        "fields": [
+          146
+        ],
+        "fine": [
+          148
+        ],
+        "scales;": [
+          149,
+          160
+        ],
+        "capturing": [
+          150
+        ],
+        "changes": [
+          151
+        ],
+        "small-scale": [
+          153
+        ],
+        "processes": [
+          154
+        ],
+        "their": [
+          156
+        ],
+        "feedback": [
+          157
+        ],
+        "large": [
+          159
+        ],
+        "errors": [
+          162
+        ],
+        "inherited": [
+          163
+        ],
+        "driving": [
+          166
+        ],
+        "model.": [
+          169
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Downscaling",
+          "openalex_id": "https://openalex.org/C41156917",
+          "level": 3,
+          "score": 0.9895843
+        },
+        {
+          "name": "Precipitation",
+          "openalex_id": "https://openalex.org/C107054158",
+          "level": 2,
+          "score": 0.7703504
+        },
+        {
+          "name": "Climatology",
+          "openalex_id": "https://openalex.org/C49204034",
+          "level": 1,
+          "score": 0.64388424
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.591217
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.5584093
+        },
+        {
+          "name": "Climate model",
+          "openalex_id": "https://openalex.org/C168754636",
+          "level": 3,
+          "score": 0.5371341
+        },
+        {
+          "name": "Representation (politics)",
+          "openalex_id": "https://openalex.org/C2776359362",
+          "level": 3,
+          "score": 0.48914054
+        },
+        {
+          "name": "Computer science",
+          "openalex_id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.4600058
+        },
+        {
+          "name": "Scale (ratio)",
+          "openalex_id": "https://openalex.org/C2778755073",
+          "level": 2,
+          "score": 0.43758973
+        },
+        {
+          "name": "Consistency (knowledge bases)",
+          "openalex_id": "https://openalex.org/C2776436953",
+          "level": 2,
+          "score": 0.42376122
+        },
+        {
+          "name": "Meteorology",
+          "openalex_id": "https://openalex.org/C153294291",
+          "level": 1,
+          "score": 0.39174607
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.17200634
+        },
+        {
+          "name": "Geology",
+          "openalex_id": "https://openalex.org/C127313418",
+          "level": 0,
+          "score": 0.112421334
+        },
+        {
+          "name": "Artificial intelligence",
+          "openalex_id": "https://openalex.org/C154945302",
+          "level": 1,
+          "score": 0.099113196
+        },
+        {
+          "name": "Oceanography",
+          "openalex_id": "https://openalex.org/C111368507",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Cartography",
+          "openalex_id": "https://openalex.org/C58640448",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Politics",
+          "openalex_id": "https://openalex.org/C94625758",
+          "level": 2,
+          "score": 0.0
+        },
+        {
+          "name": "Political science",
+          "openalex_id": "https://openalex.org/C17744445",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Law",
+          "openalex_id": "https://openalex.org/C199539241",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": true,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_2_climate change development"
+    }
+  ],
+  "all_google_scholar_papers": [],
+  "all_openalex_papers": [
+    {
+      "openalex_id": "https://openalex.org/W4382362038",
+      "title": "Climate Change 2022 – Impacts, Adaptation and Vulnerability",
+      "authors": [
+        {
+          "name": "Intergovernmental Panel on Climate Change",
+          "openalex_id": "https://openalex.org/A5114006012"
+        }
+      ],
+      "publication_year": 2023,
+      "journal": "",
+      "doi": "https://doi.org/10.1017/9781009325844",
+      "citations_count": 5559,
+      "abstract": {
+        "The": [
+          0,
+          34,
+          88
+        ],
+        "Working": [
+          1
+        ],
+        "Group": [
+          2
+        ],
+        "II": [
+          3
+        ],
+        "contribution": [
+          4
+        ],
+        "to": [
+          5,
+          27,
+          140
+        ],
+        "the": [
+          6,
+          11,
+          23,
+          37,
+          50,
+          91,
+          112,
+          118
+        ],
+        "Sixth": [
+          7
+        ],
+        "Assessment": [
+          8
+        ],
+        "Report": [
+          9
+        ],
+        "of": [
+          10,
+          22,
+          39,
+          115
+        ],
+        "Intergovernmental": [
+          12
+        ],
+        "Panel": [
+          13
+        ],
+        "on": [
+          14,
+          147
+        ],
+        "Climate": [
+          15
+        ],
+        "Change": [
+          16
+        ],
+        "(IPCC)": [
+          17
+        ],
+        "provides": [
+          18
+        ],
+        "a": [
+          19,
+          73,
+          81
+        ],
+        "comprehensive": [
+          20
+        ],
+        "assessment": [
+          21
+        ],
+        "scientific": [
+          24,
+          119
+        ],
+        "literature": [
+          25
+        ],
+        "relevant": [
+          26
+        ],
+        "climate": [
+          28,
+          76,
+          96,
+          132
+        ],
+        "change": [
+          29,
+          97,
+          133
+        ],
+        "impacts,": [
+          30
+        ],
+        "adaptation": [
+          31,
+          62
+        ],
+        "and": [
+          32,
+          42,
+          44,
+          47,
+          54,
+          63,
+          86,
+          106,
+          127,
+          135
+        ],
+        "vulnerability.": [
+          33
+        ],
+        "report": [
+          35
+        ],
+        "recognizes": [
+          36
+        ],
+        "interactions": [
+          38
+        ],
+        "climate,": [
+          40
+        ],
+        "ecosystems": [
+          41
+        ],
+        "biodiversity,": [
+          43
+        ],
+        "human": [
+          45
+        ],
+        "societies,": [
+          46
+        ],
+        "integrates": [
+          48
+        ],
+        "across": [
+          49
+        ],
+        "natural,": [
+          51
+        ],
+        "ecological,": [
+          52
+        ],
+        "social": [
+          53
+        ],
+        "economic": [
+          55
+        ],
+        "sciences.": [
+          56
+        ],
+        "It": [
+          57
+        ],
+        "emphasizes": [
+          58
+        ],
+        "how": [
+          59
+        ],
+        "efforts": [
+          60
+        ],
+        "in": [
+          61,
+          64,
+          72,
+          103,
+          117
+        ],
+        "reducing": [
+          65
+        ],
+        "greenhouse": [
+          66
+        ],
+        "gas": [
+          67
+        ],
+        "emissions": [
+          68
+        ],
+        "can": [
+          69
+        ],
+        "come": [
+          70
+        ],
+        "together": [
+          71
+        ],
+        "process": [
+          74
+        ],
+        "called": [
+          75
+        ],
+        "resilient": [
+          77
+        ],
+        "development,": [
+          78
+        ],
+        "which": [
+          79
+        ],
+        "enables": [
+          80
+        ],
+        "liveable": [
+          82
+        ],
+        "future": [
+          83,
+          136
+        ],
+        "for": [
+          84,
+          94
+        ],
+        "biodiversity": [
+          85
+        ],
+        "humankind.": [
+          87
+        ],
+        "IPCC": [
+          89,
+          99
+        ],
+        "is": [
+          90
+        ],
+        "leading": [
+          92
+        ],
+        "body": [
+          93
+        ],
+        "assessing": [
+          95
+        ],
+        "science.": [
+          98
+        ],
+        "reports": [
+          100
+        ],
+        "are": [
+          101
+        ],
+        "produced": [
+          102
+        ],
+        "comprehensive,": [
+          104
+        ],
+        "objective": [
+          105
+        ],
+        "transparent": [
+          107
+        ],
+        "ways,": [
+          108
+        ],
+        "ensuring": [
+          109
+        ],
+        "they": [
+          110
+        ],
+        "reflect": [
+          111
+        ],
+        "full": [
+          113
+        ],
+        "range": [
+          114
+        ],
+        "views": [
+          116
+        ],
+        "literature.": [
+          120
+        ],
+        "Novel": [
+          121
+        ],
+        "elements": [
+          122
+        ],
+        "include": [
+          123
+        ],
+        "focused": [
+          124
+        ],
+        "topical": [
+          125
+        ],
+        "assessments,": [
+          126
+        ],
+        "an": [
+          128
+        ],
+        "atlas": [
+          129
+        ],
+        "presenting": [
+          130
+        ],
+        "observed": [
+          131
+        ],
+        "impacts": [
+          134
+        ],
+        "risks": [
+          137
+        ],
+        "from": [
+          138
+        ],
+        "global": [
+          139
+        ],
+        "regional": [
+          141
+        ],
+        "scales.": [
+          142
+        ],
+        "Available": [
+          143
+        ],
+        "as": [
+          144
+        ],
+        "Open": [
+          145
+        ],
+        "Access": [
+          146
+        ],
+        "Cambridge": [
+          148
+        ],
+        "Core.": [
+          149
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.78312105
+        },
+        {
+          "name": "Vulnerability (computing)",
+          "openalex_id": "https://openalex.org/C95713431",
+          "level": 2,
+          "score": 0.76941
+        },
+        {
+          "name": "Environmental resource management",
+          "openalex_id": "https://openalex.org/C107826830",
+          "level": 1,
+          "score": 0.5888593
+        },
+        {
+          "name": "Adaptation (eye)",
+          "openalex_id": "https://openalex.org/C139807058",
+          "level": 2,
+          "score": 0.5592167
+        },
+        {
+          "name": "Biodiversity",
+          "openalex_id": "https://openalex.org/C130217890",
+          "level": 2,
+          "score": 0.49633628
+        },
+        {
+          "name": "Greenhouse gas",
+          "openalex_id": "https://openalex.org/C47737302",
+          "level": 2,
+          "score": 0.46952382
+        },
+        {
+          "name": "Political economy of climate change",
+          "openalex_id": "https://openalex.org/C189123395",
+          "level": 3,
+          "score": 0.4501918
+        },
+        {
+          "name": "Ecological forecasting",
+          "openalex_id": "https://openalex.org/C96240277",
+          "level": 4,
+          "score": 0.45000696
+        },
+        {
+          "name": "Vulnerability assessment",
+          "openalex_id": "https://openalex.org/C167063184",
+          "level": 3,
+          "score": 0.44553047
+        },
+        {
+          "name": "Environmental planning",
+          "openalex_id": "https://openalex.org/C91375879",
+          "level": 1,
+          "score": 0.44427773
+        },
+        {
+          "name": "Global warming",
+          "openalex_id": "https://openalex.org/C115343472",
+          "level": 3,
+          "score": 0.416923
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.37249094
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.3559813
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.22332448
+        },
+        {
+          "name": "Psychological resilience",
+          "openalex_id": "https://openalex.org/C137176749",
+          "level": 2,
+          "score": 0.19351372
+        },
+        {
+          "name": "Computer science",
+          "openalex_id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.109440446
+        },
+        {
+          "name": "Psychology",
+          "openalex_id": "https://openalex.org/C15744967",
+          "level": 0,
+          "score": 0.0851022
+        },
+        {
+          "name": "Computer security",
+          "openalex_id": "https://openalex.org/C38652104",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Neuroscience",
+          "openalex_id": "https://openalex.org/C169760540",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Psychotherapist",
+          "openalex_id": "https://openalex.org/C542102704",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "book",
+      "open_access": true,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_3_climate change ['Development',"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2093141926",
+      "title": "Linking climate change modelling to impacts studies: recent advances in downscaling techniques for hydrological modelling",
+      "authors": [
+        {
+          "name": "Hayley J. Fowler",
+          "openalex_id": "https://openalex.org/A5061602805"
+        },
+        {
+          "name": "Stephen Blenkinsop",
+          "openalex_id": "https://openalex.org/A5042075687"
+        },
+        {
+          "name": "Claudia Tebaldi",
+          "openalex_id": "https://openalex.org/A5037816255"
+        }
+      ],
+      "publication_year": 2007,
+      "journal": "International Journal of Climatology",
+      "doi": "https://doi.org/10.1002/joc.1556",
+      "citations_count": 2160,
+      "abstract": {
+        "Abstract": [
+          0
+        ],
+        "There": [
+          1
+        ],
+        "is": [
+          2,
+          28,
+          87,
+          154,
+          194,
+          198
+        ],
+        "now": [
+          3
+        ],
+        "a": [
+          4,
+          135,
+          199,
+          202
+        ],
+        "large": [
+          5
+        ],
+        "published": [
+          6
+        ],
+        "literature": [
+          7
+        ],
+        "on": [
+          8,
+          43,
+          67,
+          179
+        ],
+        "the": [
+          9,
+          31,
+          38,
+          50,
+          58,
+          68,
+          76,
+          81,
+          100,
+          106,
+          143,
+          163,
+          185,
+          191,
+          209,
+          231
+        ],
+        "strengths": [
+          10
+        ],
+        "and": [
+          11,
+          23,
+          80,
+          118,
+          123,
+          172,
+          181,
+          216,
+          226
+        ],
+        "weaknesses": [
+          12
+        ],
+        "of": [
+          13,
+          33,
+          40,
+          78,
+          120,
+          187,
+          211,
+          228
+        ],
+        "downscaling": [
+          14,
+          34,
+          52,
+          59,
+          69,
+          119,
+          132
+        ],
+        "methods": [
+          15
+        ],
+        "for": [
+          16,
+          62,
+          103,
+          108,
+          201,
+          214
+        ],
+        "different": [
+          17,
+          21
+        ],
+        "climatic": [
+          18
+        ],
+        "variables,": [
+          19
+        ],
+        "in": [
+          20,
+          57,
+          93,
+          134,
+          184
+        ],
+        "regions": [
+          22
+        ],
+        "seasons.": [
+          24
+        ],
+        "However,": [
+          25
+        ],
+        "little": [
+          26,
+          156
+        ],
+        "attention": [
+          27
+        ],
+        "given": [
+          29,
+          89,
+          158
+        ],
+        "to": [
+          30,
+          83,
+          90,
+          141,
+          159,
+          169,
+          174,
+          221
+        ],
+        "choice": [
+          32
+        ],
+        "method": [
+          35
+        ],
+        "when": [
+          36
+        ],
+        "examining": [
+          37,
+          54
+        ],
+        "impacts": [
+          39
+        ],
+        "climate": [
+          41,
+          94,
+          137
+        ],
+        "change": [
+          42,
+          138
+        ],
+        "hydrological": [
+          44,
+          63,
+          84,
+          109,
+          150
+        ],
+        "systems.": [
+          45
+        ],
+        "This": [
+          46
+        ],
+        "review": [
+          47
+        ],
+        "paper": [
+          48
+        ],
+        "assesses": [
+          49
+        ],
+        "current": [
+          51
+        ],
+        "literature,": [
+          53
+        ],
+        "new": [
+          55,
+          71,
+          91
+        ],
+        "developments": [
+          56,
+          92
+        ],
+        "field": [
+          60
+        ],
+        "specifically": [
+          61
+        ],
+        "impacts.": [
+          64,
+          85
+        ],
+        "Sections": [
+          65
+        ],
+        "focus": [
+          66
+        ],
+        "concept;": [
+          70
+        ],
+        "methods;": [
+          72
+        ],
+        "comparative": [
+          73
+        ],
+        "methodological": [
+          74
+        ],
+        "studies;": [
+          75
+        ],
+        "modelling": [
+          77,
+          232
+        ],
+        "extremes;": [
+          79
+        ],
+        "application": [
+          82
+        ],
+        "Consideration": [
+          86
+        ],
+        "then": [
+          88
+        ],
+        "scenario": [
+          95,
+          139
+        ],
+        "construction": [
+          96
+        ],
+        "which": [
+          97
+        ],
+        "may": [
+          98
+        ],
+        "offer": [
+          99
+        ],
+        "most": [
+          101
+        ],
+        "potential": [
+          102
+        ],
+        "advancement": [
+          104
+        ],
+        "within": [
+          105,
+          230
+        ],
+        "‘downscaling": [
+          107
+        ],
+        "impacts’": [
+          110
+        ],
+        "community,": [
+          111
+        ],
+        "such": [
+          112
+        ],
+        "as": [
+          113
+        ],
+        "probabilistic": [
+          114,
+          136
+        ],
+        "modelling,": [
+          115
+        ],
+        "pattern": [
+          116
+        ],
+        "scaling": [
+          117
+        ],
+        "multiple": [
+          121
+        ],
+        "variables": [
+          122
+        ],
+        "suggests": [
+          124
+        ],
+        "ways": [
+          125
+        ],
+        "that": [
+          126,
+          196,
+          218
+        ],
+        "they": [
+          127
+        ],
+        "can": [
+          128,
+          165
+        ],
+        "be": [
+          129,
+          166
+        ],
+        "merged": [
+          130
+        ],
+        "with": [
+          131,
+          146,
+          224
+        ],
+        "techniques": [
+          133
+        ],
+        "framework": [
+          140
+        ],
+        "assess": [
+          142
+        ],
+        "uncertainties": [
+          144,
+          189,
+          229
+        ],
+        "associated": [
+          145
+        ],
+        "future": [
+          147,
+          222
+        ],
+        "projections.": [
+          148
+        ],
+        "Within": [
+          149
+        ],
+        "impact": [
+          151
+        ],
+        "studies": [
+          152,
+          207
+        ],
+        "there": [
+          153,
+          197
+        ],
+        "still": [
+          155
+        ],
+        "consideration": [
+          157
+        ],
+        "applied": [
+          160
+        ],
+        "research;": [
+          161
+        ],
+        "how": [
+          162
+        ],
+        "results": [
+          164
+        ],
+        "best": [
+          167
+        ],
+        "used": [
+          168
+        ],
+        "enable": [
+          170
+        ],
+        "stakeholders": [
+          171
+        ],
+        "managers": [
+          173
+        ],
+        "make": [
+          175
+        ],
+        "informed,": [
+          176
+        ],
+        "robust": [
+          177,
+          220
+        ],
+        "decisions": [
+          178
+        ],
+        "adaptation": [
+          180
+        ],
+        "mitigation": [
+          182
+        ],
+        "strategies": [
+          183
+        ],
+        "face": [
+          186
+        ],
+        "many": [
+          188
+        ],
+        "about": [
+          190
+        ],
+        "future.": [
+          192
+        ],
+        "It": [
+          193
+        ],
+        "suggested": [
+          195
+        ],
+        "need": [
+          200
+        ],
+        "move": [
+          203
+        ],
+        "away": [
+          204
+        ],
+        "from": [
+          205
+        ],
+        "comparison": [
+          206
+        ],
+        "into": [
+          208
+        ],
+        "provision": [
+          210
+        ],
+        "decision‐making": [
+          212
+        ],
+        "tools": [
+          213
+        ],
+        "planning": [
+          215
+        ],
+        "management": [
+          217
+        ],
+        "are": [
+          219
+        ],
+        "uncertainties;": [
+          223
+        ],
+        "examination": [
+          225
+        ],
+        "understanding": [
+          227
+        ],
+        "system.": [
+          233
+        ],
+        "Copyright": [
+          234
+        ],
+        "©": [
+          235
+        ],
+        "2007": [
+          236
+        ],
+        "Royal": [
+          237
+        ],
+        "Meteorological": [
+          238
+        ],
+        "Society": [
+          239
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Downscaling",
+          "openalex_id": "https://openalex.org/C41156917",
+          "level": 3,
+          "score": 0.99067277
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.6630157
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.51986814
+        },
+        {
+          "name": "Computer science",
+          "openalex_id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.47673428
+        },
+        {
+          "name": "Probabilistic logic",
+          "openalex_id": "https://openalex.org/C49937458",
+          "level": 2,
+          "score": 0.42690623
+        },
+        {
+          "name": "Climatology",
+          "openalex_id": "https://openalex.org/C49204034",
+          "level": 1,
+          "score": 0.41878372
+        },
+        {
+          "name": "Environmental resource management",
+          "openalex_id": "https://openalex.org/C107826830",
+          "level": 1,
+          "score": 0.41585255
+        },
+        {
+          "name": "Artificial intelligence",
+          "openalex_id": "https://openalex.org/C154945302",
+          "level": 1,
+          "score": 0.07098177
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.06978333
+        },
+        {
+          "name": "Geology",
+          "openalex_id": "https://openalex.org/C127313418",
+          "level": 0,
+          "score": 0.069200635
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": false,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_1_climate change mitigation Deve"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3159281654",
+      "title": "Global Warming of 1.5°C. An IPCC Special Report on the impacts of global warming of 1.5°C above pre-industrial levels and related global greenhouse gas emission pathways, in the context of strengthening the global response to the threat of climate change,sustainable development, and efforts to eradicate poverty",
+      "authors": [
+        {
+          "name": "Valérie Masson‐Delmotte",
+          "openalex_id": "https://openalex.org/A5054087600"
+        },
+        {
+          "name": "Panmao Zhai",
+          "openalex_id": "https://openalex.org/A5003077921"
+        },
+        {
+          "name": "Hans‐Otto Pörtner",
+          "openalex_id": "https://openalex.org/A5089898800"
+        },
+        {
+          "name": "Daniel Roberts",
+          "openalex_id": "https://openalex.org/A5000813884"
+        },
+        {
+          "name": "Jim Skea",
+          "openalex_id": "https://openalex.org/A5082696302"
+        },
+        {
+          "name": "R.S. Priyadarshi",
+          "openalex_id": "https://openalex.org/A5087064588"
+        },
+        {
+          "name": "Anna Pirani",
+          "openalex_id": "https://openalex.org/A5053264314"
+        },
+        {
+          "name": "Wilfran Moufouma‐Okia",
+          "openalex_id": "https://openalex.org/A5045971604"
+        },
+        {
+          "name": "Clotilde Péan",
+          "openalex_id": "https://openalex.org/A5013955393"
+        },
+        {
+          "name": "Roz Pidcock",
+          "openalex_id": "https://openalex.org/A5041242608"
+        },
+        {
+          "name": "Stephen R. Connors",
+          "openalex_id": "https://openalex.org/A5054159553"
+        },
+        {
+          "name": "J.B. Robin Matthews",
+          "openalex_id": "https://openalex.org/A5033715304"
+        },
+        {
+          "name": "Y. Chen",
+          "openalex_id": "https://openalex.org/A5028665924"
+        },
+        {
+          "name": "Xiaoqian Zhou",
+          "openalex_id": "https://openalex.org/A5100580845"
+        },
+        {
+          "name": "Melissa Gomis",
+          "openalex_id": "https://openalex.org/A5054029441"
+        },
+        {
+          "name": "E Lonnoy",
+          "openalex_id": "https://openalex.org/A5056902969"
+        },
+        {
+          "name": "Thomas K. Maycock",
+          "openalex_id": "https://openalex.org/A5022396715"
+        },
+        {
+          "name": "M Tignor",
+          "openalex_id": "https://openalex.org/A5019954898"
+        },
+        {
+          "name": "T. Waterfield",
+          "openalex_id": "https://openalex.org/A5030466730"
+        }
+      ],
+      "publication_year": 2019,
+      "journal": "",
+      "doi": null,
+      "citations_count": 2034,
+      "abstract": null,
+      "concepts": [
+        {
+          "name": "Global warming",
+          "openalex_id": "https://openalex.org/C115343472",
+          "level": 3,
+          "score": 0.8359016
+        },
+        {
+          "name": "Greenhouse gas",
+          "openalex_id": "https://openalex.org/C47737302",
+          "level": 2,
+          "score": 0.7891915
+        },
+        {
+          "name": "Global-warming potential",
+          "openalex_id": "https://openalex.org/C119288801",
+          "level": 3,
+          "score": 0.74937034
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.6665629
+        },
+        {
+          "name": "Greenhouse effect",
+          "openalex_id": "https://openalex.org/C137851953",
+          "level": 4,
+          "score": 0.5078319
+        },
+        {
+          "name": "Greenhouse",
+          "openalex_id": "https://openalex.org/C32198211",
+          "level": 2,
+          "score": 0.4372039
+        },
+        {
+          "name": "Atmospheric sciences",
+          "openalex_id": "https://openalex.org/C91586092",
+          "level": 1,
+          "score": 0.41349983
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.39644805
+        },
+        {
+          "name": "Climatology",
+          "openalex_id": "https://openalex.org/C49204034",
+          "level": 1,
+          "score": 0.39463422
+        },
+        {
+          "name": "Agronomy",
+          "openalex_id": "https://openalex.org/C6557445",
+          "level": 1,
+          "score": 0.087111026
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.07598728
+        },
+        {
+          "name": "Geology",
+          "openalex_id": "https://openalex.org/C127313418",
+          "level": 0,
+          "score": 0.07327309
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": false,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_4_IPCC climate change developmen"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4240669445",
+      "title": "Unbundling Institutions",
+      "authors": [
+        {
+          "name": "Daron Acemoğlu",
+          "openalex_id": "https://openalex.org/A5012301204"
+        },
+        {
+          "name": "Simon Johnson",
+          "openalex_id": "https://openalex.org/A5111446264"
+        }
+      ],
+      "publication_year": 2005,
+      "journal": "Journal of Political Economy",
+      "doi": "https://doi.org/10.1086/432166",
+      "citations_count": 2007,
+      "abstract": {
+        "This": [
+          0
+        ],
+        "paper": [
+          1
+        ],
+        "evaluates": [
+          2
+        ],
+        "the": [
+          3,
+          15,
+          52,
+          70,
+          73,
+          106,
+          125,
+          135,
+          148
+        ],
+        "importance": [
+          4
+        ],
+        "of": [
+          5,
+          36,
+          54,
+          72,
+          108,
+          123,
+          127,
+          138,
+          150
+        ],
+        "\"property": [
+          6
+        ],
+        "rights": [
+          7,
+          49,
+          85
+        ],
+        "institutions,\"": [
+          8,
+          22
+        ],
+        "which": [
+          9,
+          23
+        ],
+        "protect": [
+          10
+        ],
+        "citizens": [
+          11
+        ],
+        "against": [
+          12
+        ],
+        "expropriation": [
+          13,
+          151
+        ],
+        "by": [
+          14,
+          39
+        ],
+        "government": [
+          16
+        ],
+        "and": [
+          17,
+          20,
+          42,
+          51,
+          60,
+          65,
+          69,
+          96,
+          130
+        ],
+        "powerful": [
+          18
+        ],
+        "elites,": [
+          19
+        ],
+        "\"contracting": [
+          21
+        ],
+        "enable": [
+          24
+        ],
+        "private": [
+          25
+        ],
+        "contracts": [
+          26,
+          132
+        ],
+        "between": [
+          27,
+          47,
+          66
+        ],
+        "citizens.": [
+          28
+        ],
+        "We": [
+          29
+        ],
+        "exploit": [
+          30
+        ],
+        "exogenous": [
+          31
+        ],
+        "variation": [
+          32
+        ],
+        "in": [
+          33,
+          152
+        ],
+        "both": [
+          34
+        ],
+        "types": [
+          35
+        ],
+        "institutions": [
+          37,
+          50,
+          68,
+          86,
+          100,
+          141
+        ],
+        "driven": [
+          38
+        ],
+        "colonial": [
+          40
+        ],
+        "history": [
+          41
+        ],
+        "document": [
+          43
+        ],
+        "strong": [
+          44
+        ],
+        "first‐stage": [
+          45
+        ],
+        "relationships": [
+          46
+        ],
+        "property": [
+          48,
+          84
+        ],
+        "determinants": [
+          53
+        ],
+        "European": [
+          55
+        ],
+        "colonization": [
+          56
+        ],
+        "strategy": [
+          57
+        ],
+        "(settler": [
+          58
+        ],
+        "mortality": [
+          59
+        ],
+        "population": [
+          61
+        ],
+        "density": [
+          62
+        ],
+        "before": [
+          63
+        ],
+        "colonization)": [
+          64
+        ],
+        "contracting": [
+          67,
+          140
+        ],
+        "identity": [
+          71
+        ],
+        "colonizing": [
+          74
+        ],
+        "power.": [
+          75
+        ],
+        "Using": [
+          76
+        ],
+        "this": [
+          77,
+          115,
+          153
+        ],
+        "instrumental": [
+          78
+        ],
+        "variables": [
+          79
+        ],
+        "approach,": [
+          80
+        ],
+        "we": [
+          81
+        ],
+        "find": [
+          82,
+          121,
+          143
+        ],
+        "that": [
+          83,
+          118
+        ],
+        "have": [
+          87
+        ],
+        "a": [
+          88
+        ],
+        "first‐order": [
+          89
+        ],
+        "effect": [
+          90
+        ],
+        "on": [
+          91
+        ],
+        "long‐run": [
+          92
+        ],
+        "economic": [
+          93
+        ],
+        "growth,": [
+          94
+        ],
+        "investment,": [
+          95
+        ],
+        "financial": [
+          97,
+          109
+        ],
+        "development.": [
+          98
+        ],
+        "Contracting": [
+          99
+        ],
+        "appear": [
+          101
+        ],
+        "to": [
+          102,
+          133,
+          146
+        ],
+        "matter": [
+          103
+        ],
+        "only": [
+          104
+        ],
+        "for": [
+          105,
+          114
+        ],
+        "form": [
+          107
+        ],
+        "intermediation.": [
+          110
+        ],
+        "A": [
+          111
+        ],
+        "possible": [
+          112
+        ],
+        "explanation": [
+          113
+        ],
+        "pattern": [
+          116
+        ],
+        "is": [
+          117
+        ],
+        "individuals": [
+          119
+        ],
+        "often": [
+          120
+        ],
+        "ways": [
+          122
+        ],
+        "altering": [
+          124
+        ],
+        "terms": [
+          126
+        ],
+        "their": [
+          128
+        ],
+        "formal": [
+          129
+        ],
+        "informal": [
+          131
+        ],
+        "avoid": [
+          134
+        ],
+        "adverse": [
+          136
+        ],
+        "effects": [
+          137
+        ],
+        "weak": [
+          139
+        ],
+        "but": [
+          142
+        ],
+        "it": [
+          144
+        ],
+        "harder": [
+          145
+        ],
+        "mitigate": [
+          147
+        ],
+        "risk": [
+          149
+        ],
+        "way.": [
+          154
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Expropriation",
+          "openalex_id": "https://openalex.org/C2780060422",
+          "level": 2,
+          "score": 0.8392199
+        },
+        {
+          "name": "Property rights",
+          "openalex_id": "https://openalex.org/C86511162",
+          "level": 2,
+          "score": 0.7622798
+        },
+        {
+          "name": "Unbundling",
+          "openalex_id": "https://openalex.org/C7668479",
+          "level": 2,
+          "score": 0.707395
+        },
+        {
+          "name": "Financial intermediary",
+          "openalex_id": "https://openalex.org/C65146658",
+          "level": 2,
+          "score": 0.61765635
+        },
+        {
+          "name": "Exploit",
+          "openalex_id": "https://openalex.org/C165696696",
+          "level": 2,
+          "score": 0.5343676
+        },
+        {
+          "name": "Business",
+          "openalex_id": "https://openalex.org/C144133560",
+          "level": 0,
+          "score": 0.52205753
+        },
+        {
+          "name": "Intermediary",
+          "openalex_id": "https://openalex.org/C139569457",
+          "level": 2,
+          "score": 0.47815117
+        },
+        {
+          "name": "Investment (military)",
+          "openalex_id": "https://openalex.org/C27548731",
+          "level": 3,
+          "score": 0.47018874
+        },
+        {
+          "name": "Government (linguistics)",
+          "openalex_id": "https://openalex.org/C2778137410",
+          "level": 2,
+          "score": 0.46851966
+        },
+        {
+          "name": "Economic rent",
+          "openalex_id": "https://openalex.org/C106866004",
+          "level": 2,
+          "score": 0.46105802
+        },
+        {
+          "name": "Population",
+          "openalex_id": "https://openalex.org/C2908647359",
+          "level": 2,
+          "score": 0.45998448
+        },
+        {
+          "name": "Intermediation",
+          "openalex_id": "https://openalex.org/C2779143981",
+          "level": 2,
+          "score": 0.4377911
+        },
+        {
+          "name": "Market economy",
+          "openalex_id": "https://openalex.org/C34447519",
+          "level": 1,
+          "score": 0.38813007
+        },
+        {
+          "name": "Economics",
+          "openalex_id": "https://openalex.org/C162324750",
+          "level": 0,
+          "score": 0.37728208
+        },
+        {
+          "name": "Financial system",
+          "openalex_id": "https://openalex.org/C73283319",
+          "level": 1,
+          "score": 0.31323346
+        },
+        {
+          "name": "Finance",
+          "openalex_id": "https://openalex.org/C10138342",
+          "level": 1,
+          "score": 0.23082408
+        },
+        {
+          "name": "Politics",
+          "openalex_id": "https://openalex.org/C94625758",
+          "level": 2,
+          "score": 0.19552207
+        },
+        {
+          "name": "Industrial organization",
+          "openalex_id": "https://openalex.org/C40700",
+          "level": 1,
+          "score": 0.16676024
+        },
+        {
+          "name": "Political science",
+          "openalex_id": "https://openalex.org/C17744445",
+          "level": 0,
+          "score": 0.15084532
+        },
+        {
+          "name": "Law",
+          "openalex_id": "https://openalex.org/C199539241",
+          "level": 1,
+          "score": 0.12430632
+        },
+        {
+          "name": "Microeconomics",
+          "openalex_id": "https://openalex.org/C175444787",
+          "level": 1,
+          "score": 0.09372473
+        },
+        {
+          "name": "Linguistics",
+          "openalex_id": "https://openalex.org/C41895202",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Philosophy",
+          "openalex_id": "https://openalex.org/C138885662",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Demography",
+          "openalex_id": "https://openalex.org/C149923435",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Computer security",
+          "openalex_id": "https://openalex.org/C38652104",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Sociology",
+          "openalex_id": "https://openalex.org/C144024400",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Computer science",
+          "openalex_id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": true,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_5_Development as enabler of miti"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2172191993",
+      "title": "Precipitation downscaling under climate change: Recent developments to bridge the gap between dynamical models and the end user",
+      "authors": [
+        {
+          "name": "Douglas Maraun",
+          "openalex_id": "https://openalex.org/A5053857204"
+        },
+        {
+          "name": "Fredrik Wetterhall",
+          "openalex_id": "https://openalex.org/A5004701035"
+        },
+        {
+          "name": "Andrew Ireson",
+          "openalex_id": "https://openalex.org/A5086383334"
+        },
+        {
+          "name": "Richard E. Chandler",
+          "openalex_id": "https://openalex.org/A5014133789"
+        },
+        {
+          "name": "Elizabeth Kendon",
+          "openalex_id": "https://openalex.org/A5043361929"
+        },
+        {
+          "name": "Martin Widmann",
+          "openalex_id": "https://openalex.org/A5089300300"
+        },
+        {
+          "name": "Susanne Brienen",
+          "openalex_id": "https://openalex.org/A5043007763"
+        },
+        {
+          "name": "Henning W. Rust",
+          "openalex_id": "https://openalex.org/A5059852792"
+        },
+        {
+          "name": "Tobias Sauter",
+          "openalex_id": "https://openalex.org/A5079612225"
+        },
+        {
+          "name": "Matthias Themeßl",
+          "openalex_id": "https://openalex.org/A5012526848"
+        },
+        {
+          "name": "Victor Venema",
+          "openalex_id": "https://openalex.org/A5115599859"
+        },
+        {
+          "name": "Kwok Pan Chun",
+          "openalex_id": "https://openalex.org/A5005362656"
+        },
+        {
+          "name": "C. M. Goodess",
+          "openalex_id": "https://openalex.org/A5076855659"
+        },
+        {
+          "name": "Richard Jones",
+          "openalex_id": "https://openalex.org/A5002521218"
+        },
+        {
+          "name": "Christian Onof",
+          "openalex_id": "https://openalex.org/A5017809538"
+        },
+        {
+          "name": "Mathieu Vrac",
+          "openalex_id": "https://openalex.org/A5072990918"
+        },
+        {
+          "name": "Insa Thiele-Eich",
+          "openalex_id": "https://openalex.org/A5080241715"
+        }
+      ],
+      "publication_year": 2010,
+      "journal": "Reviews of Geophysics",
+      "doi": "https://doi.org/10.1029/2009rg000314",
+      "citations_count": 1672,
+      "abstract": {
+        "[1]": [
+          0
+        ],
+        "Precipitation": [
+          1
+        ],
+        "downscaling": [
+          2,
+          52,
+          114
+        ],
+        "improves": [
+          3
+        ],
+        "the": [
+          4,
+          22,
+          104,
+          165
+        ],
+        "coarse": [
+          5
+        ],
+        "resolution": [
+          6
+        ],
+        "and": [
+          7,
+          16,
+          37,
+          49,
+          54,
+          65,
+          67,
+          78,
+          95,
+          143,
+          155,
+          161
+        ],
+        "poor": [
+          8
+        ],
+        "representation": [
+          9,
+          61,
+          105,
+          136
+        ],
+        "of": [
+          10,
+          26,
+          62,
+          76,
+          106,
+          137
+        ],
+        "precipitation": [
+          11,
+          63,
+          145
+        ],
+        "in": [
+          12,
+          152
+        ],
+        "global": [
+          13,
+          125,
+          167
+        ],
+        "climate": [
+          14,
+          27,
+          126,
+          168
+        ],
+        "models": [
+          15
+        ],
+        "helps": [
+          17
+        ],
+        "end": [
+          18,
+          42
+        ],
+        "users": [
+          19,
+          57
+        ],
+        "to": [
+          20,
+          39,
+          50,
+          82,
+          102,
+          112,
+          122
+        ],
+        "assess": [
+          21,
+          113
+        ],
+        "likely": [
+          23
+        ],
+        "hydrological": [
+          24
+        ],
+        "impacts": [
+          25
+        ],
+        "change.": [
+          28
+        ],
+        "This": [
+          29
+        ],
+        "paper": [
+          30
+        ],
+        "integrates": [
+          31
+        ],
+        "perspectives": [
+          32
+        ],
+        "from": [
+          33,
+          124,
+          133,
+          164
+        ],
+        "meteorologists,": [
+          34
+        ],
+        "climatologists,": [
+          35
+        ],
+        "statisticians,": [
+          36
+        ],
+        "hydrologists": [
+          38
+        ],
+        "identify": [
+          40
+        ],
+        "generic": [
+          41
+        ],
+        "user": [
+          43
+        ],
+        "(in": [
+          44
+        ],
+        "particular,": [
+          45
+        ],
+        "impact": [
+          46
+        ],
+        "modeler)": [
+          47
+        ],
+        "needs": [
+          48
+        ],
+        "discuss": [
+          51
+        ],
+        "capabilities": [
+          53
+        ],
+        "gaps.": [
+          55
+        ],
+        "End": [
+          56
+        ],
+        "need": [
+          58
+        ],
+        "a": [
+          59
+        ],
+        "reliable": [
+          60
+        ],
+        "intensities": [
+          64
+        ],
+        "temporal": [
+          66
+        ],
+        "spatial": [
+          68
+        ],
+        "variability,": [
+          69
+        ],
+        "as": [
+          70,
+          72
+        ],
+        "well": [
+          71
+        ],
+        "physical": [
+          73
+        ],
+        "consistency,": [
+          74
+        ],
+        "independent": [
+          75
+        ],
+        "region": [
+          77
+        ],
+        "season.": [
+          79
+        ],
+        "In": [
+          80
+        ],
+        "addition": [
+          81
+        ],
+        "presenting": [
+          83
+        ],
+        "dynamical": [
+          84
+        ],
+        "downscaling,": [
+          85,
+          91
+        ],
+        "we": [
+          86
+        ],
+        "review": [
+          87
+        ],
+        "perfect": [
+          88
+        ],
+        "prognosis": [
+          89
+        ],
+        "statistical": [
+          90
+        ],
+        "model": [
+          92
+        ],
+        "output": [
+          93
+        ],
+        "statistics,": [
+          94
+        ],
+        "weather": [
+          96
+        ],
+        "generators,": [
+          97
+        ],
+        "focusing": [
+          98
+        ],
+        "on": [
+          99,
+          147,
+          158
+        ],
+        "recent": [
+          100
+        ],
+        "developments": [
+          101
+        ],
+        "improve": [
+          103
+        ],
+        "space-time": [
+          107
+        ],
+        "variability.": [
+          108
+        ],
+        "Furthermore,": [
+          109
+        ],
+        "evaluation": [
+          110
+        ],
+        "techniques": [
+          111
+        ],
+        "skill": [
+          115
+        ],
+        "are": [
+          116,
+          130
+        ],
+        "presented.": [
+          117
+        ],
+        "Downscaling": [
+          118
+        ],
+        "adds": [
+          119
+        ],
+        "considerable": [
+          120
+        ],
+        "value": [
+          121
+        ],
+        "projections": [
+          123
+        ],
+        "models.": [
+          127
+        ],
+        "Remaining": [
+          128
+        ],
+        "gaps": [
+          129
+        ],
+        "uncertainties": [
+          131
+        ],
+        "arising": [
+          132
+        ],
+        "sparse": [
+          134
+        ],
+        "data;": [
+          135
+        ],
+        "extreme": [
+          138
+        ],
+        "summer": [
+          139
+        ],
+        "precipitation,": [
+          140,
+          142
+        ],
+        "subdaily": [
+          141
+        ],
+        "full": [
+          144
+        ],
+        "fields": [
+          146
+        ],
+        "fine": [
+          148
+        ],
+        "scales;": [
+          149,
+          160
+        ],
+        "capturing": [
+          150
+        ],
+        "changes": [
+          151
+        ],
+        "small-scale": [
+          153
+        ],
+        "processes": [
+          154
+        ],
+        "their": [
+          156
+        ],
+        "feedback": [
+          157
+        ],
+        "large": [
+          159
+        ],
+        "errors": [
+          162
+        ],
+        "inherited": [
+          163
+        ],
+        "driving": [
+          166
+        ],
+        "model.": [
+          169
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Downscaling",
+          "openalex_id": "https://openalex.org/C41156917",
+          "level": 3,
+          "score": 0.9895843
+        },
+        {
+          "name": "Precipitation",
+          "openalex_id": "https://openalex.org/C107054158",
+          "level": 2,
+          "score": 0.7703504
+        },
+        {
+          "name": "Climatology",
+          "openalex_id": "https://openalex.org/C49204034",
+          "level": 1,
+          "score": 0.64388424
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.591217
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.5584093
+        },
+        {
+          "name": "Climate model",
+          "openalex_id": "https://openalex.org/C168754636",
+          "level": 3,
+          "score": 0.5371341
+        },
+        {
+          "name": "Representation (politics)",
+          "openalex_id": "https://openalex.org/C2776359362",
+          "level": 3,
+          "score": 0.48914054
+        },
+        {
+          "name": "Computer science",
+          "openalex_id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.4600058
+        },
+        {
+          "name": "Scale (ratio)",
+          "openalex_id": "https://openalex.org/C2778755073",
+          "level": 2,
+          "score": 0.43758973
+        },
+        {
+          "name": "Consistency (knowledge bases)",
+          "openalex_id": "https://openalex.org/C2776436953",
+          "level": 2,
+          "score": 0.42376122
+        },
+        {
+          "name": "Meteorology",
+          "openalex_id": "https://openalex.org/C153294291",
+          "level": 1,
+          "score": 0.39174607
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.17200634
+        },
+        {
+          "name": "Geology",
+          "openalex_id": "https://openalex.org/C127313418",
+          "level": 0,
+          "score": 0.112421334
+        },
+        {
+          "name": "Artificial intelligence",
+          "openalex_id": "https://openalex.org/C154945302",
+          "level": 1,
+          "score": 0.099113196
+        },
+        {
+          "name": "Oceanography",
+          "openalex_id": "https://openalex.org/C111368507",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Cartography",
+          "openalex_id": "https://openalex.org/C58640448",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Politics",
+          "openalex_id": "https://openalex.org/C94625758",
+          "level": 2,
+          "score": 0.0
+        },
+        {
+          "name": "Political science",
+          "openalex_id": "https://openalex.org/C17744445",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Law",
+          "openalex_id": "https://openalex.org/C199539241",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "article",
+      "open_access": true,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_2_climate change development"
+    },
+    {
+      "openalex_id": "https://openalex.org/W112888852",
+      "title": "Adaptation to climate change in the context of sustainable development and equity",
+      "authors": [
+        {
+          "name": "Barry Smit",
+          "openalex_id": "https://openalex.org/A5032851671"
+        },
+        {
+          "name": "Olga Pilifosova",
+          "openalex_id": "https://openalex.org/A5053469411"
+        },
+        {
+          "name": "Ian Burton",
+          "openalex_id": "https://openalex.org/A5045281357"
+        },
+        {
+          "name": "Brian Challenger",
+          "openalex_id": "https://openalex.org/A5045356068"
+        },
+        {
+          "name": "Saleemul Huq",
+          "openalex_id": "https://openalex.org/A5025375817"
+        },
+        {
+          "name": "Richard J. T. Klein",
+          "openalex_id": "https://openalex.org/A5008155172"
+        },
+        {
+          "name": "Gary Yohe",
+          "openalex_id": "https://openalex.org/A5056095914"
+        },
+        {
+          "name": "W. Neil Adger",
+          "openalex_id": "https://openalex.org/A5000089168"
+        },
+        {
+          "name": "Thomas E. Downing",
+          "openalex_id": "https://openalex.org/A5090339922"
+        },
+        {
+          "name": "Erik Harvey",
+          "openalex_id": "https://openalex.org/A5108808225"
+        }
+      ],
+      "publication_year": 2001,
+      "journal": "Cambridge University Press eBooks",
+      "doi": null,
+      "citations_count": 1292,
+      "abstract": null,
+      "concepts": [
+        {
+          "name": "Adaptation (eye)",
+          "openalex_id": "https://openalex.org/C139807058",
+          "level": 2,
+          "score": 0.6708989
+        },
+        {
+          "name": "Equity (law)",
+          "openalex_id": "https://openalex.org/C199728807",
+          "level": 2,
+          "score": 0.65168524
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.5368673
+        },
+        {
+          "name": "Sustainable development",
+          "openalex_id": "https://openalex.org/C552854447",
+          "level": 2,
+          "score": 0.534901
+        },
+        {
+          "name": "Climate change adaptation",
+          "openalex_id": "https://openalex.org/C2778851808",
+          "level": 3,
+          "score": 0.50704026
+        },
+        {
+          "name": "Context (archaeology)",
+          "openalex_id": "https://openalex.org/C2779343474",
+          "level": 2,
+          "score": 0.46513623
+        },
+        {
+          "name": "Environmental resource management",
+          "openalex_id": "https://openalex.org/C107826830",
+          "level": 1,
+          "score": 0.44034612
+        },
+        {
+          "name": "Geography",
+          "openalex_id": "https://openalex.org/C205649164",
+          "level": 0,
+          "score": 0.36678773
+        },
+        {
+          "name": "Environmental planning",
+          "openalex_id": "https://openalex.org/C91375879",
+          "level": 1,
+          "score": 0.35354394
+        },
+        {
+          "name": "Political science",
+          "openalex_id": "https://openalex.org/C17744445",
+          "level": 0,
+          "score": 0.33632386
+        },
+        {
+          "name": "Natural resource economics",
+          "openalex_id": "https://openalex.org/C175605778",
+          "level": 1,
+          "score": 0.33070588
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.26151177
+        },
+        {
+          "name": "Economics",
+          "openalex_id": "https://openalex.org/C162324750",
+          "level": 0,
+          "score": 0.24828297
+        },
+        {
+          "name": "Psychology",
+          "openalex_id": "https://openalex.org/C15744967",
+          "level": 0,
+          "score": 0.11624655
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.113334805
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.08182585
+        },
+        {
+          "name": "Archaeology",
+          "openalex_id": "https://openalex.org/C166957645",
+          "level": 1,
+          "score": 0.05054024
+        },
+        {
+          "name": "Neuroscience",
+          "openalex_id": "https://openalex.org/C169760540",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Law",
+          "openalex_id": "https://openalex.org/C199539241",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "book-chapter",
+      "open_access": false,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_2_climate change development"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4200059648",
+      "title": "A review on buildings energy information: Trends, end-uses, fuels and drivers",
+      "authors": [
+        {
+          "name": "Maribel González-Torres",
+          "openalex_id": "https://openalex.org/A5102909043"
+        },
+        {
+          "name": "Luis Pérez‐Lombard",
+          "openalex_id": "https://openalex.org/A5014767099"
+        },
+        {
+          "name": "Juan F. Coronel",
+          "openalex_id": "https://openalex.org/A5101964726"
+        },
+        {
+          "name": "Ismael Rodríguez Maestre",
+          "openalex_id": "https://openalex.org/A5083349079"
+        },
+        {
+          "name": "Da Yan",
+          "openalex_id": "https://openalex.org/A5044218586"
+        }
+      ],
+      "publication_year": 2021,
+      "journal": "Energy Reports",
+      "doi": "https://doi.org/10.1016/j.egyr.2021.11.280",
+      "citations_count": 621,
+      "abstract": {
+        "Buildings": [
+          0
+        ],
+        "are": [
+          1,
+          75,
+          173
+        ],
+        "a": [
+          2,
+          115,
+          167
+        ],
+        "major": [
+          3
+        ],
+        "contributor": [
+          4
+        ],
+        "to": [
+          5,
+          61,
+          85,
+          141
+        ],
+        "climate": [
+          6,
+          119
+        ],
+        "change,": [
+          7
+        ],
+        "accounting": [
+          8
+        ],
+        "for": [
+          9,
+          27,
+          103,
+          108,
+          118
+        ],
+        "one": [
+          10,
+          17
+        ],
+        "third": [
+          11
+        ],
+        "of": [
+          12,
+          19,
+          33,
+          44,
+          48,
+          54,
+          99,
+          162
+        ],
+        "global": [
+          13,
+          136,
+          168
+        ],
+        "energy": [
+          14,
+          55,
+          68,
+          128,
+          164,
+          171
+        ],
+        "consumption": [
+          15
+        ],
+        "and": [
+          16,
+          31,
+          46,
+          70,
+          92,
+          106,
+          149,
+          159,
+          166
+        ],
+        "quarter": [
+          18
+        ],
+        "CO2": [
+          20
+        ],
+        "emissions.": [
+          21
+        ],
+        "However,": [
+          22,
+          127
+        ],
+        "comprehensive": [
+          23
+        ],
+        "information": [
+          24
+        ],
+        "is": [
+          25,
+          59,
+          111
+        ],
+        "lacking": [
+          26
+        ],
+        "the": [
+          28,
+          39,
+          49,
+          76,
+          143,
+          163
+        ],
+        "development,": [
+          29
+        ],
+        "evaluation": [
+          30
+        ],
+        "monitoring": [
+          32
+        ],
+        "mitigation": [
+          34
+        ],
+        "policies.": [
+          35
+        ],
+        "This": [
+          36
+        ],
+        "paper": [
+          37
+        ],
+        "discusses": [
+          38
+        ],
+        "remaining": [
+          40
+        ],
+        "challenges": [
+          41
+        ],
+        "in": [
+          42,
+          57,
+          130,
+          157
+        ],
+        "terms": [
+          43
+        ],
+        "reliability": [
+          45
+        ],
+        "consistency": [
+          47
+        ],
+        "available": [
+          50
+        ],
+        "data.": [
+          51
+        ],
+        "A": [
+          52
+        ],
+        "review": [
+          53
+        ],
+        "use": [
+          56,
+          129
+        ],
+        "buildings": [
+          58,
+          74,
+          100,
+          131
+        ],
+        "presented": [
+          60
+        ],
+        "analyse": [
+          62
+        ],
+        "its": [
+          63
+        ],
+        "evolution": [
+          64
+        ],
+        "by": [
+          65
+        ],
+        "building": [
+          66
+        ],
+        "types,": [
+          67
+        ],
+        "services": [
+          69
+        ],
+        "fuel": [
+          71
+        ],
+        "sources.": [
+          72
+        ],
+        "Residential": [
+          73
+        ],
+        "most": [
+          77
+        ],
+        "consuming,": [
+          78
+        ],
+        "although": [
+          79
+        ],
+        "tertiary": [
+          80
+        ],
+        "expansion": [
+          81
+        ],
+        "requires": [
+          82
+        ],
+        "further": [
+          83
+        ],
+        "analysis": [
+          84
+        ],
+        "develop": [
+          86
+        ],
+        "sound": [
+          87
+        ],
+        "specific": [
+          88
+        ],
+        "indicators.": [
+          89
+        ],
+        "Heating": [
+          90
+        ],
+        "Ventilation": [
+          91
+        ],
+        "Air": [
+          93
+        ],
+        "Conditioning": [
+          94
+        ],
+        "(HVAC)": [
+          95
+        ],
+        "systems": [
+          96
+        ],
+        "concentrate": [
+          97
+        ],
+        "38%": [
+          98
+        ],
+        "consumption,": [
+          101
+        ],
+        "calling": [
+          102
+        ],
+        "strengthened": [
+          104
+        ],
+        "standards": [
+          105
+        ],
+        "incentives": [
+          107
+        ],
+        "retrofitting.": [
+          109
+        ],
+        "Electrification": [
+          110
+        ],
+        "rapidly": [
+          112
+        ],
+        "increasing,": [
+          113
+        ],
+        "representing": [
+          114
+        ],
+        "potential": [
+          116
+        ],
+        "tool": [
+          117
+        ],
+        "change": [
+          120
+        ],
+        "mitigation,": [
+          121
+        ],
+        "if": [
+          122,
+          135
+        ],
+        "renewable": [
+          123
+        ],
+        "power": [
+          124
+        ],
+        "was": [
+          125
+        ],
+        "promoted.": [
+          126
+        ],
+        "will": [
+          132
+        ],
+        "only": [
+          133
+        ],
+        "curb": [
+          134
+        ],
+        "cooperation": [
+          137
+        ],
+        "enables": [
+          138
+        ],
+        "developing": [
+          139
+        ],
+        "nations": [
+          140
+        ],
+        "break": [
+          142
+        ],
+        "link": [
+          144
+        ],
+        "between": [
+          145
+        ],
+        "economic": [
+          146
+        ],
+        "growth,": [
+          147
+        ],
+        "urbanisation": [
+          148
+        ],
+        "consumption.": [
+          150
+        ],
+        "To": [
+          151
+        ],
+        "this": [
+          152
+        ],
+        "aim,": [
+          153
+        ],
+        "efficiency": [
+          154
+        ],
+        "gains": [
+          155
+        ],
+        "both": [
+          156
+        ],
+        "construction": [
+          158
+        ],
+        "equipment,": [
+          160
+        ],
+        "decarbonisation": [
+          161
+        ],
+        "mix": [
+          165
+        ],
+        "awareness": [
+          169
+        ],
+        "on": [
+          170
+        ],
+        "conservation": [
+          172
+        ],
+        "all": [
+          174
+        ],
+        "needed.": [
+          175
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Retrofitting",
+          "openalex_id": "https://openalex.org/C2778368411",
+          "level": 2,
+          "score": 0.656594
+        },
+        {
+          "name": "Renewable energy",
+          "openalex_id": "https://openalex.org/C188573790",
+          "level": 2,
+          "score": 0.6187948
+        },
+        {
+          "name": "Environmental economics",
+          "openalex_id": "https://openalex.org/C134560507",
+          "level": 1,
+          "score": 0.552211
+        },
+        {
+          "name": "HVAC",
+          "openalex_id": "https://openalex.org/C122346748",
+          "level": 3,
+          "score": 0.53130555
+        },
+        {
+          "name": "Energy consumption",
+          "openalex_id": "https://openalex.org/C2780165032",
+          "level": 2,
+          "score": 0.52541924
+        },
+        {
+          "name": "Electrification",
+          "openalex_id": "https://openalex.org/C2778324724",
+          "level": 3,
+          "score": 0.49649602
+        },
+        {
+          "name": "Climate change mitigation",
+          "openalex_id": "https://openalex.org/C509746633",
+          "level": 3,
+          "score": 0.47147512
+        },
+        {
+          "name": "Energy conservation",
+          "openalex_id": "https://openalex.org/C520301825",
+          "level": 2,
+          "score": 0.45677844
+        },
+        {
+          "name": "Efficient energy use",
+          "openalex_id": "https://openalex.org/C2742236",
+          "level": 2,
+          "score": 0.45588386
+        },
+        {
+          "name": "Incentive",
+          "openalex_id": "https://openalex.org/C29122968",
+          "level": 2,
+          "score": 0.4539939
+        },
+        {
+          "name": "Greenhouse gas",
+          "openalex_id": "https://openalex.org/C47737302",
+          "level": 2,
+          "score": 0.45360762
+        },
+        {
+          "name": "Global warming",
+          "openalex_id": "https://openalex.org/C115343472",
+          "level": 3,
+          "score": 0.4139428
+        },
+        {
+          "name": "Climate change",
+          "openalex_id": "https://openalex.org/C132651083",
+          "level": 2,
+          "score": 0.4104851
+        },
+        {
+          "name": "Architectural engineering",
+          "openalex_id": "https://openalex.org/C170154142",
+          "level": 1,
+          "score": 0.3450831
+        },
+        {
+          "name": "Environmental resource management",
+          "openalex_id": "https://openalex.org/C107826830",
+          "level": 1,
+          "score": 0.33313218
+        },
+        {
+          "name": "Engineering",
+          "openalex_id": "https://openalex.org/C127413603",
+          "level": 0,
+          "score": 0.33266455
+        },
+        {
+          "name": "Environmental science",
+          "openalex_id": "https://openalex.org/C39432304",
+          "level": 0,
+          "score": 0.29684353
+        },
+        {
+          "name": "Air conditioning",
+          "openalex_id": "https://openalex.org/C103742991",
+          "level": 2,
+          "score": 0.2876367
+        },
+        {
+          "name": "Electricity",
+          "openalex_id": "https://openalex.org/C206658404",
+          "level": 2,
+          "score": 0.2563145
+        },
+        {
+          "name": "Economics",
+          "openalex_id": "https://openalex.org/C162324750",
+          "level": 0,
+          "score": 0.10760772
+        },
+        {
+          "name": "Mechanical engineering",
+          "openalex_id": "https://openalex.org/C78519656",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Ecology",
+          "openalex_id": "https://openalex.org/C18903297",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Electrical engineering",
+          "openalex_id": "https://openalex.org/C119599485",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Structural engineering",
+          "openalex_id": "https://openalex.org/C66938386",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "name": "Microeconomics",
+          "openalex_id": "https://openalex.org/C175444787",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "review",
+      "open_access": true,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_1_climate change mitigation Deve"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2010062367",
+      "title": "Impaired Drug Absorption Due to High Stomach pH: A Review of Strategies for Mitigation of Such Effect To Enable Pharmaceutical Product Development",
+      "authors": [
+        {
+          "name": "Amitava Mitra",
+          "openalex_id": "https://openalex.org/A5033061676"
+        },
+        {
+          "name": "Filippos Kesisoglou",
+          "openalex_id": "https://openalex.org/A5015685483"
+        }
+      ],
+      "publication_year": 2013,
+      "journal": "Molecular Pharmaceutics",
+      "doi": "https://doi.org/10.1021/mp400256h",
+      "citations_count": 92,
+      "abstract": {
+        "Published": [
+          0
+        ],
+        "reports": [
+          1
+        ],
+        "have": [
+          2,
+          10,
+          17
+        ],
+        "clearly": [
+          3
+        ],
+        "shown": [
+          4
+        ],
+        "that": [
+          5,
+          98,
+          149
+        ],
+        "weakly": [
+          6,
+          137
+        ],
+        "basic": [
+          7,
+          138
+        ],
+        "drugs": [
+          8,
+          139
+        ],
+        "which": [
+          9,
+          79
+        ],
+        "low": [
+          11
+        ],
+        "solubility": [
+          12
+        ],
+        "at": [
+          13
+        ],
+        "high": [
+          14,
+          23,
+          101,
+          120,
+          141,
+          206
+        ],
+        "pH": [
+          15,
+          25,
+          61,
+          103,
+          143,
+          154,
+          194,
+          208
+        ],
+        "could": [
+          16
+        ],
+        "impaired": [
+          18
+        ],
+        "absorption": [
+          19,
+          135,
+          190,
+          200
+        ],
+        "in": [
+          20,
+          36,
+          70,
+          84,
+          104,
+          187,
+          205
+        ],
+        "patients": [
+          21
+        ],
+        "with": [
+          22,
+          177
+        ],
+        "gastric": [
+          24,
+          102,
+          121,
+          142,
+          193,
+          207
+        ],
+        "thus": [
+          26
+        ],
+        "leading": [
+          27
+        ],
+        "to": [
+          28,
+          40,
+          48,
+          62,
+          129,
+          152,
+          169,
+          198,
+          216,
+          221
+        ],
+        "reduced": [
+          29,
+          134
+        ],
+        "and": [
+          30,
+          73,
+          108,
+          119,
+          123,
+          161,
+          166,
+          192,
+          209
+        ],
+        "variable": [
+          31
+        ],
+        "bioavailability.": [
+          32
+        ],
+        "Since": [
+          33
+        ],
+        "such": [
+          34,
+          171,
+          185,
+          223
+        ],
+        "reduction": [
+          35
+        ],
+        "exposure": [
+          37,
+          83
+        ],
+        "can": [
+          38,
+          80,
+          99
+        ],
+        "lead": [
+          39
+        ],
+        "significant": [
+          41
+        ],
+        "loss": [
+          42,
+          69
+        ],
+        "of": [
+          43,
+          53,
+          59,
+          64,
+          67,
+          95,
+          117,
+          126,
+          136,
+          182,
+          202,
+          213,
+          219
+        ],
+        "efficacy,": [
+          44
+        ],
+        "it": [
+          45
+        ],
+        "is": [
+          46,
+          157
+        ],
+        "imperative": [
+          47
+        ],
+        "(1)": [
+          49
+        ],
+        "understand": [
+          50
+        ],
+        "the": [
+          51,
+          54,
+          96,
+          133,
+          150,
+          180,
+          211
+        ],
+        "behavior": [
+          52
+        ],
+        "compound": [
+          55,
+          159
+        ],
+        "as": [
+          56,
+          186
+        ],
+        "a": [
+          57,
+          76
+        ],
+        "function": [
+          58
+        ],
+        "stomach": [
+          60
+        ],
+        "inform": [
+          63
+        ],
+        "any": [
+          65
+        ],
+        "risk": [
+          66,
+          201
+        ],
+        "bioavailability": [
+          68
+        ],
+        "clinical": [
+          71,
+          107
+        ],
+        "studies": [
+          72
+        ],
+        "(2)": [
+          74
+        ],
+        "develop": [
+          75
+        ],
+        "robust": [
+          77
+        ],
+        "formulation": [
+          78,
+          127
+        ],
+        "provide": [
+          81,
+          92
+        ],
+        "adequate": [
+          82
+        ],
+        "achlorhydric": [
+          85
+        ],
+        "patients.": [
+          86
+        ],
+        "In": [
+          87
+        ],
+        "this": [
+          88
+        ],
+        "review": [
+          89
+        ],
+        "paper,": [
+          90
+        ],
+        "we": [
+          91,
+          174
+        ],
+        "an": [
+          93
+        ],
+        "overview": [
+          94
+        ],
+        "factors": [
+          97
+        ],
+        "cause": [
+          100
+        ],
+        "human,": [
+          105
+        ],
+        "discuss": [
+          106
+        ],
+        "preclinical": [
+          109
+        ],
+        "pharmacokinetic": [
+          110
+        ],
+        "data": [
+          111
+        ],
+        "for": [
+          112
+        ],
+        "weak": [
+          113,
+          203
+        ],
+        "bases": [
+          114,
+          204
+        ],
+        "under": [
+          115,
+          140
+        ],
+        "conditions": [
+          116
+        ],
+        "normal": [
+          118
+        ],
+        "pH,": [
+          122
+        ],
+        "give": [
+          124
+        ],
+        "examples": [
+          125
+        ],
+        "strategies": [
+          128
+        ],
+        "minimize": [
+          130
+        ],
+        "or": [
+          131
+        ],
+        "mitigate": [
+          132,
+          222
+        ],
+        "conditions.": [
+          144
+        ],
+        "It": [
+          145
+        ],
+        "should": [
+          146
+        ],
+        "be": [
+          147
+        ],
+        "noted": [
+          148
+        ],
+        "ability": [
+          151
+        ],
+        "overcome": [
+          153,
+          170
+        ],
+        "sensitivity": [
+          155
+        ],
+        "issues": [
+          156
+        ],
+        "highly": [
+          158
+        ],
+        "dependent": [
+          160
+        ],
+        "there": [
+          162
+        ],
+        "are": [
+          163
+        ],
+        "no": [
+          164
+        ],
+        "obvious": [
+          165
+        ],
+        "general": [
+          167
+        ],
+        "solutions": [
+          168
+        ],
+        "effect.": [
+          172
+        ],
+        "Further,": [
+          173
+        ],
+        "discuss,": [
+          175
+        ],
+        "along": [
+          176
+        ],
+        "several": [
+          178
+        ],
+        "examples,": [
+          179
+        ],
+        "use": [
+          181,
+          212
+        ],
+        "biopharmaceutical": [
+          183
+        ],
+        "tools": [
+          184,
+          215
+        ],
+        "vitro": [
+          188
+        ],
+        "dissolution,": [
+          189
+        ],
+        "modeling,": [
+          191
+        ],
+        "modified": [
+          195
+        ],
+        "animal": [
+          196
+        ],
+        "models": [
+          197
+        ],
+        "assess": [
+          199
+        ],
+        "also": [
+          210
+        ],
+        "these": [
+          214
+        ],
+        "enable": [
+          217
+        ],
+        "development": [
+          218
+        ],
+        "formulations": [
+          220
+        ],
+        "effects.": [
+          224
+        ]
+      },
+      "concepts": [
+        {
+          "name": "Bioavailability",
+          "openalex_id": "https://openalex.org/C181389837",
+          "level": 2,
+          "score": 0.8126968
+        },
+        {
+          "name": "Biopharmaceutical",
+          "openalex_id": "https://openalex.org/C2781047461",
+          "level": 2,
+          "score": 0.8106837
+        },
+        {
+          "name": "Absorption (acoustics)",
+          "openalex_id": "https://openalex.org/C125287762",
+          "level": 2,
+          "score": 0.590927
+        },
+        {
+          "name": "Drug",
+          "openalex_id": "https://openalex.org/C2780035454",
+          "level": 2,
+          "score": 0.5602449
+        },
+        {
+          "name": "Achlorhydria",
+          "openalex_id": "https://openalex.org/C2779970781",
+          "level": 3,
+          "score": 0.5333367
+        },
+        {
+          "name": "Pharmacokinetics",
+          "openalex_id": "https://openalex.org/C112705442",
+          "level": 2,
+          "score": 0.52336395
+        },
+        {
+          "name": "Pharmacology",
+          "openalex_id": "https://openalex.org/C98274493",
+          "level": 1,
+          "score": 0.48134097
+        },
+        {
+          "name": "Chemistry",
+          "openalex_id": "https://openalex.org/C185592680",
+          "level": 0,
+          "score": 0.42460117
+        },
+        {
+          "name": "Stomach",
+          "openalex_id": "https://openalex.org/C2779422922",
+          "level": 2,
+          "score": 0.38124117
+        },
+        {
+          "name": "Medicine",
+          "openalex_id": "https://openalex.org/C71924100",
+          "level": 0,
+          "score": 0.35522187
+        },
+        {
+          "name": "Materials science",
+          "openalex_id": "https://openalex.org/C192562407",
+          "level": 0,
+          "score": 0.1384989
+        },
+        {
+          "name": "Biochemistry",
+          "openalex_id": "https://openalex.org/C55493867",
+          "level": 1,
+          "score": 0.1268017
+        },
+        {
+          "name": "Biology",
+          "openalex_id": "https://openalex.org/C86803240",
+          "level": 0,
+          "score": 0.08525291
+        },
+        {
+          "name": "Biotechnology",
+          "openalex_id": "https://openalex.org/C150903083",
+          "level": 1,
+          "score": 0.07914251
+        },
+        {
+          "name": "Composite material",
+          "openalex_id": "https://openalex.org/C159985019",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "type": "review",
+      "open_access": false,
+      "topic_id": 2,
+      "topic_theme": "Development as enabler of mitigation",
+      "search_source": "strategy_5_Development as enabler of miti"
+    }
+  ]
+}

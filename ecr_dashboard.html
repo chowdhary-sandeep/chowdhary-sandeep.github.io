@@ -423,14 +423,217 @@
         ctx.fill(); ctx.stroke();
       });
 
-      // Labels (minimal)
-      ctx.font = '11px "Segoe UI", "Helvetica Neue", Arial, sans-serif';
-      ctx.textBaseline = 'middle';
-      ctx.fillStyle = '#000000';
-      if (selectedNode) {
-        const [x,y] = pos.get(selectedNode.id) || [0,0];
-        ctx.fillText(selectedNode.label, x+10, y);
+      // Draw labels with overlap avoidance
+      function drawLabelsWithAvoidance() {
+        const labels = [];
+        
+        // Collect all labels to draw
+        if (selectedNode) {
+          // Selected node label (highest priority)
+          const [x,y] = pos.get(selectedNode.id);
+          labels.push({
+            text: selectedNode.label,
+            x: x, y: y,
+            priority: 3,
+            color: '#000000',
+            font: 'bold 12px "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+            offsetX: 10, offsetY: -8
+          });
+          
+          // Order 1 connected nodes (high priority)
+          if (selectedNode.type === 'person') {
+            selectedNode.ref.offer.forEach(s => {
+              const skillNode = skills.find(sk => sk.label === s);
+              if (skillNode && egoConnections.has(skillNode.id)) {
+                const [x,y] = pos.get(skillNode.id);
+                labels.push({
+                  text: s,
+                  x: x, y: y,
+                  priority: 2,
+                  color: '#000000',
+                  font: '11px "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+                  offsetX: 10, offsetY: -6
+                });
+              }
+            });
+          } else if (selectedNode.type === 'skill') {
+            data.forEach(r => {
+              if (r.offer.includes(selectedNode.label) && egoConnections.has('p:'+r.name)) {
+                const [x,y] = pos.get('p:'+r.name);
+                labels.push({
+                  text: r.name,
+                  x: x, y: y,
+                  priority: 2,
+                  color: '#000000',
+                  font: '11px "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+                  offsetX: 8, offsetY: -8
+                });
+              }
+            });
+          }
+          
+          // Order 2 connected nodes (lower priority)
+          if (selectedNode.type === 'person') {
+            data.forEach(r => {
+              if (r.name !== selectedNode.ref.name && order2Connections.has('p:'+r.name)) {
+                const [x,y] = pos.get('p:'+r.name);
+                labels.push({
+                  text: r.name,
+                  x: x, y: y,
+                  priority: 1,
+                  color: '#666666',
+                  font: '10px "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+                  offsetX: 8, offsetY: -8
+                });
+              }
+            });
+            skills.forEach(skill => {
+              if (order2Connections.has(skill.id) && !egoConnections.has(skill.id)) {
+                const [x,y] = pos.get(skill.id);
+                labels.push({
+                  text: skill.label,
+                  x: x, y: y,
+                  priority: 1,
+                  color: '#666666',
+                  font: '10px "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+                  offsetX: 10, offsetY: -6
+                });
+              }
+            });
+          } else if (selectedNode.type === 'skill') {
+            skills.forEach(skill => {
+              if (order2Connections.has(skill.id) && !egoConnections.has(skill.id)) {
+                const [x,y] = pos.get(skill.id);
+                labels.push({
+                  text: skill.label,
+                  x: x, y: y,
+                  priority: 1,
+                  color: '#666666',
+                  font: '10px "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+                  offsetX: 10, offsetY: -6
+                });
+              }
+            });
+            data.forEach(r => {
+              if (order2Connections.has('p:'+r.name) && !egoConnections.has('p:'+r.name)) {
+                const [x,y] = pos.get('p:'+r.name);
+                labels.push({
+                  text: r.name,
+                  x: x, y: y,
+                  priority: 1,
+                  color: '#666666',
+                  font: '10px "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+                  offsetX: 8, offsetY: -8
+                });
+              }
+            });
+          }
+        } else {
+          // Show some skill labels when nothing is selected
+          skills.slice(0, Math.min(12, skills.length)).forEach(n=>{
+            const [x,y] = pos.get(n.id);
+            labels.push({
+              text: n.label,
+              x: x, y: y,
+              priority: 1,
+              color: '#666666',
+              font: '11px "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+              offsetX: 8, offsetY: -6
+            });
+          });
+        }
+        
+        // Sort by priority (higher priority first)
+        labels.sort((a, b) => b.priority - a.priority);
+        
+        // Calculate label dimensions and positions
+        const labelRects = [];
+        const placedLabels = [];
+        
+        for (const label of labels) {
+          ctx.font = label.font;
+          const metrics = ctx.measureText(label.text);
+          const width = metrics.width;
+          const height = 12; // Approximate height
+          
+          // Try different positions to avoid overlap
+          const positions = [
+            { x: label.x + label.offsetX, y: label.y + label.offsetY }, // Default position
+            { x: label.x - width - 5, y: label.y + label.offsetY }, // Left side
+            { x: label.x + label.offsetX, y: label.y - height - 5 }, // Above
+            { x: label.x + label.offsetX, y: label.y + height + 5 }, // Below
+            { x: label.x - width/2, y: label.y - height - 5 }, // Centered above
+            { x: label.x - width/2, y: label.y + height + 5 }, // Centered below
+          ];
+          
+          let placed = false;
+          for (const pos of positions) {
+            const rect = {
+              x: pos.x,
+              y: pos.y - height/2,
+              width: width,
+              height: height,
+              text: label.text,
+              color: label.color,
+              font: label.font
+            };
+            
+            // Check for collisions with placed labels
+            let collision = false;
+            for (const placedRect of placedLabels) {
+              if (rectsOverlap(rect, placedRect)) {
+                collision = true;
+                break;
+              }
+            }
+            
+            if (!collision) {
+              placedLabels.push(rect);
+              placed = true;
+              break;
+            }
+          }
+          
+          // If still no position found, place it anyway (overlap is better than no label)
+          // For ego network labels (when node is selected), always place them even if they overlap
+          if (!placed || (selectedNode && label.priority >= 1)) {
+            const rect = {
+              x: label.x + label.offsetX,
+              y: label.y + label.offsetY - height/2,
+              width: width,
+              height: height,
+              text: label.text,
+              color: label.color,
+              font: label.font
+            };
+            placedLabels.push(rect);
+          }
+        }
+        
+        // Draw all placed labels with better readability
+        for (const rect of placedLabels) {
+          ctx.font = rect.font;
+          
+          // Add subtle white stroke for better contrast
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+          ctx.lineWidth = 2;
+          ctx.strokeText(rect.text, rect.x, rect.y + rect.height/2);
+          
+          // Draw the main text
+          ctx.fillStyle = rect.color;
+          ctx.fillText(rect.text, rect.x, rect.y + rect.height/2);
+        }
       }
+      
+      function rectsOverlap(rect1, rect2) {
+        const margin = 3; // Add small margin to prevent tight spacing
+        return !(rect1.x + rect1.width + margin < rect2.x ||
+                rect2.x + rect2.width + margin < rect1.x ||
+                rect1.y + rect1.height + margin < rect2.y ||
+                rect2.y + rect2.height + margin < rect1.y);
+      }
+      
+      drawLabelsWithAvoidance();
     }
 
     async function setSemanticSeed(seed) {
@@ -497,30 +700,48 @@
     }
 
     async function loadStaticData() {
-      // Load ECR base data and vectors
-      const [ecrRecords, cardVecs, tokenVecs] = await Promise.all([
-        fetch('data/ecr_records.json').then(r=>r.json()).catch(()=>[]),
-        fetch('data/card_vectors.json').then(r=>r.json()).catch(()=>({})),
-        fetch('data/token_vectors.json').then(r=>r.json()).catch(()=>({}))
-      ]);
-      DATA = Array.isArray(ecrRecords) ? ecrRecords : (ecrRecords.records || []);
-      CARD_VECS = new Map(Object.entries(cardVecs).map(([k,v]) => [k, new Float32Array(v)]));
-      TOKEN_VECS = new Map(Object.entries(tokenVecs).map(([k,v]) => [norm(k), new Float32Array(v)]));
-
-      // Try load staff dataset if available
       try {
-        const [staffRecs, staffCardVecs] = await Promise.all([
-          fetch('data/staff_records.json').then(r=>r.json()),
-          fetch('data/staff_card_vectors.json').then(r=>r.json())
-        ]);
-        STAFF_DATA = Array.isArray(staffRecs) ? staffRecs : (staffRecs.records || []);
-        STAFF_CARD_VECS = new Map(Object.entries(staffCardVecs).map(([k,v]) => [k, new Float32Array(v)]));
-      } catch (e) {
-        STAFF_DATA = []; STAFF_CARD_VECS = new Map();
-      }
+        if (includeStaff) {
+          // Load staff dataset
+          const [staffRecs, staffCardVecs] = await Promise.all([
+            fetch('data/staff_records.json').then(r=>r.json()).catch(()=>[]),
+            fetch('data/staff_card_vectors.json').then(r=>r.json()).catch(()=>({}))
+          ]);
+          DATA = Array.isArray(staffRecs) ? staffRecs : (staffRecs.records || []);
+          CARD_VECS = new Map(Object.entries(staffCardVecs).map(([k,v]) => [k, new Float32Array(v)]));
+        } else {
+          // Load ECR dataset
+          const [ecrRecords, cardVecs] = await Promise.all([
+            fetch('data/ecr_records.json').then(r=>r.json()).catch(()=>[]),
+            fetch('data/card_vectors.json').then(r=>r.json()).catch(()=>({}))
+          ]);
+          DATA = Array.isArray(ecrRecords) ? ecrRecords : (ecrRecords.records || []);
+          CARD_VECS = new Map(Object.entries(cardVecs).map(([k,v]) => [k, new Float32Array(v)]));
+        }
 
-      // Set counts and indices
-      const countEl = byId('recordCount'); if (countEl) countEl.textContent = DATA.length;
+        // Load token vectors (shared)
+        const tokenVecs = await fetch('data/token_vectors.json').then(r=>r.json()).catch(()=>({}));
+        TOKEN_VECS = new Map(Object.entries(tokenVecs).map(([k,v]) => [norm(k), new Float32Array(v)]));
+
+        console.log(`Loaded ${DATA.length} records, includeStaff: ${includeStaff}`);
+        
+        // Update record counter
+        const countEl = byId('recordCount');
+        if (countEl) {
+          countEl.textContent = DATA.length;
+        }
+      } catch (e) {
+        console.error('Error loading data:', e);
+        showToast('Failed to load data.');
+        DATA = [];
+        
+        // Update record counter to 0 on error
+        const countEl = byId('recordCount');
+        if (countEl) {
+          countEl.textContent = '0';
+        }
+      }
+      
       allSkillsOffered = uniq(flatten(DATA.map(r => r.offer))).sort((a,b)=>a.localeCompare(b));
       allMethods = uniq(flatten(DATA.map(r => r.methods))).sort((a,b)=>a.localeCompare(b));
       allSoftware = uniq(flatten(DATA.map(r => r.software))).sort((a,b)=>a.localeCompare(b));
@@ -564,14 +785,23 @@
       const statusEl = byId('datasetStatus');
       if (toggle) {
         toggle.addEventListener('click', () => {
-          includeStaff = !includeStaff; toggle.classList.toggle('active', includeStaff);
-          if (statusEl) statusEl.textContent = includeStaff ? '(IIASA Staff only)' : '(ECR only)';
-          // Swap dataset
-          if (includeStaff && STAFF_DATA.length) { DATA = STAFF_DATA; }
-          else { loadStaticData(); return; }
-          // Update counter
-          const countEl = byId('recordCount'); if (countEl) countEl.textContent = DATA.length;
-          render();
+          includeStaff = !includeStaff;
+          toggle.classList.toggle('active', includeStaff);
+          console.log('Toggle clicked, includeStaff:', includeStaff);
+          
+          // Update status text
+          if (statusEl) {
+            statusEl.textContent = includeStaff ? '(IIASA Staff only)' : '(ECR only)';
+          }
+          
+          // Update network instructions
+          const shiftInstructions = byId('shiftInstructions');
+          if (shiftInstructions) {
+            shiftInstructions.style.display = includeStaff ? 'inline' : 'none';
+          }
+          
+          // Reload data for the selected dataset
+          loadStaticData();
         });
       }
     });

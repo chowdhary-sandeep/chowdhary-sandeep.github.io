@@ -319,59 +319,102 @@
       const skills = Array.from(skillsSet).map(s => ({ id: 's:'+s, label: s, type:'skill' }));
 
       const cx = W/2, cy = H/2, R1 = Math.min(W,H)*0.42;
-
-      // Grouped skill layout if staff expertise_groups available
+      
+      // Create layered layout for skills based on expertise groups
       const expertiseGroups = new Map();
       data.forEach(r => {
         if (r.expertise_groups) {
           Object.keys(r.expertise_groups).forEach(group => {
-            if (!expertiseGroups.has(group)) expertiseGroups.set(group, new Set());
-            r.expertise_groups[group].forEach(skill => { expertiseGroups.get(group).add(skill); });
+            if (!expertiseGroups.has(group)) {
+              expertiseGroups.set(group, new Set());
+            }
+            r.expertise_groups[group].forEach(skill => {
+              expertiseGroups.get(group).add(skill);
+            });
           });
         }
       });
-      if (expertiseGroups.size === 0) expertiseGroups.set('General', skillsSet);
+      
+      // If no expertise groups, fall back to single layer
+      if (expertiseGroups.size === 0) {
+        expertiseGroups.set('General', skillsSet);
+      }
 
       const P = people.length || 1;
       const pos = new Map();
-      people.forEach((n,i)=>{ const a = (i/P) * Math.PI*2; pos.set(n.id, [cx + R1*Math.cos(a), cy + R1*Math.sin(a)]); });
-
+      
+      // Position people in outer circle
+      people.forEach((n,i)=>{
+        const a = (i/P) * Math.PI*2;
+        pos.set(n.id, [cx + R1*Math.cos(a), cy + R1*Math.sin(a)]);
+      });
+      
+      // Position skills in concentric circles based on expertise groups
       const groupArray = Array.from(expertiseGroups.entries());
       groupArray.forEach(([groupName, groupSkills], groupIndex) => {
         const groupSkillsArray = Array.from(groupSkills);
-        const R2 = Math.min(W,H) * (0.15 + (groupIndex * 0.08));
+        const R2 = Math.min(W,H) * (0.15 + (groupIndex * 0.08)); // Different radii for each group
         const S = groupSkillsArray.length || 1;
+        
         groupSkillsArray.forEach((skill, skillIndex) => {
-          const a = (skillIndex/S) * Math.PI*2; pos.set('s:'+skill, [cx + R2*Math.cos(a), cy + R2*Math.sin(a)]);
+          const a = (skillIndex/S) * Math.PI*2;
+          pos.set('s:'+skill, [cx + R2*Math.cos(a), cy + R2*Math.sin(a)]);
         });
       });
 
-      const egoConnections = new Set();
-      const order2Connections = new Set();
+      // Get ego network connections for selected node (order 1 and 2)
+      const egoConnections = new Set(); // Direct connections (order 1)
+      const order2Connections = new Set(); // Friends of friends (order 2)
+      
       if (selectedNode) {
         if (selectedNode.type === 'person') {
           const person = selectedNode.ref;
-          person.offer.forEach(s => { egoConnections.add('s:'+s); egoConnections.add('p:'+person.name); });
+          // Order 1: Direct connections
+          person.offer.forEach(s => {
+            egoConnections.add('s:'+s);
+            egoConnections.add('p:'+person.name);
+          });
+          
+          // Order 2: Find people who share skills with the selected person (only for ECR or when showOrder2 is true)
           if (!includeStaff || showOrder2) {
             person.offer.forEach(skill => {
               data.forEach(r => {
                 if (r.name !== person.name && r.offer.includes(skill)) {
                   order2Connections.add('p:'+r.name);
-                  r.offer.forEach(s => { if (s !== skill) order2Connections.add('s:'+s); });
+                  // Also add their skills to order 2
+                  r.offer.forEach(s => {
+                    if (s !== skill) order2Connections.add('s:'+s);
+                  });
                 }
               });
             });
           }
+          
         } else if (selectedNode.type === 'skill') {
           const skill = selectedNode.label;
           const peopleWithSkill = [];
-          data.forEach(r => { if (r.offer.includes(skill)) { egoConnections.add('p:'+r.name); egoConnections.add('s:'+skill); peopleWithSkill.push(r); } });
+          
+          // Order 1: People who offer this skill
+          data.forEach(r => {
+            if (r.offer.includes(skill)) {
+              egoConnections.add('p:'+r.name);
+              egoConnections.add('s:'+skill);
+              peopleWithSkill.push(r);
+            }
+          });
+          
+          // Order 2: Skills offered by people who also offer the selected skill (only for ECR or when showOrder2 is true)
           if (!includeStaff || showOrder2) {
             peopleWithSkill.forEach(person => {
               person.offer.forEach(s => {
                 if (s !== skill) {
                   order2Connections.add('s:'+s);
-                  data.forEach(r => { if (r.name !== person.name && r.offer.includes(s)) { order2Connections.add('p:'+r.name); } });
+                  // Find other people who offer these order 2 skills
+                  data.forEach(r => {
+                    if (r.name !== person.name && r.offer.includes(s)) {
+                      order2Connections.add('p:'+r.name);
+                    }
+                  });
                 }
               });
             });
@@ -379,7 +422,7 @@
         }
       }
 
-      // Edges
+      // Draw connections
       ctx.lineWidth = 1;
       data.forEach(r => {
         const p = 'p:'+r.name;
@@ -387,40 +430,93 @@
           const sid = 's:'+s;
           const [x1,y1] = pos.get(p) || [0,0];
           const [x2,y2] = pos.get(sid) || [0,0];
+          
+          // Determine connection type and styling
           const isEgoConnection = selectedNode && (egoConnections.has(p) && egoConnections.has(sid));
           const isOrder2Connection = selectedNode && !isEgoConnection && (order2Connections.has(p) || order2Connections.has(sid));
-          if (isEgoConnection) { ctx.strokeStyle = '#000000'; ctx.lineWidth = 3; }
-          else if (isOrder2Connection) { ctx.strokeStyle = '#666666'; ctx.lineWidth = 1; }
-          else { ctx.strokeStyle = '#cccccc'; ctx.lineWidth = 1; }
+          
+          if (isEgoConnection) {
+            ctx.strokeStyle = '#000000';
+            ctx.lineWidth = 3;
+          } else if (isOrder2Connection) {
+            ctx.strokeStyle = '#666666'; // Gray for order 2
+            ctx.lineWidth = 1;
+          } else {
+            ctx.strokeStyle = '#cccccc';
+            ctx.lineWidth = 1;
+          }
+          
           ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();
         });
       });
 
-      // Nodes
-      const groupColors = ['#000000','#333333','#666666','#999999','#cccccc'];
+      // Draw skills (squares) with expertise group colors
+      const groupColors = [
+        '#000000', // Black for first group
+        '#333333', // Dark gray for second group  
+        '#666666', // Medium gray for third group
+        '#999999', // Light gray for fourth group
+        '#cccccc'  // Very light gray for additional groups
+      ];
+
       skills.forEach(n=>{
         const [x,y] = pos.get(n.id);
         const isSelected = selectedNode && selectedNode.id === n.id;
         const isEgoNode = selectedNode && egoConnections.has(n.id);
         const isOrder2Node = selectedNode && !isEgoNode && order2Connections.has(n.id);
-        let groupIndex = 0; groupArray.forEach(([groupName, groupSkills], idx) => { if (groupSkills.has(n.label)) groupIndex = idx; });
-        if (isSelected) { ctx.fillStyle = '#000000'; ctx.strokeStyle = '#000000'; }
-        else if (isEgoNode) { ctx.fillStyle = '#000000'; ctx.strokeStyle = '#000000'; }
-        else if (isOrder2Node) { ctx.fillStyle = groupColors[Math.min(groupIndex, groupColors.length - 1)]; ctx.strokeStyle = groupColors[Math.min(groupIndex, groupColors.length - 1)]; }
-        else { ctx.fillStyle = groupColors[Math.min(groupIndex, groupColors.length - 1)]; ctx.strokeStyle = '#000000'; }
-        const size = isSelected ? 12 : 9; ctx.fillRect(x-size/2, y-size/2, size, size); ctx.strokeRect(x-size/2, y-size/2, size, size);
+        
+        // Find which expertise group this skill belongs to
+        let groupIndex = 0;
+        groupArray.forEach(([groupName, groupSkills], idx) => {
+          if (groupSkills.has(n.label)) {
+            groupIndex = idx;
+          }
+        });
+        
+        if (isSelected) {
+          ctx.fillStyle = '#000000';
+          ctx.strokeStyle = '#000000';
+        } else if (isEgoNode) {
+          ctx.fillStyle = '#000000';
+          ctx.strokeStyle = '#000000';
+        } else if (isOrder2Node) {
+          ctx.fillStyle = groupColors[Math.min(groupIndex, groupColors.length - 1)];
+          ctx.strokeStyle = groupColors[Math.min(groupIndex, groupColors.length - 1)];
+        } else {
+          ctx.fillStyle = groupColors[Math.min(groupIndex, groupColors.length - 1)];
+          ctx.strokeStyle = '#000000';
+        }
+        
+        const size = isSelected ? 12 : 9;
+        ctx.fillRect(x-size/2, y-size/2, size, size);
+        ctx.strokeRect(x-size/2, y-size/2, size, size);
       });
+
+      // Draw people (circles)
       people.forEach(n=>{
         const [x,y] = pos.get(n.id);
         const isSelected = selectedNode && selectedNode.id === n.id;
         const isEgoNode = selectedNode && egoConnections.has(n.id);
         const isOrder2Node = selectedNode && !isEgoNode && order2Connections.has(n.id);
+        
         ctx.beginPath(); ctx.arc(x,y,isSelected ? 7 : 5,0,Math.PI*2);
-        if (isSelected) { ctx.fillStyle = '#000000'; ctx.strokeStyle = '#000000'; }
-        else if (isEgoNode) { ctx.fillStyle = '#000000'; ctx.strokeStyle = '#000000'; }
-        else if (isOrder2Node) { ctx.fillStyle = '#666666'; ctx.strokeStyle = '#666666'; }
-        else { ctx.fillStyle = '#cccccc'; ctx.strokeStyle = '#000000'; }
-        ctx.fill(); ctx.stroke();
+        
+        if (isSelected) {
+          ctx.fillStyle = '#000000';
+          ctx.strokeStyle = '#000000';
+        } else if (isEgoNode) {
+          ctx.fillStyle = '#000000';
+          ctx.strokeStyle = '#000000';
+        } else if (isOrder2Node) {
+          ctx.fillStyle = '#666666'; // Gray for order 2
+          ctx.strokeStyle = '#666666';
+        } else {
+          ctx.fillStyle = '#cccccc';
+          ctx.strokeStyle = '#000000';
+        }
+        
+        ctx.fill(); 
+        ctx.stroke();
       });
 
       // Draw labels with overlap avoidance
@@ -634,6 +730,32 @@
       }
       
       drawLabelsWithAvoidance();
+      
+      // Draw expertise group legend
+      if (groupArray.length > 1) {
+        ctx.font = '10px "Segoe UI", "Helvetica Neue", Arial, sans-serif';
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'top';
+        
+        const legendX = 20;
+        const legendY = 20;
+        const legendItemHeight = 16;
+        
+        groupArray.forEach(([groupName, groupSkills], idx) => {
+          const y = legendY + (idx * legendItemHeight);
+          const color = groupColors[Math.min(idx, groupColors.length - 1)];
+          
+          // Draw colored square
+          ctx.fillStyle = color;
+          ctx.fillRect(legendX, y + 2, 8, 8);
+          ctx.strokeStyle = '#000000';
+          ctx.strokeRect(legendX, y + 2, 8, 8);
+          
+          // Draw group name
+          ctx.fillStyle = '#000000';
+          ctx.fillText(`${groupName} (${groupSkills.size})`, legendX + 12, y);
+        });
+      }
     }
 
     async function setSemanticSeed(seed) {

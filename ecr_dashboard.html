@@ -335,9 +335,81 @@
         }
       });
       
-      // If no expertise groups, fall back to single layer
+      // If no expertise groups, create skill categories based on skill names
       if (expertiseGroups.size === 0) {
-        expertiseGroups.set('General', skillsSet);
+        const skillCategories = {
+          'Programming & Software': new Set(),
+          'Data & Analytics': new Set(),
+          'Modeling & Simulation': new Set(),
+          'Research Methods': new Set(),
+          'Domain Knowledge': new Set(),
+          'Tools & Platforms': new Set(),
+          'Other': new Set()
+        };
+        
+        // Categorize skills based on keywords
+        skillsSet.forEach(skill => {
+          const skillLower = skill.toLowerCase();
+          let categorized = false;
+          
+          // Programming & Software
+          if (skillLower.includes('python') || skillLower.includes('r') || skillLower.includes('java') || 
+              skillLower.includes('c++') || skillLower.includes('javascript') || skillLower.includes('sql') ||
+              skillLower.includes('programming') || skillLower.includes('coding') || skillLower.includes('software')) {
+            skillCategories['Programming & Software'].add(skill);
+            categorized = true;
+          }
+          // Data & Analytics
+          else if (skillLower.includes('data') || skillLower.includes('analytics') || skillLower.includes('statistics') ||
+                   skillLower.includes('machine learning') || skillLower.includes('ai') || skillLower.includes('visualization') ||
+                   skillLower.includes('gis') || skillLower.includes('remote sensing')) {
+            skillCategories['Data & Analytics'].add(skill);
+            categorized = true;
+          }
+          // Modeling & Simulation
+          else if (skillLower.includes('model') || skillLower.includes('simulation') || skillLower.includes('optimization') ||
+                   skillLower.includes('forecasting') || skillLower.includes('scenario') || skillLower.includes('system dynamics')) {
+            skillCategories['Modeling & Simulation'].add(skill);
+            categorized = true;
+          }
+          // Research Methods
+          else if (skillLower.includes('research') || skillLower.includes('method') || skillLower.includes('survey') ||
+                   skillLower.includes('interview') || skillLower.includes('analysis') || skillLower.includes('evaluation')) {
+            skillCategories['Research Methods'].add(skill);
+            categorized = true;
+          }
+          // Tools & Platforms
+          else if (skillLower.includes('excel') || skillLower.includes('word') || skillLower.includes('powerpoint') ||
+                   skillLower.includes('arcgis') || skillLower.includes('matlab') || skillLower.includes('stata') ||
+                   skillLower.includes('spss') || skillLower.includes('tableau') || skillLower.includes('platform')) {
+            skillCategories['Tools & Platforms'].add(skill);
+            categorized = true;
+          }
+          // Domain Knowledge
+          else if (skillLower.includes('climate') || skillLower.includes('energy') || skillLower.includes('water') ||
+                   skillLower.includes('agriculture') || skillLower.includes('forest') || skillLower.includes('biodiversity') ||
+                   skillLower.includes('economics') || skillLower.includes('policy') || skillLower.includes('sustainability')) {
+            skillCategories['Domain Knowledge'].add(skill);
+            categorized = true;
+          }
+          
+          // If not categorized, put in Other
+          if (!categorized) {
+            skillCategories['Other'].add(skill);
+          }
+        });
+        
+        // Add non-empty categories to expertise groups
+        Object.entries(skillCategories).forEach(([category, skills]) => {
+          if (skills.size > 0) {
+            expertiseGroups.set(category, skills);
+          }
+        });
+        
+        // If still no groups, fall back to single layer
+        if (expertiseGroups.size === 0) {
+          expertiseGroups.set('General', skillsSet);
+        }
       }
 
       const P = people.length || 1;
@@ -353,7 +425,8 @@
       const groupArray = Array.from(expertiseGroups.entries());
       groupArray.forEach(([groupName, groupSkills], groupIndex) => {
         const groupSkillsArray = Array.from(groupSkills);
-        const R2 = Math.min(W,H) * (0.15 + (groupIndex * 0.08)); // Different radii for each group
+        // Create more distinct layers with better spacing
+        const R2 = Math.min(W,H) * (0.12 + (groupIndex * 0.12)); // More spacing between layers
         const S = groupSkillsArray.length || 1;
         
         groupSkillsArray.forEach((skill, skillIndex) => {

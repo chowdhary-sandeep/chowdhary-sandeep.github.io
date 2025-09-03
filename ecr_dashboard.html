@@ -166,6 +166,33 @@
   <div id="toast" class="toast"></div>
 
   <script>
+    // --- Minimal crypto helpers for decrypting JSON blobs encrypted with encrypt_data.py ---
+    async function importKeyPBKDF2(password) {
+      const enc = new TextEncoder();
+      return await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+    }
+    async function deriveAesGcmKey(password, salt, iterations) {
+      const baseKey = await importKeyPBKDF2(password);
+      return await crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt, iterations, hash: 'SHA-256' },
+        baseKey,
+        { name: 'AES-GCM', length: 256 },
+        false,
+        ['decrypt']
+      );
+    }
+    async function decryptBlobJson(url, password) {
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error('Failed to fetch ' + url);
+      const meta = await resp.json();
+      const salt = Uint8Array.from(atob(meta.salt), c=>c.charCodeAt(0));
+      const iv = Uint8Array.from(atob(meta.iv), c=>c.charCodeAt(0));
+      const ct = Uint8Array.from(atob(meta.ct), c=>c.charCodeAt(0));
+      const key = await deriveAesGcmKey(password, salt, meta.iter || 200000);
+      const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct);
+      const dec = new TextDecoder();
+      return JSON.parse(dec.decode(new Uint8Array(pt)));
+    }
     // Data and vectors (loaded from static JSON files)
     let DATA = [];
     let CARD_VECS = new Map(); // name -> Float32Array
@@ -939,26 +966,31 @@
 
     async function loadStaticData() {
       try {
+        // Ask for password once per load
+        const pwd = window.sessionStorage.getItem('ecr_pwd') || prompt('Enter password to unlock data:');
+        if (!pwd) { showToast('No password provided.'); return; }
+        window.sessionStorage.setItem('ecr_pwd', pwd);
+
         if (includeStaff) {
-          // Load staff dataset
+          // Encrypted staff dataset
           const [staffRecs, staffCardVecs] = await Promise.all([
-            fetch('data/staff_records.json').then(r=>r.json()).catch(()=>[]),
-            fetch('data/staff_card_vectors.json').then(r=>r.json()).catch(()=>({}))
+            decryptBlobJson('data/staff_records.json.enc', pwd).catch(()=>[]),
+            decryptBlobJson('data/staff_card_vectors.json.enc', pwd).catch(()=>({}))
           ]);
           DATA = Array.isArray(staffRecs) ? staffRecs : (staffRecs.records || []);
           CARD_VECS = new Map(Object.entries(staffCardVecs).map(([k,v]) => [k, new Float32Array(v)]));
         } else {
-          // Load ECR dataset
+          // Encrypted ECR dataset
           const [ecrRecords, cardVecs] = await Promise.all([
-            fetch('data/ecr_records.json').then(r=>r.json()).catch(()=>[]),
-            fetch('data/card_vectors.json').then(r=>r.json()).catch(()=>({}))
+            decryptBlobJson('data/ecr_records.json.enc', pwd).catch(()=>[]),
+            decryptBlobJson('data/card_vectors.json.enc', pwd).catch(()=>({}))
           ]);
           DATA = Array.isArray(ecrRecords) ? ecrRecords : (ecrRecords.records || []);
           CARD_VECS = new Map(Object.entries(cardVecs).map(([k,v]) => [k, new Float32Array(v)]));
         }
 
-        // Load token vectors (shared)
-        const tokenVecs = await fetch('data/token_vectors.json').then(r=>r.json()).catch(()=>({}));
+        // Load token vectors (shared, encrypted)
+        const tokenVecs = await decryptBlobJson('data/token_vectors.json.enc', pwd).catch(()=>({}));
         TOKEN_VECS = new Map(Object.entries(tokenVecs).map(([k,v]) => [norm(k), new Float32Array(v)]));
 
         console.log(`Loaded ${DATA.length} records, includeStaff: ${includeStaff}`);

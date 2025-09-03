@@ -318,7 +318,11 @@
       data.forEach(r => r.offer.forEach(s => skillsSet.add(s)));
       const skills = Array.from(skillsSet).map(s => ({ id: 's:'+s, label: s, type:'skill' }));
 
-      const cx = W/2, cy = H/2, R1 = Math.min(W,H)*0.42;
+      const cx = W/2, cy = H/2;
+      // Dynamic scaling based on data size
+      const totalNodes = people.length + skills.length;
+      const baseRadius = Math.min(W,H) * 0.35; // Reduced base radius
+      const R1 = Math.min(baseRadius, Math.min(W,H) * 0.4); // Cap the outer radius
       
       // Create layered layout for skills based on expertise groups
       const expertiseGroups = new Map();
@@ -415,23 +419,62 @@
       const P = people.length || 1;
       const pos = new Map();
       
-      // Position people in outer circle
+      // Position people in outer circle(s) - use multiple circles if needed
+      const maxPeoplePerCircle = Math.floor(2 * Math.PI * R1 / 20); // Approximate based on node size
+      const numCircles = Math.ceil(P / maxPeoplePerCircle);
+      
       people.forEach((n,i)=>{
-        const a = (i/P) * Math.PI*2;
-        pos.set(n.id, [cx + R1*Math.cos(a), cy + R1*Math.sin(a)]);
+        let x, y;
+        
+        if (numCircles === 1) {
+          // Single circle
+          const a = (i/P) * Math.PI*2;
+          x = cx + R1*Math.cos(a);
+          y = cy + R1*Math.sin(a);
+        } else {
+          // Multiple circles
+          const circleIndex = Math.floor(i / maxPeoplePerCircle);
+          const peopleInThisCircle = Math.min(maxPeoplePerCircle, P - circleIndex * maxPeoplePerCircle);
+          const localIndex = i - circleIndex * maxPeoplePerCircle;
+          const a = (localIndex/peopleInThisCircle) * Math.PI*2;
+          
+          // Use slightly different radius for each circle
+          const circleRadius = R1 * (0.8 + circleIndex * 0.1);
+          x = cx + circleRadius*Math.cos(a);
+          y = cy + circleRadius*Math.sin(a);
+        }
+        
+        // Ensure people nodes stay within canvas bounds
+        const margin = 15; // Keep margin from edges
+        const boundedX = Math.max(margin, Math.min(W - margin, x));
+        const boundedY = Math.max(margin, Math.min(H - margin, y));
+        
+        pos.set(n.id, [boundedX, boundedY]);
       });
       
       // Position skills in concentric circles based on expertise groups
       const groupArray = Array.from(expertiseGroups.entries());
+      const maxLayers = groupArray.length;
+      const availableRadius = R1 * 0.7; // Use 70% of available radius for skill layers
+      
       groupArray.forEach(([groupName, groupSkills], groupIndex) => {
         const groupSkillsArray = Array.from(groupSkills);
-        // Create more distinct layers with better spacing
-        const R2 = Math.min(W,H) * (0.12 + (groupIndex * 0.12)); // More spacing between layers
+        // Adaptive spacing based on number of layers and available space
+        const layerSpacing = availableRadius / Math.max(maxLayers, 1);
+        const R2 = Math.min(W,H) * 0.08 + (groupIndex * layerSpacing); // Start closer to center
         const S = groupSkillsArray.length || 1;
         
         groupSkillsArray.forEach((skill, skillIndex) => {
           const a = (skillIndex/S) * Math.PI*2;
-          pos.set('s:'+skill, [cx + R2*Math.cos(a), cy + R2*Math.sin(a)]);
+          const x = cx + R2*Math.cos(a);
+          const y = cy + R2*Math.sin(a);
+          
+          // Ensure nodes stay within canvas bounds
+          const margin = 20; // Keep margin from edges
+          const boundedX = Math.max(margin, Math.min(W - margin, x));
+          const boundedY = Math.max(margin, Math.min(H - margin, y));
+          
+          pos.set('s:'+skill, [boundedX, boundedY]);
         });
       });
 

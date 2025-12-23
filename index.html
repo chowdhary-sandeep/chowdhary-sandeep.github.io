@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandeep Chowdhary</title>
+    <title>Sandeep Chowdhary — Ideas & Thoughts</title>
     <style>
         :root {
             --bg: #000000;
@@ -122,52 +122,63 @@
             color: var(--muted); 
         }
 
-        .card {
+        .blog-card {
             background: var(--card); 
             border: 3px solid #ffffff; 
             border-radius: var(--radius);
             box-shadow: none;
             margin-bottom: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
 
-        .card .hd { 
+        .blog-card:hover {
+            background: #1a1a1a;
+        }
+
+        .blog-card.expanded {
+            background: var(--card);
+        }
+
+        .blog-card .hd { 
             padding: 10px 12px; 
             border-bottom: 3px solid #ffffff; 
             font-weight: 800; 
             text-transform: uppercase; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .card .bd { 
-            padding: 10px 12px; 
+        .blog-card .hd::after {
+            content: '+';
+            font-size: 24px;
+            font-weight: 300;
+            transition: transform 0.2s ease;
         }
 
-        .iframe-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 16px;
-            margin: 16px 0;
+        .blog-card.expanded .hd::after {
+            content: '−';
         }
 
-        .iframe-wrapper {
-            border: 3px solid #ffffff;
-            background: transparent;
-            padding: 8px;
+        .blog-card .bd { 
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
         }
 
-        .iframe-wrapper iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-            display: block;
+        .blog-card.expanded .bd {
+            padding: 10px 12px;
+            max-height: 5000px;
         }
 
-        .iframe-wrapper p {
-            margin: 8px 0 0 0;
-            padding: 8px;
-            border-top: 2px solid #ffffff;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 14px;
+        .blog-card .bd p {
+            margin: 0 0 16px 0;
+        }
+
+        .blog-card .bd p:last-child {
+            margin-bottom: 0;
         }
 
         a { 
@@ -209,14 +220,11 @@
 <body>
     <div class="wrap">
         <nav>
+            <h1>Ideas</h1>
             <div class="logo">
                 <span class="dot"></span>
                 Sandeep Chowdhary
             </div>
-            
-            <ul class="toc">
-                <li><a href="ideas.html">Ideas & Thoughts</a></li>
-            </ul>
         </nav>
 
         <main>
@@ -224,13 +232,28 @@
                 <div class="hero">
                     <h2>Ideas & Thoughts</h2>
                     <p class="muted">A collection of research ideas, curiosities, and explorations.</p>
-                    
-                    <div style="margin-top: 16px;">
-                        <a href="ideas.html" class="pill accent2">View Ideas</a>
+                </div>
+            </section>
+
+            <section id="blogs">
+                <div class="blog-card" data-blog-id="1">
+                    <div class="hd">Metaanalysis of textbooks</div>
+                    <div class="bd">
+                        <p>Growing up, during my education I found some textbooks to be easier to understand than others. And with some textbooks I would just be lost and not understand what was going on. And I always wanted to know why this was. I was curious why some subject matter was easier for me to understand, while some just didn't register. And I wondered whether it was a I) personal thing, an individual aptitude for the subject, II) Was it because of the subject matter and how difficult/ complex it was inherently? Or III) maybe it was something about how the subject matter was presented in the book.</p>
+                        <p>With my training in network and data science, and a growing interest in meta-science, I want to now answer that childhood curiosity by using textbooks at college level from physics, chemistry, mathematics, and biology and parsing them as growing networks of knowledge as one reads the textbook. And using the recent breakthrough in AI vision and language technology, which is LLMs, I will convert books into structured data, such as a JSON object, and then analyze the networks of concepts and the order in which they occur in the book. How this knowledge network is grown in each individual book, to understand the complexity of the structure and compare them across subject matter, to compare disciplines. Next, to understand different structures of different books for the same topic, I will compare the same topic taught in different books.</p>
+                        <p>If successful, this research would help us better the theoretical representation of knowledge and learning, and capture the kind of structures we are designing in in textbooks. Perhaps it will also open up potentially better ways to structure material in the future for consumption by humans. Now that we have LLMs, restructuring books is no major struggle, it should be possible to do this on a fly. Things will become more fluid, and we might even have books that adjust themselves agentically to each student. So I imagine such an investigation of the inherent structure of knowledge, and our options therein to rearrange, might be quite useful.</p>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+
+    <script>
+        document.querySelectorAll('.blog-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('expanded');
+            });
+        });
+    </script>
 </body>
 </html>

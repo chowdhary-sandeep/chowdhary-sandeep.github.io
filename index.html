@@ -181,6 +181,22 @@
             margin-bottom: 0;
         }
 
+        .blog-card .bd h3 {
+            margin-top: 24px;
+            margin-bottom: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 16px;
+            border-top: 2px solid #ffffff;
+            padding-top: 12px;
+        }
+
+        .blog-card .bd h3:first-of-type {
+            margin-top: 0;
+            border-top: none;
+            padding-top: 0;
+        }
+
         a { 
             color: var(--accent); 
             text-decoration: underline; 
@@ -241,6 +257,38 @@
                         <p>Growing up, during my education I found some textbooks to be easier to understand than others. And with some textbooks I would just be lost and not understand what was going on. And I always wanted to know why this was. I was curious why some subject matter was easier for me to understand, while some just didn't register. And I wondered whether it was a I) personal thing, an individual aptitude for the subject, II) Was it because of the subject matter and how difficult/ complex it was inherently? Or III) maybe it was something about how the subject matter was presented in the book.</p>
                         <p>With my training in network and data science, and a growing interest in meta-science, I want to now answer that childhood curiosity by using textbooks at college level from physics, chemistry, mathematics, and biology and parsing them as growing networks of knowledge as one reads the textbook. And using the recent breakthrough in AI vision and language technology, which is LLMs, I will convert books into structured data, such as a JSON object, and then analyze the networks of concepts and the order in which they occur in the book. How this knowledge network is grown in each individual book, to understand the complexity of the structure and compare them across subject matter, to compare disciplines. Next, to understand different structures of different books for the same topic, I will compare the same topic taught in different books.</p>
                         <p>If successful, this research would help us better the theoretical representation of knowledge and learning, and capture the kind of structures we are designing in in textbooks. Perhaps it will also open up potentially better ways to structure material in the future for consumption by humans. Now that we have LLMs, restructuring books is no major struggle, it should be possible to do this on a fly. Things will become more fluid, and we might even have books that adjust themselves agentically to each student. So I imagine such an investigation of the inherent structure of knowledge, and our options therein to rearrange, might be quite useful.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-blog-id="2">
+                    <div class="hd">A short note on 'why LEAN'</div>
+                    <div class="bd">
+                        <p>Lean-based automatic theorem proving (ATP) is one of the fastest-moving, most rigorously quantified "scientific" arenas we have: every step is verifiable and the full developmental history of the library and tactic ecosystem is recorded. That makes it a near-ideal testbed where meta-science can stop being purely observational and become interventional: we can define discovery as a computational search process over a formally specified space (proof states, tactics, and premises), measure progress precisely, and design systems that actually accelerate proof and lemma discovery.</p>
+                        <p>Modern ATP work explicitly frames proving as sequential decision-making (often an MDP) and improves performance via structured search and learning—e.g., retrieval-augmented premise selection and tactic prediction in LeanDojo [Yang 2023]; reinforcement learning from proof-assistant feedback combined with Monte-Carlo tree search in DeepSeek-Prover-V1.5 [Xin 2025a]; scalable best-first search (BFS-Prover) [Xin 2025b]; critic-guided expert iteration for stepwise proving (InternLM2.5-StepProver) [Wu 2024]; and "growing libraries" approaches that explicitly model how new lemmas expand the adjacent possible (LEGO-Prover) [Wang 2024a]. In parallel, autoformalization is rapidly scaling: translating natural-language math problems and proofs into formal statements (Lean Workbook [Ying 2024], TheoremLlama [Wang 2024b]), earlier autoformalization with LLMs in proof assistants [Wu 2022], and curriculum-style training over formal statements [Polu 2022]. Recent work also targets the semantic mismatch between informal proofs and formal tactic steps by introducing intermediate representations such as a "Chain of States" to align informal logical transitions with formal proof states [Wang n.d.].</p>
+                        <p>That is why I would like to work on this: Lean/Mathlib provides a uniquely clean marriage of (i) a fully verified, richly logged discovery process and (ii) a rapidly innovating AI toolchain, meaning meta-science can be used not just to observe scientific development but to accelerate it with measurable, reproducible gains.</p>
+                        
+                        <h3>Towards Compositionality in Concept Learn</h3>
+                        <p><a href="https://huggingface.co/datasets/internlm/Lean-Workbook" target="_blank">https://huggingface.co/datasets/internlm/Lean-Workbook</a></p>
+                        <p>Dataset contains 57231 problems in the split of Lean Workbook and 82893 problems in the split of Lean Workbook Plus. We provide the natural language statement, answer, formal statement, and formal proof (if available) for each problem.</p>
+                        
+                        <h3>A last set of goals</h3>
+                        <p>A last set of goals of this project are: (I) to discover the tactics used in physics, and patterns of their usage, similar to tactics used by LEAN. (II) Grow LEAN tactics by identifying the mechanism of creating new tactics, tactics are a subset of reasoning traces (assumption), reasonings which are useful in many scenarios. (III) discover new predictive physics laws. (IV) new LEAN tactics by formalizing new tactics generated by LLMs or perhaps a more fundamental process of generation than LLMs and testing those candidates to prove theorems in LEAN. (V) identify meta-traces within saturations of Eprover which lead to solutions using RL perhaps and name them as tactics.</p>
+                        
+                        <h3>Derive laws of physics in a toy env</h3>
+                        <p>Knowing all physics previously derived, memory, and access to the environment for experiments to gain info. Another aspect hard to model would be hardware to run experiments is also another exploratory, adjacent possible space. For now, lets avoid that. So we build a toy world, like game of life lets say and add a neural network in it. It might be a weird situation because the game of life is sufficiently complex enough for universal computation but how a neural network would look like in it is unclear to me at this stage. My problem is that I want to run the neural network on the hardware that game of life provides, a spatial map with rules of evolution. Like physics in our world is bedrock on which we must build neural networks using silicon. I am sure it can be done similarly fro game of life but just not immediately obvious. So lets instead choose a world which is more suitable for an agent to exist in. Perhaps a larger neural network simulates the world around but with fixed laws. Then we are back to Worlds models idea by Demis Hassbis and deepmind, letting genie play inside a video gen model.</p>
+                        <p>Rethinking, it is perfectly fine to have a neural network inside the game of life. Just assume its possible to have an agent like that as game of life is universal computer, so we might not know how the spacial representation of a NN in game of life 2d space would be but we do not need to know. It's like brains in our universe, lets suppose there is an evolutionary process which can evolve NNs in game of life. Can it discover the exact symbolic equations in this game of life? Rather than approximations and complex representations inside its network. Think: Minimum description lengths, occam's razor and such.</p>
+                        
+                        <h3>Full references</h3>
+                        <p style="margin-bottom: 8px;">Yang, Kaiyu, Aidan Swope, Alex Gu, Rahul Chalamala, Peiyang Song, Shixing Yu, Saad Godil, Ryan J. Prenger, and Animashree Anandkumar. 2023. "LeanDojo: Theorem Proving with Retrieval-Augmented Language Models." Advances in Neural Information Processing Systems (NeurIPS 2023), 21573–21612.</p>
+                        <p style="margin-bottom: 8px;">Xin, Huajian, Z. Z. Ren, Junxiao Song, Zhihong Shao, Wanjia Zhao, Haocheng Wang, Bo Liu, Liyue Zhang, Xuan Lu, Qiushi Du, et al. 2025a. "DeepSeek-Prover-V1.5: Harnessing Proof Assistant Feedback for Reinforcement Learning and Monte Carlo Tree Search." International Conference on Learning Representations (ICLR 2025).</p>
+                        <p style="margin-bottom: 8px;">Xin, Ran, Chengguang Xi, Jie Yang, Feng Chen, Hang Wu, Xia Xiao, Yifan Sun, Shen Zheng, and Kai Shen. 2025b. "BFS-Prover: Scalable Best-First Tree Search for LLM-Based Automatic Theorem Proving." arXiv preprint arXiv:2502.03438.</p>
+                        <p style="margin-bottom: 8px;">Wu, Zijian, Suozhi Huang, Zhejian Zhou, Huaiyuan Ying, Jiayu Wang, Dahua Lin, and Kai Chen. 2024. "InternLM 2.5-StepProver: Advancing Automated Theorem Proving via Expert Iteration on Large-Scale Lean Problems." arXiv preprint arXiv:2410.15700.</p>
+                        <p style="margin-bottom: 8px;">Wang, Haiming, Huajian Xin, Chuanyang Zheng, Lin Li, Zhengying Liu, Qingxing Cao, Yinya Huang, Jing Xiong, Han Shi, Enze Xie, et al. 2024a. "LEGO-Prover: Neural Theorem Proving with Growing Libraries." International Conference on Learning Representations (ICLR 2024).</p>
+                        <p style="margin-bottom: 8px;">Ying, Huaiyuan, Zijian Wu, Yihan Geng, Jiayu Wang, Dahua Lin, and Kai Chen. 2024. "Lean Workbook: A Large-Scale Lean Problem Set Formalized from Natural Language Math Problems." arXiv preprint arXiv:2406.03847.</p>
+                        <p style="margin-bottom: 8px;">Wang, Ruida, Jipeng Zhang, Yizhen Jia, Rui Pan, Shizhe Diao, Renjie Pi, and Tong Zhang. 2024b. "TheoremLlama: Transforming General-Purpose LLMs into Lean4 Experts." Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP 2024). Association for Computational Linguistics.</p>
+                        <p style="margin-bottom: 8px;">Wu, Yuhuai, Albert Q. Jiang, Wenda Li, Markus Rabe, Charles Staats, Mateja Jamnik, and Christian Szegedy. 2022. "Autoformalization with Large Language Models." Advances in Neural Information Processing Systems (NeurIPS 2022) 35: 32353–32368.</p>
+                        <p style="margin-bottom: 8px;">Polu, Stanislas, Jesse Michael Han, Kunhao Zheng, Mantas Baksys, Igor Babuschkin, and Ilya Sutskever. 2022. "Formal Mathematics Statement Curriculum Learning." arXiv preprint arXiv:2202.01344.</p>
+                        <p style="margin-bottom: 8px;">Wang, Ziyu, Bowen Yang, Chenyi Li, Yuan Zhang, Shihao Zhou, Bin Dong, and Zaiwen Wen. n.d. "Translating Informal Proofs into Formal Proofs Using a Chain of States." (Source shown as a formatted paper PDF page; year not visible in the provided image.)</p>
                     </div>
                 </div>
             </section>

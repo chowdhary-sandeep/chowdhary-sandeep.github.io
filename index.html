@@ -96,9 +96,10 @@
         }
 
         main { 
-            padding: 16px 16px 120px 8px; 
-            width: 75%; 
-            justify-self: start; 
+            padding: 16px 8px 120px 8px; 
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
         }
 
         section { 
@@ -197,9 +198,27 @@
             padding-top: 0;
         }
 
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-header {
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: 20px;
+            font-weight: 800;
+            text-transform: lowercase;
+            margin: 0;
+            padding: 8px 0;
+            border-bottom: 3px solid #ffffff;
+        }
+
         .iframe-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 16px;
             margin: 16px 0;
         }
@@ -265,26 +284,19 @@
 <body>
     <div class="wrap">
         <nav>
-            <h1>Adjacent Possible Ideas</h1>
+            <h1>exploring adjacent possible</h1>
             <div class="logo">
                 <span class="dot"></span>
                 Sandeep Chowdhary
             </div>
-            
-            <ul class="toc">
-                <li><a href="#blogs">Ideas</a></li>
-                <li><a href="#experiments">Experiments</a></li>
-            </ul>
         </nav>
 
         <main>
-            <section id="welcome">
-                <div class="hero">
-                    <h2>Adjacent Possible Ideas</h2>
+            <div class="column">
+                <div class="section-header">
+                    <h2>thoughts</h2>
                 </div>
-            </section>
-
-            <section id="blogs">
+                <section id="blogs">
                 <div class="blog-card" data-blog-id="1">
                     <div class="hd">Metaanalysis of textbooks</div>
                     <div class="bd">
@@ -333,23 +345,37 @@
                 </div>
             </section>
 
-            <section id="experiments">
-                <div class="card">
-                    <div class="hd">Experiments</div>
-                    <div class="bd">
-                        <div style="margin-bottom: 24px;">
-                            <h3 style="margin-top: 0; border-top: none; padding-top: 0;">PUZI TPTP Problems - EProver Proof DAGs</h3>
-                            <p>Visualization of PUZI TPTP problems solved by EProver showing the proof DAG (Directed Acyclic Graph) structure.</p>
-                            <a href="proof_graphs_visualization.html" target="_blank" class="pill accent2">View Visualization</a>
-                        </div>
-                        <div>
-                            <h3>LEAN Mathlib Proof DAGs - Algebra Sample</h3>
-                            <p>LEAN mathlib proof DAGs for a random sample of theorems in the Algebra submodule.</p>
-                            <a href="proof_trees_grid_MATHLIB_Algebra_sample.html" target="_blank" class="pill accent2">View Visualization</a>
+            </div>
+
+            <div class="column">
+                <div class="section-header">
+                    <h2>experiments</h2>
+                </div>
+                <section id="experiments">
+                    <div class="card">
+                        <div class="bd">
+                            <div class="iframe-container">
+                                <div class="iframe-wrapper">
+                                    <iframe
+                                        src="proof_graphs_visualization.html"
+                                        title="PUZI TPTP Problems - EProver Proof DAGs"
+                                        allowFullScreen>
+                                    </iframe>
+                                    <p>PUZI TPTP Problems Solved by EProver - Proof DAGs</p>
+                                </div>
+                                <div class="iframe-wrapper">
+                                    <iframe
+                                        src="proof_trees_grid_MATHLIB_Algebra_sample.html"
+                                        title="LEAN Mathlib Algebra Proof DAGs"
+                                        allowFullScreen>
+                                    </iframe>
+                                    <p>LEAN Mathlib Proof DAGs - Random Sample of Theorems in Algebra Submodule</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </main>
     </div>
 

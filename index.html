@@ -224,25 +224,17 @@
         }
 
         .iframe-wrapper {
-            border: 3px solid #ffffff;
+            border: none;
             background: transparent;
-            padding: 8px;
+            padding: 0;
+            margin-top: 8px;
         }
 
         .iframe-wrapper iframe {
             width: 100%;
             height: 600px;
-            border: none;
+            border: 3px solid #ffffff;
             display: block;
-        }
-
-        .iframe-wrapper p {
-            margin: 8px 0 0 0;
-            padding: 8px;
-            border-top: 2px solid #ffffff;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 14px;
         }
 
         a { 
@@ -352,25 +344,28 @@
                     <h2>experiments</h2>
                 </div>
                 <section id="experiments">
-                    <div class="card">
+                    <div class="blog-card" data-experiment-id="1">
+                        <div class="hd">PUZI TPTP Problems - EProver Proof DAGs</div>
                         <div class="bd">
-                            <div class="iframe-container">
-                                <div class="iframe-wrapper">
-                                    <iframe
-                                        src="proof_graphs_visualization.html"
-                                        title="PUZI TPTP Problems - EProver Proof DAGs"
-                                        allowFullScreen>
-                                    </iframe>
-                                    <p>PUZI TPTP Problems Solved by EProver - Proof DAGs</p>
-                                </div>
-                                <div class="iframe-wrapper">
-                                    <iframe
-                                        src="proof_trees_grid_MATHLIB_Algebra_sample.html"
-                                        title="LEAN Mathlib Algebra Proof DAGs"
-                                        allowFullScreen>
-                                    </iframe>
-                                    <p>LEAN Mathlib Proof DAGs - Random Sample of Theorems in Algebra Submodule</p>
-                                </div>
+                            <div class="iframe-wrapper">
+                                <iframe
+                                    src="proof_graphs_visualization.html"
+                                    title="PUZI TPTP Problems - EProver Proof DAGs"
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-experiment-id="2">
+                        <div class="hd">LEAN Mathlib Proof DAGs - Algebra Sample</div>
+                        <div class="bd">
+                            <div class="iframe-wrapper">
+                                <iframe
+                                    src="proof_trees_grid_MATHLIB_Algebra_sample.html"
+                                    title="LEAN Mathlib Algebra Proof DAGs"
+                                    allowFullScreen>
+                                </iframe>
                             </div>
                         </div>
                     </div>

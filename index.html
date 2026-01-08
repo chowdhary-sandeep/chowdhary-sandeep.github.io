@@ -149,6 +149,36 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 12px;
+        }
+
+        .blog-card .hd span {
+            flex: 1;
+        }
+
+        .external-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border: 2px solid #ffffff;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .external-link:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .external-arrow {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1;
         }
 
         .blog-card .hd::after {
@@ -323,6 +353,15 @@
             .iframe-wrapper iframe {
                 height: 400px;
             }
+
+            .external-link {
+                width: 28px;
+                height: 28px;
+            }
+
+            .external-arrow {
+                font-size: 16px;
+            }
         }
 
         @media screen and (max-width: 480px) {
@@ -345,6 +384,15 @@
 
             .iframe-wrapper iframe {
                 height: 300px;
+            }
+
+            .external-link {
+                width: 24px;
+                height: 24px;
+            }
+
+            .external-arrow {
+                font-size: 14px;
             }
         }
     </style>
@@ -421,7 +469,12 @@
                 </div>
                 <section id="experiments">
                     <div class="blog-card" data-experiment-id="1">
-                        <div class="hd">PUZI TPTP Problems - EProver Proof DAGs</div>
+                        <div class="hd">
+                            <span>PUZI TPTP Problems - EProver Proof DAGs</span>
+                            <a href="proof_graphs_visualization.html" target="_blank" class="external-link" onclick="event.stopPropagation();">
+                                <span class="external-arrow">↗</span>
+                            </a>
+                        </div>
                         <div class="bd">
                             <div class="iframe-wrapper">
                                 <iframe
@@ -434,7 +487,12 @@
                     </div>
 
                     <div class="blog-card" data-experiment-id="2">
-                        <div class="hd">LEAN Mathlib Proof DAGs - Algebra Sample</div>
+                        <div class="hd">
+                            <span>LEAN Mathlib Proof DAGs - Algebra Sample</span>
+                            <a href="proof_trees_grid_MATHLIB_Algebra_sample.html" target="_blank" class="external-link" onclick="event.stopPropagation();">
+                                <span class="external-arrow">↗</span>
+                            </a>
+                        </div>
                         <div class="bd">
                             <div class="iframe-wrapper">
                                 <iframe

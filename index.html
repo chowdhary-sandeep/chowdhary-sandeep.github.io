@@ -183,15 +183,15 @@
         }
 
         .external-arrow {
-            font-size: 11px;
-            font-weight: 700;
-            line-height: 1;
-            color: #ffffff;
             display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
         }
 
         .external-link:hover .external-arrow {
-            color: #000000;
+            filter: brightness(0) invert(0);
         }
 
         .blog-card .hd::after {
@@ -374,7 +374,8 @@
             }
 
             .external-arrow {
-                font-size: 9px;
+                width: 100%;
+                height: 100%;
             }
         }
 
@@ -406,7 +407,8 @@
             }
 
             .external-arrow {
-                font-size: 8px;
+                width: 100%;
+                height: 100%;
             }
         }
     </style>
@@ -489,7 +491,7 @@
                         <div class="hd">
                             <span>PUZI TPTP problems - eprover proof DAGs</span>
                             <a href="proof_graphs_visualization.html" target="_blank" class="external-link" onclick="event.stopPropagation();">
-                                <span class="external-arrow">↗</span>
+                                <img src="maximize.png" alt="open in new tab" class="external-arrow">
                             </a>
                         </div>
                         <div class="bd">
@@ -507,7 +509,7 @@
                         <div class="hd">
                             <span>LEAN mathlib proof DAGs - algebra sample</span>
                             <a href="proof_trees_grid_MATHLIB_Algebra_sample.html" target="_blank" class="external-link" onclick="event.stopPropagation();">
-                                <span class="external-arrow">↗</span>
+                                <img src="maximize.png" alt="open in new tab" class="external-arrow">
                             </a>
                         </div>
                         <div class="bd">
@@ -525,7 +527,7 @@
                         <div class="hd">
                             <span>AI-augmented IPCC reports</span>
                             <a href="AI-augmented-IPCC-reports.html" target="_blank" class="external-link" onclick="event.stopPropagation();">
-                                <span class="external-arrow">↗</span>
+                                <img src="maximize.png" alt="open in new tab" class="external-arrow">
                             </a>
                         </div>
                         <div class="bd">

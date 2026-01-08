@@ -144,66 +144,25 @@
 <div class="wrap">
   <nav>
     <div class="logo"><span class="dot"></span> Live‑Updated IPCC</div>
-    <div class="note" style="margin:10px 0 16px">Single‑page demo. Use <span class="kbd">1–6</span> to jump; <span class="kbd">+</span>/<span class="kbd">−</span> to zoom; <span class="kbd">←</span>/<span class="kbd">→</span>/<span class="kbd">↑</span>/<span class="kbd">↓</span> to pan; <span class="kbd">N</span> to advance pipeline.</div>
-    
-    <div style="margin: 16px 0;">
-      <a href="index.html" class="pill accent">← Back to Homepage</a>
-    </div>
     <ul class="toc">
-      <li><a href="#intro" class="active">1. Why this now</a></li>
-      <li><a href="#concept-note">2. AIPCC Concept Note</a></li>
-      <li><a href="#workflow">3. Workflow (interactive)</a></li>
-      <li><a href="#video">4. Collector Video</a></li>
-      <li><a href="#results">5. Assignment → Chapters</a></li>
-      <li><a href="#future-directions">6. Future Directions</a></li>
+      <li><a href="#intro" class="active">1. intro</a></li>
+      <li><a href="#concept-note">2. concept note</a></li>
+      <li><a href="#workflow">3. workflow</a></li>
+      <li><a href="#video">4. collector</a></li>
+      <li><a href="#results">5. results</a></li>
     </ul>
-    <div class="footer">
-      Draws on proposal & internal analyses. See embedded PDF and diagram.
-    </div>
   </nav>
 
   <main>
     <section id="intro" class="hero">
-      <div class="pill ok">Open • Transparent • Auditable</div>
-      <h2>AI‑assisted, continuously updated IPCC evidence base</h2>
-      <p class="muted">Automates discovery → relevance filtering → chapter assignment → key‑insight extraction → validator checks → live HTML insertion. Built for coverage, provenance, and policy‑readiness.</p>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px;">
-        <!-- Left column: Two stacked boxes -->
-        <div style="display: flex; flex-direction: column; gap: 8px;">
-          <div class="card">
-            <div class="hd">Why general chatbots such as GPT aren't enough</div>
-            <div class="bd note">Fast per‑query answers, but: low coverage, opaque retrieval, no provenance guarantees, and hallucinations in long‑form synthesis. <em>Not fit for assessments.</em></div>
-          </div>
-          <div class="card">
-            <div class="hd">What specialized tools still miss</div>
-            <div class="bd note">Tools such as Elicit, Research Rabbit etc are NOT open-acess,  are paid, limited scale, and weak support for consensus building & living updates. We go "glass‑box" + continuous.</div>
-          </div>
-        </div>
-        
-        <!-- Right column: Single full-height box -->
-        <div class="card">
-          <div class="hd">How This Tool Improves Upon Existing AI</div>
-          <div class="bd note">
-            <p><strong>Our transparent, open-source solution:</strong></p>
-            <ul style="margin: 8px 0; padding-left: 20px;">
-              <li><strong>Glass Box:</strong> Not a black box - fully auditable and transparent</li>
-              <li><strong>Open Source:</strong> Community-driven development and verification</li>
-              <li><strong>Accessible:</strong> Designed for researchers and policymakers</li>
-              <li><strong>Living Evidence:</strong> Continuous updates with versioned HTML reports</li>
-              <li><strong>Source Tracking:</strong> Sentence-level source attribution and validator scores</li>
-            </ul>
-            
-            <p><strong>Pipeline:</strong> Citation-graph expansion, semantic retrieval, LLM-based classification, dual-model claim extraction with cross-validation, and human review escalation for low-confidence outputs.</p>
-          </div>
-        </div>
-      </div>
+      <h2>AI‑augmented IPCC reports</h2>
+      <p class="muted">automated discovery → filtering → chapter assignment → extraction → validation</p>
     </section>
 
     <section id="concept-note">
       <div class="card">
-        <div class="hd">AIPCC Concept Note</div>
+        <div class="hd">concept note</div>
         <div class="bd">
-          <p class="muted" style="margin-bottom: 16px;">Executive summary and concept overview for the AI-augmented IPCC literature synthesis project.</p>
           <div class="pdf-container">
             <object data="IPCC_1_pager.pdf?v=20241220#page=1&zoom=50" type="application/pdf" width="100%" height="600">
               <div class="note">PDF could not be displayed. <a href="IPCC_1_pager.pdf?v=20241220">Open IPCC_1_pager.pdf</a>.</div>
@@ -216,7 +175,7 @@
 
     <section id="workflow">
       <div class="card flow">
-        <div class="hd">Workflow Diagram (interactive)</div>
+        <div class="hd">workflow</div>
         <div class="zoomwrap" id="zoomWrap1" style="height: 105vh;">
           <iframe class="zoomcontent" src="Workflow_Diagram_interactive.html" title="Interactive workflow"></iframe>
         </div>
@@ -225,14 +184,13 @@
           <button data-target="zoomWrap1" class="zOut">Zoom −</button>
           <button data-target="zoomWrap1" class="zReset">Reset</button>
           <button data-target="workflow" data-type="iframe" data-src="Workflow_Diagram_interactive.html" class="fullscreen">⛶ Fullscreen</button>
-          <div class="note">Tip: you can also <span class="kbd">+</span>/<span class="kbd">−</span> and arrow keys to pan.</div>
         </div>
       </div>
     </section>
 
     <section id="video">
       <div class="card flow">
-        <div class="hd">Literature Collector - Concept</div>
+        <div class="hd">collector</div>
         <div class="zoomwrap" id="zoomWrap2" style="height:70vh; background:#0d1219; border-radius:var(--radius) var(--radius) 0 0; overflow:hidden;">
           <video class="zoomcontent" src="systematic_review 3.mp4" controls preload="metadata" style="background:#000; width:100%; height:100%; object-fit:contain; display:block;"></video>
         </div>
@@ -246,48 +204,14 @@
     </section>
 
     <section id="results">
-      <div class="grid">
-        <div class="card">
-          <div class="hd">Chapter assignment — Results</div>
-          <div class="bd">
-            <p class="muted" style="margin-bottom: 16px;">These are the >3000 papers which cite the IPCC report 2021 IPCC_AR6_WGI. We automatically retrieved the papers using literature collector tool shown above. Then we ran ML classification to place them within the existing IPCC chapters. The figure shows the chapter assignments distributions and scores.</p>
-            <div class="pdf-container">
-              <object data="ipcc_analysis.pdf#page=1&zoom=40" type="application/pdf" width="100%" height="600">
-                <div class="note">PDF could not be displayed. <a href="ipcc_analysis.pdf">Open ipcc_analysis.pdf</a>.</div>
-              </object>
-              <button class="fullscreen" data-target="pdf1" data-type="pdf" data-src="ipcc_analysis.pdf#page=1&zoom=40">⛶ Fullscreen</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="future-directions">
       <div class="card">
-        <div class="hd">Future Directions & Upcoming IPCC Reports</div>
+        <div class="hd">results</div>
         <div class="bd">
-          <p class="muted" style="margin-bottom: 16px;">We will use the IPCC AR7 outline (already drafted) to construct a seed set of relevant papers and feed them to literature collector.</p>
-          
-                      <div class="grid">
-              <div class="card">
-                <div class="hd">Chapter 8: Services & Demand</div>
-                <div class="bd">
-                  <p>Focus on human needs, behavioral change drivers, social innovations, and cross-sectoral synergies for demand-side mitigation.</p>
-                  <a href="future-directions.html#chapter8" class="pill accent2">Learn More</a>
-                </div>
-              </div>
-              
-              <div class="card">
-                <div class="hd">Chapter 5: Enablers & Barriers</div>
-                <div class="bd">
-                  <p>Analysis of feasibility, capacity building, technology access, and social dimensions of climate mitigation.</p>
-                  <a href="future-directions.html#chapter5" class="pill accent2">Learn More</a>
-                </div>
-              </div>
-            </div>
-          
-          <div style="margin-top: 16px; text-align: center;">
-            <a href="future-directions.html" class="pill accent">Explore Future Directions →</a>
+          <div class="pdf-container">
+            <object data="ipcc_analysis.pdf#page=1&zoom=40" type="application/pdf" width="100%" height="600">
+              <div class="note">PDF could not be displayed. <a href="ipcc_analysis.pdf">Open ipcc_analysis.pdf</a>.</div>
+            </object>
+            <button class="fullscreen" data-target="pdf1" data-type="pdf" data-src="ipcc_analysis.pdf#page=1&zoom=40">⛶ Fullscreen</button>
           </div>
         </div>
       </div>
@@ -311,9 +235,9 @@
   sections.forEach(s => obs.observe(s));
 
   // Keyboard navigation
-  const ids = ['intro','concept-note','workflow','video','results','future-directions'];
+  const ids = ['intro','concept-note','workflow','video','results'];
   window.addEventListener('keydown', e => {
-    if (e.key >= '1' && e.key <= '6') {
+    if (e.key >= '1' && e.key <= '5') {
       document.getElementById(ids[Number(e.key)-1]).scrollIntoView({behavior:'smooth'});
     }
   });

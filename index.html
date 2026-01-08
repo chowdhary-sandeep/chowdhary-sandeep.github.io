@@ -161,8 +161,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
+            width: 24px;
+            height: 24px;
             border: 2px solid #ffffff;
             background: transparent;
             color: #ffffff;
@@ -176,10 +176,20 @@
             color: #000000;
         }
 
+        .external-link:visited {
+            color: #ffffff;
+        }
+
         .external-arrow {
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 700;
             line-height: 1;
+            color: #ffffff;
+            display: block;
+        }
+
+        .external-link:hover .external-arrow {
+            color: #000000;
         }
 
         .blog-card .hd::after {
@@ -356,12 +366,12 @@
             }
 
             .external-link {
-                width: 28px;
-                height: 28px;
+                width: 20px;
+                height: 20px;
             }
 
             .external-arrow {
-                font-size: 11px;
+                font-size: 9px;
             }
         }
 
@@ -388,12 +398,12 @@
             }
 
             .external-link {
-                width: 24px;
-                height: 24px;
+                width: 18px;
+                height: 18px;
             }
 
             .external-arrow {
-                font-size: 10px;
+                font-size: 8px;
             }
         }
     </style>
@@ -405,6 +415,9 @@
             <div class="logo">
                 <span class="dot"></span>
                 Sandeep Chowdhary
+            </div>
+            <div style="margin-top: 12px;">
+                <a href="https://www.sandeepchowdhary.com/" target="_blank" style="display: block; padding: 8px 10px; border: 2px solid #ffffff; color: #ffffff; text-transform: uppercase; font-weight: 700; text-decoration: none; font-size: 8px;">personal page</a>
             </div>
         </nav>
 
@@ -454,7 +467,7 @@
                 <div class="blog-card" data-blog-id="3">
                     <div class="hd">Derive laws of physics in a toy env</div>
                     <div class="bd">
-                        <p>Knowing all physics previously derived, memory, and access to the environment for experiments to gain info. Another aspect hard to model would be hardware to run experiments is also another exploratory, adjacent possible space. For now, let's avoid that. So we build a toy world, like game of life let's say and add a neural network in it. It might be a weird situation because the game of life is sufficiently complex enough for universal computation but how a neural network would look like in it is unclear to me at this stage. My problem is that I want to run the neural network on the hardware that game of life provides, a spatial map with rules of evolution. Like physics in our world is bedrock on which we must build neural networks using silicon. I am sure it can be done similarly for game of life but just not immediately obvious. So let's instead choose a world which is more suitable for an agent to exist in. Perhaps a larger neural network simulates the world around but with fixed laws. Then we are back to Worlds models idea by Demis Hassabis and deepmind, with genie inside a video gen model.</p>
+                        <p>Knowing all physics previously derived, memory, and access to the environment for experiments to gain info, can we . Another aspect hard to model would be hardware to run experiments is also another exploratory, adjacent possible space. For now, let's avoid that. So we build a toy world, like game of life let's say and add a neural network in it. It might be a weird situation because the game of life is sufficiently complex enough for universal computation but how a neural network would look like in it is unclear to me at this stage. My problem is that I want to run the neural network on the hardware that game of life provides, a spatial map with rules of evolution. Like physics in our world is bedrock on which we must build neural networks using silicon. I am sure it can be done similarly for game of life but just not immediately obvious. So let's instead choose a world which is more suitable for an agent to exist in. Perhaps a larger neural network simulates the world around but with fixed laws. Then we are back to Worlds models idea by Demis Hassabis and deepmind, with genie inside a video gen model.</p>
                         <p>Rethinking, it is perfectly fine to have a neural network inside the game of life. Just assume it's possible to have an agent like that as game of life is a universal computer, so we might not know how the spatial representation of a NN in game of life 2d space would be but we do not need to know. It's like brains in our universe, let's suppose there is an evolutionary process which can evolve NNs in game of life. Can it discover the exact symbolic equations in this game of life? Rather than approximations and complex representations inside its network. Think: Minimum description lengths, occam's razor and such.</p>
                         <p>Next important decision is: What initial capabilities do we assign to this agent? RL to evolve its own architecture and reward patterns? Memory? Perhaps an LLM which it builds and trains, we give it the autoencoder architecture. The LLM we will have substitute with an LLM from our world to save time and be a bit hand-wavy about the self-contained nature of this experiment, purely due to compute constraints I have. Unless I get hired by deepmind or someplace where this constraint goes away.</p>
                         <p>All in all it's cheating to instantiate this agent with these massive capabilities at start and we skip a lot of the building phase before this, but it is fine. This will be educational still. Even the process of creating such a system, is a good first step to such systems which can quantify the process of scientific discovery itself. That's the end goal, to learn how science works and can be made faster.</p>

@@ -423,8 +423,21 @@
         height: auto;
         display: block;
         margin-left: -23.075%;
-        filter: grayscale(100%) invert(1);
+        filter: grayscale(100%) invert(1) brightness(1.2) contrast(2);
         object-fit: contain;
+        image-rendering: auto;
+    }
+
+    .discovery-animation::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 100%);
+        mix-blend-mode: multiply;
+        pointer-events: none;
     }
 
     @media screen and (max-width: 768px) {
@@ -590,68 +603,6 @@
             });
         });
 
-        // Process discovery animation to set darkest 20% of pixels to black
-        const discoveryImg = document.querySelector('.discovery-animation img');
-        if (discoveryImg) {
-            // Create a new image to load the original (bypassing CSS filters)
-            const originalImg = new Image();
-            originalImg.crossOrigin = 'anonymous';
-            originalImg.src = discoveryImg.src;
-            
-            originalImg.addEventListener('load', function() {
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                
-                canvas.width = originalImg.naturalWidth || originalImg.width;
-                canvas.height = originalImg.naturalHeight || originalImg.height;
-                
-                // Draw original image to canvas
-                ctx.drawImage(originalImg, 0, 0);
-                
-                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                const data = imageData.data;
-                const brightnessValues = [];
-                
-                // Calculate brightness for each pixel
-                for (let i = 0; i < data.length; i += 4) {
-                    const r = data[i];
-                    const g = data[i + 1];
-                    const b = data[i + 2];
-                    const brightness = (r + g + b) / 3;
-                    brightnessValues.push(brightness);
-                }
-                
-                // Find 20th percentile threshold
-                brightnessValues.sort((a, b) => a - b);
-                const threshold = brightnessValues[Math.floor(brightnessValues.length * 0.2)];
-                
-                // Set pixels below threshold to black
-                for (let i = 0; i < data.length; i += 4) {
-                    const r = data[i];
-                    const g = data[i + 1];
-                    const b = data[i + 2];
-                    const brightness = (r + g + b) / 3;
-                    
-                    if (brightness <= threshold) {
-                        data[i] = 0;     // R
-                        data[i + 1] = 0; // G
-                        data[i + 2] = 0; // B
-                    }
-                }
-                
-                ctx.putImageData(imageData, 0, 0);
-                
-                // Replace original image with processed canvas
-                discoveryImg.src = canvas.toDataURL();
-            });
-            
-            // Fallback if crossOrigin fails
-            originalImg.addEventListener('error', function() {
-                // If cross-origin fails, try processing the displayed image
-                // This won't work perfectly but is a fallback
-                console.log('Could not process image due to CORS restrictions');
-            });
-        }
     </script>
 </body>
 </html>

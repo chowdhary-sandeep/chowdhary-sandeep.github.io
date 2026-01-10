@@ -405,12 +405,34 @@
                 height: 6.5px;
             }
 
-            .external-arrow {
-                width: 100%;
-                height: 100%;
-            }
+        .external-arrow {
+            width: 100%;
+            height: 100%;
         }
-    </style>
+    }
+
+    .discovery-animation {
+        margin-top: 16px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .discovery-animation img {
+        width: 153.85%;
+        height: auto;
+        display: block;
+        margin-left: -46.15%;
+        filter: grayscale(100%) invert(1);
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 768px) {
+        .discovery-animation {
+            margin-top: 12px;
+        }
+    }
+</style>
 </head>
 <body>
     <div class="wrap">
@@ -422,6 +444,9 @@
             </div>
             <div style="margin-top: 12px;">
                 <a href="https://www.sandeepchowdhary.com/" target="_blank" style="display: block; padding: 8px 10px; border: 2px solid #ffffff; color: #ffffff; text-transform: lowercase; font-weight: 700; text-decoration: none; font-size: 11px;">art/blog</a>
+            </div>
+            <div class="discovery-animation">
+                <img src="discovery_animation.gif" alt="discovery animation">
             </div>
         </nav>
 

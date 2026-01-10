@@ -10,7 +10,7 @@
 # Image files (except those used in website)
 *.png
 !maximize.png
-!anchors_filters1.png
+!anchors_filters.png
 
 # Video files
 *.mp4

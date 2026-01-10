@@ -411,29 +411,6 @@
         }
     }
 
-    .discovery-animation {
-        margin-top: 16px;
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        text-align: left;
-    }
-
-    .discovery-animation img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: contain;
-        image-rendering: auto;
-        margin-left: 0;
-    }
-
-
-    @media screen and (max-width: 768px) {
-        .discovery-animation {
-            margin-top: 12px;
-        }
-        }
     </style>
 </head>
 <body>
@@ -444,11 +421,9 @@
                 <span class="dot"></span>
                 Sandeep Chowdhary
             </div>
-            <div style="margin-top: 12px;">
+            <div style="margin-top: 12px; display: flex; align-items: center; gap: 8px;">
                 <a href="https://www.sandeepchowdhary.com/" target="_blank" style="display: block; padding: 8px 10px; border: 2px solid #ffffff; color: #ffffff; text-transform: lowercase; font-weight: 700; text-decoration: none; font-size: 11px;">art/blog</a>
-            </div>
-            <div class="discovery-animation">
-                <img src="anchors_filters.png" alt="discovery animation">
+                <img src="anchors_filters.png" alt="discovery animation" style="width: 10%; height: auto; display: block;">
             </div>
         </nav>
 

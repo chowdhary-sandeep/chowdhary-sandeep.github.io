@@ -540,12 +540,28 @@
                 </div>
 
                 <div class="blog-card" data-blog-id="3">
-                    <div class="hd">derive laws of physics in a toy env</div>
+                    <div class="hd">derive laws of physics in a toy env I</div>
                     <div class="bd">
                         <p>knowing all physics previously derived, memory, and access to the environment for experiments to gain info, can an agent find the minimal description length physical law. another aspect that would be hard to model is the hardware to run experiments, which is also an exploratory, adjacent possible space. for now, let's avoid that. so we build a toy world, like the game of life let's say and add a neural network in it. it might be a weird situation because the game of life is sufficiently complex for universal computation but what a neural network would look like in it is unclear to me at this stage. my problem is that i want to run the neural network on the hardware that the game of life provides, a spatial map with rules of evolution. like physics in our world is the bedrock on which we must build neural networks using silicon. i am sure it can be done similarly for the game of life but just not immediately obvious. so let's instead choose a world which is more suitable for an agent to exist in. perhaps a larger neural network simulates the world around it, but with fixed laws. then we are back to the Worlds models idea by Demis Hassabis and DeepMind, with Genie inside a video generation model.</p> 
                         <p>rethinking this, it is perfectly fine to have a neural network inside the game of life. just assume it's possible to have an agent like that as the game of life is a universal computer, so we might not know what the spatial representation of a NN in the game of life's 2D space would be but we do not need to know. it's like brains in our universe, let's suppose there is an evolutionary process which can evolve NNs in the game of life. can it discover the exact symbolic equations in this game of life? rather than approximations and complex representations inside its network. think: minimum description length, Occam's razor and such.</p>
                         <p>the next important decision is: what initial capabilities do we assign to this agent? RL to evolve its own architecture and reward patterns? memory? perhaps an LLM that it builds and trains, we give it the autoencoder architecture. the LLM we will substitute with an LLM from our world to save time and be a bit hand-wavy about the self-contained nature of this experiment, purely due to compute constraints i have. unless i get hired by DeepMind or someplace where this constraint goes away.</p>
                         <p>all in all it's cheating to instantiate this agent with these massive capabilities at the start and we skip a lot of the building phase before this, but it is fine. this will still be educational. even the process of creating such a system is a good first step to such systems which can quantify the process of scientific discovery itself. that's the end goal, to learn how science works and can be made faster.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-blog-id="5">
+                    <div class="hd">derive laws of physics in a toy env II</div>
+                    <div class="bd">
+                        <p>scientific laws are compact descriptions that compress large volumes of observations. from an information-theoretic perspective, understanding corresponds to minimizing description length rather than merely fitting data. this view is implicit in approaches such as minimum description length (MDL), Kolmogorov complexity, and symbolic regression, but is rarely enforced explicitly in modern machine learning benchmarks.</p>
+                        <p>most existing benchmarks reduce discovery to passive regression or supervised prediction. even when symbolic expressions are recovered, the agent is typically given a fixed dataset and asked to interpolate. in contrast, real scientific discovery is interactive: the scientist chooses experiments, probes edge cases, and revises hypotheses when simple explanations fail.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-blog-id="4">
+                    <div class="hd">hardness of new proofs under removal of existing proofs</div>
+                    <div class="bd">
+                        <p>ok so imagine we've got a theorem v sitting in the graph like a named shortcut. it has parents(v) upstream and children(v) downstream. right now, every child in children(v) gets to say "cool, i'll just cite v" and move on. the experiment is: remove v as a named node. not "delete truth", just delete the label that everyone is using as a handle. then we ask a very plain question: can the stuff right after it still be proved if we only allow parents(v) and whatever else they already had?</p>
+                        <p>and this immediately splits into two separate things, and i'm trying to keep them from blurring. one is logical reachability: if v is derivable from parents(v), then in principle nothing is lost. any proof that used v can be rewritten by inlining a derivation of v from parents(v). so the children are still "possible" in the math sense. the other is operational reachability: when you actually run proof search (tactics, premise selection, timeouts), does the system still find those inlined paths, or does removing v blow up the search so the child proofs become practically unreachable under budget?</p>
                     </div>
                 </div>
             </section>

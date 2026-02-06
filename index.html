@@ -561,7 +561,8 @@
                     <div class="hd">derive laws of physics in a toy env II</div>
                     <div class="bd">
                         <p>scientific laws are compact descriptions that compress large volumes of observations. from an information-theoretic perspective, understanding corresponds to minimizing description length rather than merely fitting data. this view is implicit in approaches such as minimum description length (MDL), Kolmogorov complexity, and symbolic regression, but is rarely enforced explicitly in modern machine learning benchmarks.</p>
-                        <p>most existing benchmarks reduce discovery to passive regression or supervised prediction. even when symbolic expressions are recovered, the agent is typically given a fixed dataset and asked to interpolate. examples like SWE, proof bench, ARC AGI I, II, III are all performance-based—they measure how well systems perform on tasks, not about guessing the minimal rule underlying the env. in contrast, real scientific discovery is interactive: the scientist chooses experiments, probes edge cases, and revises hypotheses when simple explanations fail.</p>
+                        <p>most existing benchmarks reduce discovery to passive regression or supervised prediction. even when symbolic expressions are recovered, the agent is typically given a fixed dataset and asked to interpolate. examples like SWE, proof bench, ARC AGI I, II, III are all performance-based—they measure how well systems perform on tasks.</p>
+                        <p>the computational complexity of such a task is very hard naively. how hard relatively for different envs? say the background env is something known to humans (already "named") like "game of life". i tested this with an API server env (which only exposes the state evolution, not underlying rules) and the scientist is a cursor agent using claude sonnet and it guessed it after a couple of experiments. so named rules are easy to find. then i tried game of life + a perturbation (every 10th step, all 0 flip to 1), it could not find the minimal set of rules, which was pretty easy to come up with for me. so it's rare as a combination for game of life to come up with this perturbation and that made it a harder guess. can we quantify the hardness of guessing a physics set of rules using complexity theory and their distance in embedding space of LLMs finetuned on physics textbooks?</p>
                     </div>
                 </div>
 
@@ -599,9 +600,9 @@
                             </div>
                         </div>
                         <div class="notes">
-                            <div class="password-prompt" id="password-prompt-1">
-                                <input type="password" class="password-input" placeholder="password" id="password-input-1" onkeypress="if(event.key==='Enter') checkPassword(1)">
-                                <button class="password-button" onclick="checkPassword(1)">submit</button>
+                            <div class="password-prompt" id="password-prompt-1" onclick="event.stopPropagation();">
+                                <input type="password" class="password-input" placeholder="password" id="password-input-1" onkeypress="if(event.key==='Enter') checkPassword(1)" onclick="event.stopPropagation();">
+                                <button class="password-button" onclick="event.stopPropagation(); checkPassword(1);">submit</button>
                                 <div class="password-error" id="password-error-1" style="display: none;">incorrect password</div>
                             </div>
                             <div class="notes-content" id="notes-content-1" style="display: none;">
@@ -628,9 +629,9 @@
                             </div>
                         </div>
                         <div class="notes">
-                            <div class="password-prompt" id="password-prompt-2">
-                                <input type="password" class="password-input" placeholder="password" id="password-input-2" onkeypress="if(event.key==='Enter') checkPassword(2)">
-                                <button class="password-button" onclick="checkPassword(2)">submit</button>
+                            <div class="password-prompt" id="password-prompt-2" onclick="event.stopPropagation();">
+                                <input type="password" class="password-input" placeholder="password" id="password-input-2" onkeypress="if(event.key==='Enter') checkPassword(2)" onclick="event.stopPropagation();">
+                                <button class="password-button" onclick="event.stopPropagation(); checkPassword(2);">submit</button>
                                 <div class="password-error" id="password-error-2" style="display: none;">incorrect password</div>
                             </div>
                             <div class="notes-content" id="notes-content-2" style="display: none;">
@@ -654,9 +655,9 @@
                             </p>
                     </div>
                         <div class="notes">
-                            <div class="password-prompt" id="password-prompt-4">
-                                <input type="password" class="password-input" placeholder="password" id="password-input-4" onkeypress="if(event.key==='Enter') checkPassword(4)">
-                                <button class="password-button" onclick="checkPassword(4)">submit</button>
+                            <div class="password-prompt" id="password-prompt-4" onclick="event.stopPropagation();">
+                                <input type="password" class="password-input" placeholder="password" id="password-input-4" onkeypress="if(event.key==='Enter') checkPassword(4)" onclick="event.stopPropagation();">
+                                <button class="password-button" onclick="event.stopPropagation(); checkPassword(4);">submit</button>
                                 <div class="password-error" id="password-error-4" style="display: none;">incorrect password</div>
                             </div>
                             <div class="notes-content" id="notes-content-4" style="display: none;">

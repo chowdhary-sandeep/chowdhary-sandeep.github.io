@@ -149,13 +149,21 @@
             font-weight: 800; 
             text-transform: lowercase; 
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }
 
         .blog-card .hd span {
-            flex: 1;
+            flex: 0 1 auto;
+        }
+
+        .blog-card .hd .external-link {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .blog-card .hd .notes-button {
+            margin-left: 0;
         }
 
         .external-link {
@@ -553,14 +561,14 @@
                     <div class="hd">derive laws of physics in a toy env II</div>
                     <div class="bd">
                         <p>scientific laws are compact descriptions that compress large volumes of observations. from an information-theoretic perspective, understanding corresponds to minimizing description length rather than merely fitting data. this view is implicit in approaches such as minimum description length (MDL), Kolmogorov complexity, and symbolic regression, but is rarely enforced explicitly in modern machine learning benchmarks.</p>
-                        <p>most existing benchmarks reduce discovery to passive regression or supervised prediction. even when symbolic expressions are recovered, the agent is typically given a fixed dataset and asked to interpolate. in contrast, real scientific discovery is interactive: the scientist chooses experiments, probes edge cases, and revises hypotheses when simple explanations fail.</p>
+                        <p>most existing benchmarks reduce discovery to passive regression or supervised prediction. even when symbolic expressions are recovered, the agent is typically given a fixed dataset and asked to interpolate. examples like SWE, proof bench, ARC AGI I, II, III are all performance-based—they measure how well systems perform on tasks, not about guessing the minimal rule underlying the env. in contrast, real scientific discovery is interactive: the scientist chooses experiments, probes edge cases, and revises hypotheses when simple explanations fail.</p>
                     </div>
                 </div>
 
                 <div class="blog-card" data-blog-id="4">
                     <div class="hd">hardness of new proofs under removal of existing proofs</div>
                     <div class="bd">
-                        <p>ok so imagine we've got a theorem v sitting in the graph like a named shortcut. it has parents(v) upstream and children(v) downstream. right now, every child in children(v) gets to say "cool, i'll just cite v" and move on. the experiment is: remove v as a named node. not "delete truth", just delete the label that everyone is using as a handle. then we ask a very plain question: can the stuff right after it still be proved if we only allow parents(v) and whatever else they already had?</p>
+                        <p>ok so imagine we've got a theorem v sitting in the graph like a named shortcut. it has parents(v) upstream and children(v) downstream. right now, every child in children(v) gets to say "cool, i'll just cite v" and move on. the experiment is: remove v as a named node. just delete the label that everyone is using as a handle. then we ask a very plain question: can the stuff right after it still be proved if we only allow parents(v) and whatever else they already had?</p>
                         <p>and this immediately splits into two separate things, and i'm trying to keep them from blurring. one is logical reachability: if v is derivable from parents(v), then in principle nothing is lost. any proof that used v can be rewritten by inlining a derivation of v from parents(v). so the children are still "possible" in the math sense. the other is operational reachability: when you actually run proof search (tactics, premise selection, timeouts), does the system still find those inlined paths, or does removing v blow up the search so the child proofs become practically unreachable under budget?</p>
                     </div>
                 </div>

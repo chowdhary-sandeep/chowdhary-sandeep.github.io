@@ -505,14 +505,14 @@
                 <div class="blog-card" data-blog-id="1">
                     <div class="hd">metaanalysis of textbooks</div>
                     <div class="bd">
-                        <p>growing up, during my education i found some textbooks to be easier to understand than others. and with some textbooks, i would just be lost and not understand what was going on. and i always wanted to know why this was. i was curious why some subject matter was easier for me to understand, while some just didn't register. and i wondered whether it was (i) a personal thing, an individual aptitude for the subject, (ii) was it because of the subject matter and how difficult/complex it was inherently? or (iii) maybe it was something about how the subject matter was presented in the book.</p>
+                        <p>during my studies i found some textbooks to be easier to understand than others. and with some textbooks, i would just be lost and not understand what was going on. and i always wanted to know why this was. i was curious why some subject matter was easier for me to understand, while some just didn't register. and i wondered whether it was (i) a personal thing, an individual aptitude for the subject, (ii) was it because of the subject matter and how difficult/complex it was inherently? or (iii) maybe it was something about how the subject matter was presented in the book.</p>
                         <p>with my training in network and data science, and a growing interest in meta-science, i want to answer that childhood curiosity by using textbooks at college level from physics, chemistry, mathematics, and biology and parsing them as growing networks of knowledge as one reads the textbook. using the recent breakthrough in AI vision and language technology, which is LLMs, i will convert books into structured data, such as a JSON object, and then analyze the networks of concepts and the order in which they occur in the book. how this knowledge network grows in each individual book, to understand the complexity of the structure and compare them across subject matter, to compare disciplines. next, to understand different structures of different books for the same topic, i will compare the same topic taught in different books.</p>
                         <p>if successful, this research would help us improve the theoretical representation of knowledge and learning, and capture the kind of structures we are designing in textbooks. perhaps it will also open up potentially better ways to structure material in the future for consumption by humans. now that we have LLMs, restructuring books is no major struggle, it should be possible to do this on the fly. things will become more fluid, and we might even have books that adjust themselves agentically to each student. so i imagine such an investigation of the inherent structure of knowledge, and our options therein to rearrange, might be quite useful.</p>
                     </div>
                 </div>
 
                 <div class="blog-card" data-blog-id="2">
-                    <div class="hd">a short note on 'why LEAN'</div>
+                    <div class="hd">short note on lean</div>
                     <div class="bd">
                         <p>lean-based automatic theorem proving (ATP) is one of the fastest-moving, most rigorously quantified "scientific" arenas we have: every step is verifiable and the full developmental history of the library and tactic ecosystem is recorded. that makes it a near-ideal testbed where meta-science can stop being purely observational and become interventional: we can define discovery as a computational search process over a formally specified space (proof states, tactics, and premises), measure progress precisely, and design systems that actually accelerate proof and lemma discovery.</p>
                         <p>modern ATP work explicitly frames proving as sequential decision-making (often an MDP) and improves performance via structured search and learning—e.g., retrieval-augmented premise selection and tactic prediction in LeanDojo [Yang 2023]; reinforcement learning from proof-assistant feedback combined with Monte-Carlo tree search in DeepSeek-Prover-V1.5 [Xin 2025a]; scalable best-first search (BFS-Prover) [Xin 2025b]; critic-guided expert iteration for stepwise proving (InternLM2.5-StepProver) [Wu 2024]; and "growing libraries" approaches that explicitly model how new lemmas expand the adjacent possible (LEGO-Prover) [Wang 2024a]. in parallel, autoformalization is rapidly scaling: translating natural-language math problems and proofs into formal statements (Lean Workbook [Ying 2024], TheoremLlama [Wang 2024b]), earlier autoformalization with LLMs in proof assistants [Wu 2022], and curriculum-style training over formal statements [Polu 2022]. recent work also targets the semantic mismatch between informal proofs and formal tactic steps by introducing intermediate representations such as a "Chain of States" to align informal logical transitions with formal proof states [Wang n.d.].</p>
@@ -614,34 +614,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="blog-card" data-experiment-id="3">
-                        <div class="hd">
-                            <span>AI-augmented IPCC reports</span>
-                            <a href="AI-augmented-IPCC-reports.html" target="_blank" class="external-link" onclick="event.stopPropagation();">
-                                <img src="maximize.png" alt="open in new tab" class="external-arrow">
-                            </a>
-                            <span class="notes-button" onclick="event.stopPropagation(); toggleNotes(this);">n</span>
-                        </div>
-                        <div class="bd">
-                            <p style="margin-bottom: 16px;">
-                                <a href="https://huggingface.co/spaces/echoboi/ai_systematic_lit_review" target="_blank" style="display: inline-block; padding: 8px 10px; border: 2px solid #ffffff; color: #ffffff; text-decoration: none; font-weight: 700; text-transform: lowercase;">
-                                    open AI systematic lit review →
-                                </a>
-                            </p>
-                            <p style="text-transform: lowercase;">science is expanding faster than we can review it, creating a bottleneck for policy makers trying to act on the latest consensus. existing ai tools help but they're opaque and miss stuff. this project builds an open, transparent tool for automated literature synthesis, starting with climate assessments like ipcc. we expand from seed papers via citation networks and semantic search, filter with llms, validate findings with independent models, and integrate everything into live html reports with timestamps and source links. it's a glass box approach—fully open source—that automates discovery and validation while keeping human authors in the loop. works for any evidence-intensive domain, not just climate.</p>
-                    </div>
-                        <div class="notes">
-                            <div class="password-prompt" id="password-prompt-3">
-                                <input type="password" class="password-input" placeholder="password" id="password-input-3" onkeypress="if(event.key==='Enter') checkPassword(3)">
-                                <button class="password-button" onclick="checkPassword(3)">submit</button>
-                                <div class="password-error" id="password-error-3" style="display: none;">incorrect password</div>
-                            </div>
-                            <div class="notes-content" id="notes-content-3" style="display: none;">
-                                <p>hello. LEAN. i'm working on some problems in LEAN. operating LEAN through Lean Dojo, which is a wrapper built in Python to access LEAN, which is not Python. essentially, the issue i'm having is that the proof trajectories that Lean Dojo traces for Mathlib are, i think, complete, but some lemmas or something are missing. i don't know what this something is, but because of this, some of the proofs cannot be constructed or rerun by using the Lean Dojo framework of applied tactics. you have the proof states, but applying the tactic sequence that apparently is a solution to proving the theorem does not prove the theorem or gives an error. that's the issue i'm having with LEAN. i don't know how to fix this. maybe it's not necessary for the analysis i have in mind right now, which is just the analysis of how tactics and proofs interact with each other. if you assume this dataset that is traced by Lean Dojo for Mathlib to be true, then you can still do experiments of trying to just remove edges and see the fragility of this graph, but i do need the ability to run perturbations on top of proof states or alternate tactics and such. and see alternate paths which lead to the proof state and then try to understand the global state of the proof, not just the proof tag, but the sets of all proof tags for a certain theorem and sort of do measures on top of this ensemble. however, i'm not confident that i'm operating Lean Dojo correctly or maybe Lean Dojo has an internal fault or something because Reprover, which is part of Lean Dojo or a continuation of the work, could not prove the theorems using this exact same sequence of tactics that Lean Dojo trace has. so i'm not sure what's going on, but i remember when i tried it, it did work for some cases. so Lean Dojo's internal mid states, if i applied to the Lean Dojo data, how a theorem is in Lean Dojo, then it works. so i don't know what the difference is between Reprover's statements and Lean Dojo's statements. so i have to check that.</p>
-                            </div>
-                        </div>
-                </div>
 
                     <div class="blog-card" data-experiment-id="4">
                         <div class="hd">

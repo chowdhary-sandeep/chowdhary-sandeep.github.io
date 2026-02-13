@@ -606,7 +606,6 @@
                                 <div class="password-error" id="password-error-1" style="display: none;">incorrect password</div>
                             </div>
                             <div class="notes-content" id="notes-content-1" style="display: none;">
-                                <p>hello. LEAN. i'm working on some problems in LEAN. operating LEAN through Lean Dojo, which is a wrapper built in Python to access LEAN, which is not Python. essentially, the issue i'm having is that the proof trajectories that Lean Dojo traces for Mathlib are, i think, complete, but some lemmas or something are missing. i don't know what this something is, but because of this, some of the proofs cannot be constructed or rerun by using the Lean Dojo framework of applied tactics. you have the proof states, but applying the tactic sequence that apparently is a solution to proving the theorem does not prove the theorem or gives an error. that's the issue i'm having with LEAN. i don't know how to fix this. maybe it's not necessary for the analysis i have in mind right now, which is just the analysis of how tactics and proofs interact with each other. if you assume this dataset that is traced by Lean Dojo for Mathlib to be true, then you can still do experiments of trying to just remove edges and see the fragility of this graph, but i do need the ability to run perturbations on top of proof states or alternate tactics and such. and see alternate paths which lead to the proof state and then try to understand the global state of the proof, not just the proof tag, but the sets of all proof tags for a certain theorem and sort of do measures on top of this ensemble. however, i'm not confident that i'm operating Lean Dojo correctly or maybe Lean Dojo has an internal fault or something because Reprover, which is part of Lean Dojo or a continuation of the work, could not prove the theorems using this exact same sequence of tactics that Lean Dojo trace has. so i'm not sure what's going on, but i remember when i tried it, it did work for some cases. so Lean Dojo's internal mid states, if i applied to the Lean Dojo data, how a theorem is in Lean Dojo, then it works. so i don't know what the difference is between Reprover's statements and Lean Dojo's statements. so i have to check that.</p>
                             </div>
                         </div>
                     </div>
@@ -640,6 +639,34 @@
                         </div>
                     </div>
 
+                    <div class="blog-card" data-experiment-id="3">
+                        <div class="hd">
+                            <span>griffiths dashboard</span>
+                            <a href="dash_griffiths_upload.html" target="_blank" class="external-link" onclick="event.stopPropagation();">
+                                <img src="maximize.png" alt="open in new tab" class="external-arrow">
+                            </a>
+                            <span class="notes-button" onclick="event.stopPropagation(); toggleNotes(this);">n</span>
+                        </div>
+                        <div class="bd">
+                            <div class="iframe-wrapper">
+                                <iframe
+                                    src="dash_griffiths_upload.html"
+                                    title="griffiths dashboard"
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="notes">
+                            <div class="password-prompt" id="password-prompt-3" onclick="event.stopPropagation();">
+                                <input type="password" class="password-input" placeholder="password" id="password-input-3" onkeypress="if(event.key==='Enter') checkPassword(3)" onclick="event.stopPropagation();">
+                                <button class="password-button" onclick="event.stopPropagation(); checkPassword(3);">submit</button>
+                                <div class="password-error" id="password-error-3" style="display: none;">incorrect password</div>
+                            </div>
+                            <div class="notes-content" id="notes-content-3" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="blog-card" data-experiment-id="4">
                         <div class="hd">
                             <span>genetic aesthetics evolver</span>
@@ -661,7 +688,6 @@
                                 <div class="password-error" id="password-error-4" style="display: none;">incorrect password</div>
                             </div>
                             <div class="notes-content" id="notes-content-4" style="display: none;">
-                                <p>hello. LEAN. i'm working on some problems in LEAN. operating LEAN through Lean Dojo, which is a wrapper built in Python to access LEAN, which is not Python. essentially, the issue i'm having is that the proof trajectories that Lean Dojo traces for Mathlib are, i think, complete, but some lemmas or something are missing. i don't know what this something is, but because of this, some of the proofs cannot be constructed or rerun by using the Lean Dojo framework of applied tactics. you have the proof states, but applying the tactic sequence that apparently is a solution to proving the theorem does not prove the theorem or gives an error. that's the issue i'm having with LEAN. i don't know how to fix this. maybe it's not necessary for the analysis i have in mind right now, which is just the analysis of how tactics and proofs interact with each other. if you assume this dataset that is traced by Lean Dojo for Mathlib to be true, then you can still do experiments of trying to just remove edges and see the fragility of this graph, but i do need the ability to run perturbations on top of proof states or alternate tactics and such. and see alternate paths which lead to the proof state and then try to understand the global state of the proof, not just the proof tag, but the sets of all proof tags for a certain theorem and sort of do measures on top of this ensemble. however, i'm not confident that i'm operating Lean Dojo correctly or maybe Lean Dojo has an internal fault or something because Reprover, which is part of Lean Dojo or a continuation of the work, could not prove the theorems using this exact same sequence of tactics that Lean Dojo trace has. so i'm not sure what's going on, but i remember when i tried it, it did work for some cases. so Lean Dojo's internal mid states, if i applied to the Lean Dojo data, how a theorem is in Lean Dojo, then it works. so i don't know what the difference is between Reprover's statements and Lean Dojo's statements. so i have to check that.</p>
                             </div>
                         </div>
                 </div>

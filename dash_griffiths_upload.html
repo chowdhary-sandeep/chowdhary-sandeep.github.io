@@ -956,12 +956,17 @@
   }
   #temporalPlayBtn {
     background: rgba(255,255,255,0.06) !important;
-    border: 1px solid rgba(255,255,255,0.12) !important;
+    border: 2px solid rgba(255,255,255,0.3) !important;
     color: #fff !important;
-    transition: background 0.2s;
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
   }
   #temporalPlayBtn:hover {
     background: rgba(255,255,255,0.12) !important;
+  }
+  #temporalPlayBtn.is-playing {
+    background: rgba(255,255,255,0.15) !important;
+    border-color: rgba(255,255,255,0.6) !important;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.2);
   }
   #temporalPageLabel {
     color: #fff !important;
@@ -47411,7 +47416,10 @@ function renderAdjacentPossible() {
   function stopAutoPlay() {
     if (tAutoPlay) { clearInterval(tAutoPlay); tAutoPlay = null; }
     tIsPlaying = false;
-    if (playBtn) playBtn.innerHTML = '&#9654;';
+    if (playBtn) {
+      playBtn.innerHTML = '&#9654;';
+      playBtn.classList.remove('is-playing');
+    }
   }
 
   if (slider) {
@@ -47431,6 +47439,7 @@ function renderAdjacentPossible() {
           ensureData();
           tIsPlaying = true;
           playBtn.innerHTML = '&#9646;&#9646;';
+          playBtn.classList.add('is-playing');
           tAutoPlay = setInterval(() => {
             const val = parseInt(slider.value);
             if (val < parseInt(slider.max)) {
@@ -47455,10 +47464,23 @@ function renderAdjacentPossible() {
       }
       if (tNodes.length === 0) buildTemporalNetwork(0);
     }
-    // Auto-init after a short delay (DOM must be ready), then auto-play
+    // Auto-init after a short delay (DOM must be ready), then auto-play on by default
     setTimeout(() => {
       initTemporalNetwork();
-      /* auto-play disabled for upload version */
+      if (playBtn && slider) {
+        tIsPlaying = true;
+        playBtn.innerHTML = '&#9646;&#9646;';
+        playBtn.classList.add('is-playing');
+        tAutoPlay = setInterval(() => {
+          const val = parseInt(slider.value);
+          if (val < parseInt(slider.max)) {
+            slider.value = val + 1;
+            buildTemporalNetwork(val + 1);
+          } else {
+            stopAutoPlay();
+          }
+        }, 1050);
+      }
     }, 200);
     // Also re-init if user switches tabs (canvas may need resize)
     const temporalTab = document.querySelector('[data-tab="temporal"]');

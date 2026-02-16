@@ -35,9 +35,9 @@
     --text2: #8888a0;
     --accent: #6c5ce7;
     --accent2: #a29bfe;
-    --gold: #f0c040;
+    --gold: #ffffff;
     --red: #ff6b6b;
-    --green: #51cf66;
+    --green: rgba(255,255,255,0.7);
     --blue: #339af0;
     --cyan: #22b8cf;
   }
@@ -340,114 +340,76 @@
   /* Help button (glowing ?) */
   .card h2 { display: flex; align-items: center; gap: 8px; }
   .help-btn {
-    width: 22px; height: 22px;
+    width: 18px; height: 18px;
     border-radius: 50%;
-    border: 1.5px solid var(--accent);
+    border: 1px solid rgba(255,255,255,0.15);
     background: transparent;
-    color: var(--accent);
-    font-size: 12px; font-weight: 700;
+    color: rgba(255,255,255,0.35);
+    font-size: 10px; font-weight: 600;
     cursor: pointer;
     display: inline-flex; align-items: center; justify-content: center;
     margin-left: auto;
     flex-shrink: 0;
-    animation: helpGlow 2.5s ease-in-out infinite;
     transition: all 0.2s;
   }
   .help-btn:hover {
-    background: var(--accent);
-    color: var(--bg);
-    box-shadow: 0 0 16px rgba(108, 92, 231, 0.6);
+    color: rgba(255,255,255,0.8);
+    border-color: rgba(255,255,255,0.3);
   }
-  @keyframes helpGlow {
-    0%, 100% { box-shadow: 0 0 4px rgba(108, 92, 231, 0.3); }
-    50% { box-shadow: 0 0 12px rgba(108, 92, 231, 0.6); }
-  }
-  .help-overlay {
-    position: fixed; inset: 0;
-    background: rgba(0,0,0,0.65);
+  /* Hover help tooltip */
+  .help-tip {
+    position: absolute;
     z-index: 2000;
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; pointer-events: none;
-    transition: opacity 0.25s;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    top: 28px; right: 0;
   }
-  .help-overlay.visible { opacity: 1; pointer-events: auto; }
-  .help-modal {
-    background: var(--surface);
-    border: 1px solid var(--accent);
-    border-radius: 16px;
-    padding: 28px 32px;
-    max-width: 640px; width: 90%;
-    max-height: 80vh; overflow-y: auto;
-    box-shadow: 0 16px 64px rgba(0,0,0,0.6);
-    color: var(--text);
-    line-height: 1.7;
+  .help-tip.visible {
+    opacity: 1;
+    pointer-events: auto;
   }
-  .help-modal h3 {
-    color: var(--accent2); margin: 0 0 12px 0; font-size: 1.15rem;
+  .help-tip-inner {
+    background: rgba(10,10,16,0.96);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 14px 18px;
+    max-width: 320px;
+    width: max-content;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    color: rgba(255,255,255,0.78);
+    font-size: 0.78rem;
+    line-height: 1.65;
+    backdrop-filter: blur(16px);
   }
-  .help-modal .help-section { margin-bottom: 14px; }
-  .help-modal .help-section strong { color: var(--accent); }
-  .help-modal .help-close {
-    float: right; background: none; border: 1px solid var(--border);
-    color: var(--text2); border-radius: 6px; padding: 4px 12px;
-    cursor: pointer; font-size: 0.85rem;
-  }
-  .help-modal .help-close:hover { border-color: var(--accent); color: var(--text); }
-  .help-modal .help-formula {
-    background: rgba(108,92,231,0.08);
-    border-left: 3px solid var(--accent);
-    padding: 10px 14px;
-    margin: 10px 0;
-    border-radius: 0 8px 8px 0;
-    font-size: 0.95rem;
-    overflow-x: auto;
-  }
-  .help-modal details {
-    margin-top: 14px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .help-modal details summary {
-    padding: 10px 14px;
-    background: var(--surface2);
-    cursor: pointer;
+  .help-tip-inner h3 {
+    color: var(--accent2);
+    margin: 0 0 6px 0;
+    font-size: 0.82rem;
     font-weight: 600;
-    color: var(--accent);
-    font-size: 0.9rem;
-    user-select: none;
+    letter-spacing: 0.02em;
   }
-  .help-modal details summary:hover { background: rgba(108,92,231,0.12); }
-  .help-modal details[open] summary { border-bottom: 1px solid var(--border); }
-  .help-modal .details-body {
-    padding: 14px;
-    font-size: 0.88rem;
-    line-height: 1.75;
-  }
-  .help-modal .details-body p { margin: 8px 0; }
-  .help-modal .details-body ol { margin: 8px 0 8px 20px; }
-  .help-modal .details-body li { margin-bottom: 6px; }
+  .help-tip-inner p { margin: 4px 0; }
+  .help-tip-inner strong { color: rgba(255,255,255,0.95); }
   /* Panel-level help button (positioned in panel top-right) */
   .panel-help-btn {
     position: absolute;
     top: 6px; right: 6px;
-    width: 20px; height: 20px;
+    width: 18px; height: 18px;
     border-radius: 50%;
-    border: 1.5px solid var(--accent);
-    background: rgba(18,18,30,0.8);
-    color: var(--accent);
-    font-size: 11px; font-weight: 700;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(18,18,30,0.6);
+    color: rgba(255,255,255,0.3);
+    font-size: 10px; font-weight: 600;
     cursor: pointer;
     display: inline-flex; align-items: center; justify-content: center;
     z-index: 10;
-    opacity: 0.5;
     transition: all 0.2s;
   }
   .panel-help-btn:hover {
-    opacity: 1;
-    background: var(--accent);
-    color: var(--bg);
-    box-shadow: 0 0 12px rgba(108,92,231,0.5);
+    color: rgba(255,255,255,0.8);
+    border-color: rgba(255,255,255,0.3);
+    background: rgba(18,18,30,0.9);
   }
 
   /* % change badge */
@@ -762,10 +724,10 @@
   }
   .dl-legend-item { display: flex; align-items: center; gap: 5px; }
   .dl-swatch { width: 12px; height: 8px; border-radius: 2px; flex-shrink: 0; }
-  .dl-swatch-raw { background: rgba(231,76,60,0.6); }
-  .dl-swatch-comp { background: rgba(108,92,231,0.7); }
-  .dl-swatch-gap { background: rgba(46,204,113,0.35); }
-  .dl-swatch-nocur { background: rgba(243,156,18,0.6); }
+  .dl-swatch-raw { background: rgba(255,255,255,0.7); border: 1px dashed rgba(255,255,255,0.5); }
+  .dl-swatch-comp { background: rgba(255,255,255,0.85); }
+  .dl-swatch-nocur { background: repeating-linear-gradient(45deg, rgba(255,255,255,0.3), rgba(255,255,255,0.3) 2px, transparent 2px, transparent 4px); border: 1px solid rgba(255,255,255,0.2); }
+  .dl-swatch-gap { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2); }
 
   @media (max-width: 1000px) {
     .book-network-row { flex-direction: column; }
@@ -923,7 +885,7 @@
     font-weight: 400;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    font-size: 0.65rem;
+    font-size: 0.5rem;
   }
   .dl-chart-legend {
     color: rgba(255,255,255,0.45);
@@ -956,17 +918,12 @@
   }
   #temporalPlayBtn {
     background: rgba(255,255,255,0.06) !important;
-    border: 2px solid rgba(255,255,255,0.3) !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
     color: #fff !important;
-    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition: background 0.2s;
   }
   #temporalPlayBtn:hover {
     background: rgba(255,255,255,0.12) !important;
-  }
-  #temporalPlayBtn.is-playing {
-    background: rgba(255,255,255,0.15) !important;
-    border-color: rgba(255,255,255,0.6) !important;
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.2);
   }
   #temporalPageLabel {
     color: #fff !important;
@@ -976,17 +933,7 @@
     color: rgba(255,255,255,0.4) !important;
   }
 
-  /* Help overlay */
-  .help-overlay .help-modal {
-    background: #0c0c0c;
-    border: 1px solid rgba(255,255,255,0.08);
-    color: rgba(255,255,255,0.8);
-  }
-  .help-close {
-    background: rgba(255,255,255,0.06) !important;
-    color: #fff !important;
-    border: 1px solid rgba(255,255,255,0.1) !important;
-  }
+  /* Help tooltip dark overrides — handled by .help-tip-inner defaults */
 
   /* Tooltip */
   .tooltip {
@@ -1122,10 +1069,82 @@
     }
 
     /* Compact slider row on mobile */
-    #temporalSlider { height: 20px !important; }
+    #temporalSlider { height: 16px !important; }
     #temporalPageLabel { font-size: 0.65rem !important; min-width: 140px !important; }
     #temporalNodeCount { font-size: 0.6rem !important; min-width: 60px !important; }
-    #temporalPlayBtn { font-size: 0.85rem !important; padding: 1px 7px !important; }
+    #temporalPlayBtn { width: 28px !important; height: 28px !important; }
+  }
+
+  /* ── Sleek slider & play/pause ── */
+  #temporalSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 24px;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+  #temporalSlider::-webkit-slider-runnable-track {
+    height: 2px;
+    background: var(--border);
+    border-radius: 1px;
+  }
+  #temporalSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent2);
+    margin-top: -5px;
+    box-shadow: 0 0 6px rgba(162,155,254,0.4);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  #temporalSlider::-webkit-slider-thumb:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(162,155,254,0.7);
+  }
+  #temporalSlider::-moz-range-track {
+    height: 2px;
+    background: var(--border);
+    border-radius: 1px;
+    border: none;
+  }
+  #temporalSlider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent2);
+    border: none;
+    box-shadow: 0 0 6px rgba(162,155,254,0.4);
+  }
+  #temporalSlider::-moz-range-thumb:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(162,155,254,0.7);
+  }
+  #temporalPlayBtn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1.5px solid var(--border);
+    color: var(--accent2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: border-color 0.2s, background 0.2s;
+    flex-shrink: 0;
+  }
+  #temporalPlayBtn:hover {
+    border-color: var(--accent2);
+    background: rgba(162,155,254,0.08);
+  }
+  #temporalPlayBtn svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--accent2);
   }
 
 </style>
@@ -1138,7 +1157,7 @@
 <div class="header upload-header">
   <div class="upload-book-title">Introduction to Electrodynamics</div>
   <div class="upload-author">David J. Griffiths</div>
-  <div class="upload-tagline">The Compression Architecture of 725 Concepts</div>
+  <div class="upload-tagline">Adjacent Possible In Electrodynamics</div>
 </div>
 
 <div class="stats-bar" id="statsBar" style="display:none !important;"></div>
@@ -1156,12 +1175,12 @@
 <div class="tab-content active" id="tab-overview">
 
 
-  <div class="card" style="padding:12px 16px 16px;">
-    <div style="display:flex;align-items:center;gap:10px;margin:8px 0 4px 0;">
-      <button id="temporalPlayBtn" style="background:var(--surface2);border:1px solid var(--border);color:var(--accent2);font-size:1.1rem;cursor:pointer;border-radius:6px;padding:2px 10px;line-height:1.4;" title="Auto-play">&#9654;</button>
-      <input type="range" id="temporalSlider" min="0" max="1" value="0" step="1" style="flex:1;accent-color:var(--accent2);">
-      <span id="temporalPageLabel" style="font-size:0.85rem;font-weight:700;color:var(--accent2);min-width:200px;text-align:center;"></span>
-      <span id="temporalNodeCount" style="font-size:0.8rem;color:var(--text2);min-width:100px;"></span>
+  <div class="card" style="padding:8px 16px 16px;">
+    <div style="display:flex;align-items:center;gap:12px;margin:4px 0 6px 0;">
+      <button id="temporalPlayBtn" title="Auto-play"><svg viewBox="0 0 16 16"><polygon points="4,2 14,8 4,14"/></svg></button>
+      <input type="range" id="temporalSlider" min="0" max="1" value="0" step="1" style="flex:1;">
+      <span id="temporalPageLabel" style="font-size:0.78rem;font-weight:600;color:var(--accent2);min-width:200px;text-align:center;letter-spacing:0.02em;"></span>
+      <span id="temporalNodeCount" style="font-size:0.72rem;color:var(--text2);min-width:100px;opacity:0.7;"></span>
     </div>
     <div class="book-network-row">
       <!-- Book page panel -->
@@ -1184,7 +1203,7 @@
         </div>
       </div>
       <!-- Network canvas -->
-      <div class="network-wrap" style="flex:1;min-width:0;position:relative;">
+      <div class="network-wrap" id="networkWrap" style="flex:1;min-width:0;position:relative;">
         <canvas id="temporalNetCanvas" style="height:500px;"></canvas>
         <div class="node-detail-panel" id="temporalNodePanel"></div>
       </div>
@@ -1322,7 +1341,7 @@
       <button class="net-btn" data-n="9999">All</button>
       <span class="table-info">Drag to rearrange. Scroll to zoom. Click node to highlight neighborhood.
         <span style="color:#f39c12;font-weight:600">&#9679; upstream</span>
-        <span style="color:#2ecc71;font-weight:600">&#9679; downstream</span>
+        <span style="color:#ffffff;font-weight:600">&#9679; downstream</span>
       </span>
     </div>
     <div class="network-wrap">
@@ -1413,7 +1432,7 @@
       <h2>Naming Quadrants (&#x2113; vs N)</h2>
       <div class="interpretation">
         <strong style="color:#f39c12">&#9679;</strong> Sleeping Giants (high &#x2113;, low N) &nbsp;
-        <strong style="color:#2ecc71">&#9679;</strong> Pillars (high &#x2113;, high N) &nbsp;
+        <strong style="color:#ffffff">&#9679;</strong> Pillars (high &#x2113;, high N) &nbsp;
         <strong style="color:#00d2ff">&#9679;</strong> Lightweight Hubs (low &#x2113;, high N) &nbsp;
         <strong style="color:#8888a0">&#9679;</strong> Leaves
       </div>
@@ -1434,12 +1453,7 @@
 </div>
 
 <div class="tooltip" id="tooltip"></div>
-<div class="help-overlay" id="helpOverlay" onclick="if(event.target===this)this.classList.remove('visible')">
-  <div class="help-modal">
-    <button class="help-close" onclick="document.getElementById('helpOverlay').classList.remove('visible')">Close</button>
-    <div id="helpContent"></div>
-  </div>
-</div>
+<!-- Help tooltips are injected per-panel by setupHelpButtons() -->
 
 <script id="delta-data" type="application/json">{
   "book": "griffiths_electrodynamics",
@@ -45139,6 +45153,38 @@ function loadData() {
   GRAPH = JSON.parse(document.getElementById('graph-data').textContent);
   var pageEl = document.getElementById('page-data');
   if (pageEl) try { PAGES = JSON.parse(pageEl.textContent); } catch(e) { PAGES = {}; }
+
+  // ── Skip all concepts before page 13 (preamble / math-review) ──
+  const MIN_PAGE = 13;
+  const skipSet = new Set();
+  if (GRAPH && GRAPH.graph) {
+    for (const [name, info] of Object.entries(GRAPH.graph)) {
+      if (info.page && info.page < MIN_PAGE) skipSet.add(name);
+    }
+    for (const name of skipSet) delete GRAPH.graph[name];
+    // Remove skipped concepts from dependency lists
+    for (const info of Object.values(GRAPH.graph)) {
+      if (info.depends_on) info.depends_on = info.depends_on.filter(d => !skipSet.has(d));
+      if (info.depended_on_by) info.depended_on_by = info.depended_on_by.filter(d => !skipSet.has(d));
+      if (info.open_dependencies) info.open_dependencies = info.open_dependencies.filter(d => !skipSet.has(d));
+      if (info.unresolved) info.unresolved = info.unresolved.filter(d => !skipSet.has(d));
+    }
+  }
+  if (DATA && DATA.rankings) {
+    DATA.rankings = DATA.rankings.filter(r => !skipSet.has(r.concept));
+    // Re-rank
+    DATA.rankings.forEach((r, i) => r.rank = i + 1);
+    DATA.total_concepts = DATA.rankings.length;
+  }
+  // Update edge count to reflect filtered graph
+  if (GRAPH && GRAPH.graph) {
+    let edgeCount = 0;
+    for (const info of Object.values(GRAPH.graph)) {
+      if (info.depends_on) edgeCount += info.depends_on.length;
+    }
+    DATA.total_edges = edgeCount;
+  }
+
   init();
 }
 
@@ -45324,7 +45370,11 @@ function highlightConceptOnPage(conceptName) {
         var badge = document.createElement('span');
         badge.className = 'concept-badge'; badge.textContent = 'NEW';
         bestPara.insertBefore(badge, bestPara.firstChild);
-        bestPara.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        var scrollContainer = document.getElementById('bookPageCurrent');
+        if (scrollContainer) {
+          var targetTop = bestPara.offsetTop - scrollContainer.offsetTop - scrollContainer.clientHeight / 2 + bestPara.clientHeight / 2;
+          scrollContainer.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+        }
         return;
       }
     }
@@ -45432,7 +45482,13 @@ function tryHighlightText(body, searchText, badgeText) {
     node.parentNode.replaceChild(frag, node);
   }
   var first = body.querySelector('.concept-highlight');
-  if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  if (first) {
+    var scrollContainer = document.getElementById('bookPageCurrent');
+    if (scrollContainer) {
+      var targetTop = first.offsetTop - scrollContainer.offsetTop - scrollContainer.clientHeight / 2 + first.clientHeight / 2;
+      scrollContainer.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+    }
+  }
   return true;
 }
 
@@ -45448,7 +45504,11 @@ function highlightParagraphContaining(body, phrase, badgeText) {
       badge.className = 'concept-badge';
       badge.textContent = badgeText;
       paras[i].insertBefore(badge, paras[i].firstChild);
-      paras[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      var scrollContainer = document.getElementById('bookPageCurrent');
+      if (scrollContainer) {
+        var targetTop = paras[i].offsetTop - scrollContainer.offsetTop - scrollContainer.clientHeight / 2 + paras[i].clientHeight / 2;
+        scrollContainer.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+      }
       return;
     }
   }
@@ -46176,11 +46236,11 @@ function populateNodePanel(nodeId) {
     <div class="nd-stat"><span>Def</span><span>${ranking ? ranking.definition_length + 't' : '—'}</span></div>
     <div class="nd-stat"><span>p.</span><span>${info ? info.page : '—'}</span></div>
     <div class="nd-stat"><span style="color:#f39c12">&#9650;</span><span>${depsOut.length}</span></div>
-    <div class="nd-stat"><span style="color:#2ecc71">&#9660;</span><span>${depsIn.length}</span></div>
+    <div class="nd-stat"><span style="color:#ffffff">&#9660;</span><span>${depsIn.length}</span></div>
     </div>
     ${info && info.definition ? `<div class="nd-def">${renderDef(info.definition)}</div>` : ''}
     ${depsOut.length ? `<div class="nd-deps"><strong style="color:#f39c12">&#9650; Depends on:</strong><br>${depsOut.map(d => '<span>' + d + '</span>').join('')}</div>` : ''}
-    ${depsIn.length ? `<div class="nd-deps"><strong style="color:#2ecc71">&#9660; Depended-on by:</strong><br>${depsIn.map(d => '<span>' + d + '</span>').join('')}</div>` : ''}
+    ${depsIn.length ? `<div class="nd-deps"><strong style="color:#ffffff">&#9660; Depended-on by:</strong><br>${depsIn.map(d => '<span>' + d + '</span>').join('')}</div>` : ''}
   `;
   renderMathIn(panel);
 
@@ -46395,7 +46455,7 @@ function simulate(canvas, ctx, W, H) {
     }
 
     // Labels
-    ctx.font = '9px Inter, sans-serif';
+    ctx.font = '6px Inter, sans-serif';
     ctx.textAlign = 'center';
     for (const n of netNodes) {
       const isSel = n.id === selectedNode;
@@ -46407,13 +46467,13 @@ function simulate(canvas, ctx, W, H) {
         let lblColor = '#e0e0ec';
         if (isDimmed) lblColor = 'rgba(224,224,236,0.1)';
         else if (isSel) lblColor = '#ffffff';
-        else if (isUpLbl && isDownLbl) lblColor = '#f5c842';  // gold for both
+        else if (isUpLbl && isDownLbl) lblColor = '#ffffff';  // gold for both
         else if (isUpLbl) lblColor = 'rgba(243, 156, 18, 0.95)';  // orange
         else if (isDownLbl) lblColor = 'rgba(46, 204, 113, 0.95)'; // green
         else if (isEgo) lblColor = 'rgba(0, 210, 255, 0.7)';
         ctx.fillStyle = lblColor;
         const label = n.id.length > 22 ? n.id.slice(0, 20) + '...' : n.id;
-        ctx.fillText(label, n.x, n.y + n.radius + 11);
+        ctx.fillText(label, n.x, n.y + n.radius + 9);
       }
     }
 
@@ -46860,30 +46920,21 @@ function renderAdjacentPossible() {
     ctx.rect(pad.left, pad.top, cW, cH);
     ctx.clip();
 
-    // --- GAP FILL (green: savings between raw and compressed) ---
-    ctx.beginPath();
-    ctx.moveTo(toX(0), toY(rawK));
-    for (let i = 0; i < drawN; i++) ctx.lineTo(toX(i), toY(rawK));
-    for (let i = drawN - 1; i >= 0; i--) {
-      const lK = (dlLRawBits - dlCumDelta[i] * DL_BPT) / 1000;
-      ctx.lineTo(toX(i), toY(lK));
-    }
-    ctx.closePath();
-    const gg = ctx.createLinearGradient(0, toY(rawK), 0, toY(curK));
-    gg.addColorStop(0, 'rgba(46,204,113,0.35)');
-    gg.addColorStop(1, 'rgba(46,204,113,0.12)');
-    ctx.fillStyle = gg;
-    ctx.fill();
-
-    // --- "WITHOUT CURRENT CONCEPT" LINE (orange dashed) ---
-    // At step i: L_raw - cumDelta[i-1]*BPT (all prev concepts named, but not concept i)
-    // Computes nocurK(i): at i=0 it equals rawK (no prev concepts); at i>0 it equals compressed(i-1)
+    // --- COMPRESSION SAVINGS FILL (light gray between raw and nocur) ---
     function nocurK(i) {
       if (i === 0) return rawK;
       return (dlLRawBits - dlCumDelta[i - 1] * DL_BPT) / 1000;
     }
 
-    // Marginal gap fill (amber): area between nocur line and compressed line
+    ctx.beginPath();
+    ctx.moveTo(toX(0), toY(rawK));
+    for (let i = 0; i < drawN; i++) ctx.lineTo(toX(i), toY(rawK));
+    for (let i = drawN - 1; i >= 0; i--) ctx.lineTo(toX(i), toY(nocurK(i)));
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(255,255,255,0.15)';
+    ctx.fill();
+
+    // --- WITHOUT CURRENT CONCEPT FILL (hatched between nocur and compressed) ---
     ctx.beginPath();
     ctx.moveTo(toX(0), toY(nocurK(0)));
     for (let i = 1; i < drawN; i++) ctx.lineTo(toX(i), toY(nocurK(i)));
@@ -46892,10 +46943,20 @@ function renderAdjacentPossible() {
       ctx.lineTo(toX(i), toY(lK));
     }
     ctx.closePath();
-    ctx.fillStyle = 'rgba(243,156,18,0.18)';
+    // Diagonal hatch pattern for marginal gap
+    ctx.save();
+    const hatchCanvas = document.createElement('canvas');
+    hatchCanvas.width = 6; hatchCanvas.height = 6;
+    const hctx = hatchCanvas.getContext('2d');
+    hctx.strokeStyle = 'rgba(255,255,255,0.25)';
+    hctx.lineWidth = 1;
+    hctx.beginPath();
+    hctx.moveTo(0, 6); hctx.lineTo(6, 0); hctx.stroke();
+    ctx.fillStyle = ctx.createPattern(hatchCanvas, 'repeat');
     ctx.fill();
+    ctx.restore();
 
-    // Draw the nocur line itself
+    // --- "WITHOUT CURRENT CONCEPT" LINE (white dashed, lighter) ---
     ctx.beginPath();
     for (let i = 0; i < drawN; i++) {
       const y = toY(nocurK(i));
@@ -46903,28 +46964,28 @@ function renderAdjacentPossible() {
       else ctx.lineTo(toX(i), y);
     }
     ctx.setLineDash([3, 3]);
-    ctx.strokeStyle = 'rgba(243,156,18,0.75)';
+    ctx.strokeStyle = 'rgba(255,255,255,0.45)';
     ctx.lineWidth = 1.3;
     ctx.stroke();
     ctx.setLineDash([]);
 
-    // --- COMPRESSED LINE (purple solid) ---
+    // --- COMPRESSED LINE (white solid, bright) ---
     ctx.beginPath();
     for (let i = 0; i < drawN; i++) {
       const lK = (dlLRawBits - dlCumDelta[i] * DL_BPT) / 1000;
       if (i === 0) ctx.moveTo(toX(i), toY(lK));
       else ctx.lineTo(toX(i), toY(lK));
     }
-    ctx.strokeStyle = 'rgba(108,92,231,0.9)';
+    ctx.strokeStyle = 'rgba(255,255,255,0.9)';
     ctx.lineWidth = 1.8;
     ctx.stroke();
 
-    // --- RAW LINE (red dashed) ---
+    // --- RAW LINE (white dashed, medium) ---
     ctx.beginPath();
     ctx.setLineDash([5, 4]);
     ctx.moveTo(toX(0), toY(rawK));
     ctx.lineTo(toX(drawN - 1), toY(rawK));
-    ctx.strokeStyle = 'rgba(231,76,60,0.7)';
+    ctx.strokeStyle = 'rgba(255,255,255,0.6)';
     ctx.lineWidth = 1.5;
     ctx.stroke();
     ctx.setLineDash([]);
@@ -46937,19 +46998,19 @@ function renderAdjacentPossible() {
     // Full gap line (raw to compressed)
     ctx.beginPath();
     ctx.moveTo(cx, toY(rawK)); ctx.lineTo(cx, toY(curK));
-    ctx.strokeStyle = 'rgba(255,220,80,0.3)';
+    ctx.strokeStyle = 'rgba(255,255,255,0.3)';
     ctx.lineWidth = 1;
     ctx.stroke();
-    // Marginal gap tick (nocur to compressed) — highlight current concept's contribution
+    // Marginal gap tick (nocur to compressed)
     ctx.beginPath();
     ctx.moveTo(cx, toY(nocurVal)); ctx.lineTo(cx, toY(curK));
-    ctx.strokeStyle = 'rgba(243,156,18,0.7)';
+    ctx.strokeStyle = 'rgba(255,255,255,0.6)';
     ctx.lineWidth = 2;
     ctx.stroke();
 
     // Total gap annotation (centered between raw and nocur)
     const totalMidY = (toY(rawK) + toY(nocurVal)) / 2;
-    ctx.fillStyle = 'rgba(46,204,113,0.85)';
+    ctx.fillStyle = 'rgba(255,255,255,0.85)';
     ctx.font = '9px Inter, sans-serif';
     ctx.textAlign = 'right';
     const gapTxt = gapK >= 1000 ? (gapK/1000).toFixed(2)+'M' : gapK.toFixed(0)+'K';
@@ -46959,21 +47020,21 @@ function renderAdjacentPossible() {
     const marginalK = nocurVal - curK;
     if (marginalK > 0) {
       const margMidY = (toY(nocurVal) + toY(curK)) / 2;
-      ctx.fillStyle = 'rgba(243,156,18,0.95)';
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
       ctx.font = 'bold 10px Inter, sans-serif';
       const margTxt = marginalK >= 1000 ? (marginalK/1000).toFixed(2)+'M' : marginalK.toFixed(1)+'K';
       ctx.fillText('\u0394L ' + margTxt, cx - 4, margMidY + 4);
     }
 
     // Raw value at top
-    ctx.fillStyle = 'rgba(231,76,60,0.7)';
+    ctx.fillStyle = 'rgba(255,255,255,0.6)';
     ctx.font = '8px Inter, sans-serif';
     ctx.textAlign = 'left';
     const rawTxt = rawK >= 1000 ? (rawK/1000).toFixed(2)+'M' : rawK.toFixed(0)+'K';
     ctx.fillText(rawTxt, pad.left + 3, toY(rawK) - 3);
 
     // Compressed value at bottom-right
-    ctx.fillStyle = 'rgba(108,92,231,0.85)';
+    ctx.fillStyle = 'rgba(255,255,255,0.85)';
     const compTxt = curK >= 1000 ? (curK/1000).toFixed(2)+'M' : curK.toFixed(0)+'K';
     ctx.fillText(compTxt, pad.left + 3, toY(curK) + 11);
 
@@ -47037,6 +47098,15 @@ function renderAdjacentPossible() {
     ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
     const W = rect.width, H = rect.height;
 
+    // "The Adjacent Possible" boundary — radius grows with network size
+    const cx = W/2, cy = H/2;
+    const maxCircleR = Math.min(W, H) * 0.38;
+    const minCircleR = Math.min(W, H) * 0.08;
+    const progress = Math.min(1, (conceptIdx + 1) / allConcepts.length);
+    const circleR = minCircleR + (maxCircleR - minCircleR) * Math.sqrt(progress);
+    const outerMinR = circleR + 14;  // readiness=1: clear gap from boundary
+    const outerMaxR = circleR + 55;  // readiness=0: no deps inside, far out
+
     // Visible = concepts 0..conceptIdx (by sorted order)
     const visible = allConcepts.slice(0, conceptIdx + 1);
     const visSet = new Set(visible.map(c => c.concept));
@@ -47058,19 +47128,76 @@ function renderAdjacentPossible() {
 
     // Reuse existing node positions where possible
     const oldPos = {};
-    tNodes.forEach(n => { oldPos[n.id] = { x: n.x, y: n.y }; });
+    tNodes.forEach(n => { if (!n.preview) oldPos[n.id] = { x: n.x, y: n.y }; });
+
+    // Dynamic outer positions for ALL not-yet-positioned concepts
+    // (includes current concept for spawn, plus all undiscovered for drawing)
+    const outerPositions = {};
+    for (let ci = 0; ci < allConcepts.length; ci++) {
+      const ac = allConcepts[ci];
+      if (oldPos[ac.concept]) continue; // already has inner position, skip
+      const info = GRAPH.graph[ac.concept];
+      const deps = info ? info.depends_on : [];
+      const totalDeps = deps.length;
+
+      // Find deps already inside and their positions
+      let sx = 0, sy = 0, insideCount = 0;
+      for (const dep of deps) {
+        if (visSet.has(dep) && oldPos[dep]) {
+          sx += oldPos[dep].x; sy += oldPos[dep].y; insideCount++;
+        }
+      }
+
+      // Readiness: fraction of deps already inside (0..1)
+      const readiness = totalDeps > 0 ? insideCount / totalDeps : 0;
+
+      // Angular position: toward centroid of inside deps, or fallback to page-index
+      let angle;
+      if (insideCount > 0) {
+        angle = Math.atan2(sy/insideCount - cy, sx/insideCount - cx);
+      } else {
+        angle = (ci / allConcepts.length) * Math.PI * 2 - Math.PI/2;
+      }
+
+      // Radial distance: closer = more ready
+      const r = outerMinR + (1 - readiness) * (outerMaxR - outerMinR);
+
+      outerPositions[ac.concept] = {
+        x: cx + r * Math.cos(angle),
+        y: cy + r * Math.sin(angle),
+        readiness: readiness,
+      };
+    }
 
     const maxDL = visible.length > 0 ? Math.max(...visible.map(c => c.delta_L), 1) : 1;
     const maxFan = visible.length > 0 ? Math.max(...visible.map(c => c.fan_out), 1) : 1;
     const N = visible.length + (previewConcept ? 1 : 0);
-    const radiusScale = Math.min(5, 50 / Math.sqrt(Math.max(N, 10)));
+    // Node size scales down as network grows AND as circle is smaller
+    const baseRadiusScale = Math.min(3, 30 / Math.sqrt(Math.max(N, 10)));
+    const circleShrink = Math.min(1, circleR / 120);
+    const radiusScale = (baseRadiusScale * circleShrink) / 1.5;
+    const innerGap = 6; // guaranteed gap between innermost outer node and outermost inner node
 
     tNodes = visible.map(c => {
       const old = oldPos[c.concept];
+      let spawnX, spawnY;
+      if (old) {
+        spawnX = old.x; spawnY = old.y;
+      } else {
+        // New node: spawn from its position on the outer ring ("adjacent possible")
+        const outerPos = outerPositions[c.concept];
+        if (outerPos) {
+          spawnX = outerPos.x;
+          spawnY = outerPos.y;
+        } else {
+          spawnX = W/2 + (Math.random() - 0.5) * W * 0.3;
+          spawnY = H/2 + (Math.random() - 0.5) * H * 0.3;
+        }
+      }
       return {
         id: c.concept,
-        x: old ? old.x : W/2 + (Math.random() - 0.5) * W * 0.6,
-        y: old ? old.y : H/2 + (Math.random() - 0.5) * H * 0.6,
+        x: spawnX,
+        y: spawnY,
         vx: 0, vy: 0,
         radius: 1.5 + Math.sqrt(c.delta_L / maxDL) * radiusScale,
         delta_L: c.delta_L,
@@ -47133,20 +47260,14 @@ function renderAdjacentPossible() {
     const nodeMap = {};
     tNodes.forEach(n => nodeMap[n.id] = n);
 
-    // Add preview node: next concept visible but unconnected, positioned near its deps
+    // Add preview node: next concept, spawns from outer ring
     if (previewConcept) {
       const old = oldPos[previewConcept.concept];
-      let px = W/2 + (Math.random() - 0.5) * W * 0.3;
-      let py = H/2 + (Math.random() - 0.5) * H * 0.3;
+      let px, py;
       if (!old) {
-        const pInfo = GRAPH.graph[previewConcept.concept];
-        if (pInfo && pInfo.depends_on.length > 0) {
-          let sx = 0, sy = 0, cnt = 0;
-          for (const dep of pInfo.depends_on) {
-            if (nodeMap[dep]) { sx += nodeMap[dep].x; sy += nodeMap[dep].y; cnt++; }
-          }
-          if (cnt > 0) { px = sx/cnt + (Math.random()-0.5)*50; py = sy/cnt + (Math.random()-0.5)*50; }
-        }
+        const outerPos = outerPositions[previewConcept.concept];
+        if (outerPos) { px = outerPos.x; py = outerPos.y; }
+        else { px = W/2; py = H/2; }
       }
       const pNode = {
         id: previewConcept.concept,
@@ -47164,14 +47285,22 @@ function renderAdjacentPossible() {
       nodeMap[pNode.id] = pNode;
     }
 
+    // Auto-fit: zoom and center so circle + outer ring fills the canvas
+    const totalExtent = outerMaxR + 15;
+    tZoom = Math.min(W, H) / (2 * totalExtent);
+    tZoom = Math.max(0.35, Math.min(1.4, tZoom));
+    tPanX = W/2 * (1 - tZoom);
+    tPanY = H/2 * (1 - tZoom);
+
     // Adaptive force scaling: reduce repulsion & increase damping at high node counts
     const nScale = Math.max(1, N / 50);
-    const damping = Math.max(0.75, 0.94 - 0.04 * Math.sqrt(nScale));
-    const repulsion = 1800 / nScale;
-    const attraction = 0.008;
-    const idealLen = Math.max(15, 60 / Math.pow(nScale, 0.4));
-    const centerForce = 0.04 * Math.pow(nScale, 0.35);
+    const damping = Math.max(0.60, 0.82 - 0.04 * Math.sqrt(nScale));
+    const repulsion = 450 / nScale;
+    const attraction = 0.012;
+    const idealLen = Math.max(10, 40 / Math.pow(nScale, 0.4));
+    const centerForce = 0.03 * Math.pow(nScale, 0.35);
     const pad = 40, boundaryForce = 0.5, arrowSize = 1;
+    let frameCount = 0;
 
     function step() {
       // Repulsion
@@ -47199,19 +47328,45 @@ function renderAdjacentPossible() {
         if (a !== tDragNode) { a.vx += fx; a.vy += fy; }
         if (b !== tDragNode) { b.vx -= fx; b.vy -= fy; }
       }
-      // Center + boundary + damping
+      // Center + boundary + damping + velocity cap
       for (const n of tNodes) {
         if (n === tDragNode) continue;
-        n.vx += (W/2 - n.x) * centerForce;
-        n.vy += (H/2 - n.y) * centerForce;
-        if (n.x < pad) n.vx += boundaryForce;
-        if (n.x > W - pad) n.vx -= boundaryForce;
-        if (n.y < pad) n.vy += boundaryForce;
-        if (n.y > H - pad) n.vy -= boundaryForce;
+        n.vx += (cx - n.x) * centerForce;
+        n.vy += (cy - n.y) * centerForce;
+        if (!n.preview) {
+          // Circular boundary: strong inward push starting at 75% radius
+          const maxR = circleR - n.radius - innerGap;
+          const dfc = Math.sqrt((n.x - cx)*(n.x - cx) + (n.y - cy)*(n.y - cy));
+          if (dfc > maxR * 0.75) {
+            const overshoot = Math.max(0, dfc - maxR * 0.75);
+            const pushStr = overshoot * 0.5;
+            n.vx -= ((n.x - cx) / (dfc || 1)) * pushStr;
+            n.vy -= ((n.y - cy) / (dfc || 1)) * pushStr;
+            // Extra friction near boundary to kill tangential orbiting
+            n.vx *= 0.85; n.vy *= 0.85;
+          }
+        }
         n.vx *= damping; n.vy *= damping;
+        // Velocity cap — prevent runaway speeds
+        const speed = Math.sqrt(n.vx * n.vx + n.vy * n.vy);
+        const maxSpeed = 8;
+        if (speed > maxSpeed) { n.vx *= maxSpeed / speed; n.vy *= maxSpeed / speed; }
         n.x += n.vx; n.y += n.vy;
-        n.x = Math.max(n.radius+2, Math.min(W-n.radius-2, n.x));
-        n.y = Math.max(n.radius+2, Math.min(H-n.radius-2, n.y));
+        if (!n.preview) {
+          // Hard circular clamp: discovered nodes never cross boundary
+          const maxR = circleR - n.radius - innerGap;
+          const dfcPost = Math.sqrt((n.x - cx)*(n.x - cx) + (n.y - cy)*(n.y - cy));
+          if (dfcPost > maxR) {
+            const scale = maxR / dfcPost;
+            n.x = cx + (n.x - cx) * scale;
+            n.y = cy + (n.y - cy) * scale;
+            // Remove outward radial velocity + extra damping on collision
+            const ux = (n.x - cx) / (maxR || 1), uy = (n.y - cy) / (maxR || 1);
+            const dot = n.vx * ux + n.vy * uy;
+            if (dot > 0) { n.vx -= dot * ux * 1.2; n.vy -= dot * uy * 1.2; }
+            n.vx *= 0.7; n.vy *= 0.7;
+          }
+        }
       }
 
       // Draw
@@ -47220,6 +47375,115 @@ function renderAdjacentPossible() {
       ctx.translate(tPanX, tPanY);
       ctx.scale(tZoom, tZoom);
       const hasSel = tSelectedNode !== null;
+
+      // --- Draw "The Adjacent Possible" boundary + zone labels ---
+      frameCount++;
+      const breathe = 0.5 + 0.5 * Math.sin(frameCount * 0.02); // slow pulse 0..1
+      const breatheFast = 0.5 + 0.5 * Math.sin(frameCount * 0.05);
+
+      // Circle boundary — glowing dashed ring
+      ctx.save();
+      ctx.shadowColor = `rgba(160,180,255,${0.25 + breathe * 0.2})`;
+      ctx.shadowBlur = 12 + breathe * 8;
+      ctx.beginPath();
+      ctx.arc(cx, cy, circleR, 0, Math.PI*2);
+      ctx.strokeStyle = `rgba(180,200,255,${0.20 + breathe * 0.15})`;
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([6, 4]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.restore();
+
+      // "the adjacent possible" label — glowing, larger, italic
+      ctx.save();
+      const apAlpha = 0.4 + breathe * 0.3;
+      ctx.font = 'italic 11px Inter, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.shadowColor = `rgba(160,180,255,${apAlpha * 0.8})`;
+      ctx.shadowBlur = 14 + breathe * 6;
+      ctx.fillStyle = `rgba(180,200,255,${apAlpha})`;
+      ctx.fillText('the adjacent possible', cx, cy - circleR - 8);
+      // Double-paint for stronger glow
+      ctx.fillText('the adjacent possible', cx, cy - circleR - 8);
+      ctx.restore();
+
+      // "known" — same color/glow as adjacent possible, size 11px→22px over progress
+      const knownAlpha = 0.4 + breathe * 0.3;
+      const knownSize = 11 + progress * 11;
+      ctx.save();
+      ctx.font = `600 ${knownSize}px Inter, sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.shadowColor = `rgba(160,180,255,${knownAlpha * 0.8})`;
+      ctx.shadowBlur = 14 + breathe * 6;
+      ctx.fillStyle = `rgba(180,200,255,${knownAlpha})`;
+      ctx.fillText('known', cx, cy + circleR * 0.75);
+      ctx.fillText('known', cx, cy + circleR * 0.75);
+      ctx.restore();
+
+      // "unknown" — single instance above the boundary, same color/glow as adjacent possible
+      const unknownAlpha = Math.max(0.15, 0.45 * (1 - progress) + breatheFast * 0.1);
+      const unknownSize = Math.max(9, 12 - progress * 3);
+      const uDist = circleR + (outerMaxR - circleR) * 0.6;
+      ctx.save();
+      ctx.font = `${unknownSize}px Inter, sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.shadowColor = `rgba(160,180,255,${unknownAlpha * 0.8})`;
+      ctx.shadowBlur = 14 + breatheFast * 6;
+      ctx.fillStyle = `rgba(180,200,255,${unknownAlpha})`;
+      ctx.fillText('unknown', cx, cy - uDist);
+      ctx.restore();
+
+      // Outer undiscovered nodes: position by deps, size/brightness by readiness
+      const undiscovered = allConcepts.slice(conceptIdx + 1);
+      for (let ui = 0; ui < undiscovered.length; ui++) {
+        const uc = undiscovered[ui];
+        const op = outerPositions[uc.concept];
+        if (!op) continue;
+        const isNext = (ui === 0);
+        const rd = op.readiness; // 0=no deps inside, 1=all deps inside
+
+        ctx.beginPath();
+        if (isNext) {
+          // Next concept: bright gold glow
+          ctx.arc(op.x, op.y, 3.5, 0, Math.PI*2);
+          ctx.fillStyle = 'rgba(255,255,255,0.8)';
+          ctx.shadowColor = 'rgba(255,255,255,0.6)';
+          ctx.shadowBlur = 12;
+          ctx.fill();
+          ctx.shadowBlur = 0; ctx.shadowColor = 'transparent';
+          ctx.font = '6px Inter, sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillStyle = 'rgba(255,255,255,0.75)';
+          const nlbl = uc.concept.length > 18 ? uc.concept.slice(0,16)+'..' : uc.concept;
+          ctx.fillText(nlbl, op.x, op.y - 6);
+        } else if (rd >= 1.0) {
+          // Truly adjacent possible: all deps inside — bright, larger, warm glow
+          ctx.arc(op.x, op.y, 2.5, 0, Math.PI*2);
+          ctx.fillStyle = 'rgba(255,255,255,0.4)';
+          ctx.shadowColor = 'rgba(255,255,255,0.25)';
+          ctx.shadowBlur = 6;
+          ctx.fill();
+          ctx.shadowBlur = 0; ctx.shadowColor = 'transparent';
+        } else if (rd > 0) {
+          // Partially ready: some deps inside — size/alpha scales with readiness
+          const dotR = 1.0 + rd * 1.2;
+          const alpha = 0.08 + rd * 0.2;
+          ctx.arc(op.x, op.y, dotR, 0, Math.PI*2);
+          ctx.fillStyle = `rgba(160,175,220,${alpha})`;
+          ctx.shadowColor = `rgba(160,175,220,${alpha * 0.4})`;
+          ctx.shadowBlur = 2 + rd * 3;
+          ctx.fill();
+          ctx.shadowBlur = 0; ctx.shadowColor = 'transparent';
+        } else {
+          // No deps inside: tiny, faint, blurry
+          ctx.arc(op.x, op.y, 0.9, 0, Math.PI*2);
+          ctx.fillStyle = 'rgba(140,140,180,0.07)';
+          ctx.shadowColor = 'rgba(140,140,180,0.04)';
+          ctx.shadowBlur = 2;
+          ctx.fill();
+          ctx.shadowBlur = 0; ctx.shadowColor = 'transparent';
+        }
+      }
 
       // --- Recency helpers ---
       // Tier intensities: 0=newest(1.0) .. 4=oldest(0.2)
@@ -47251,12 +47515,12 @@ function renderAdjacentPossible() {
           const isUp = (e.source === tSelectedNode && tHighlightUp.has(e.target));
           const isDn = (e.target === tSelectedNode && tHighlightDown.has(e.source));
           if (isUp) { ctx.strokeStyle = 'rgba(243,156,18,0.8)'; ctx.fillStyle = 'rgba(243,156,18,0.9)'; ctx.lineWidth = 2.2; }
-          else if (isDn) { ctx.strokeStyle = 'rgba(46,204,113,0.8)'; ctx.fillStyle = 'rgba(46,204,113,0.9)'; ctx.lineWidth = 2.2; }
+          else if (isDn) { ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.fillStyle = 'rgba(255,255,255,0.9)'; ctx.lineWidth = 2.2; }
           else { ctx.strokeStyle = 'rgba(0,210,255,0.25)'; ctx.fillStyle = 'rgba(0,210,255,0.35)'; ctx.lineWidth = 0.9; }
         } else if (edgeRecent) {
           const ea = recAlpha(edgeTier) * 0.6;
-          ctx.strokeStyle = `rgba(255,220,80,${ea})`;
-          ctx.fillStyle = `rgba(255,220,80,${ea + 0.08})`;
+          ctx.strokeStyle = `rgba(255,255,255,${ea})`;
+          ctx.fillStyle = `rgba(255,255,255,${ea + 0.08})`;
           ctx.lineWidth = 0.7;
         } else {
           const inertEdge = hasRecent && !srcPrimary && !tgtPrimary;
@@ -47304,18 +47568,18 @@ function renderAdjacentPossible() {
         } else if (isUp) {
           ctx.strokeStyle = 'rgba(243,156,18,0.9)'; ctx.lineWidth = 2.5; ctx.stroke();
         } else if (isDn) {
-          ctx.strokeStyle = 'rgba(46,204,113,0.9)'; ctx.lineWidth = 2.5; ctx.stroke();
+          ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.lineWidth = 2.5; ctx.stroke();
         } else if (isEgo) {
           ctx.strokeStyle = 'rgba(0,210,255,0.5)'; ctx.lineWidth = 1.5; ctx.stroke();
         } else if (isNew) {
           const ra = recAlpha(rec.tier);
-          ctx.shadowColor = `rgba(255,220,80,${ra * 0.6})`; ctx.shadowBlur = 3 + ra * 4;
-          ctx.strokeStyle = `rgba(255,220,80,${ra})`; ctx.lineWidth = 1.2; ctx.stroke();
+          ctx.shadowColor = `rgba(255,255,255,${ra * 0.6})`; ctx.shadowBlur = 3 + ra * 4;
+          ctx.strokeStyle = `rgba(255,255,255,${ra})`; ctx.lineWidth = 1.2; ctx.stroke();
           ctx.shadowColor = 'transparent'; ctx.shadowBlur = 0;
         } else if (isNewEgo) {
           const ra = rec.tier === 0 ? 0.55 : 0.045;
-          ctx.shadowColor = `rgba(255,220,80,${ra * 0.4})`; ctx.shadowBlur = 2 + ra * 3;
-          ctx.strokeStyle = `rgba(255,220,80,${ra})`; ctx.lineWidth = 1.2; ctx.stroke();
+          ctx.shadowColor = `rgba(255,255,255,${ra * 0.4})`; ctx.shadowBlur = 2 + ra * 3;
+          ctx.strokeStyle = `rgba(255,255,255,${ra})`; ctx.lineWidth = 1.2; ctx.stroke();
           ctx.shadowColor = 'transparent'; ctx.shadowBlur = 0;
         } else if (isInert) {
           ctx.strokeStyle = 'rgba(255,255,255,0.06)';
@@ -47327,16 +47591,16 @@ function renderAdjacentPossible() {
       }
 
       // Labels
-      ctx.font = '9px Inter, sans-serif';
+      ctx.font = '6px Inter, sans-serif';
       ctx.textAlign = 'center';
       for (const n of tNodes) {
         if (n.preview) {
           // Always label the preview node
           ctx.fillStyle = 'rgba(255,255,255,0.55)';
-          ctx.font = '10px Inter, sans-serif';
+          ctx.font = '7px Inter, sans-serif';
           const lbl = n.id.length > 22 ? n.id.slice(0,20)+'...' : n.id;
-          ctx.fillText(lbl, n.x, n.y + n.radius + 11);
-          ctx.font = '9px Inter, sans-serif';
+          ctx.fillText(lbl, n.x, n.y + n.radius + 9);
+          ctx.font = '6px Inter, sans-serif';
           continue;
         }
         const isSel = n.id === tSelectedNode;
@@ -47354,14 +47618,14 @@ function renderAdjacentPossible() {
           if (isDim) ctx.fillStyle = 'rgba(224,224,236,0.1)';
           else if (isSel) ctx.fillStyle = '#fff';
           else if (isUp) ctx.fillStyle = 'rgba(243,156,18,0.95)';
-          else if (isDn) ctx.fillStyle = 'rgba(46,204,113,0.95)';
+          else if (isDn) ctx.fillStyle = 'rgba(255,255,255,0.95)';
           else if (isEgo) ctx.fillStyle = 'rgba(0,210,255,0.7)';
-          else if (isNew) { const ra = recAlpha(rec.tier); ctx.fillStyle = `rgba(255,220,80,${ra})`; ctx.font = '10px Inter, sans-serif'; }
-          else if (isNewEgo) { const ra = rec.tier === 0 ? 0.65 : 0.06; ctx.fillStyle = `rgba(255,220,80,${ra})`; ctx.font = '9px Inter, sans-serif'; }
+          else if (isNew) { const ra = recAlpha(rec.tier); ctx.fillStyle = `rgba(255,255,255,${ra})`; ctx.font = '7px Inter, sans-serif'; }
+          else if (isNewEgo) { const ra = rec.tier === 0 ? 0.65 : 0.06; ctx.fillStyle = `rgba(255,255,255,${ra})`; ctx.font = '6px Inter, sans-serif'; }
           else ctx.fillStyle = '#e0e0ec';
           const lbl = n.id.length > 22 ? n.id.slice(0,20)+'...' : n.id;
-          ctx.fillText(lbl, n.x, n.y + n.radius + 11);
-          if (isNew) ctx.font = '9px Inter, sans-serif';
+          ctx.fillText(lbl, n.x, n.y + n.radius + 9);
+          if (isNew) ctx.font = '6px Inter, sans-serif';
         }
       }
       ctx.restore();
@@ -47414,12 +47678,9 @@ function renderAdjacentPossible() {
   const playBtn = document.getElementById('temporalPlayBtn');
 
   function stopAutoPlay() {
-    if (tAutoPlay) { clearInterval(tAutoPlay); tAutoPlay = null; }
+    if (tAutoPlay) { clearTimeout(tAutoPlay); tAutoPlay = null; }
     tIsPlaying = false;
-    if (playBtn) {
-      playBtn.innerHTML = '&#9654;';
-      playBtn.classList.remove('is-playing');
-    }
+    if (playBtn) playBtn.innerHTML = '<svg viewBox="0 0 16 16"><polygon points="4,2 14,8 4,14"/></svg>';
   }
 
   if (slider) {
@@ -47438,17 +47699,22 @@ function renderAdjacentPossible() {
         } else {
           ensureData();
           tIsPlaying = true;
-          playBtn.innerHTML = '&#9646;&#9646;';
-          playBtn.classList.add('is-playing');
-          tAutoPlay = setInterval(() => {
+          playBtn.innerHTML = '<svg viewBox="0 0 16 16"><rect x="3" y="2" width="3.5" height="12" rx="0.8"/><rect x="9.5" y="2" width="3.5" height="12" rx="0.8"/></svg>';
+          function autoStep() {
             const val = parseInt(slider.value);
-            if (val < parseInt(slider.max)) {
+            const maxVal = parseInt(slider.max);
+            if (val < maxVal) {
               slider.value = val + 1;
               buildTemporalNetwork(val + 1);
+              // Accelerate: 600ms at start → 100ms at end
+              const p = maxVal > 0 ? val / maxVal : 0;
+              const delay = 600 - p * 550;
+              tAutoPlay = setTimeout(autoStep, delay);
             } else {
               stopAutoPlay();
             }
-          }, 1050);
+          }
+          tAutoPlay = setTimeout(autoStep, 600);
         }
       });
     }
@@ -47464,23 +47730,10 @@ function renderAdjacentPossible() {
       }
       if (tNodes.length === 0) buildTemporalNetwork(0);
     }
-    // Auto-init after a short delay (DOM must be ready), then auto-play on by default
+    // Auto-init after a short delay (DOM must be ready), then auto-play
     setTimeout(() => {
       initTemporalNetwork();
-      if (playBtn && slider) {
-        tIsPlaying = true;
-        playBtn.innerHTML = '&#9646;&#9646;';
-        playBtn.classList.add('is-playing');
-        tAutoPlay = setInterval(() => {
-          const val = parseInt(slider.value);
-          if (val < parseInt(slider.max)) {
-            slider.value = val + 1;
-            buildTemporalNetwork(val + 1);
-          } else {
-            stopAutoPlay();
-          }
-        }, 1050);
-      }
+      /* auto-play disabled for upload version */
     }, 200);
     // Also re-init if user switches tabs (canvas may need resize)
     const temporalTab = document.querySelector('[data-tab="temporal"]');
@@ -47514,23 +47767,11 @@ This is the increase in the book's total description length if concept \\(r\\) w
 <p><strong>Model used:</strong> GPT-OSS-20B for Steps 2&ndash;3. No fine-tuning; zero-shot prompting with structured output constraints.</p>`
   },
   "Knowledge Network Growth": {
-    title: "Knowledge Network Growth (Temporal View)",
-    method: "All 725 concepts are sorted by the page on which they first appear in Griffiths. The slider steps through concepts in reading order. At each step, we show the subgraph induced by all concepts introduced so far: nodes are concepts, directed edges are dependency references.",
-    reason: "This reveals <em>how</em> the knowledge graph assembles itself as a student reads the book. Early chapters lay down foundational hubs (vector, derivative, integral); later chapters build on them. The growing graph makes visible the emergence of the compression backbone in real time.",
-    details: `<p><strong>Three synchronized panels:</strong></p>
-<ol>
-<li><strong>Book page (left):</strong> Shows the actual OCR'd page from Griffiths where the current concept is introduced. The relevant passage is highlighted. Definitions are extracted from the LLM's concept annotation and matched back to the source text.</li>
-<li><strong>Force-directed network (center):</strong> A custom Canvas-based physics simulation. Nodes repel (Coulomb-like \\(1/r^2\\) force), connected nodes attract (spring force), and a gentle gravity pulls toward center. Node size \\(\\propto \\sqrt{\\Delta L / \\Delta L_{\\max}}\\). Color encodes fan-out. The last 2 introduced nodes and their 1-hop ego networks glow gold.</li>
-<li><strong>Description length chart (right):</strong> Shows the total book description length \\(L\\) as vocabulary grows. See the dedicated help for that panel.</li>
-</ol>
-<p><strong>Layout physics:</strong></p>
-<div class="help-formula">
-\\[F_{\\text{repel}}(i,j) = \\frac{k_r}{\\|\\mathbf{r}_i - \\mathbf{r}_j\\|^2} \\hat{\\mathbf{r}}_{ij}\\]
-\\[F_{\\text{attract}}(i,j) = -k_s \\cdot \\|\\mathbf{r}_i - \\mathbf{r}_j\\| \\cdot \\hat{\\mathbf{r}}_{ij} \\quad \\text{(if edge exists)}\\]
-\\[F_{\\text{gravity}}(i) = -k_g \\cdot (\\mathbf{r}_i - \\mathbf{r}_{\\text{center}})\\]
-</div>
-<p>Simulation runs at 60 fps with velocity damping \\(v \\leftarrow 0.92\\,v\\) per frame. Nodes are draggable; clicking a node highlights its upstream (orange) and downstream (green) neighbors.</p>
-<p><strong>Auto-play:</strong> Steps through concepts at 1050 ms intervals (\\(\\approx\\) 1 concept/sec). Total playback: ~12.5 minutes for all 725 concepts.</p>`
+    title: "Knowledge Network Growth",
+    method: "725 concepts sorted by page order. The slider steps through them; at each step, the network shows all concepts introduced so far with their dependency edges.",
+    details: `<p>Three synchronized panels: source text (left), force-directed network (center), description length curve (right).</p>
+<p>The 2 most recently introduced concepts glow white. Click any node to see upstream (orange) and downstream (white) neighbors. Drag nodes, scroll to zoom.</p>
+<p>Auto-play steps at ~1 concept/sec (~12.5 min for all 725).</p>`
   },
   "Top 15 Concepts by ΔL": {
     title: "Top Concepts Bar Chart",
@@ -47739,107 +47980,64 @@ This is the increase in the book's total description length if concept \\(r\\) w
 // Panel-specific help content (for the three sub-panels)
 const PANEL_HELP = {
   bookPanel: {
-    title: "Book Page Panel (OCR Source Text)",
-    method: "Shows the actual page from Griffiths' <em>Introduction to Electrodynamics</em> where the current concept is introduced. Text is extracted via LLM-assisted OCR and rendered with KaTeX for math.",
-    reason: "Provides ground truth: you can see the <em>exact passage</em> from which the LLM extracted the concept definition and dependencies.",
-    details: `<p><strong>OCR pipeline:</strong></p>
-<ol>
-<li>Each of 596 pages is processed by a vision-language model that converts the scanned page to Markdown.</li>
-<li>LaTeX math is preserved as <code>\\\\(...\\\\)</code> (inline) and <code>\\\\[...\\\\]</code> (display). Figures become <code>![caption](path)</code> placeholders.</li>
-<li>The 596 Markdown files (\\(\\approx 1.3\\) MB) are loaded as JSON and embedded in the dashboard HTML.</li>
-</ol>
-<p><strong>Concept highlighting:</strong></p>
-<ol>
-<li><strong>Direct match:</strong> Search the page text for the concept name (case-insensitive). If found, highlight it with a purple badge.</li>
-<li><strong>Definition-based fallback:</strong> If the concept name doesn't appear literally on the page (e.g., "electromagnetic radiation" may be described without using that exact phrase), we extract text snippets from the LLM's definition &mdash; blockquotes, quoted phrases, and key sentences &mdash; and search for matches on the page. The longest matching snippet is highlighted.</li>
-<li><strong>Paragraph fallback:</strong> If no snippet matches, we search for 4-word phrases from the definition. The containing paragraph is highlighted.</li>
-</ol>
-<p><strong>Page flip animation:</strong> CSS 3D transform using <code>perspective(1200px)</code> and <code>rotateY</code>. A pseudo-element simulates the turning page with light/shadow gradients. Content fades at the midpoint (220 ms) and swaps. Flip is skipped for page jumps &gt; 10 pages apart.</p>`
+    title: "Source Text",
+    body: "The page from Griffiths where this concept first appears. OCR'd via vision-LLM, math rendered with KaTeX. The defining passage is highlighted automatically."
   },
-  temporalNetCanvas: {
-    title: "Concept Dependency Network (Force-Directed)",
-    method: "A real-time force-directed graph where each node is a concept introduced up to the current slider position. Edges represent dependency relations: an arrow from \\(B \\to A\\) means concept \\(B\\)'s definition references concept \\(A\\).",
-    reason: "Shows how the knowledge graph grows structurally as a student reads through the textbook. Early foundational concepts attract many edges; later concepts fill in the periphery.",
-    details: `<p><strong>Node encoding:</strong></p>
-<ul>
-<li><strong>Size:</strong> \\(r_{\\text{node}} = 1.5 + \\sqrt{\\Delta L / \\Delta L_{\\max}} \\times r_{\\text{scale}}\\), where \\(r_{\\text{scale}}\\) adapts to node count</li>
-<li><strong>Color:</strong> HSL hue mapped from fan-out: low fan-out = cool blue, high fan-out = warm red</li>
-<li><strong>Glow:</strong> The 2 most recently introduced concepts glow gold. The newest node's 1-hop ego network (all directly connected neighbors) also glows at reduced intensity (\\(\\alpha = 0.55\\)). Labels are shown for glowing nodes and large nodes.</li>
-</ul>
-<p><strong>Force simulation (per frame at 60 fps):</strong></p>
-<div class="help-formula">
-\\[\\mathbf{F}_{\\text{repel}}(i,j) = \\frac{k_r}{\\|\\mathbf{r}_{ij}\\|^2} \\hat{\\mathbf{r}}_{ij}, \\quad k_r = 800\\]
-\\[\\mathbf{F}_{\\text{spring}}(i,j) = -k_s \\cdot (\\|\\mathbf{r}_{ij}\\| - L_0) \\hat{\\mathbf{r}}_{ij}, \\quad k_s = 0.004, \\; L_0 = 60\\]
-\\[\\mathbf{F}_{\\text{gravity}}(i) = -k_g (\\mathbf{r}_i - \\mathbf{c}), \\quad k_g = 0.003\\]
-\\[\\mathbf{v}_i \\leftarrow 0.92 \\, \\mathbf{v}_i + \\sum \\mathbf{F}_i, \\quad \\mathbf{r}_i \\leftarrow \\mathbf{r}_i + \\mathbf{v}_i\\]
-</div>
-<p><strong>Interaction:</strong> Click node to select (shows upstream/downstream). Drag to move nodes. Scroll to zoom. Hover for tooltip. Ghost node (dashed ring) previews the <em>next</em> concept to be introduced.</p>`
+  networkWrap: {
+    title: "Knowledge Network",
+    body: `The dashed circle separates <strong>known</strong> from <strong>unknown</strong>. Inside: every concept introduced so far, wired by dependency. Outside: everything still to come.
+
+<p>Outer nodes drift toward the concepts they depend on. Distance from the boundary is <strong>readiness</strong>&mdash;the fraction of prerequisites already known. Nodes pressed against the circle have all dependencies met: they are the <em>adjacent possible</em>, what a reader could learn next. Nodes farther out still wait.</p>
+
+<p>When a concept enters, it crosses from outer ring into the network, pulled by spring forces to its neighbors. The boundary expands as knowledge grows.</p>
+
+<p>Click a node to trace upstream/downstream. Drag to rearrange. Scroll to zoom.</p>`
   },
   dlChartPanel: {
-    title: "Description Length Curve (MDL Compression)",
-    method: "Tracks the total description length of the textbook as concepts are introduced into the vocabulary, measured in bits.",
-    reason: "Visualizes the central MDL insight: naming concepts compresses the book. The growing gap between the two lines is the cumulative compression achieved by the vocabulary.",
-    details: `<p><strong>The two curves:</strong></p>
-<div class="help-formula">
-\\[L_{\\text{raw}} = \\left(L_{\\text{base}} + \\sum_{r=1}^{N} \\Delta L(r)\\right) \\times b \\quad \\text{(constant, no vocabulary)}\\]
-\\[L_{\\text{vocab}}(i) = \\left(L_{\\text{raw}} - \\sum_{r=1}^{i} \\Delta L(r)\\right) \\times b \\quad \\text{(with concepts 1..i named)}\\]
-</div>
-<p>where \\(b = 8\\) bits/token (\\(\\approx \\log_2 256\\), the entropy of an English word).</p>
-<p><strong>Numerical values:</strong></p>
-<ul>
-<li>\\(L_{\\text{base}} = 32{,}996\\) tokens (fully compressed with all 725 concepts)</li>
-<li>\\(\\sum \\Delta L = 157{,}735\\) tokens (total compression savings)</li>
-<li>\\(L_{\\text{raw}} = 190{,}731\\) tokens \\(= 1{,}526\\) Kbits (fully uncompressed)</li>
-<li>\\(L_{\\text{base}} \\times b = 264\\) Kbits (fully compressed)</li>
-<li>Compression ratio: \\(190{,}731 / 32{,}996 = 5.78\\times\\)</li>
-</ul>
-<p><strong>Red dashed line:</strong> \\(L_{\\text{raw}}\\) = description length if no concept is ever named. Every time a concept would be referenced, its full definition is spelled out. This is constant because it represents the "worst case."</p>
-<p><strong>Purple solid line:</strong> \\(L_{\\text{vocab}}(i)\\) = description length using the vocabulary of concepts introduced so far (concepts 1 through \\(i\\), sorted by page order). Each new concept subtracts its \\(\\Delta L\\) from the total, stepping the line downward.</p>
-<p><strong>Green gap:</strong> \\(L_{\\text{raw}} - L_{\\text{vocab}}(i) = \\sum_{r=1}^{i} \\Delta L(r) \\times b\\). This is the cumulative compression achieved by the vocabulary so far. It grows monotonically (each concept can only help, never hurt, compression).</p>
-<p><strong>Dynamic zoom:</strong> The Y-axis auto-scales to tightly frame the current gap between the two curves, so the step-by-step compression gains are always visible regardless of how far through the book you are.</p>
-<p><strong>Why bits?</strong> In information theory, description length is measured in bits. We convert from tokens using \\(b \\approx \\log_2(|\\text{vocabulary}|)\\). The value \\(b = 8\\) assumes an effective vocabulary of \\(2^8 = 256\\) distinct tokens, which is a reasonable lower bound for English text entropy.</p>`
+    title: "Description Length",
+    body: "Total cost of describing the textbook in bits as vocabulary grows. Dashed line: cost without concepts. Solid line: cost with all concepts so far. The gap is cumulative compression; the hatched slice is the current concept's contribution."
   }
 };
 
-function showHelp(helpObj) {
-  const el = document.getElementById('helpContent');
-  let html = `<h3>${helpObj.title}</h3>` +
-    `<div class="help-section"><strong>What it shows:</strong> ${helpObj.method}</div>` +
-    `<div class="help-section"><strong>Why it matters:</strong> ${helpObj.reason}</div>`;
-  if (helpObj.details) {
-    html += `<details><summary>See more &mdash; full methodology &amp; formulas</summary><div class="details-body">${helpObj.details}</div></details>`;
-  }
-  el.innerHTML = html;
-  document.getElementById('helpOverlay').classList.add('visible');
-  // Render KaTeX in the help modal
-  setTimeout(() => renderMathIn(el), 50);
+function attachHoverHelp(container, help, mode) {
+  const btn = document.createElement('button');
+  btn.className = mode === 'panel' ? 'panel-help-btn' : 'help-btn';
+  btn.textContent = '?';
+  btn.title = '';
+
+  const tip = document.createElement('div');
+  tip.className = 'help-tip';
+  tip.innerHTML = '<div class="help-tip-inner"><h3>' + help.title + '</h3>' + help.body + '</div>';
+
+  container.appendChild(btn);
+  container.appendChild(tip);
+
+  let hideTimer = null;
+  function show() { clearTimeout(hideTimer); tip.classList.add('visible'); }
+  function scheduleHide() { hideTimer = setTimeout(function() { tip.classList.remove('visible'); }, 200); }
+
+  btn.addEventListener('mouseenter', show);
+  btn.addEventListener('mouseleave', scheduleHide);
+  tip.addEventListener('mouseenter', show);
+  tip.addEventListener('mouseleave', scheduleHide);
 }
 
 function setupHelpButtons() {
-  // Card-level help buttons (existing pattern)
-  document.querySelectorAll('.card h2').forEach(h2 => {
+  // Card-level help buttons
+  document.querySelectorAll('.card h2').forEach(function(h2) {
     const text = h2.textContent.trim();
     const help = HELP_CONTENT[text];
     if (!help) return;
-    const btn = document.createElement('button');
-    btn.className = 'help-btn';
-    btn.textContent = '?';
-    btn.title = 'How & why';
-    btn.onclick = (e) => { e.stopPropagation(); showHelp(help); };
-    h2.appendChild(btn);
+    h2.style.position = h2.style.position || 'relative';
+    attachHoverHelp(h2, { title: help.title || text, body: help.method || '' }, 'card');
   });
 
   // Panel-level help buttons (book, network, DL chart)
-  Object.entries(PANEL_HELP).forEach(([panelId, help]) => {
+  Object.entries(PANEL_HELP).forEach(function([panelId, help]) {
     const panel = document.getElementById(panelId);
     if (!panel) return;
     panel.style.position = panel.style.position || 'relative';
-    const btn = document.createElement('button');
-    btn.className = 'panel-help-btn';
-    btn.textContent = '?';
-    btn.title = help.title;
-    btn.onclick = (e) => { e.stopPropagation(); showHelp(help); };
-    panel.appendChild(btn);
+    attachHoverHelp(panel, help, 'panel');
   });
 }
 setupHelpButtons();

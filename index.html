@@ -162,10 +162,6 @@
             margin-right: 0;
         }
 
-        .blog-card .hd .notes-button {
-            margin-left: 0;
-        }
-
         .external-link {
             display: inline-flex;
             align-items: center;
@@ -201,20 +197,6 @@
             filter: brightness(0) invert(0);
         }
 
-        .notes-button {
-            font-size: 17px;
-            font-weight: 300;
-            cursor: pointer;
-            color: #ffffff;
-            transition: opacity 0.2s ease;
-            transform: scaleX(0.7);
-            user-select: none;
-        }
-
-        .notes-button:hover {
-            opacity: 0.7;
-        }
-
         .blog-card .hd::after {
             content: '+';
             font-size: 17px;
@@ -237,62 +219,6 @@
         .blog-card.expanded .bd {
             padding: 10px 12px; 
             max-height: 5000px;
-        }
-
-        .blog-card .notes {
-            padding: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            border-top: 2px solid #ffffff;
-        }
-
-        .blog-card.notes-expanded .notes {
-            padding: 10px 12px;
-            max-height: 5000px;
-        }
-
-        .password-prompt {
-            margin-bottom: 12px;
-        }
-
-        .password-input {
-            background: transparent;
-            border: 2px solid #ffffff;
-            color: #ffffff;
-            padding: 6px 10px;
-            font-size: 11px;
-            font-family: inherit;
-            width: 200px;
-            margin-right: 8px;
-        }
-
-        .password-input:focus {
-            outline: none;
-            border-color: #ffffff;
-        }
-
-        .password-button {
-            background: transparent;
-            border: 2px solid #ffffff;
-            color: #ffffff;
-            padding: 6px 10px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: lowercase;
-            cursor: pointer;
-            font-family: inherit;
-        }
-
-        .password-button:hover {
-            background: #ffffff;
-            color: #000000;
-        }
-
-        .password-error {
-            color: #ffffff;
-            font-size: 11px;
-            margin-top: 8px;
         }
 
         .blog-card .bd p {
@@ -600,7 +526,6 @@
                             <a href="proof_graphs_visualization.html" target="_blank" class="external-link" onclick="event.stopPropagation();">
                                 <img src="maximize.png" alt="open in new tab" class="external-arrow">
                             </a>
-                            <span class="notes-button" onclick="event.stopPropagation(); toggleNotes(this);">n</span>
                             </div>
                         <div class="bd">
                             <div class="iframe-wrapper">
@@ -611,15 +536,6 @@
                                 </iframe>
                             </div>
                         </div>
-                        <div class="notes">
-                            <div class="password-prompt" id="password-prompt-1" onclick="event.stopPropagation();">
-                                <input type="password" class="password-input" placeholder="password" id="password-input-1" onkeypress="if(event.key==='Enter') checkPassword(1)" onclick="event.stopPropagation();">
-                                <button class="password-button" onclick="event.stopPropagation(); checkPassword(1);">submit</button>
-                                <div class="password-error" id="password-error-1" style="display: none;">incorrect password</div>
-                            </div>
-                            <div class="notes-content" id="notes-content-1" style="display: none;">
-                            </div>
-                        </div>
                     </div>
 
                     <div class="blog-card" data-experiment-id="2">
@@ -628,7 +544,6 @@
                             <a href="proof_trees_grid_MATHLIB_Algebra_sample.html" target="_blank" class="external-link" onclick="event.stopPropagation();">
                                 <img src="maximize.png" alt="open in new tab" class="external-arrow">
                             </a>
-                            <span class="notes-button" onclick="event.stopPropagation(); toggleNotes(this);">n</span>
                 </div>
                     <div class="bd">
                             <div class="iframe-wrapper">
@@ -639,16 +554,6 @@
                                 </iframe>
                             </div>
                         </div>
-                        <div class="notes">
-                            <div class="password-prompt" id="password-prompt-2" onclick="event.stopPropagation();">
-                                <input type="password" class="password-input" placeholder="password" id="password-input-2" onkeypress="if(event.key==='Enter') checkPassword(2)" onclick="event.stopPropagation();">
-                                <button class="password-button" onclick="event.stopPropagation(); checkPassword(2);">submit</button>
-                                <div class="password-error" id="password-error-2" style="display: none;">incorrect password</div>
-                            </div>
-                            <div class="notes-content" id="notes-content-2" style="display: none;">
-                                <p>hello. LEAN. i'm working on some problems in LEAN. operating LEAN through Lean Dojo, which is a wrapper built in Python to access LEAN, which is not Python. essentially, the issue i'm having is that the proof trajectories that Lean Dojo traces for Mathlib are, i think, complete, but some lemmas or something are missing. i don't know what this something is, but because of this, some of the proofs cannot be constructed or rerun by using the Lean Dojo framework of applied tactics. you have the proof states, but applying the tactic sequence that apparently is a solution to proving the theorem does not prove the theorem or gives an error. that's the issue i'm having with LEAN. i don't know how to fix this. maybe it's not necessary for the analysis i have in mind right now, which is just the analysis of how tactics and proofs interact with each other. if you assume this dataset that is traced by Lean Dojo for Mathlib to be true, then you can still do experiments of trying to just remove edges and see the fragility of this graph, but i do need the ability to run perturbations on top of proof states or alternate tactics and such. and see alternate paths which lead to the proof state and then try to understand the global state of the proof, not just the proof tag, but the sets of all proof tags for a certain theorem and sort of do measures on top of this ensemble. however, i'm not confident that i'm operating Lean Dojo correctly or maybe Lean Dojo has an internal fault or something because Reprover, which is part of Lean Dojo or a continuation of the work, could not prove the theorems using this exact same sequence of tactics that Lean Dojo trace has. so i'm not sure what's going on, but i remember when i tried it, it did work for some cases. so Lean Dojo's internal mid states, if i applied to the Lean Dojo data, how a theorem is in Lean Dojo, then it works. so i don't know what the difference is between Reprover's statements and Lean Dojo's statements. so i have to check that.</p>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="blog-card" data-experiment-id="3">
@@ -657,31 +562,20 @@
                             <a href="exp1_dash_griffiths_upload_v2.html" target="_blank" class="external-link" onclick="event.stopPropagation();">
                                 <img src="maximize.png" alt="open in new tab" class="external-arrow">
                             </a>
-                            <span class="notes-button" onclick="event.stopPropagation(); toggleNotes(this);">n</span>
                         </div>
                         <div class="bd">
                             <p>physics is compression. the laws of physics are equations which are true across any number of contexts. we name concepts, write equations that connect them, equations which explain real observations. how much compression does a concept offer? using Griffiths textbook as a first experiment, i measure the compression of description length of the textbook brought about by concepts of electrodynamics. (on the other hand, compression brought by laws of electrodynamics is astronomical if not infinite, as they are predictive laws, true regardless of context.)</p>
                             <p style="margin-top: 16px;">
                                 <a href="exp1_dash_griffiths_upload_v2.html" target="_blank" style="display: inline-block; padding: 8px 10px; border: 2px solid #ffffff; color: #ffffff; text-decoration: none; font-weight: 700; text-transform: lowercase;">
-                                    open griffiths dashboard →
+                                    Adjacent Possible In Electrodynamics →
                                 </a>
                             </p>
-                        </div>
-                        <div class="notes">
-                            <div class="password-prompt" id="password-prompt-3" onclick="event.stopPropagation();">
-                                <input type="password" class="password-input" placeholder="password" id="password-input-3" onkeypress="if(event.key==='Enter') checkPassword(3)" onclick="event.stopPropagation();">
-                                <button class="password-button" onclick="event.stopPropagation(); checkPassword(3);">submit</button>
-                                <div class="password-error" id="password-error-3" style="display: none;">incorrect password</div>
-                            </div>
-                            <div class="notes-content" id="notes-content-3" style="display: none;">
-                            </div>
                         </div>
                     </div>
 
                     <div class="blog-card" data-experiment-id="4">
                         <div class="hd">
                             <span>genetic aesthetics evolver</span>
-                            <span class="notes-button" onclick="event.stopPropagation(); toggleNotes(this);">n</span>
                         </div>
                     <div class="bd">
                             <p>exploring the adjacent possible of equation aesthetics through user-guided genetic evolution. systematically testing individual parameter changes to map which mutations create preferred visual patterns, learning from user selections to evolve variants that favor approved changes while keeping unapproved ones accessible at reduced probability</p>
@@ -692,15 +586,6 @@
                                 </a>
                             </p>
                     </div>
-                        <div class="notes">
-                            <div class="password-prompt" id="password-prompt-4" onclick="event.stopPropagation();">
-                                <input type="password" class="password-input" placeholder="password" id="password-input-4" onkeypress="if(event.key==='Enter') checkPassword(4)" onclick="event.stopPropagation();">
-                                <button class="password-button" onclick="event.stopPropagation(); checkPassword(4);">submit</button>
-                                <div class="password-error" id="password-error-4" style="display: none;">incorrect password</div>
-                            </div>
-                            <div class="notes-content" id="notes-content-4" style="display: none;">
-                            </div>
-                        </div>
                 </div>
             </section>
             </div>
@@ -713,28 +598,6 @@
                 this.classList.toggle('expanded');
             });
         });
-
-        function toggleNotes(button) {
-            const card = button.closest('.blog-card');
-            card.classList.toggle('notes-expanded');
-        }
-
-        function checkPassword(experimentId) {
-            const input = document.getElementById('password-input-' + experimentId);
-            const error = document.getElementById('password-error-' + experimentId);
-            const prompt = document.getElementById('password-prompt-' + experimentId);
-            const content = document.getElementById('notes-content-' + experimentId);
-            
-            if (input.value === 'lalaland') {
-                prompt.style.display = 'none';
-                content.style.display = 'block';
-                error.style.display = 'none';
-            } else {
-                error.style.display = 'block';
-                input.value = '';
-            }
-        }
-
     </script>
 </body>
 </html>

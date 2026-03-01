@@ -47733,7 +47733,7 @@ function renderAdjacentPossible() {
     // Auto-init after a short delay (DOM must be ready), then auto-play
     setTimeout(() => {
       initTemporalNetwork();
-      /* auto-play disabled for upload version */
+      if (playBtn && !tIsPlaying) playBtn.click();
     }, 200);
     // Also re-init if user switches tabs (canvas may need resize)
     const temporalTab = document.querySelector('[data-tab="temporal"]');

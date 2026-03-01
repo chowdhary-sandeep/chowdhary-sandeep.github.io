@@ -426,7 +426,7 @@
                 Sandeep Chowdhary
             </div>
             <div style="margin-top: 12px;">
-                <a href="https://www.sandeepchowdhary.com/" target="_blank" style="display: block; padding: 8px 10px; border: 2px solid #ffffff; color: #ffffff; text-transform: lowercase; font-weight: 700; text-decoration: none; font-size: 11px;">art/blog</a>
+                <a href="https://www.sandeepchowdhary.com/" target="_blank" id="art-blog-btn" style="display: block; padding: 8px 10px; border: 2px solid #ffffff; color: #ffffff; text-transform: lowercase; font-weight: 700; text-decoration: none; font-size: 11px; transition: box-shadow 0.12s ease-out;">art/blog</a>
             </div>
         </nav>
 
@@ -602,6 +602,26 @@
                 this.classList.toggle('expanded');
             });
         });
+
+        // Chaotic glow for art/blog button — logistic map + smoothing
+        (function() {
+            const btn = document.getElementById('art-blog-btn');
+            if (!btn) return;
+            let x = 0.37;
+            let smooth = 0.3;
+            const r = 3.99;
+            const smoothAlpha = 0.97;
+            const minBright = 0.08;
+            const maxBright = 0.55;
+            function tick() {
+                x = r * x * (1 - x);
+                smooth = smoothAlpha * smooth + (1 - smoothAlpha) * x;
+                const b = minBright + smooth * (maxBright - minBright);
+                btn.style.boxShadow = `0 0 12px rgba(255,255,255,${b}), 0 0 24px rgba(255,255,255,${b * 0.4})`;
+                requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+        })();
     </script>
 </body>
 </html>
